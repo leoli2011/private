@@ -99,9 +99,10 @@ int Base64decode(char *bufplain, const char *bufcoded)
     return nbytesdecoded;
 }
 
-server_config running_info;
+server_config running_info[3];
+server_config *running_info_test;
 extern list_head instances;
-extern redsocks_fini_instance(redsocks_instance *instance);
+extern void redsocks_fini_instance(redsocks_instance *instance);
 /*
 int ssl_sdk(char* buf)
 {
@@ -139,17 +140,16 @@ size_t process_data(void *buffer, size_t size, size_t nmemb, void *user_p)
 	json_object *uid, *key;
 	json_object *msg, *machine_id, *proxy_port, *proxy,
 		    *client_ip;
-    redsocks_instance *instance , *tmp = NULL;
+    redsocks_instance *instance;
     char buf[3][20]= {{0}};
     int action = 0;
 	int i;
 	int j;
 
-    //instance = (redsocks_instance *)list_entry((&instances)->next, __typeof(*instance), list);
     instance = (redsocks_instance *)user_p;
-    server_config *sc = &running_info;
+    server_config *sc = &running_info[instance->if_index][instance->sn_number];
 
-	fprintf(stdout, "%s \n", (char*) buffer);
+	fprintf(stdout, "%s \n if_index=%d", (char*) buffer, instance->if_index);
 
 	json_result = json_tokener_parse(buffer);
 	if (json_result == NULL) {
@@ -191,7 +191,7 @@ size_t process_data(void *buffer, size_t size, size_t nmemb, void *user_p)
 
 	json_object_object_get_ex(json_result, "proxy", &proxy);
 
-	for(i = 0; i < json_object_array_length(proxy); i++) {
+	for (i = 0; i < json_object_array_length(proxy); i++) {
 		json_object *ip, *o_type;
 
 		json_object *jproxy = json_object_array_get_idx(proxy, i);
@@ -304,29 +304,10 @@ update_key:
 	//} else {
 	//	fprintf(stderr, "Failed to get uid or key\n");
 	//}
+
     if (action) {
         goto exit;
     }
-
-        if (!sc->dst[0].dip) {
-			log_errno(LOG_ERR, "No server address");
-            return 0;
-        }
-
-		list_for_each_entry_safe(instance, tmp, &instances, list) {
-           struct in_addr addr;
-           if (inet_aton(sc->dst[0].dip, &addr) == 0) {
-               fprintf(stderr, "Invalid address\n");
-               exit(EXIT_FAILURE);
-           }
-
-            instance->config.relayaddr.sin_port = htons(atoi(sc->proxy_port));
-            instance->config.relayaddr.sin_addr = addr;
-			log_errno(LOG_ERR, "### sin_port = %s, sin_addr =%s", sc->proxy_port, sc->dst[0].dip);
-		    if (redsocks_init_instance(instance) != 0)
-	            redsocks_fini_instance(instance);
-		    	goto exit;
-		}
 
 exit:
 
@@ -350,20 +331,21 @@ enum st_reporter_type {
 	REPORTER_IPLIST,
 };
 
+/*
 int doauth(redsocks_instance *instance, CURL* handle, int type)
 {
     int res = -1;
     char const *post_str;
 
 	switch (type) {
-	case AUTH_LOGIN: {
+    case AUTH_LOGIN: {
        	json_object *jlogin = json_object_new_object();
 	    json_object *jarray = json_object_new_array();
         json_object *jID;
-        if (running_info.lastID[0] != NULL) {
+        if (running_info[0].lastID[0] != NULL) {
             int i = 0;
-            for (i = 0; running_info.lastID[i] != NULL; i++)
-                jID = json_object_new_string(running_info.lastID[i]);
+            for (i = 0; running_info[0].lastID[i] != NULL; i++)
+                jID = json_object_new_string(running_info[0].lastID[i]);
                 json_object_array_add(jarray, jID);
         } else {
                 json_object_array_add(jarray, json_object_new_string(""));
@@ -410,6 +392,7 @@ int doauth(redsocks_instance *instance, CURL* handle, int type)
 
 	return 0;
 }
+*/
 
 struct MemoryStruct {
       char *memory;
@@ -503,6 +486,7 @@ int doreporter(CURL *handle, int type) {
     return ret;
 }
 
+/*
 int mptcp_auth(redsocks_instance *ins, char* url) {
 	char buf[1024];
 	CURLcode return_code;
@@ -537,6 +521,216 @@ int mptcp_auth(redsocks_instance *ins, char* url) {
 		doreporter(easy_handle, 0);
 	else
 		printf("Unsupport operation!\n");
+
+	curl_easy_cleanup(easy_handle);
+	curl_global_cleanup();
+
+	return 0;
+}
+
+*/
+char *l_ifname[3] = {
+    "10.75.12.30",
+    "10.75.12.30",
+    "10.75.12.30",
+    /*
+    "eth0",
+    "eth1",
+    "eth2"
+    */
+};
+
+int doauth_test(redsocks_instance *instance, CURL* handle, int type, int index)
+{
+    int res = -1;
+    char const *post_str;
+
+	switch (type) {
+    case AUTH_LOGIN: {
+       	json_object *jlogin = json_object_new_object();
+	    json_object *jarray = json_object_new_array();
+        json_object *jID;
+        if (running_info[index].lastID[0] != NULL) {
+            int i = 0;
+            for (i = 0; running_info[index].lastID[i] != NULL; i++) {
+                jID = json_object_new_string(running_info[index].lastID[i]);
+                json_object_array_add(jarray, jID);
+            }
+        } else {
+                json_object_array_add(jarray, json_object_new_string(""));
+        }
+
+       	json_object_object_add(jlogin, "sn", json_object_new_string(instance->config.mptcp_auth_sn[i%SN_CNT]));
+       	json_object_object_add(jlogin, "key", json_object_new_string(instance->config.mptcp_auth_key[i%SN_CNT]));
+       	json_object_object_add(jlogin, "last_id", jarray);
+
+       	post_str = json_object_to_json_string(jlogin);
+		log_error(LOG_ERR, "login post_str=%s.", post_str);
+	}
+	break;
+
+	case AUTH_LOGOUT: {
+       		json_object *jlogout = json_object_new_object();
+   	    	json_object_object_add(jlogout, "uid", json_object_new_string(running_info[index].key.uid));
+   	    	post_str = json_object_to_json_string(jlogout);
+		    log_error(LOG_ERR, "logout post_str=%s.", post_str);
+    }
+	break;
+
+	case AUTH_HEARTBEAT: {
+	        json_object *heart = json_object_new_object();
+	        json_object_object_add(heart, "uid", json_object_new_string(running_info[index].key.uid));
+	        json_object_object_add(heart, "update_key", json_object_new_string("1"));
+    	    post_str = json_object_to_json_string(heart);
+		    log_error(LOG_ERR, "heartbeat post_str=%s.", post_str);
+	}
+	break;
+
+	default:
+	    printf ("unknown auth type : %d\n", type);
+	    return -1;
+	}
+
+
+	curl_easy_setopt(handle, CURLOPT_POSTFIELDS, post_str);
+	curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, &process_data);
+	curl_easy_setopt(handle, CURLOPT_WRITEDATA, instance);
+	curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+
+	curl_easy_perform(handle);
+
+	return 0;
+}
+*/
+
+int mptcp_auth_login(redsocks_instance *ins, int i)
+{
+	CURLcode return_code;
+	CURL *easy_handle;
+	const char *post_str;
+	char *post_encode;
+	char buf[128];
+
+	//SSL_library_init();
+
+    snprintf(buf, sizof(buf), "%s%s", ins->config.mptcp_url, "/v1/auth/login");
+	return_code = curl_global_init(CURL_GLOBAL_ALL);
+	if (CURLE_OK != return_code) {
+		log_error(LOG_ERR, "init libcurl failed.");
+		return -1;
+	}
+
+	easy_handle = curl_easy_init();
+	if (NULL == easy_handle) {
+		log_error(LOG_ERR, "get a easy handle failed.");
+		curl_global_cleanup();
+		return -1;
+	}
+
+	curl_easy_setopt(easy_handle, CURLOPT_URL, buf);
+	curl_easy_setopt(easy_handle, CURLOPT_INTERFACE, l_ifname[i]);
+    ins->if_index = i;
+
+	doauth_test(ins, easy_handle, AUTH_LOGIN, i);
+
+	curl_easy_cleanup(easy_handle);
+	curl_global_cleanup();
+
+	return 0;
+}
+
+int doauth_login_test(redsocks_instance *instance, CURL* handle, int type, int index, int sn_number)
+{
+    int res = -1;
+    char const *post_str;
+
+	switch (type) {
+    case AUTH_LOGIN: {
+       	json_object *jlogin = json_object_new_object();
+	    json_object *jarray = json_object_new_array();
+        json_object *jID;
+        if (running_info[index][sn_number].lastID[0] != NULL) {
+            int i = 0;
+            for (i = 0; running_info[index][sn_number].lastID[i] != NULL; i++) {
+                jID = json_object_new_string(running_info[index][sn_number].lastID[i]);
+                json_object_array_add(jarray, jID);
+            }
+        } else {
+                json_object_array_add(jarray, json_object_new_string(""));
+        }
+
+       	json_object_object_add(jlogin, "sn", json_object_new_string(instance->config.mptcp_auth_sn[sn_number]));
+       	json_object_object_add(jlogin, "key", json_object_new_string(instance->config.mptcp_auth_key[sn_number]));
+       	json_object_object_add(jlogin, "last_id", jarray);
+
+       	post_str = json_object_to_json_string(jlogin);
+		log_error(LOG_ERR, "login post_str=%s.", post_str);
+	}
+	break;
+
+	case AUTH_LOGOUT: {
+       		json_object *jlogout = json_object_new_object();
+   	    	json_object_object_add(jlogout, "uid", json_object_new_string(running_info[index][sn_number].key.uid));
+   	    	post_str = json_object_to_json_string(jlogout);
+		    log_error(LOG_ERR, "logout post_str=%s.", post_str);
+    }
+	break;
+
+	case AUTH_HEARTBEAT: {
+	        json_object *heart = json_object_new_object();
+	        json_object_object_add(heart, "uid", json_object_new_string(running_info[index][sn_number].key.uid));
+	        json_object_object_add(heart, "update_key", json_object_new_string("1"));
+    	    post_str = json_object_to_json_string(heart);
+		    log_error(LOG_ERR, "heartbeat post_str=%s.", post_str);
+	}
+	break;
+
+	default:
+	    printf ("unknown auth type : %d\n", type);
+	    return -1;
+	}
+
+
+	curl_easy_setopt(handle, CURLOPT_POSTFIELDS, post_str);
+	curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, &process_data);
+	curl_easy_setopt(handle, CURLOPT_WRITEDATA, instance);
+	curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+
+	curl_easy_perform(handle);
+
+	return 0;
+}
+
+int mptcp_login_test(redsocks_instance *ins, int if_index, int sn_number)
+{
+	CURLcode return_code;
+	CURL *easy_handle;
+	const char *post_str;
+	char *post_encode;
+	char buf[128];
+
+//	SSL_library_init();
+
+    snprintf(buf, sizof(buf), "%s%s", ins->config.mptcp_url, "/v1/auth/login");
+	return_code = curl_global_init(CURL_GLOBAL_ALL);
+	if (CURLE_OK != return_code) {
+		log_error(LOG_ERR, "init libcurl failed.");
+		return -1;
+	}
+
+	easy_handle = curl_easy_init();
+	if (NULL == easy_handle) {
+		log_error(LOG_ERR, "get a easy handle failed.");
+		curl_global_cleanup();
+		return -1;
+	}
+
+	curl_easy_setopt(easy_handle, CURLOPT_URL, buf);
+	curl_easy_setopt(easy_handle, CURLOPT_INTERFACE, l_ifname[if_index]);
+    ins->if_index = if_index;
+    ins->sn_number = sn_number;
+
+	doauth_login_test(ins, easy_handle, AUTH_LOGIN, if_index, sn_number);
 
 	curl_easy_cleanup(easy_handle);
 	curl_global_cleanup();
