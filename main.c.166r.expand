@@ -46,7 +46,7 @@ try_optimize_cfg iteration 2
      (nil))
 (note 6 4 9 2 NOTE_INSN_FUNCTION_BEG)
 (call_insn 9 6 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_loopbreak") [flags 0x41]  <function_decl 0x2b644b315900 event_loopbreak>) [0 event_loopbreak S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_loopbreak") [flags 0x41]  <function_decl 0x2af127e42900 event_loopbreak>) [0 event_loopbreak S1 A8])
             (const_int 0 [0]))) main.c:47 -1
      (nil)
     (nil))
@@ -66,7 +66,7 @@ try_optimize_cfg iteration 2
  -> 24)
 (note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 14 13 15 4 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2b644b38fb48 *.LC1>)) main.c:48 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2af127ebcb48 *.LC1>)) main.c:48 -1
      (nil))
 (insn 15 14 16 4 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) main.c:48 -1
@@ -75,18 +75,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) main.c:48 -1
      (nil))
 (insn 17 16 18 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5454") [flags 0x2]  <var_decl 0x2b644b362c78 __func__>)) main.c:48 -1
+        (symbol_ref:DI ("__func__.5454") [flags 0x2]  <var_decl 0x2af127e8fc78 __func__>)) main.c:48 -1
      (nil))
 (insn 18 17 19 4 (set (reg:SI 4 si)
         (const_int 48 [0x30])) main.c:48 -1
      (nil))
 (insn 19 18 20 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b644b38fbe0 *.LC2>)) main.c:48 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2af127ebcbe0 *.LC2>)) main.c:48 -1
      (nil))
 (insn 20 19 21 4 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:48 -1
      (nil))
-(call_insn 21 20 24 4 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b644b355200 _log_write>) [0 _log_write S1 A8])
+(call_insn 21 20 24 4 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2af127e82200 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) main.c:48 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -142,7 +142,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) main.c:54 -1
      (nil))
 (call_insn 8 7 9 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gettimeofday") [flags 0x41]  <function_decl 0x2b644b0da700 gettimeofday>) [0 gettimeofday S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gettimeofday") [flags 0x41]  <function_decl 0x2af127c07700 gettimeofday>) [0 gettimeofday S1 A8])
             (const_int 0 [0]))) main.c:54 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -180,7 +180,7 @@ try_optimize_cfg iteration 2
 (insn 15 14 16 2 (set (reg:SI 5 di)
         (reg:SI 64 [ D.5582 ])) main.c:56 -1
      (nil))
-(call_insn 16 15 0 2 (call (mem:QI (symbol_ref:DI ("srand") [flags 0x41]  <function_decl 0x2b644b13c200 srand>) [0 srand S1 A8])
+(call_insn 16 15 0 2 (call (mem:QI (symbol_ref:DI ("srand") [flags 0x41]  <function_decl 0x2af127c69200 srand>) [0 srand S1 A8])
         (const_int 0 [0])) main.c:56 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -380,7 +380,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 10 9 11 2 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:69 -1
      (nil))
-(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("red_srand") [flags 0x3]  <function_decl 0x2b644b373300 red_srand>) [0 red_srand S1 A8])
+(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("red_srand") [flags 0x3]  <function_decl 0x2af127ea0300 red_srand>) [0 red_srand S1 A8])
         (const_int 0 [0])) main.c:69 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -482,9 +482,9 @@ Forwarding edge 9->10 to 15 failed.
 (code_label 36 35 37 12 9 "" [1 uses])
 (note 37 36 38 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
 (insn 38 37 39 12 (set (reg/f:DI 61 [ optarg.0 ])
-        (mem/f/c:DI (symbol_ref:DI ("optarg") [flags 0x40]  <var_decl 0x2b644b1b1000 optarg>) [0 optarg+0 S8 A64])) main.c:76 -1
+        (mem/f/c:DI (symbol_ref:DI ("optarg") [flags 0x40]  <var_decl 0x2af127cde000 optarg>) [0 optarg+0 S8 A64])) main.c:76 -1
      (nil))
-(insn 39 38 40 12 (set (mem/f/c:DI (symbol_ref:DI ("confname") [flags 0x2]  <var_decl 0x2b644b362b48 confname>) [0 confname+0 S8 A64])
+(insn 39 38 40 12 (set (mem/f/c:DI (symbol_ref:DI ("confname") [flags 0x2]  <var_decl 0x2af127e8fb48 confname>) [0 confname+0 S8 A64])
         (reg/f:DI 61 [ optarg.0 ])) main.c:76 -1
      (nil))
 (jump_insn 40 39 41 12 (set (pc)
@@ -495,9 +495,9 @@ Forwarding edge 9->10 to 15 failed.
 (code_label 42 41 43 13 7 "" [1 uses])
 (note 43 42 44 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
 (insn 44 43 45 13 (set (reg/f:DI 62 [ optarg.1 ])
-        (mem/f/c:DI (symbol_ref:DI ("optarg") [flags 0x40]  <var_decl 0x2b644b1b1000 optarg>) [0 optarg+0 S8 A64])) main.c:79 -1
+        (mem/f/c:DI (symbol_ref:DI ("optarg") [flags 0x40]  <var_decl 0x2af127cde000 optarg>) [0 optarg+0 S8 A64])) main.c:79 -1
      (nil))
-(insn 45 44 46 13 (set (mem/f/c:DI (symbol_ref:DI ("pidfile") [flags 0x2]  <var_decl 0x2b644b362be0 pidfile>) [0 pidfile+0 S8 A64])
+(insn 45 44 46 13 (set (mem/f/c:DI (symbol_ref:DI ("pidfile") [flags 0x2]  <var_decl 0x2af127e8fbe0 pidfile>) [0 pidfile+0 S8 A64])
         (reg/f:DI 62 [ optarg.1 ])) main.c:79 -1
      (nil))
 (jump_insn 46 45 47 13 (set (pc)
@@ -508,13 +508,13 @@ Forwarding edge 9->10 to 15 failed.
 (code_label 48 47 49 14 11 "" [1 uses])
 (note 49 48 50 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
 (insn 50 49 51 14 (set (reg/f:DI 63 [ redsocks_version.2 ])
-        (mem/f/c:DI (symbol_ref:DI ("redsocks_version") [flags 0x40]  <var_decl 0x2b644b3627b8 redsocks_version>) [0 redsocks_version+0 S8 A64])) main.c:82 -1
+        (mem/f/c:DI (symbol_ref:DI ("redsocks_version") [flags 0x40]  <var_decl 0x2af127e8f7b8 redsocks_version>) [0 redsocks_version+0 S8 A64])) main.c:82 -1
      (nil))
 (insn 51 50 52 14 (set (reg:DI 5 di)
         (reg/f:DI 63 [ redsocks_version.2 ])) main.c:82 -1
      (nil))
 (call_insn 52 51 53 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x2b644b033e00 puts>) [0 __builtin_puts S1 A8])
+        (call (mem:QI (symbol_ref:DI ("puts") [flags 0x41]  <function_decl 0x2af127b60e00 puts>) [0 __builtin_puts S1 A8])
             (const_int 0 [0]))) main.c:82 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -540,13 +540,13 @@ Forwarding edge 9->10 to 15 failed.
         (reg/f:DI 64 [ D.5584 ])) main.c:85 -1
      (nil))
 (insn 61 60 62 15 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2b644b3a4a18 *.LC3>)) main.c:85 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2af127ed1a18 *.LC3>)) main.c:85 -1
      (nil))
 (insn 62 61 63 15 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:85 -1
      (nil))
 (call_insn 63 62 64 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x2b644b033800 printf>) [0 __builtin_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("printf") [flags 0x41]  <function_decl 0x2af127b60800 printf>) [0 __builtin_printf S1 A8])
             (const_int 0 [0]))) main.c:85 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -613,7 +613,7 @@ Forwarding edge 9->10 to 15 failed.
                 (const_int -324 [0xfffffffffffffebc])) [0 argc+0 S4 A32])) main.c:70 -1
      (nil))
 (insn 85 84 86 20 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2b644b3a4ab0 *.LC4>)) main.c:70 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2af127ed1ab0 *.LC4>)) main.c:70 -1
      (nil))
 (insn 86 85 87 20 (set (reg:DI 4 si)
         (reg:DI 96)) main.c:70 -1
@@ -622,7 +622,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:SI 97)) main.c:70 -1
      (nil))
 (call_insn 88 87 89 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("getopt") [flags 0x41]  <function_decl 0x2b644b1afa00 getopt>) [0 getopt S1 A8])
+        (call (mem:QI (symbol_ref:DI ("getopt") [flags 0x41]  <function_decl 0x2af127cdca00 getopt>) [0 getopt S1 A8])
             (const_int 0 [0]))) main.c:70 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -651,16 +651,16 @@ Forwarding edge 9->10 to 15 failed.
  -> 91)
 (note 94 93 95 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
 (insn 95 94 96 21 (set (reg/f:DI 65 [ confname.4 ])
-        (mem/f/c:DI (symbol_ref:DI ("confname") [flags 0x2]  <var_decl 0x2b644b362b48 confname>) [0 confname+0 S8 A64])) main.c:97 -1
+        (mem/f/c:DI (symbol_ref:DI ("confname") [flags 0x2]  <var_decl 0x2af127e8fb48 confname>) [0 confname+0 S8 A64])) main.c:97 -1
      (nil))
 (insn 96 95 97 21 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2b644b3a4b48 *.LC5>)) main.c:97 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2af127ed1b48 *.LC5>)) main.c:97 -1
      (nil))
 (insn 97 96 98 21 (set (reg:DI 5 di)
         (reg/f:DI 65 [ confname.4 ])) main.c:97 -1
      (nil))
 (call_insn 98 97 99 21 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x2b644b2dce00 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x2af127e09e00 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) main.c:97 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -687,9 +687,9 @@ Forwarding edge 9->10 to 15 failed.
  -> 109)
 (note 103 102 104 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
 (insn 104 103 105 22 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2b644b3a4be0 *.LC6>)) main.c:99 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2af127ed1be0 *.LC6>)) main.c:99 -1
      (nil))
-(call_insn 105 104 106 22 (call (mem:QI (symbol_ref:DI ("perror") [flags 0x41]  <function_decl 0x2b644b2fe800 perror>) [0 perror S1 A8])
+(call_insn 105 104 106 22 (call (mem:QI (symbol_ref:DI ("perror") [flags 0x41]  <function_decl 0x2af127e2b800 perror>) [0 perror S1 A8])
         (const_int 0 [0])) main.c:99 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -715,7 +715,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:DI 100)) main.c:103 -1
      (nil))
 (call_insn 114 113 115 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("parser_start") [flags 0x41]  <function_decl 0x2b644b355300 parser_start>) [0 parser_start S1 A8])
+        (call (mem:QI (symbol_ref:DI ("parser_start") [flags 0x41]  <function_decl 0x2af127e82300 parser_start>) [0 parser_start S1 A8])
             (const_int 0 [0]))) main.c:103 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -742,9 +742,9 @@ Forwarding edge 9->10 to 15 failed.
  -> 125)
 (note 119 118 120 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
 (insn 120 119 121 24 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2b644b3a4c78 *.LC7>)) main.c:105 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2af127ed1c78 *.LC7>)) main.c:105 -1
      (nil))
-(call_insn 121 120 122 24 (call (mem:QI (symbol_ref:DI ("perror") [flags 0x41]  <function_decl 0x2b644b2fe800 perror>) [0 perror S1 A8])
+(call_insn 121 120 122 24 (call (mem:QI (symbol_ref:DI ("perror") [flags 0x41]  <function_decl 0x2af127e2b800 perror>) [0 perror S1 A8])
         (const_int 0 [0])) main.c:105 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -761,7 +761,7 @@ Forwarding edge 9->10 to 15 failed.
 (note 126 125 127 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
 (insn 127 126 128 25 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -296 [0xfffffffffffffed8])) [0 ss+0 S8 A64])
-        (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2b644b362ab0 subsystems>)) main.c:109 -1
+        (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2af127e8fab0 subsystems>)) main.c:109 -1
      (nil))
 (jump_insn 128 127 129 25 (set (pc)
         (label_ref 147)) main.c:109 -1
@@ -814,7 +814,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 142 141 143 27 (set (reg:DI 5 di)
         (reg:DI 104)) main.c:111 -1
      (nil))
-(call_insn 143 142 144 27 (call (mem:QI (symbol_ref:DI ("parser_add_section") [flags 0x41]  <function_decl 0x2b644b355400 parser_add_section>) [0 parser_add_section S1 A8])
+(call_insn 143 142 144 27 (call (mem:QI (symbol_ref:DI ("parser_add_section") [flags 0x41]  <function_decl 0x2af127e82400 parser_add_section>) [0 parser_add_section S1 A8])
         (const_int 0 [0])) main.c:111 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -836,7 +836,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 150 148 151 29 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -296 [0xfffffffffffffed8])) [0 ss+0 S8 A64])
-            (const:DI (plus:DI (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2b644b362ab0 subsystems>)
+            (const:DI (plus:DI (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2af127e8fab0 subsystems>)
                     (const_int 32 [0x20]))))) main.c:109 -1
      (nil))
 (jump_insn 151 150 152 29 (set (pc)
@@ -855,7 +855,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:DI 105)) main.c:112 -1
      (nil))
 (call_insn 155 154 156 30 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("parser_run") [flags 0x41]  <function_decl 0x2b644b355500 parser_run>) [0 parser_run S1 A8])
+        (call (mem:QI (symbol_ref:DI ("parser_run") [flags 0x41]  <function_decl 0x2af127e82500 parser_run>) [0 parser_run S1 A8])
             (const_int 0 [0]))) main.c:112 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -874,7 +874,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 159 158 160 30 (set (reg:DI 5 di)
         (reg:DI 107)) main.c:113 -1
      (nil))
-(call_insn 160 159 161 30 (call (mem:QI (symbol_ref:DI ("parser_stop") [flags 0x41]  <function_decl 0x2b644b355700 parser_stop>) [0 parser_stop S1 A8])
+(call_insn 160 159 161 30 (call (mem:QI (symbol_ref:DI ("parser_stop") [flags 0x41]  <function_decl 0x2af127e82700 parser_stop>) [0 parser_stop S1 A8])
         (const_int 0 [0])) main.c:113 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -887,7 +887,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:DI 108)) main.c:114 -1
      (nil))
 (call_insn 163 162 164 30 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x2b644b2dcb00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x2af127e09b00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) main.c:114 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -939,7 +939,7 @@ Forwarding edge 9->10 to 15 failed.
 (code_label 178 177 179 34 22 "" [1 uses])
 (note 179 178 180 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
 (call_insn 180 179 181 34 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_init") [flags 0x41]  <function_decl 0x2b644b315500 event_init>) [0 event_init S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_init") [flags 0x41]  <function_decl 0x2af127e42500 event_init>) [0 event_init S1 A8])
             (const_int 0 [0]))) main.c:122 -1
      (nil)
     (nil))
@@ -960,7 +960,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:DI 109)) main.c:123 -1
      (nil))
 (call_insn 185 184 186 34 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2b644b02a400 memset>) [0 __builtin_memset S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2af127b57400 memset>) [0 __builtin_memset S1 A8])
             (const_int 0 [0]))) main.c:123 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -972,7 +972,7 @@ Forwarding edge 9->10 to 15 failed.
                     (nil))))))
 (insn 186 185 187 34 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -296 [0xfffffffffffffed8])) [0 ss+0 S8 A64])
-        (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2b644b362ab0 subsystems>)) main.c:125 -1
+        (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2af127e8fab0 subsystems>)) main.c:125 -1
      (nil))
 (jump_insn 187 186 188 34 (set (pc)
         (label_ref 211)) main.c:125 -1
@@ -1063,7 +1063,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 214 212 215 39 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -296 [0xfffffffffffffed8])) [0 ss+0 S8 A64])
-            (const:DI (plus:DI (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2b644b362ab0 subsystems>)
+            (const:DI (plus:DI (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2af127e8fab0 subsystems>)
                     (const_int 32 [0x20]))))) main.c:125 -1
      (nil))
 (jump_insn 215 214 216 39 (set (pc)
@@ -1075,7 +1075,7 @@ Forwarding edge 9->10 to 15 failed.
  -> 213)
 (note 216 215 217 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
 (insn 217 216 218 40 (set (reg/f:DI 74 [ pidfile.5 ])
-        (mem/f/c:DI (symbol_ref:DI ("pidfile") [flags 0x2]  <var_decl 0x2b644b362be0 pidfile>) [0 pidfile+0 S8 A64])) main.c:133 -1
+        (mem/f/c:DI (symbol_ref:DI ("pidfile") [flags 0x2]  <var_decl 0x2af127e8fbe0 pidfile>) [0 pidfile+0 S8 A64])) main.c:133 -1
      (nil))
 (insn 218 217 219 40 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:DI 74 [ pidfile.5 ])
@@ -1090,16 +1090,16 @@ Forwarding edge 9->10 to 15 failed.
  -> 248)
 (note 220 219 221 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
 (insn 221 220 222 41 (set (reg/f:DI 75 [ pidfile.6 ])
-        (mem/f/c:DI (symbol_ref:DI ("pidfile") [flags 0x2]  <var_decl 0x2b644b362be0 pidfile>) [0 pidfile+0 S8 A64])) main.c:134 -1
+        (mem/f/c:DI (symbol_ref:DI ("pidfile") [flags 0x2]  <var_decl 0x2af127e8fbe0 pidfile>) [0 pidfile+0 S8 A64])) main.c:134 -1
      (nil))
 (insn 222 221 223 41 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2b644b3a4d10 *.LC8>)) main.c:134 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2af127ed1d10 *.LC8>)) main.c:134 -1
      (nil))
 (insn 223 222 224 41 (set (reg:DI 5 di)
         (reg/f:DI 75 [ pidfile.6 ])) main.c:134 -1
      (nil))
 (call_insn 224 223 225 41 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x2b644b2dce00 fopen>) [0 fopen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fopen") [flags 0x41]  <function_decl 0x2af127e09e00 fopen>) [0 fopen S1 A8])
             (const_int 0 [0]))) main.c:134 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1126,9 +1126,9 @@ Forwarding edge 9->10 to 15 failed.
  -> 235)
 (note 229 228 230 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
 (insn 230 229 231 42 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b644b3a4da8 *.LC9>)) main.c:136 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af127ed1da8 *.LC9>)) main.c:136 -1
      (nil))
-(call_insn 231 230 232 42 (call (mem:QI (symbol_ref:DI ("perror") [flags 0x41]  <function_decl 0x2b644b2fe800 perror>) [0 perror S1 A8])
+(call_insn 231 230 232 42 (call (mem:QI (symbol_ref:DI ("perror") [flags 0x41]  <function_decl 0x2af127e2b800 perror>) [0 perror S1 A8])
         (const_int 0 [0])) main.c:136 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1144,7 +1144,7 @@ Forwarding edge 9->10 to 15 failed.
 (code_label 235 234 236 43 28 "" [1 uses])
 (note 236 235 237 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
 (call_insn 237 236 238 43 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("getpid") [flags 0x41]  <function_decl 0x2b644b1a4200 getpid>) [0 getpid S1 A8])
+        (call (mem:QI (symbol_ref:DI ("getpid") [flags 0x41]  <function_decl 0x2af127cd1200 getpid>) [0 getpid S1 A8])
             (const_int 0 [0]))) main.c:139 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1160,7 +1160,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:SI 76 [ D.5583 ])) main.c:139 -1
      (nil))
 (insn 241 240 242 43 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b644b3a4e40 *.LC10>)) main.c:139 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2af127ed1e40 *.LC10>)) main.c:139 -1
      (nil))
 (insn 242 241 243 43 (set (reg:DI 5 di)
         (reg:DI 114)) main.c:139 -1
@@ -1169,7 +1169,7 @@ Forwarding edge 9->10 to 15 failed.
         (const_int 0 [0])) main.c:139 -1
      (nil))
 (call_insn 244 243 245 43 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x2b644b030700 fprintf>) [0 __builtin_fprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x2af127b5d700 fprintf>) [0 __builtin_fprintf S1 A8])
             (const_int 0 [0]))) main.c:139 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1185,7 +1185,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg:DI 115)) main.c:140 -1
      (nil))
 (call_insn 247 246 248 43 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x2b644b2dcb00 fclose>) [0 fclose S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fclose") [flags 0x41]  <function_decl 0x2af127e09b00 fclose>) [0 fclose S1 A8])
             (const_int 0 [0]))) main.c:140 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1272,7 +1272,7 @@ Forwarding edge 9->10 to 15 failed.
         (const_int 0 [0])) main.c:145 -1
      (nil))
 (insn 267 266 268 45 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("terminate") [flags 0x3]  <function_decl 0x2b644b373200 terminate>)) main.c:145 -1
+        (symbol_ref:DI ("terminate") [flags 0x3]  <function_decl 0x2af127ea0200 terminate>)) main.c:145 -1
      (nil))
 (insn 268 267 269 45 (set (reg:SI 1 dx)
         (const_int 24 [0x18])) main.c:145 -1
@@ -1283,7 +1283,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 270 269 271 45 (set (reg:DI 5 di)
         (reg/f:DI 79 [ D.5588 ])) main.c:145 -1
      (nil))
-(call_insn 271 270 272 45 (call (mem:QI (symbol_ref:DI ("event_set") [flags 0x41]  <function_decl 0x2b644b315d00 event_set>) [0 event_set S1 A8])
+(call_insn 271 270 272 45 (call (mem:QI (symbol_ref:DI ("event_set") [flags 0x41]  <function_decl 0x2af127e42d00 event_set>) [0 event_set S1 A8])
         (const_int 0 [0])) main.c:145 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1351,7 +1351,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg/f:DI 80 [ D.5588 ])) main.c:146 -1
      (nil))
 (call_insn 283 282 284 45 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x2b644b312000 event_add>) [0 event_add S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x2af127e3f000 event_add>) [0 event_add S1 A8])
             (const_int 0 [0]))) main.c:146 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1373,7 +1373,7 @@ Forwarding edge 9->10 to 15 failed.
  -> 298)
 (note 287 286 288 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
 (insn 288 287 289 46 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b644b3a4ed8 *.LC11>)) main.c:147 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2af127ed1ed8 *.LC11>)) main.c:147 -1
      (nil))
 (insn 289 288 290 46 (set (reg:SI 37 r8)
         (const_int 3 [0x3])) main.c:147 -1
@@ -1382,18 +1382,18 @@ Forwarding edge 9->10 to 15 failed.
         (const_int 1 [0x1])) main.c:147 -1
      (nil))
 (insn 291 290 292 46 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2b644b378720 __func__>)) main.c:147 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2af127ea5720 __func__>)) main.c:147 -1
      (nil))
 (insn 292 291 293 46 (set (reg:SI 4 si)
         (const_int 147 [0x93])) main.c:147 -1
      (nil))
 (insn 293 292 294 46 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b644b38fbe0 *.LC2>)) main.c:147 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2af127ebcbe0 *.LC2>)) main.c:147 -1
      (nil))
 (insn 294 293 295 46 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:147 -1
      (nil))
-(call_insn 295 294 296 46 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b644b355200 _log_write>) [0 _log_write S1 A8])
+(call_insn 295 294 296 46 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2af127e82200 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) main.c:147 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1439,7 +1439,7 @@ Forwarding edge 9->10 to 15 failed.
  -> 304)
 (note 307 306 308 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
 (insn 308 307 309 49 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b644b3b4000 *.LC12>)) main.c:152 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2af127ee1000 *.LC12>)) main.c:152 -1
      (nil))
 (insn 309 308 310 49 (set (reg:SI 37 r8)
         (const_int 5 [0x5])) main.c:152 -1
@@ -1448,18 +1448,18 @@ Forwarding edge 9->10 to 15 failed.
         (const_int 0 [0])) main.c:152 -1
      (nil))
 (insn 311 310 312 49 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2b644b378720 __func__>)) main.c:152 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2af127ea5720 __func__>)) main.c:152 -1
      (nil))
 (insn 312 311 313 49 (set (reg:SI 4 si)
         (const_int 152 [0x98])) main.c:152 -1
      (nil))
 (insn 313 312 314 49 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b644b38fbe0 *.LC2>)) main.c:152 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2af127ebcbe0 *.LC2>)) main.c:152 -1
      (nil))
 (insn 314 313 315 49 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:152 -1
      (nil))
-(call_insn 315 314 316 49 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b644b355200 _log_write>) [0 _log_write S1 A8])
+(call_insn 315 314 316 49 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2af127e82200 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) main.c:152 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1471,12 +1471,12 @@ Forwarding edge 9->10 to 15 failed.
                             (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 38 r9))
                                 (nil)))))))))
 (call_insn 316 315 317 49 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_dispatch") [flags 0x41]  <function_decl 0x2b644b315600 event_dispatch>) [0 event_dispatch S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_dispatch") [flags 0x41]  <function_decl 0x2af127e42600 event_dispatch>) [0 event_dispatch S1 A8])
             (const_int 0 [0]))) main.c:154 -1
      (nil)
     (nil))
 (insn 317 316 318 49 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2b644b3b4098 *.LC13>)) main.c:156 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2af127ee1098 *.LC13>)) main.c:156 -1
      (nil))
 (insn 318 317 319 49 (set (reg:SI 37 r8)
         (const_int 5 [0x5])) main.c:156 -1
@@ -1485,18 +1485,18 @@ Forwarding edge 9->10 to 15 failed.
         (const_int 0 [0])) main.c:156 -1
      (nil))
 (insn 320 319 321 49 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2b644b378720 __func__>)) main.c:156 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2af127ea5720 __func__>)) main.c:156 -1
      (nil))
 (insn 321 320 322 49 (set (reg:SI 4 si)
         (const_int 156 [0x9c])) main.c:156 -1
      (nil))
 (insn 322 321 323 49 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b644b38fbe0 *.LC2>)) main.c:156 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2af127ebcbe0 *.LC2>)) main.c:156 -1
      (nil))
 (insn 323 322 324 49 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:156 -1
      (nil))
-(call_insn 324 323 325 49 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b644b355200 _log_write>) [0 _log_write S1 A8])
+(call_insn 324 323 325 49 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2af127e82200 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) main.c:156 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1576,7 +1576,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg/f:DI 83 [ D.5588 ])) main.c:160 -1
      (nil))
 (call_insn 341 340 342 51 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_initialized") [flags 0x41]  <function_decl 0x2b644b312400 event_initialized>) [0 event_initialized S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_initialized") [flags 0x41]  <function_decl 0x2af127e3f400 event_initialized>) [0 event_initialized S1 A8])
             (const_int 0 [0]))) main.c:160 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1652,7 +1652,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg/f:DI 85 [ D.5588 ])) main.c:161 -1
      (nil))
 (call_insn 356 355 357 52 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x2b644b312100 event_del>) [0 event_del S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x2af127e3f100 event_del>) [0 event_del S1 A8])
             (const_int 0 [0]))) main.c:161 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1673,7 +1673,7 @@ Forwarding edge 9->10 to 15 failed.
  -> 369)
 (note 360 359 361 53 [bb 53] NOTE_INSN_BASIC_BLOCK)
 (insn 361 360 362 53 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2b644b3b4130 *.LC14>)) main.c:162 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2af127ee1130 *.LC14>)) main.c:162 -1
      (nil))
 (insn 362 361 363 53 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) main.c:162 -1
@@ -1682,18 +1682,18 @@ Forwarding edge 9->10 to 15 failed.
         (const_int 1 [0x1])) main.c:162 -1
      (nil))
 (insn 364 363 365 53 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2b644b378720 __func__>)) main.c:162 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2af127ea5720 __func__>)) main.c:162 -1
      (nil))
 (insn 365 364 366 53 (set (reg:SI 4 si)
         (const_int 162 [0xa2])) main.c:162 -1
      (nil))
 (insn 366 365 367 53 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b644b38fbe0 *.LC2>)) main.c:162 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2af127ebcbe0 *.LC2>)) main.c:162 -1
      (nil))
 (insn 367 366 368 53 (set (reg:QI 0 ax)
         (const_int 0 [0])) main.c:162 -1
      (nil))
-(call_insn 368 367 369 53 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b644b355200 _log_write>) [0 _log_write S1 A8])
+(call_insn 368 367 369 53 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2af127e82200 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) main.c:162 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1768,7 +1768,7 @@ Forwarding edge 9->10 to 15 failed.
         (reg/f:DI 87 [ D.5588 ])) main.c:163 -1
      (nil))
 (call_insn 383 382 384 54 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2b644b02a400 memset>) [0 __builtin_memset S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2af127b57400 memset>) [0 __builtin_memset S1 A8])
             (const_int 0 [0]))) main.c:163 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1882,7 +1882,7 @@ Forwarding edge 9->10 to 15 failed.
 (insn 415 413 416 61 (set (reg:CC 17 flags)
         (compare:CC (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -296 [0xfffffffffffffed8])) [0 ss+0 S8 A64])
-            (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2b644b362ab0 subsystems>))) main.c:167 -1
+            (symbol_ref:DI ("subsystems") [flags 0x2]  <var_decl 0x2af127e8fab0 subsystems>))) main.c:167 -1
      (nil))
 (jump_insn 416 415 417 61 (set (pc)
         (if_then_else (geu (reg:CC 17 flags)

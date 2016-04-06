@@ -176,7 +176,7 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 head+0 S8 A64])) list.h:69 -1
      (nil))
-(insn 8 7 9 2 (set (reg/f:DI 59 [ D.5536 ])
+(insn 8 7 9 2 (set (reg/f:DI 59 [ D.5538 ])
         (mem/f/j:DI (reg/f:DI 60) [0 head_1(D)->next+0 S8 A64])) list.h:69 -1
      (nil))
 (insn 9 8 10 2 (set (reg:DI 61)
@@ -188,7 +188,7 @@ try_optimize_cfg iteration 2
                 (const_int -8 [0xfffffffffffffff8])) [0 new+0 S8 A64])) list.h:69 -1
      (nil))
 (insn 11 10 12 2 (set (reg:DI 1 dx)
-        (reg/f:DI 59 [ D.5536 ])) list.h:69 -1
+        (reg/f:DI 59 [ D.5538 ])) list.h:69 -1
      (nil))
 (insn 12 11 13 2 (set (reg:DI 4 si)
         (reg:DI 61)) list.h:69 -1
@@ -196,7 +196,7 @@ try_optimize_cfg iteration 2
 (insn 13 12 14 2 (set (reg:DI 5 di)
         (reg:DI 62)) list.h:69 -1
      (nil))
-(call_insn 14 13 0 2 (call (mem:QI (symbol_ref:DI ("__list_add") [flags 0x3]  <function_decl 0x2ba4330de600 __list_add>) [0 __list_add S1 A8])
+(call_insn 14 13 0 2 (call (mem:QI (symbol_ref:DI ("__list_add") [flags 0x3]  <function_decl 0x2ad610fdf600 __list_add>) [0 __list_add S1 A8])
         (const_int 0 [0])) list.h:69 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -296,24 +296,24 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 entry+0 S8 A64])) list.h:106 -1
      (nil))
-(insn 7 6 8 2 (set (reg/f:DI 59 [ D.5537 ])
+(insn 7 6 8 2 (set (reg/f:DI 59 [ D.5539 ])
         (mem/f/j:DI (reg/f:DI 61) [0 entry_1(D)->next+0 S8 A64])) list.h:106 -1
      (nil))
 (insn 8 7 9 2 (set (reg/f:DI 62)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 entry+0 S8 A64])) list.h:106 -1
      (nil))
-(insn 9 8 10 2 (set (reg/f:DI 60 [ D.5537 ])
+(insn 9 8 10 2 (set (reg/f:DI 60 [ D.5539 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 62)
                 (const_int 8 [0x8])) [0 entry_1(D)->prev+0 S8 A64])) list.h:106 -1
      (nil))
 (insn 10 9 11 2 (set (reg:DI 4 si)
-        (reg/f:DI 59 [ D.5537 ])) list.h:106 -1
+        (reg/f:DI 59 [ D.5539 ])) list.h:106 -1
      (nil))
 (insn 11 10 12 2 (set (reg:DI 5 di)
-        (reg/f:DI 60 [ D.5537 ])) list.h:106 -1
+        (reg/f:DI 60 [ D.5539 ])) list.h:106 -1
      (nil))
-(call_insn 12 11 13 2 (call (mem:QI (symbol_ref:DI ("__list_del") [flags 0x3]  <function_decl 0x2ba4330de900 __list_del>) [0 __list_del S1 A8])
+(call_insn 12 11 13 2 (call (mem:QI (symbol_ref:DI ("__list_del") [flags 0x3]  <function_decl 0x2ad610fdf900 __list_del>) [0 __list_del S1 A8])
         (const_int 0 [0])) list.h:106 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -335,7 +335,7 @@ try_optimize_cfg iteration 2
         (const_int 2097664 [0x200200])) list.h:108 -1
      (nil))
 
-;; Function dnstc_pkt_from_client (dnstc_pkt_from_client, funcdef_no=19, decl_uid=5345, cgraph_uid=19)
+;; Function dnstc_pkt_from_client (dnstc_pkt_from_client, funcdef_no=19, decl_uid=5347, cgraph_uid=19)
 
 Partition 4: size 65535 align 16
 	buf
@@ -433,7 +433,7 @@ Forwarding edge 19->20 to 23 failed.
 (note 6 4 7 2 NOTE_INSN_FUNCTION_BEG)
 (insn 7 6 10 2 (parallel [
             (set (mem/v/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                        (const_int -8 [0xfffffffffffffff8])) [0 D.5544+0 S8 A64])
+                        (const_int -8 [0xfffffffffffffff8])) [0 D.5546+0 S8 A64])
                 (unspec:DI [
                         (const_int 40 [0x28])
                     ] UNSPEC_SP_TLS_SET))
@@ -455,7 +455,7 @@ Forwarding edge 19->20 to 23 failed.
                 (const_int -65592 [0xfffffffffffeffc8])) [0 self+0 S8 A64])) dnstc.c:70 -1
      (nil))
 (insn 13 12 14 2 (parallel [
-            (set (reg/f:DI 59 [ D.5538 ])
+            (set (reg/f:DI 59 [ D.5540 ])
                 (plus:DI (reg/f:DI 83)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -465,19 +465,19 @@ Forwarding edge 19->20 to 23 failed.
             (const_int 32 [0x20]))
         (nil)))
 (insn 14 13 15 2 (set (reg:DI 5 di)
-        (reg/f:DI 59 [ D.5538 ])) dnstc.c:70 -1
+        (reg/f:DI 59 [ D.5540 ])) dnstc.c:70 -1
      (nil))
 (call_insn 15 14 16 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2ba433098700 event_get_fd>) [0 event_get_fd S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2ad610f99700 event_get_fd>) [0 event_get_fd S1 A8])
             (const_int 0 [0]))) dnstc.c:70 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 16 15 17 2 (set (reg:SI 60 [ D.5539 ])
+(insn 16 15 17 2 (set (reg:SI 60 [ D.5541 ])
         (reg:SI 0 ax)) dnstc.c:70 -1
      (nil))
 (insn 17 16 18 2 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 60 [ D.5539 ])
+        (compare:CCZ (reg:SI 60 [ D.5541 ])
             (mem/c:SI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -65604 [0xfffffffffffeffbc])) [0 fd+0 S4 A32]))) dnstc.c:70 -1
      (nil))
@@ -490,18 +490,18 @@ Forwarding edge 19->20 to 23 failed.
  -> 26)
 (note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 20 19 21 4 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.5355") [flags 0x2]  <var_decl 0x2ba433110d10 __PRETTY_FUNCTION__>)) dnstc.c:70 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.5357") [flags 0x2]  <var_decl 0x2ad611012e40 __PRETTY_FUNCTION__>)) dnstc.c:70 -1
      (nil))
 (insn 21 20 22 4 (set (reg:SI 1 dx)
         (const_int 70 [0x46])) dnstc.c:70 -1
      (nil))
 (insn 22 21 23 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:70 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:70 -1
      (nil))
 (insn 23 22 24 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2ba433175720 *.LC1>)) dnstc.c:70 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2ad611076850 *.LC1>)) dnstc.c:70 -1
      (nil))
-(call_insn 24 23 25 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ba432fe8500 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 24 23 25 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ad610ee9500 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) dnstc.c:70 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -548,7 +548,7 @@ Forwarding edge 19->20 to 23 failed.
         (reg:SI 86)) dnstc.c:71 -1
      (nil))
 (call_insn 36 35 37 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("red_recv_udp_pkt") [flags 0x41]  <function_decl 0x2ba4330de000 red_recv_udp_pkt>) [0 red_recv_udp_pkt S1 A8])
+        (call (mem:QI (symbol_ref:DI ("red_recv_udp_pkt") [flags 0x41]  <function_decl 0x2ad610fdf000 red_recv_udp_pkt>) [0 red_recv_udp_pkt S1 A8])
             (const_int 0 [0]))) dnstc.c:71 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -557,11 +557,11 @@ Forwarding edge 19->20 to 23 failed.
                 (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 2 cx))
                     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 37 r8))
                         (nil)))))))
-(insn 37 36 38 5 (set (reg:SI 61 [ D.5539 ])
+(insn 37 36 38 5 (set (reg:SI 61 [ D.5541 ])
         (reg:SI 0 ax)) dnstc.c:71 -1
      (nil))
 (insn 38 37 39 5 (set (reg:DI 87)
-        (sign_extend:DI (reg:SI 61 [ D.5539 ]))) dnstc.c:71 -1
+        (sign_extend:DI (reg:SI 61 [ D.5541 ]))) dnstc.c:71 -1
      (nil))
 (insn 39 38 40 5 (set (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65584 [0xfffffffffffeffd0])) [0 pktlen+0 S8 A64])
@@ -608,7 +608,7 @@ Forwarding edge 19->20 to 23 failed.
                 (const_int -65592 [0xfffffffffffeffc8])) [0 self+0 S8 A64])) dnstc.c:76 -1
      (nil))
 (insn 52 51 53 8 (parallel [
-            (set (reg/f:DI 63 [ D.5540 ])
+            (set (reg/f:DI 63 [ D.5542 ])
                 (plus:DI (reg/f:DI 88)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
@@ -626,13 +626,13 @@ Forwarding edge 19->20 to 23 failed.
      (nil))
 (insn 54 53 55 8 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ba4331757b8 *.LC2>)) dnstc.c:76 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ad6110768e8 *.LC2>)) dnstc.c:76 -1
      (nil))
 (insn 55 54 56 8 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 6 [0x6])) dnstc.c:76 -1
      (nil))
 (insn 56 55 57 8 (set (reg:DI 38 r9)
-        (reg/f:DI 63 [ D.5540 ])) dnstc.c:76 -1
+        (reg/f:DI 63 [ D.5542 ])) dnstc.c:76 -1
      (nil))
 (insn 57 56 58 8 (set (reg:DI 37 r8)
         (reg:DI 89)) dnstc.c:76 -1
@@ -641,18 +641,18 @@ Forwarding edge 19->20 to 23 failed.
         (const_int 0 [0])) dnstc.c:76 -1
      (nil))
 (insn 59 58 60 8 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5356") [flags 0x2]  <var_decl 0x2ba433110da8 __func__>)) dnstc.c:76 -1
+        (symbol_ref:DI ("__func__.5358") [flags 0x2]  <var_decl 0x2ad611012ed8 __func__>)) dnstc.c:76 -1
      (nil))
 (insn 60 59 61 8 (set (reg:SI 4 si)
         (const_int 76 [0x4c])) dnstc.c:76 -1
      (nil))
 (insn 61 60 62 8 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:76 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:76 -1
      (nil))
 (insn 62 61 63 8 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:76 -1
      (nil))
-(call_insn 63 62 64 8 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ba433117300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 63 62 64 8 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ad611018300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) dnstc.c:76 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -673,15 +673,15 @@ Forwarding edge 19->20 to 23 failed.
 (barrier 65 64 66)
 (code_label 66 65 67 9 10 "" [1 uses])
 (note 67 66 68 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
-(insn 68 67 69 9 (set (reg:QI 64 [ D.5541 ])
+(insn 68 67 69 9 (set (reg:QI 64 [ D.5543 ])
         (mem/j/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65550 [0xfffffffffffefff2])) [0 buf.h.qr_opcode_aa_tc_rd+0 S1 A16])) dnstc.c:81 -1
      (nil))
-(insn 69 68 70 9 (set (reg:QI 65 [ D.5542 ])
-        (reg:QI 64 [ D.5541 ])) dnstc.c:81 -1
+(insn 69 68 70 9 (set (reg:QI 65 [ D.5544 ])
+        (reg:QI 64 [ D.5543 ])) dnstc.c:81 -1
      (nil))
 (insn 70 69 71 9 (set (reg:CCGOC 17 flags)
-        (compare:CCGOC (reg:QI 65 [ D.5542 ])
+        (compare:CCGOC (reg:QI 65 [ D.5544 ])
             (const_int 0 [0]))) dnstc.c:80 -1
      (nil))
 (jump_insn 71 70 72 9 (set (pc)
@@ -692,22 +692,22 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 156)
 (note 72 71 73 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
-(insn 73 72 74 10 (set (reg:QI 66 [ D.5541 ])
+(insn 73 72 74 10 (set (reg:QI 66 [ D.5543 ])
         (mem/j/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65549 [0xfffffffffffefff3])) [0 buf.h.ra_z_rcode+0 S1 A8])) dnstc.c:82 -1
      (nil))
-(insn 74 73 75 10 (set (reg:SI 67 [ D.5539 ])
-        (zero_extend:SI (reg:QI 66 [ D.5541 ]))) dnstc.c:82 -1
+(insn 74 73 75 10 (set (reg:SI 67 [ D.5541 ])
+        (zero_extend:SI (reg:QI 66 [ D.5543 ]))) dnstc.c:82 -1
      (nil))
 (insn 75 74 76 10 (parallel [
-            (set (reg:SI 68 [ D.5539 ])
-                (and:SI (reg:SI 67 [ D.5539 ])
+            (set (reg:SI 68 [ D.5541 ])
+                (and:SI (reg:SI 67 [ D.5541 ])
                     (const_int 112 [0x70])))
             (clobber (reg:CC 17 flags))
         ]) dnstc.c:82 -1
      (nil))
 (insn 76 75 77 10 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 68 [ D.5539 ])
+        (compare:CCZ (reg:SI 68 [ D.5541 ])
             (const_int 0 [0]))) dnstc.c:82 -1
      (nil))
 (jump_insn 77 76 78 10 (set (pc)
@@ -718,12 +718,12 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 156)
 (note 78 77 79 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
-(insn 79 78 80 11 (set (reg:HI 69 [ D.5543 ])
+(insn 79 78 80 11 (set (reg:HI 69 [ D.5545 ])
         (mem/j/c:HI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65548 [0xfffffffffffefff4])) [0 buf.h.qdcount+0 S2 A32])) dnstc.c:83 -1
      (nil))
 (insn 80 79 81 11 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:HI 69 [ D.5543 ])
+        (compare:CCZ (reg:HI 69 [ D.5545 ])
             (const_int 0 [0]))) dnstc.c:83 -1
      (nil))
 (jump_insn 81 80 82 11 (set (pc)
@@ -734,12 +734,12 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 156)
 (note 82 81 83 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
-(insn 83 82 84 12 (set (reg:HI 70 [ D.5543 ])
+(insn 83 82 84 12 (set (reg:HI 70 [ D.5545 ])
         (mem/j/c:HI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65546 [0xfffffffffffefff6])) [0 buf.h.ancount+0 S2 A16])) dnstc.c:84 -1
      (nil))
 (insn 84 83 85 12 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:HI 70 [ D.5543 ])
+        (compare:CCZ (reg:HI 70 [ D.5545 ])
             (const_int 0 [0]))) dnstc.c:84 -1
      (nil))
 (jump_insn 85 84 86 12 (set (pc)
@@ -750,12 +750,12 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 156)
 (note 86 85 87 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
-(insn 87 86 88 13 (set (reg:HI 71 [ D.5543 ])
+(insn 87 86 88 13 (set (reg:HI 71 [ D.5545 ])
         (mem/j/c:HI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65544 [0xfffffffffffefff8])) [0 buf.h.nscount+0 S2 A64])) dnstc.c:84 -1
      (nil))
 (insn 88 87 89 13 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:HI 71 [ D.5543 ])
+        (compare:CCZ (reg:HI 71 [ D.5545 ])
             (const_int 0 [0]))) dnstc.c:84 -1
      (nil))
 (jump_insn 89 88 90 13 (set (pc)
@@ -766,12 +766,12 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 156)
 (note 90 89 91 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
-(insn 91 90 92 14 (set (reg:HI 72 [ D.5543 ])
+(insn 91 90 92 14 (set (reg:HI 72 [ D.5545 ])
         (mem/j/c:HI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65542 [0xfffffffffffefffa])) [0 buf.h.arcount+0 S2 A16])) dnstc.c:84 -1
      (nil))
 (insn 92 91 93 14 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:HI 72 [ D.5543 ])
+        (compare:CCZ (reg:HI 72 [ D.5545 ])
             (const_int 0 [0]))) dnstc.c:84 -1
      (nil))
 (jump_insn 93 92 94 14 (set (pc)
@@ -782,35 +782,35 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 156)
 (note 94 93 95 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
-(insn 95 94 96 15 (set (reg:QI 73 [ D.5541 ])
+(insn 95 94 96 15 (set (reg:QI 73 [ D.5543 ])
         (mem/j/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65550 [0xfffffffffffefff2])) [0 buf.h.qr_opcode_aa_tc_rd+0 S1 A16])) dnstc.c:86 -1
      (nil))
 (insn 96 95 97 15 (parallel [
-            (set (reg:QI 74 [ D.5541 ])
-                (ior:QI (reg:QI 73 [ D.5541 ])
+            (set (reg:QI 74 [ D.5543 ])
+                (ior:QI (reg:QI 73 [ D.5543 ])
                     (const_int -128 [0xffffffffffffff80])))
             (clobber (reg:CC 17 flags))
         ]) dnstc.c:86 -1
      (nil))
 (insn 97 96 98 15 (set (mem/j/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65550 [0xfffffffffffefff2])) [0 buf.h.qr_opcode_aa_tc_rd+0 S1 A16])
-        (reg:QI 74 [ D.5541 ])) dnstc.c:86 -1
+        (reg:QI 74 [ D.5543 ])) dnstc.c:86 -1
      (nil))
-(insn 98 97 99 15 (set (reg:QI 75 [ D.5541 ])
+(insn 98 97 99 15 (set (reg:QI 75 [ D.5543 ])
         (mem/j/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65550 [0xfffffffffffefff2])) [0 buf.h.qr_opcode_aa_tc_rd+0 S1 A16])) dnstc.c:87 -1
      (nil))
 (insn 99 98 100 15 (parallel [
-            (set (reg:QI 76 [ D.5541 ])
-                (ior:QI (reg:QI 75 [ D.5541 ])
+            (set (reg:QI 76 [ D.5543 ])
+                (ior:QI (reg:QI 75 [ D.5543 ])
                     (const_int 2 [0x2])))
             (clobber (reg:CC 17 flags))
         ]) dnstc.c:87 -1
      (nil))
 (insn 100 99 101 15 (set (mem/j/c:QI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -65550 [0xfffffffffffefff2])) [0 buf.h.qr_opcode_aa_tc_rd+0 S1 A16])
-        (reg:QI 76 [ D.5541 ])) dnstc.c:87 -1
+        (reg:QI 76 [ D.5543 ])) dnstc.c:87 -1
      (nil))
 (insn 101 100 102 15 (set (reg:DI 77 [ pktlen.1 ])
         (mem/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -853,7 +853,7 @@ Forwarding edge 19->20 to 23 failed.
         (reg:SI 92)) dnstc.c:88 -1
      (nil))
 (call_insn 111 110 112 15 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("sendto") [flags 0x41]  <function_decl 0x2ba432fb2100 sendto>) [0 sendto S1 A8])
+        (call (mem:QI (symbol_ref:DI ("sendto") [flags 0x41]  <function_decl 0x2ad610eb3100 sendto>) [0 sendto S1 A8])
             (const_int 0 [0]))) dnstc.c:88 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -892,7 +892,7 @@ Forwarding edge 19->20 to 23 failed.
                 (const_int -65592 [0xfffffffffffeffc8])) [0 self+0 S8 A64])) dnstc.c:91 -1
      (nil))
 (insn 119 118 120 16 (parallel [
-            (set (reg/f:DI 78 [ D.5540 ])
+            (set (reg/f:DI 78 [ D.5542 ])
                 (plus:DI (reg/f:DI 95)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
@@ -926,13 +926,13 @@ Forwarding edge 19->20 to 23 failed.
      (nil))
 (insn 125 124 126 16 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2ba433175850 *.LC3>)) dnstc.c:91 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2ad611076980 *.LC3>)) dnstc.c:91 -1
      (nil))
 (insn 126 125 127 16 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 4 [0x4])) dnstc.c:91 -1
      (nil))
 (insn 127 126 128 16 (set (reg:DI 38 r9)
-        (reg/f:DI 78 [ D.5540 ])) dnstc.c:91 -1
+        (reg/f:DI 78 [ D.5542 ])) dnstc.c:91 -1
      (nil))
 (insn 128 127 129 16 (set (reg:DI 37 r8)
         (reg:DI 96)) dnstc.c:91 -1
@@ -941,18 +941,18 @@ Forwarding edge 19->20 to 23 failed.
         (const_int 1 [0x1])) dnstc.c:91 -1
      (nil))
 (insn 130 129 131 16 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5356") [flags 0x2]  <var_decl 0x2ba433110da8 __func__>)) dnstc.c:91 -1
+        (symbol_ref:DI ("__func__.5358") [flags 0x2]  <var_decl 0x2ad611012ed8 __func__>)) dnstc.c:91 -1
      (nil))
 (insn 131 130 132 16 (set (reg:SI 4 si)
         (const_int 92 [0x5c])) dnstc.c:91 -1
      (nil))
 (insn 132 131 133 16 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:91 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:91 -1
      (nil))
 (insn 133 132 134 16 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:91 -1
      (nil))
-(call_insn 134 133 135 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ba433117300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 134 133 135 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ad611018300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 32 [0x20])) dnstc.c:91 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -982,7 +982,7 @@ Forwarding edge 19->20 to 23 failed.
                 (const_int -65592 [0xfffffffffffeffc8])) [0 self+0 S8 A64])) dnstc.c:94 -1
      (nil))
 (insn 140 139 141 17 (parallel [
-            (set (reg/f:DI 79 [ D.5540 ])
+            (set (reg/f:DI 79 [ D.5542 ])
                 (plus:DI (reg/f:DI 99)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
@@ -1000,13 +1000,13 @@ Forwarding edge 19->20 to 23 failed.
      (nil))
 (insn 142 141 143 17 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2ba4331758e8 *.LC4>)) dnstc.c:94 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2ad611076a18 *.LC4>)) dnstc.c:94 -1
      (nil))
 (insn 143 142 144 17 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 6 [0x6])) dnstc.c:94 -1
      (nil))
 (insn 144 143 145 17 (set (reg:DI 38 r9)
-        (reg/f:DI 79 [ D.5540 ])) dnstc.c:94 -1
+        (reg/f:DI 79 [ D.5542 ])) dnstc.c:94 -1
      (nil))
 (insn 145 144 146 17 (set (reg:DI 37 r8)
         (reg:DI 100)) dnstc.c:94 -1
@@ -1015,18 +1015,18 @@ Forwarding edge 19->20 to 23 failed.
         (const_int 0 [0])) dnstc.c:94 -1
      (nil))
 (insn 147 146 148 17 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5356") [flags 0x2]  <var_decl 0x2ba433110da8 __func__>)) dnstc.c:94 -1
+        (symbol_ref:DI ("__func__.5358") [flags 0x2]  <var_decl 0x2ad611012ed8 __func__>)) dnstc.c:94 -1
      (nil))
 (insn 148 147 149 17 (set (reg:SI 4 si)
         (const_int 94 [0x5e])) dnstc.c:94 -1
      (nil))
 (insn 149 148 150 17 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:94 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:94 -1
      (nil))
 (insn 150 149 151 17 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:94 -1
      (nil))
-(call_insn 151 150 152 17 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ba433117300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 151 150 152 17 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ad611018300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) dnstc.c:94 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1054,7 +1054,7 @@ Forwarding edge 19->20 to 23 failed.
                 (const_int -65592 [0xfffffffffffeffc8])) [0 self+0 S8 A64])) dnstc.c:97 -1
      (nil))
 (insn 159 158 160 19 (parallel [
-            (set (reg/f:DI 80 [ D.5540 ])
+            (set (reg/f:DI 80 [ D.5542 ])
                 (plus:DI (reg/f:DI 101)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
@@ -1072,13 +1072,13 @@ Forwarding edge 19->20 to 23 failed.
      (nil))
 (insn 161 160 162 19 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2ba433175980 *.LC5>)) dnstc.c:97 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2ad611076ab0 *.LC5>)) dnstc.c:97 -1
      (nil))
 (insn 162 161 163 19 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 6 [0x6])) dnstc.c:97 -1
      (nil))
 (insn 163 162 164 19 (set (reg:DI 38 r9)
-        (reg/f:DI 80 [ D.5540 ])) dnstc.c:97 -1
+        (reg/f:DI 80 [ D.5542 ])) dnstc.c:97 -1
      (nil))
 (insn 164 163 165 19 (set (reg:DI 37 r8)
         (reg:DI 102)) dnstc.c:97 -1
@@ -1087,18 +1087,18 @@ Forwarding edge 19->20 to 23 failed.
         (const_int 0 [0])) dnstc.c:97 -1
      (nil))
 (insn 166 165 167 19 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5356") [flags 0x2]  <var_decl 0x2ba433110da8 __func__>)) dnstc.c:97 -1
+        (symbol_ref:DI ("__func__.5358") [flags 0x2]  <var_decl 0x2ad611012ed8 __func__>)) dnstc.c:97 -1
      (nil))
 (insn 167 166 168 19 (set (reg:SI 4 si)
         (const_int 97 [0x61])) dnstc.c:97 -1
      (nil))
 (insn 168 167 169 19 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:97 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:97 -1
      (nil))
 (insn 169 168 170 19 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:97 -1
      (nil))
-(call_insn 170 169 171 19 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ba433117300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 170 169 171 19 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ad611018300 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) dnstc.c:97 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1120,7 +1120,7 @@ Forwarding edge 19->20 to 23 failed.
             (set (reg:CCZ 17 flags)
                 (unspec:CCZ [
                         (mem/v/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
-                                (const_int -8 [0xfffffffffffffff8])) [0 D.5544+0 S8 A64])
+                                (const_int -8 [0xfffffffffffffff8])) [0 D.5546+0 S8 A64])
                         (const_int 40 [0x28])
                     ] UNSPEC_SP_TLS_TEST))
             (clobber (scratch:DI))
@@ -1134,7 +1134,7 @@ Forwarding edge 19->20 to 23 failed.
      (nil)
  -> 184)
 (note 186 181 182 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
-(call_insn 182 186 183 24 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2ba433138900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+(call_insn 182 186 183 24 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2ad611039900 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
         (const_int 0 [0])) dnstc.c:99 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -1144,7 +1144,7 @@ Forwarding edge 19->20 to 23 failed.
 (code_label 184 183 187 25 16 "" [1 uses])
 (note 187 184 0 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
 
-;; Function dnstc_onenter (dnstc_onenter, funcdef_no=20, decl_uid=5360, cgraph_uid=20)
+;; Function dnstc_onenter (dnstc_onenter, funcdef_no=20, decl_uid=5362, cgraph_uid=20)
 
 Partition 1: size 8 align 8
 	instance_5
@@ -1210,7 +1210,7 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:115 -1
      (nil))
 (call_insn 8 7 9 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ba432e05d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ad610d06d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) dnstc.c:115 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1242,23 +1242,23 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -24 [0xffffffffffffffe8])) [0 section+0 S8 A64])) dnstc.c:117 -1
      (nil))
-(insn 15 14 16 4 (set (reg/f:DI 62 [ D.5556 ])
+(insn 15 14 16 4 (set (reg/f:DI 62 [ D.5558 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 72)
                 (const_int 8 [0x8])) [0 section_6(D)->context+0 S8 A64])) dnstc.c:117 -1
      (nil))
 (insn 16 15 17 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2ba433185b48 *.LC8>)) dnstc.c:117 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2ad611086c78 *.LC8>)) dnstc.c:117 -1
      (nil))
 (insn 17 16 18 4 (set (reg:DI 5 di)
-        (reg/f:DI 62 [ D.5556 ])) dnstc.c:117 -1
+        (reg/f:DI 62 [ D.5558 ])) dnstc.c:117 -1
      (nil))
-(call_insn 18 17 19 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x41]  <function_decl 0x2ba4330f5500 parser_error>) [0 parser_error S1 A8])
+(call_insn 18 17 19 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x41]  <function_decl 0x2ad610ff6500 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) dnstc.c:117 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 19 18 20 4 (set (reg:SI 59 [ D.5555 ])
+(insn 19 18 20 4 (set (reg:SI 59 [ D.5557 ])
         (const_int -1 [0xffffffffffffffff])) dnstc.c:118 -1
      (nil))
 (jump_insn 20 19 21 4 (set (pc)
@@ -1268,14 +1268,14 @@ try_optimize_cfg iteration 2
 (barrier 21 20 22)
 (code_label 22 21 23 5 18 "" [1 uses])
 (note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
-(insn 24 23 25 5 (set (reg/f:DI 63 [ D.5557 ])
+(insn 24 23 25 5 (set (reg/f:DI 63 [ D.5559 ])
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:121 -1
      (nil))
 (insn 25 24 26 5 (set (reg:DI 5 di)
-        (reg/f:DI 63 [ D.5557 ])) dnstc.c:121 -1
+        (reg/f:DI 63 [ D.5559 ])) dnstc.c:121 -1
      (nil))
-(call_insn 26 25 27 5 (call (mem:QI (symbol_ref:DI ("INIT_LIST_HEAD") [flags 0x3]  <function_decl 0x2ba4330de500 INIT_LIST_HEAD>) [0 INIT_LIST_HEAD S1 A8])
+(call_insn 26 25 27 5 (call (mem:QI (symbol_ref:DI ("INIT_LIST_HEAD") [flags 0x3]  <function_decl 0x2ad610fdf500 INIT_LIST_HEAD>) [0 INIT_LIST_HEAD S1 A8])
         (const_int 0 [0])) dnstc.c:121 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1292,13 +1292,13 @@ try_optimize_cfg iteration 2
         (const_int 2130706433 [0x7f000001])) dnstc.c:123 -1
      (nil))
 (call_insn/u 30 29 31 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("htonl") [flags 0x41]  <function_decl 0x2ba432fdb200 htonl>) [0 htonl S1 A8])
+        (call (mem:QI (symbol_ref:DI ("htonl") [flags 0x41]  <function_decl 0x2ad610edc200 htonl>) [0 htonl S1 A8])
             (const_int 0 [0]))) dnstc.c:123 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
         (nil)))
-(insn 31 30 32 5 (set (reg:SI 64 [ D.5558 ])
+(insn 31 30 32 5 (set (reg:SI 64 [ D.5560 ])
         (reg:SI 0 ax)) dnstc.c:123 -1
      (nil))
 (insn 32 31 33 5 (set (reg/f:DI 74)
@@ -1307,7 +1307,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 33 32 34 5 (set (mem/j:SI (plus:DI (reg/f:DI 74)
                 (const_int 20 [0x14])) [0 instance_5->config.bindaddr.sin_addr.s_addr+0 S4 A32])
-        (reg:SI 64 [ D.5558 ])) dnstc.c:123 -1
+        (reg:SI 64 [ D.5560 ])) dnstc.c:123 -1
      (nil))
 (insn 34 33 35 5 (set (reg/f:DI 75)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -1332,28 +1332,28 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 entry+0 S8 A64])) dnstc.c:127 -1
      (nil))
-(insn 41 40 42 6 (set (reg/f:DI 66 [ D.5559 ])
+(insn 41 40 42 6 (set (reg/f:DI 66 [ D.5561 ])
         (mem/f/j:DI (reg/f:DI 77) [0 entry_1->key+0 S8 A64])) dnstc.c:127 -1
      (nil))
 (insn 42 41 43 6 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2ba433185720 *.LC6>)) dnstc.c:127 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2ad611086850 *.LC6>)) dnstc.c:127 -1
      (nil))
 (insn 43 42 44 6 (set (reg:DI 5 di)
-        (reg/f:DI 66 [ D.5559 ])) dnstc.c:127 -1
+        (reg/f:DI 66 [ D.5561 ])) dnstc.c:127 -1
      (nil))
 (call_insn/i 44 43 45 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ba432dece00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ad610cede00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) dnstc.c:127 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 45 44 46 6 (set (reg:SI 67 [ D.5555 ])
+(insn 45 44 46 6 (set (reg:SI 67 [ D.5557 ])
         (reg:SI 0 ax)) dnstc.c:127 -1
      (nil))
 (insn 46 45 47 6 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 67 [ D.5555 ])
+        (compare:CCZ (reg:SI 67 [ D.5557 ])
             (const_int 0 [0]))) dnstc.c:127 -1
      (nil))
 (jump_insn 47 46 48 6 (set (pc)
@@ -1389,28 +1389,28 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 entry+0 S8 A64])) dnstc.c:128 -1
      (nil))
-(insn 56 55 57 8 (set (reg/f:DI 68 [ D.5559 ])
+(insn 56 55 57 8 (set (reg/f:DI 68 [ D.5561 ])
         (mem/f/j:DI (reg/f:DI 79) [0 entry_1->key+0 S8 A64])) dnstc.c:128 -1
      (nil))
 (insn 57 56 58 8 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2ba4331857b8 *.LC7>)) dnstc.c:128 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2ad6110868e8 *.LC7>)) dnstc.c:128 -1
      (nil))
 (insn 58 57 59 8 (set (reg:DI 5 di)
-        (reg/f:DI 68 [ D.5559 ])) dnstc.c:128 -1
+        (reg/f:DI 68 [ D.5561 ])) dnstc.c:128 -1
      (nil))
 (call_insn/i 59 58 60 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ba432dece00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ad610cede00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) dnstc.c:128 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 60 59 61 8 (set (reg:SI 69 [ D.5555 ])
+(insn 60 59 61 8 (set (reg:SI 69 [ D.5557 ])
         (reg:SI 0 ax)) dnstc.c:128 -1
      (nil))
 (insn 61 60 62 8 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 69 [ D.5555 ])
+        (compare:CCZ (reg:SI 69 [ D.5557 ])
             (const_int 0 [0]))) dnstc.c:128 -1
      (nil))
 (jump_insn 62 61 63 8 (set (pc)
@@ -1475,11 +1475,11 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 entry+0 S8 A64])) dnstc.c:125 -1
      (nil))
-(insn 82 81 84 13 (set (reg/f:DI 65 [ D.5559 ])
+(insn 82 81 84 13 (set (reg/f:DI 65 [ D.5561 ])
         (mem/f/j:DI (reg/f:DI 82) [0 entry_1->key+0 S8 A64])) dnstc.c:125 -1
      (nil))
 (insn 84 82 85 13 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg/f:DI 65 [ D.5559 ])
+        (compare:CCZ (reg/f:DI 65 [ D.5561 ])
             (const_int 0 [0]))) dnstc.c:125 -1
      (nil))
 (jump_insn 85 84 86 13 (set (pc)
@@ -1502,13 +1502,13 @@ try_optimize_cfg iteration 2
                 (const_int 48 [0x30])) [0 section_6(D)->data+0 S8 A64])
         (reg/f:DI 84)) dnstc.c:130 -1
      (nil))
-(insn 90 89 91 14 (set (reg:SI 59 [ D.5555 ])
+(insn 90 89 91 14 (set (reg:SI 59 [ D.5557 ])
         (const_int 0 [0])) dnstc.c:131 -1
      (nil))
 (code_label 91 90 92 15 19 "" [1 uses])
 (note 92 91 93 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
 (insn 93 92 97 15 (set (reg:SI 70 [ <retval> ])
-        (reg:SI 59 [ D.5555 ])) -1
+        (reg:SI 59 [ D.5557 ])) -1
      (nil))
 (insn 97 93 100 15 (set (reg/i:SI 0 ax)
         (reg:SI 70 [ <retval> ])) dnstc.c:132 -1
@@ -1516,7 +1516,7 @@ try_optimize_cfg iteration 2
 (insn 100 97 0 15 (use (reg/i:SI 0 ax)) dnstc.c:132 -1
      (nil))
 
-;; Function dnstc_onexit (dnstc_onexit, funcdef_no=21, decl_uid=5368, cgraph_uid=21)
+;; Function dnstc_onexit (dnstc_onexit, funcdef_no=21, decl_uid=5370, cgraph_uid=21)
 
 Partition 1: size 8 align 8
 	instance_3
@@ -1624,11 +1624,11 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 entry+0 S8 A64])) dnstc.c:139 -1
      (nil))
-(insn 23 22 25 5 (set (reg/f:DI 59 [ D.5561 ])
+(insn 23 22 25 5 (set (reg/f:DI 59 [ D.5563 ])
         (mem/f/j:DI (reg/f:DI 72) [0 entry_1->key+0 S8 A64])) dnstc.c:139 -1
      (nil))
 (insn 25 23 26 5 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg/f:DI 59 [ D.5561 ])
+        (compare:CCZ (reg/f:DI 59 [ D.5563 ])
             (const_int 0 [0]))) dnstc.c:139 -1
      (nil))
 (jump_insn 26 25 27 5 (set (pc)
@@ -1643,24 +1643,24 @@ try_optimize_cfg iteration 2
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:142 -1
      (nil))
-(insn 29 28 30 6 (set (reg:HI 60 [ D.5562 ])
+(insn 29 28 30 6 (set (reg:HI 60 [ D.5564 ])
         (mem/j:HI (plus:DI (reg/f:DI 73)
                 (const_int 18 [0x12])) [0 instance_3->config.bindaddr.sin_port+0 S2 A16])) dnstc.c:142 -1
      (nil))
-(insn 30 29 31 6 (set (reg:SI 61 [ D.5563 ])
-        (zero_extend:SI (reg:HI 60 [ D.5562 ]))) dnstc.c:142 -1
+(insn 30 29 31 6 (set (reg:SI 61 [ D.5565 ])
+        (zero_extend:SI (reg:HI 60 [ D.5564 ]))) dnstc.c:142 -1
      (nil))
 (insn 31 30 32 6 (set (reg:SI 5 di)
-        (reg:SI 61 [ D.5563 ])) dnstc.c:142 -1
+        (reg:SI 61 [ D.5565 ])) dnstc.c:142 -1
      (nil))
 (call_insn/u 32 31 33 6 (set (reg:HI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("htons") [flags 0x41]  <function_decl 0x2ba432fdb300 htons>) [0 htons S1 A8])
+        (call (mem:QI (symbol_ref:DI ("htons") [flags 0x41]  <function_decl 0x2ad610edc300 htons>) [0 htons S1 A8])
             (const_int 0 [0]))) dnstc.c:142 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
         (nil)))
-(insn 33 32 34 6 (set (reg:HI 62 [ D.5562 ])
+(insn 33 32 34 6 (set (reg:HI 62 [ D.5564 ])
         (reg:HI 0 ax)) dnstc.c:142 -1
      (nil))
 (insn 34 33 35 6 (set (reg/f:DI 74)
@@ -1669,29 +1669,29 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 35 34 36 6 (set (mem/j:HI (plus:DI (reg/f:DI 74)
                 (const_int 18 [0x12])) [0 instance_3->config.bindaddr.sin_port+0 S2 A16])
-        (reg:HI 62 [ D.5562 ])) dnstc.c:142 -1
+        (reg:HI 62 [ D.5564 ])) dnstc.c:142 -1
      (nil))
-(insn 36 35 37 6 (set (reg/f:DI 63 [ D.5564 ])
+(insn 36 35 37 6 (set (reg/f:DI 63 [ D.5566 ])
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:144 -1
      (nil))
 (insn 37 36 38 6 (set (reg:DI 4 si)
-        (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ba433110ed8 instances>)) dnstc.c:144 -1
+        (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ad611029098 instances>)) dnstc.c:144 -1
      (nil))
 (insn 38 37 39 6 (set (reg:DI 5 di)
-        (reg/f:DI 63 [ D.5564 ])) dnstc.c:144 -1
+        (reg/f:DI 63 [ D.5566 ])) dnstc.c:144 -1
      (nil))
-(call_insn 39 38 40 6 (call (mem:QI (symbol_ref:DI ("list_add") [flags 0x3]  <function_decl 0x2ba4330de700 list_add>) [0 list_add S1 A8])
+(call_insn 39 38 40 6 (call (mem:QI (symbol_ref:DI ("list_add") [flags 0x3]  <function_decl 0x2ad610fdf700 list_add>) [0 list_add S1 A8])
         (const_int 0 [0])) dnstc.c:144 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 4 si))
             (nil))))
-(insn 40 39 43 6 (set (reg:SI 64 [ D.5563 ])
+(insn 40 39 43 6 (set (reg:SI 64 [ D.5565 ])
         (const_int 0 [0])) dnstc.c:146 -1
      (nil))
 (insn 43 40 47 6 (set (reg:SI 65 [ <retval> ])
-        (reg:SI 64 [ D.5563 ])) dnstc.c:146 -1
+        (reg:SI 64 [ D.5565 ])) dnstc.c:146 -1
      (nil))
 (insn 47 43 50 6 (set (reg/i:SI 0 ax)
         (reg:SI 65 [ <retval> ])) dnstc.c:147 -1
@@ -1699,7 +1699,7 @@ try_optimize_cfg iteration 2
 (insn 50 47 0 6 (use (reg/i:SI 0 ax)) dnstc.c:147 -1
      (nil))
 
-;; Function dnstc_init_instance (dnstc_init_instance, funcdef_no=22, decl_uid=5376, cgraph_uid=22)
+;; Function dnstc_init_instance (dnstc_init_instance, funcdef_no=22, decl_uid=5378, cgraph_uid=22)
 
 Partition 1: size 4 align 4
 	error_6
@@ -1774,7 +1774,7 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) dnstc.c:158 -1
      (nil))
 (call_insn 10 9 11 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("socket") [flags 0x41]  <function_decl 0x2ba432f97900 socket>) [0 socket S1 A8])
+        (call (mem:QI (symbol_ref:DI ("socket") [flags 0x41]  <function_decl 0x2ad610e98900 socket>) [0 socket S1 A8])
             (const_int 0 [0]))) dnstc.c:158 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1803,7 +1803,7 @@ try_optimize_cfg iteration 2
  -> 26)
 (note 15 14 16 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 16 15 17 4 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ba4331971c8 *.LC9>)) dnstc.c:160 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ad6110972f8 *.LC9>)) dnstc.c:160 -1
      (nil))
 (insn 17 16 18 4 (set (reg:SI 37 r8)
         (const_int 3 [0x3])) dnstc.c:160 -1
@@ -1812,18 +1812,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:160 -1
      (nil))
 (insn 19 18 20 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5380") [flags 0x2]  <var_decl 0x2ba433128390 __func__>)) dnstc.c:160 -1
+        (symbol_ref:DI ("__func__.5382") [flags 0x2]  <var_decl 0x2ad6110294c0 __func__>)) dnstc.c:160 -1
      (nil))
 (insn 20 19 21 4 (set (reg:SI 4 si)
         (const_int 160 [0xa0])) dnstc.c:160 -1
      (nil))
 (insn 21 20 22 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:160 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:160 -1
      (nil))
 (insn 22 21 23 4 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:160 -1
      (nil))
-(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 23 22 24 4 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:160 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1846,7 +1846,7 @@ try_optimize_cfg iteration 2
                 (const_int -24 [0xffffffffffffffe8])) [0 instance+0 S8 A64])) dnstc.c:164 -1
      (nil))
 (insn 29 28 30 5 (parallel [
-            (set (reg/f:DI 60 [ D.5566 ])
+            (set (reg/f:DI 60 [ D.5568 ])
                 (plus:DI (reg/f:DI 66)
                     (const_int 16 [0x10])))
             (clobber (reg:CC 17 flags))
@@ -1863,13 +1863,13 @@ try_optimize_cfg iteration 2
         (const_int 16 [0x10])) dnstc.c:164 -1
      (nil))
 (insn 32 31 33 5 (set (reg:DI 4 si)
-        (reg/f:DI 60 [ D.5566 ])) dnstc.c:164 -1
+        (reg/f:DI 60 [ D.5568 ])) dnstc.c:164 -1
      (nil))
 (insn 33 32 34 5 (set (reg:SI 5 di)
         (reg:SI 67)) dnstc.c:164 -1
      (nil))
 (call_insn 34 33 35 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bind") [flags 0x41]  <function_decl 0x2ba432f97b00 bind>) [0 bind S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bind") [flags 0x41]  <function_decl 0x2ad610e98b00 bind>) [0 bind S1 A8])
             (const_int 0 [0]))) dnstc.c:164 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1898,7 +1898,7 @@ try_optimize_cfg iteration 2
  -> 50)
 (note 39 38 40 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (insn 40 39 41 6 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2ba433197260 *.LC10>)) dnstc.c:166 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2ad611097390 *.LC10>)) dnstc.c:166 -1
      (nil))
 (insn 41 40 42 6 (set (reg:SI 37 r8)
         (const_int 3 [0x3])) dnstc.c:166 -1
@@ -1907,18 +1907,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:166 -1
      (nil))
 (insn 43 42 44 6 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5380") [flags 0x2]  <var_decl 0x2ba433128390 __func__>)) dnstc.c:166 -1
+        (symbol_ref:DI ("__func__.5382") [flags 0x2]  <var_decl 0x2ad6110294c0 __func__>)) dnstc.c:166 -1
      (nil))
 (insn 44 43 45 6 (set (reg:SI 4 si)
         (const_int 166 [0xa6])) dnstc.c:166 -1
      (nil))
 (insn 45 44 46 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:166 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:166 -1
      (nil))
 (insn 46 45 47 6 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:166 -1
      (nil))
-(call_insn 47 46 48 6 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 47 46 48 6 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:166 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1944,7 +1944,7 @@ try_optimize_cfg iteration 2
         (reg:SI 69)) dnstc.c:170 -1
      (nil))
 (call_insn 54 53 55 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fcntl_nonblock") [flags 0x41]  <function_decl 0x2ba4330de100 fcntl_nonblock>) [0 fcntl_nonblock S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fcntl_nonblock") [flags 0x41]  <function_decl 0x2ad610fdf100 fcntl_nonblock>) [0 fcntl_nonblock S1 A8])
             (const_int 0 [0]))) dnstc.c:170 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -1970,7 +1970,7 @@ try_optimize_cfg iteration 2
  -> 70)
 (note 59 58 60 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
 (insn 60 59 61 8 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2ba4331972f8 *.LC11>)) dnstc.c:172 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2ad611097428 *.LC11>)) dnstc.c:172 -1
      (nil))
 (insn 61 60 62 8 (set (reg:SI 37 r8)
         (const_int 3 [0x3])) dnstc.c:172 -1
@@ -1979,18 +1979,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:172 -1
      (nil))
 (insn 63 62 64 8 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5380") [flags 0x2]  <var_decl 0x2ba433128390 __func__>)) dnstc.c:172 -1
+        (symbol_ref:DI ("__func__.5382") [flags 0x2]  <var_decl 0x2ad6110294c0 __func__>)) dnstc.c:172 -1
      (nil))
 (insn 64 63 65 8 (set (reg:SI 4 si)
         (const_int 172 [0xac])) dnstc.c:172 -1
      (nil))
 (insn 65 64 66 8 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:172 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:172 -1
      (nil))
 (insn 66 65 67 8 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:172 -1
      (nil))
-(call_insn 67 66 68 8 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 67 66 68 8 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:172 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2013,7 +2013,7 @@ try_optimize_cfg iteration 2
                 (const_int -24 [0xffffffffffffffe8])) [0 instance+0 S8 A64])) dnstc.c:176 -1
      (nil))
 (insn 73 72 74 9 (parallel [
-            (set (reg/f:DI 61 [ D.5567 ])
+            (set (reg/f:DI 61 [ D.5569 ])
                 (plus:DI (reg/f:DI 71)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -2034,7 +2034,7 @@ try_optimize_cfg iteration 2
         (reg:DI 72)) dnstc.c:176 -1
      (nil))
 (insn 77 76 78 9 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("dnstc_pkt_from_client") [flags 0x3]  <function_decl 0x2ba433117600 dnstc_pkt_from_client>)) dnstc.c:176 -1
+        (symbol_ref:DI ("dnstc_pkt_from_client") [flags 0x3]  <function_decl 0x2ad611018600 dnstc_pkt_from_client>)) dnstc.c:176 -1
      (nil))
 (insn 78 77 79 9 (set (reg:SI 1 dx)
         (const_int 18 [0x12])) dnstc.c:176 -1
@@ -2043,9 +2043,9 @@ try_optimize_cfg iteration 2
         (reg:SI 73)) dnstc.c:176 -1
      (nil))
 (insn 80 79 81 9 (set (reg:DI 5 di)
-        (reg/f:DI 61 [ D.5567 ])) dnstc.c:176 -1
+        (reg/f:DI 61 [ D.5569 ])) dnstc.c:176 -1
      (nil))
-(call_insn 81 80 82 9 (call (mem:QI (symbol_ref:DI ("event_set") [flags 0x41]  <function_decl 0x2ba43309be00 event_set>) [0 event_set S1 A8])
+(call_insn 81 80 82 9 (call (mem:QI (symbol_ref:DI ("event_set") [flags 0x41]  <function_decl 0x2ad610f9ce00 event_set>) [0 event_set S1 A8])
         (const_int 0 [0])) dnstc.c:176 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2059,7 +2059,7 @@ try_optimize_cfg iteration 2
                 (const_int -24 [0xffffffffffffffe8])) [0 instance+0 S8 A64])) dnstc.c:177 -1
      (nil))
 (insn 83 82 84 9 (parallel [
-            (set (reg/f:DI 62 [ D.5567 ])
+            (set (reg/f:DI 62 [ D.5569 ])
                 (plus:DI (reg/f:DI 74)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -2072,10 +2072,10 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) dnstc.c:177 -1
      (nil))
 (insn 85 84 86 9 (set (reg:DI 5 di)
-        (reg/f:DI 62 [ D.5567 ])) dnstc.c:177 -1
+        (reg/f:DI 62 [ D.5569 ])) dnstc.c:177 -1
      (nil))
 (call_insn 86 85 87 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x2ba433098100 event_add>) [0 event_add S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_add") [flags 0x41]  <function_decl 0x2ad610f99100 event_add>) [0 event_add S1 A8])
             (const_int 0 [0]))) dnstc.c:177 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2102,7 +2102,7 @@ try_optimize_cfg iteration 2
  -> 102)
 (note 91 90 92 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (insn 92 91 93 10 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2ba433197390 *.LC12>)) dnstc.c:179 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2ad6110974c0 *.LC12>)) dnstc.c:179 -1
      (nil))
 (insn 93 92 94 10 (set (reg:SI 37 r8)
         (const_int 3 [0x3])) dnstc.c:179 -1
@@ -2111,18 +2111,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:179 -1
      (nil))
 (insn 95 94 96 10 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5380") [flags 0x2]  <var_decl 0x2ba433128390 __func__>)) dnstc.c:179 -1
+        (symbol_ref:DI ("__func__.5382") [flags 0x2]  <var_decl 0x2ad6110294c0 __func__>)) dnstc.c:179 -1
      (nil))
 (insn 96 95 97 10 (set (reg:SI 4 si)
         (const_int 179 [0xb3])) dnstc.c:179 -1
      (nil))
 (insn 97 96 98 10 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:179 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:179 -1
      (nil))
 (insn 98 97 99 10 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:179 -1
      (nil))
-(call_insn 99 98 100 10 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 99 98 100 10 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:179 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2140,7 +2140,7 @@ try_optimize_cfg iteration 2
 (barrier 101 100 102)
 (code_label 102 101 103 11 35 "" [1 uses])
 (note 103 102 104 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
-(insn 104 103 105 11 (set (reg:SI 59 [ D.5565 ])
+(insn 104 103 105 11 (set (reg:SI 59 [ D.5567 ])
         (const_int 0 [0])) dnstc.c:183 -1
      (nil))
 (jump_insn 105 104 106 11 (set (pc)
@@ -2157,7 +2157,7 @@ try_optimize_cfg iteration 2
 (insn 110 109 111 12 (set (reg:DI 5 di)
         (reg:DI 76)) dnstc.c:186 -1
      (nil))
-(call_insn 111 110 112 12 (call (mem:QI (symbol_ref:DI ("dnstc_fini_instance") [flags 0x3]  <function_decl 0x2ba433117400 dnstc_fini_instance>) [0 dnstc_fini_instance S1 A8])
+(call_insn 111 110 112 12 (call (mem:QI (symbol_ref:DI ("dnstc_fini_instance") [flags 0x3]  <function_decl 0x2ad611018400 dnstc_fini_instance>) [0 dnstc_fini_instance S1 A8])
         (const_int 0 [0])) dnstc.c:186 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2183,16 +2183,16 @@ try_optimize_cfg iteration 2
         (reg:SI 77)) dnstc.c:189 -1
      (nil))
 (call_insn 117 116 118 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x2ba432f33d00 close>) [0 close S1 A8])
+        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x2ad610e34d00 close>) [0 close S1 A8])
             (const_int 0 [0]))) dnstc.c:189 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
         (nil)))
-(insn 118 117 119 13 (set (reg:SI 63 [ D.5565 ])
+(insn 118 117 119 13 (set (reg:SI 63 [ D.5567 ])
         (reg:SI 0 ax)) dnstc.c:189 -1
      (nil))
 (insn 119 118 120 13 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 63 [ D.5565 ])
+        (compare:CCZ (reg:SI 63 [ D.5567 ])
             (const_int 0 [0]))) dnstc.c:189 -1
      (nil))
 (jump_insn 120 119 121 13 (set (pc)
@@ -2204,7 +2204,7 @@ try_optimize_cfg iteration 2
  -> 130)
 (note 121 120 122 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
 (insn 122 121 123 14 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ba433197428 *.LC13>)) dnstc.c:190 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ad611097558 *.LC13>)) dnstc.c:190 -1
      (nil))
 (insn 123 122 124 14 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) dnstc.c:190 -1
@@ -2213,18 +2213,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:190 -1
      (nil))
 (insn 125 124 126 14 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5380") [flags 0x2]  <var_decl 0x2ba433128390 __func__>)) dnstc.c:190 -1
+        (symbol_ref:DI ("__func__.5382") [flags 0x2]  <var_decl 0x2ad6110294c0 __func__>)) dnstc.c:190 -1
      (nil))
 (insn 126 125 127 14 (set (reg:SI 4 si)
         (const_int 190 [0xbe])) dnstc.c:190 -1
      (nil))
 (insn 127 126 128 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:190 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:190 -1
      (nil))
 (insn 128 127 129 14 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:190 -1
      (nil))
-(call_insn 129 128 130 14 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 129 128 130 14 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:190 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2237,13 +2237,13 @@ try_optimize_cfg iteration 2
                                 (nil)))))))))
 (code_label 130 129 131 15 37 "" [2 uses])
 (note 131 130 132 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
-(insn 132 131 133 15 (set (reg:SI 59 [ D.5565 ])
+(insn 132 131 133 15 (set (reg:SI 59 [ D.5567 ])
         (const_int -1 [0xffffffffffffffff])) dnstc.c:193 -1
      (nil))
 (code_label 133 132 134 16 36 "" [1 uses])
 (note 134 133 135 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
 (insn 135 134 139 16 (set (reg:SI 64 [ <retval> ])
-        (reg:SI 59 [ D.5565 ])) -1
+        (reg:SI 59 [ D.5567 ])) -1
      (nil))
 (insn 139 135 142 16 (set (reg/i:SI 0 ax)
         (reg:SI 64 [ <retval> ])) dnstc.c:194 -1
@@ -2251,7 +2251,7 @@ try_optimize_cfg iteration 2
 (insn 142 139 0 16 (use (reg/i:SI 0 ax)) dnstc.c:194 -1
      (nil))
 
-;; Function dnstc_fini_instance (dnstc_fini_instance, funcdef_no=23, decl_uid=5331, cgraph_uid=23)
+;; Function dnstc_fini_instance (dnstc_fini_instance, funcdef_no=23, decl_uid=5333, cgraph_uid=23)
 
 
 ;; Generating RTL for gimple basic block 2
@@ -2298,7 +2298,7 @@ try_optimize_cfg iteration 2
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:201 -1
      (nil))
 (insn 7 6 8 2 (parallel [
-            (set (reg/f:DI 59 [ D.5573 ])
+            (set (reg/f:DI 59 [ D.5575 ])
                 (plus:DI (reg/f:DI 68)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -2308,19 +2308,19 @@ try_optimize_cfg iteration 2
             (const_int 32 [0x20]))
         (nil)))
 (insn 8 7 9 2 (set (reg:DI 5 di)
-        (reg/f:DI 59 [ D.5573 ])) dnstc.c:201 -1
+        (reg/f:DI 59 [ D.5575 ])) dnstc.c:201 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_initialized") [flags 0x41]  <function_decl 0x2ba433098500 event_initialized>) [0 event_initialized S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_initialized") [flags 0x41]  <function_decl 0x2ad610f99500 event_initialized>) [0 event_initialized S1 A8])
             (const_int 0 [0]))) dnstc.c:201 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 10 9 11 2 (set (reg:SI 60 [ D.5574 ])
+(insn 10 9 11 2 (set (reg:SI 60 [ D.5576 ])
         (reg:SI 0 ax)) dnstc.c:201 -1
      (nil))
 (insn 11 10 12 2 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 60 [ D.5574 ])
+        (compare:CCZ (reg:SI 60 [ D.5576 ])
             (const_int 0 [0]))) dnstc.c:201 -1
      (nil))
 (jump_insn 12 11 13 2 (set (pc)
@@ -2336,7 +2336,7 @@ try_optimize_cfg iteration 2
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:202 -1
      (nil))
 (insn 15 14 16 4 (parallel [
-            (set (reg/f:DI 61 [ D.5573 ])
+            (set (reg/f:DI 61 [ D.5575 ])
                 (plus:DI (reg/f:DI 69)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -2346,19 +2346,19 @@ try_optimize_cfg iteration 2
             (const_int 32 [0x20]))
         (nil)))
 (insn 16 15 17 4 (set (reg:DI 5 di)
-        (reg/f:DI 61 [ D.5573 ])) dnstc.c:202 -1
+        (reg/f:DI 61 [ D.5575 ])) dnstc.c:202 -1
      (nil))
 (call_insn 17 16 18 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x2ba433098200 event_del>) [0 event_del S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_del") [flags 0x41]  <function_decl 0x2ad610f99200 event_del>) [0 event_del S1 A8])
             (const_int 0 [0]))) dnstc.c:202 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 18 17 19 4 (set (reg:SI 62 [ D.5574 ])
+(insn 18 17 19 4 (set (reg:SI 62 [ D.5576 ])
         (reg:SI 0 ax)) dnstc.c:202 -1
      (nil))
 (insn 19 18 20 4 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 62 [ D.5574 ])
+        (compare:CCZ (reg:SI 62 [ D.5576 ])
             (const_int 0 [0]))) dnstc.c:202 -1
      (nil))
 (jump_insn 20 19 21 4 (set (pc)
@@ -2370,7 +2370,7 @@ try_optimize_cfg iteration 2
  -> 30)
 (note 21 20 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 22 21 23 5 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2ba4331a0260 *.LC14>)) dnstc.c:203 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2ad6110a1390 *.LC14>)) dnstc.c:203 -1
      (nil))
 (insn 23 22 24 5 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) dnstc.c:203 -1
@@ -2379,18 +2379,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:203 -1
      (nil))
 (insn 25 24 26 5 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5385") [flags 0x2]  <var_decl 0x2ba433128428 __func__>)) dnstc.c:203 -1
+        (symbol_ref:DI ("__func__.5387") [flags 0x2]  <var_decl 0x2ad611029558 __func__>)) dnstc.c:203 -1
      (nil))
 (insn 26 25 27 5 (set (reg:SI 4 si)
         (const_int 203 [0xcb])) dnstc.c:203 -1
      (nil))
 (insn 27 26 28 5 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:203 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:203 -1
      (nil))
 (insn 28 27 29 5 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:203 -1
      (nil))
-(call_insn 29 28 30 5 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 29 28 30 5 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:203 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2408,7 +2408,7 @@ try_optimize_cfg iteration 2
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:204 -1
      (nil))
 (insn 33 32 34 6 (parallel [
-            (set (reg/f:DI 63 [ D.5573 ])
+            (set (reg/f:DI 63 [ D.5575 ])
                 (plus:DI (reg/f:DI 70)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -2418,31 +2418,31 @@ try_optimize_cfg iteration 2
             (const_int 32 [0x20]))
         (nil)))
 (insn 34 33 35 6 (set (reg:DI 5 di)
-        (reg/f:DI 63 [ D.5573 ])) dnstc.c:204 -1
+        (reg/f:DI 63 [ D.5575 ])) dnstc.c:204 -1
      (nil))
 (call_insn 35 34 36 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2ba433098700 event_get_fd>) [0 event_get_fd S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2ad610f99700 event_get_fd>) [0 event_get_fd S1 A8])
             (const_int 0 [0]))) dnstc.c:204 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 36 35 37 6 (set (reg:SI 64 [ D.5574 ])
+(insn 36 35 37 6 (set (reg:SI 64 [ D.5576 ])
         (reg:SI 0 ax)) dnstc.c:204 -1
      (nil))
 (insn 37 36 38 6 (set (reg:SI 5 di)
-        (reg:SI 64 [ D.5574 ])) dnstc.c:204 -1
+        (reg:SI 64 [ D.5576 ])) dnstc.c:204 -1
      (nil))
 (call_insn 38 37 39 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x2ba432f33d00 close>) [0 close S1 A8])
+        (call (mem:QI (symbol_ref:DI ("close") [flags 0x41]  <function_decl 0x2ad610e34d00 close>) [0 close S1 A8])
             (const_int 0 [0]))) dnstc.c:204 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
         (nil)))
-(insn 39 38 40 6 (set (reg:SI 65 [ D.5574 ])
+(insn 39 38 40 6 (set (reg:SI 65 [ D.5576 ])
         (reg:SI 0 ax)) dnstc.c:204 -1
      (nil))
 (insn 40 39 41 6 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 65 [ D.5574 ])
+        (compare:CCZ (reg:SI 65 [ D.5576 ])
             (const_int 0 [0]))) dnstc.c:204 -1
      (nil))
 (jump_insn 41 40 42 6 (set (pc)
@@ -2454,7 +2454,7 @@ try_optimize_cfg iteration 2
  -> 51)
 (note 42 41 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 43 42 44 7 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ba433197428 *.LC13>)) dnstc.c:205 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ad611097558 *.LC13>)) dnstc.c:205 -1
      (nil))
 (insn 44 43 45 7 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) dnstc.c:205 -1
@@ -2463,18 +2463,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) dnstc.c:205 -1
      (nil))
 (insn 46 45 47 7 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5385") [flags 0x2]  <var_decl 0x2ba433128428 __func__>)) dnstc.c:205 -1
+        (symbol_ref:DI ("__func__.5387") [flags 0x2]  <var_decl 0x2ad611029558 __func__>)) dnstc.c:205 -1
      (nil))
 (insn 47 46 48 7 (set (reg:SI 4 si)
         (const_int 205 [0xcd])) dnstc.c:205 -1
      (nil))
 (insn 48 47 49 7 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ba433175688 *.LC0>)) dnstc.c:205 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ad6110767b8 *.LC0>)) dnstc.c:205 -1
      (nil))
 (insn 49 48 50 7 (set (reg:QI 0 ax)
         (const_int 0 [0])) dnstc.c:205 -1
      (nil))
-(call_insn 50 49 51 7 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ba4330f5100 _log_write>) [0 _log_write S1 A8])
+(call_insn 50 49 51 7 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ad610ff6100 _log_write>) [0 _log_write S1 A8])
         (const_int 0 [0])) dnstc.c:205 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2492,7 +2492,7 @@ try_optimize_cfg iteration 2
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:206 -1
      (nil))
 (insn 54 53 55 8 (parallel [
-            (set (reg/f:DI 66 [ D.5573 ])
+            (set (reg/f:DI 66 [ D.5575 ])
                 (plus:DI (reg/f:DI 71)
                     (const_int 32 [0x20])))
             (clobber (reg:CC 17 flags))
@@ -2508,10 +2508,10 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) dnstc.c:206 -1
      (nil))
 (insn 57 56 58 8 (set (reg:DI 5 di)
-        (reg/f:DI 66 [ D.5573 ])) dnstc.c:206 -1
+        (reg/f:DI 66 [ D.5575 ])) dnstc.c:206 -1
      (nil))
 (call_insn 58 57 59 8 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2ba432dec400 memset>) [0 __builtin_memset S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2ad610ced400 memset>) [0 __builtin_memset S1 A8])
             (const_int 0 [0]))) dnstc.c:206 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2523,14 +2523,14 @@ try_optimize_cfg iteration 2
                     (nil))))))
 (code_label 59 58 60 9 39 "" [1 uses])
 (note 60 59 61 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
-(insn 61 60 62 9 (set (reg/f:DI 67 [ D.5575 ])
+(insn 61 60 62 9 (set (reg/f:DI 67 [ D.5577 ])
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:209 -1
      (nil))
 (insn 62 61 63 9 (set (reg:DI 5 di)
-        (reg/f:DI 67 [ D.5575 ])) dnstc.c:209 -1
+        (reg/f:DI 67 [ D.5577 ])) dnstc.c:209 -1
      (nil))
-(call_insn 63 62 64 9 (call (mem:QI (symbol_ref:DI ("list_del") [flags 0x3]  <function_decl 0x2ba4330dea00 list_del>) [0 list_del S1 A8])
+(call_insn 63 62 64 9 (call (mem:QI (symbol_ref:DI ("list_del") [flags 0x3]  <function_decl 0x2ad610fdfa00 list_del>) [0 list_del S1 A8])
         (const_int 0 [0])) dnstc.c:209 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2549,7 +2549,7 @@ try_optimize_cfg iteration 2
         (reg:DI 72)) dnstc.c:211 -1
      (nil))
 (call_insn 68 67 69 9 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2ba432dec400 memset>) [0 __builtin_memset S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2ad610ced400 memset>) [0 __builtin_memset S1 A8])
             (const_int 0 [0]))) dnstc.c:211 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2566,14 +2566,14 @@ try_optimize_cfg iteration 2
 (insn 70 69 71 9 (set (reg:DI 5 di)
         (reg:DI 73)) dnstc.c:212 -1
      (nil))
-(call_insn 71 70 0 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ba432e0b500 free>) [0 __builtin_free S1 A8])
+(call_insn 71 70 0 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ad610d0c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) dnstc.c:212 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
 
-;; Function dnstc_init (dnstc_init, funcdef_no=24, decl_uid=5386, cgraph_uid=24)
+;; Function dnstc_init (dnstc_init, funcdef_no=24, decl_uid=5388, cgraph_uid=24)
 
 Partition 1: size 8 align 8
 	instance_2
@@ -2623,7 +2623,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) dnstc.c:217 -1
      (nil))
 (insn 6 5 7 2 (set (reg/f:DI 63)
-        (mem/f/j/c:DI (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ba433110ed8 instances>) [0 instances.next+0 S8 A128])) dnstc.c:221 -1
+        (mem/f/j/c:DI (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ad611029098 instances>) [0 instances.next+0 S8 A128])) dnstc.c:221 -1
      (nil))
 (insn 7 6 8 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])
@@ -2655,16 +2655,16 @@ try_optimize_cfg iteration 2
         (reg:DI 66)) dnstc.c:222 -1
      (nil))
 (call_insn 16 15 17 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("dnstc_init_instance") [flags 0x3]  <function_decl 0x2ba433117c00 dnstc_init_instance>) [0 dnstc_init_instance S1 A8])
+        (call (mem:QI (symbol_ref:DI ("dnstc_init_instance") [flags 0x3]  <function_decl 0x2ad611018c00 dnstc_init_instance>) [0 dnstc_init_instance S1 A8])
             (const_int 0 [0]))) dnstc.c:222 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
         (nil)))
-(insn 17 16 18 4 (set (reg:SI 61 [ D.5577 ])
+(insn 17 16 18 4 (set (reg:SI 61 [ D.5579 ])
         (reg:SI 0 ax)) dnstc.c:222 -1
      (nil))
 (insn 18 17 19 4 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg:SI 61 [ D.5577 ])
+        (compare:CCZ (reg:SI 61 [ D.5579 ])
             (const_int 0 [0]))) dnstc.c:222 -1
      (nil))
 (jump_insn 19 18 20 4 (set (pc)
@@ -2703,13 +2703,13 @@ try_optimize_cfg iteration 2
      (nil))
 (code_label 30 29 31 7 43 "" [1 uses])
 (note 31 30 32 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
-(insn 32 31 34 7 (set (reg/f:DI 60 [ D.5578 ])
+(insn 32 31 34 7 (set (reg/f:DI 60 [ D.5580 ])
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:221 -1
      (nil))
 (insn 34 32 35 7 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg/f:DI 60 [ D.5578 ])
-            (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ba433110ed8 instances>))) dnstc.c:221 -1
+        (compare:CCZ (reg/f:DI 60 [ D.5580 ])
+            (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ad611029098 instances>))) dnstc.c:221 -1
      (nil))
 (jump_insn 35 34 36 7 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
@@ -2719,7 +2719,7 @@ try_optimize_cfg iteration 2
      (nil)
  -> 33)
 (note 36 35 37 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
-(insn 37 36 38 8 (set (reg:SI 59 [ D.5577 ])
+(insn 37 36 38 8 (set (reg:SI 59 [ D.5579 ])
         (const_int 0 [0])) dnstc.c:226 -1
      (nil))
 (jump_insn 38 37 39 8 (set (pc)
@@ -2733,18 +2733,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) dnstc.c:229 -1
      (nil))
 (call_insn 43 42 44 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("dnstc_fini") [flags 0x3]  <function_decl 0x2ba433117500 dnstc_fini>) [0 dnstc_fini S1 A8])
+        (call (mem:QI (symbol_ref:DI ("dnstc_fini") [flags 0x3]  <function_decl 0x2ad611018500 dnstc_fini>) [0 dnstc_fini S1 A8])
             (const_int 0 [0]))) dnstc.c:229 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
         (nil)))
-(insn 44 43 45 9 (set (reg:SI 59 [ D.5577 ])
+(insn 44 43 45 9 (set (reg:SI 59 [ D.5579 ])
         (const_int -1 [0xffffffffffffffff])) dnstc.c:230 -1
      (nil))
 (code_label 45 44 46 10 47 "" [1 uses])
 (note 46 45 47 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (insn 47 46 51 10 (set (reg:SI 62 [ <retval> ])
-        (reg:SI 59 [ D.5577 ])) -1
+        (reg:SI 59 [ D.5579 ])) -1
      (nil))
 (insn 51 47 54 10 (set (reg/i:SI 0 ax)
         (reg:SI 62 [ <retval> ])) dnstc.c:231 -1
@@ -2752,7 +2752,7 @@ try_optimize_cfg iteration 2
 (insn 54 51 0 10 (use (reg/i:SI 0 ax)) dnstc.c:231 -1
      (nil))
 
-;; Function dnstc_fini (dnstc_fini, funcdef_no=25, decl_uid=5332, cgraph_uid=25)
+;; Function dnstc_fini (dnstc_fini, funcdef_no=25, decl_uid=5334, cgraph_uid=25)
 
 Partition 1: size 8 align 8
 	instance_2
@@ -2799,7 +2799,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) dnstc.c:235 -1
      (nil))
 (insn 6 5 7 2 (set (reg/f:DI 62)
-        (mem/f/j/c:DI (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ba433110ed8 instances>) [0 instances.next+0 S8 A128])) dnstc.c:237 -1
+        (mem/f/j/c:DI (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ad611029098 instances>) [0 instances.next+0 S8 A128])) dnstc.c:237 -1
      (nil))
 (insn 7 6 8 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])
@@ -2830,7 +2830,7 @@ try_optimize_cfg iteration 2
 (insn 15 14 16 4 (set (reg:DI 5 di)
         (reg:DI 65)) dnstc.c:238 -1
      (nil))
-(call_insn 16 15 17 4 (call (mem:QI (symbol_ref:DI ("dnstc_fini_instance") [flags 0x3]  <function_decl 0x2ba433117400 dnstc_fini_instance>) [0 dnstc_fini_instance S1 A8])
+(call_insn 16 15 17 4 (call (mem:QI (symbol_ref:DI ("dnstc_fini_instance") [flags 0x3]  <function_decl 0x2ad611018400 dnstc_fini_instance>) [0 dnstc_fini_instance S1 A8])
         (const_int 0 [0])) dnstc.c:238 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2856,13 +2856,13 @@ try_optimize_cfg iteration 2
      (nil))
 (code_label 22 21 23 5 49 "" [1 uses])
 (note 23 22 24 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
-(insn 24 23 26 5 (set (reg/f:DI 59 [ D.5579 ])
+(insn 24 23 26 5 (set (reg/f:DI 59 [ D.5581 ])
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 instance+0 S8 A64])) dnstc.c:237 -1
      (nil))
 (insn 26 24 27 5 (set (reg:CCZ 17 flags)
-        (compare:CCZ (reg/f:DI 59 [ D.5579 ])
-            (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ba433110ed8 instances>))) dnstc.c:237 -1
+        (compare:CCZ (reg/f:DI 59 [ D.5581 ])
+            (symbol_ref:DI ("instances") [flags 0x2]  <var_decl 0x2ad611029098 instances>))) dnstc.c:237 -1
      (nil))
 (jump_insn 27 26 28 5 (set (pc)
         (if_then_else (ne (reg:CCZ 17 flags)
@@ -2872,11 +2872,11 @@ try_optimize_cfg iteration 2
      (nil)
  -> 25)
 (note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
-(insn 29 28 32 6 (set (reg:SI 60 [ D.5580 ])
+(insn 29 28 32 6 (set (reg:SI 60 [ D.5582 ])
         (const_int 0 [0])) dnstc.c:240 -1
      (nil))
 (insn 32 29 36 6 (set (reg:SI 61 [ <retval> ])
-        (reg:SI 60 [ D.5580 ])) dnstc.c:240 -1
+        (reg:SI 60 [ D.5582 ])) dnstc.c:240 -1
      (nil))
 (insn 36 32 39 6 (set (reg/i:SI 0 ax)
         (reg:SI 61 [ <retval> ])) dnstc.c:241 -1

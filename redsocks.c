@@ -41,8 +41,11 @@
 static void redsocks_shutdown(redsocks_client *client, struct bufferevent *buffev, int how);
 
 
-extern server_config running_info[3][SN_CNT];
+extern server_config running_info[3];
+extern server_config running_info_test[3][SN_CNT];
 extern int mptcp_auth(redsocks_instance *ins, char* url);
+extern int mptcp_login_test(redsocks_instance *ins, char* url, int if_index, int sn_num);
+extern int mptcp_auth_login(redsocks_instance *ins, char* url, int i);
 extern relay_subsys http_connect_subsys;
 extern relay_subsys http_relay_subsys;
 extern relay_subsys socks4_subsys;
@@ -73,9 +76,9 @@ static parser_entry redsocks_entries[] =
 	{ .key = "mptcp_auth_key", .type = pt_pchar },
 	{ .key = "mptcp_lastID", .type = pt_pchar },
 	{ .key = "mptcp_reauth_time", .type = pt_uint16 },
-	{ .key = "mptcp_enable", .type = pt_uint },
+	{ .key = "mptcp_enable", .type = pt_uint16 },
 	{ .key = "mptcp_url", .type = pt_pchar },
-	{ .key = "mptcp_test_mode", .type = pt_uint },
+	{ .key = "mptcp_test_mode", .type = pt_uint16 },
 	{ }
 };
 
@@ -124,8 +127,8 @@ static int redsocks_onenter(parser_section *section)
 	INIT_LIST_HEAD(&instance->clients);
 	instance->config.bindaddr.sin_family = AF_INET;
 	instance->config.bindaddr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
-	instance->config.relayaddr[0][0].sin_family = AF_INET;
-	instance->config.relayaddr[0][0].sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+	instance->config.relayaddr[0].sin_family = AF_INET;
+	instance->config.relayaddr[0].sin_addr.s_addr = htonl(INADDR_LOOPBACK);
 	/* Default value can be checked in run-time, but I doubt anyone needs that.
 	 * Linux:   sysctl net.core.somaxconn
 	 * FreeBSD: sysctl kern.ipc.somaxconn */
@@ -137,8 +140,8 @@ static int redsocks_onenter(parser_section *section)
 		entry->addr =
 			(strcmp(entry->key, "local_ip") == 0)   ? (void*)&instance->config.bindaddr.sin_addr :
 			(strcmp(entry->key, "local_port") == 0) ? (void*)&instance->config.bindaddr.sin_port :
-			(strcmp(entry->key, "ip") == 0)         ? (void*)&instance->config.relayaddr[0][0].sin_addr :
-			(strcmp(entry->key, "port") == 0)       ? (void*)&instance->config.relayaddr[0][0].sin_port :
+			(strcmp(entry->key, "ip") == 0)         ? (void*)&instance->config.relayaddr[0].sin_addr :
+			(strcmp(entry->key, "port") == 0)       ? (void*)&instance->config.relayaddr[0].sin_port :
 			(strcmp(entry->key, "type") == 0)       ? (void*)&instance->config.type :
 			(strcmp(entry->key, "login") == 0)      ? (void*)&instance->config.login :
 			(strcmp(entry->key, "password") == 0)   ? (void*)&instance->config.password :
@@ -172,7 +175,7 @@ static int redsocks_onexit(parser_section *section)
 		entry->addr = NULL;
 
 	instance->config.bindaddr.sin_port = htons(instance->config.bindaddr.sin_port);
-	instance->config.relayaddr[0][0].sin_port = htons(instance->config.relayaddr[0][0].sin_port);
+	instance->config.relayaddr[0].sin_port = htons(instance->config.relayaddr[0].sin_port);
 
 	if (instance->config.type) {
 		relay_subsys **ss;
@@ -606,15 +609,15 @@ fail:
 	redsocks_drop_client(client);
 }
 
+static int ins = 0;
 void redsocks_connect_relay(redsocks_client *client)
 {
-    if (client->instance->config.test_mode) {
-        int i = 0;
-	    client->relay = red_connect_relay(&client->instance->config.relayaddr[0][i%SN_CNT],
+    if (client->instance->config.mptcp_test_mode) {
+	    client->relay = red_connect_relay(&client->instance->config.relayaddr[ins++ % SN_CNT],
 			                               redsocks_relay_connected, redsocks_event_error, client);
     } else {
 
-	    client->relay = red_connect_relay(&client->instance->config.relayaddr[0][0],
+	    client->relay = red_connect_relay(&client->instance->config.relayaddr[0],
 			                               redsocks_relay_connected, redsocks_event_error, client);
     }
 
@@ -824,13 +827,23 @@ void redsocks_fini_instance(redsocks_instance *instance);
 static void redsocks_mptcp_auth(int fd, short what, void *_arg)
 {
     struct timeval tv;
+    char buf[128];
+    int i,j;
     redsocks_instance *instance = (redsocks_instance *)_arg;
-//  snprintf(url, sizeof(url), "http://%s:%d/%s", inet_ntoa(instance->config.relayaddr.sin_addr),
-//                              instance->config.mptcp_auth_port, instance->config.mptcp_auth_url);
-    char *url = IP_PORT"/v1/auth/heartbeat";
+    snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/heartbeat");
+
+    if (instance->config.mptcp_test_mode) {
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < SN_CNT; j++) {
+                mptcp_login_test(instance, buf, i, j);
+            }
+        }
+    } else {
+        mptcp_auth_login(instance, buf, 0);
+    }
+
     //mptcp_auth(instance, url);
     //mptcp_auth_login(instance, url);
-    mptcp_auth_login(instance, 0);
 
     tv.tv_sec = instance->config.mptcp_reauth_time;
     tv.tv_usec = 0;
@@ -909,6 +922,7 @@ fail:
  */
 //static void redsocks_fini_instance(redsocks_instance *instance) {
 void redsocks_fini_instance(redsocks_instance *instance) {
+    int i;
 	if (!list_empty(&instance->clients)) {
 		redsocks_client *tmp, *client = NULL;
 
@@ -973,12 +987,12 @@ int parse_key_file(redsocks_instance *instance, char *file)
     redsocks_config *config = &instance->config;
     fp = fopen(file, "r+");
     while(fgets(buff, sizeof(buff), fp) != NULL) {
-        rc = sscanf(buff, "mptcp_auth_sn = ""%s", sn);
-        if (rc) {
-            config->mptcp_auth_sn[i++] = strdup(sn);
-        } else {
-            rc = sscanf(buff, "mptcp_auth_key = ""%s", key);
-            config->mptcp_auth_key[j++] = strdup(key);
+        if (strstr(buff, "mptcp_auth_sn=")) {
+            config->mptcp_auth_sn[i++] = strndup(buff+strlen("mptcp_auth_sn="), 36);
+        }
+
+        if (strstr(buff, "mptcp_auth_key=")) {
+            config->mptcp_auth_key[j++] = strndup(buff+strlen("mptcp_auth_key="), 9);
         }
     }
 
@@ -989,6 +1003,7 @@ static int redsocks_init() {
 	struct sigaction sa = { }, sa_old = { };
     struct timeval tv;
     int i, j;
+	char buf[128];
 //	redsocks_instance *tmp, *instance = NULL;
 
 	sa.sa_handler = SIG_IGN;
@@ -1005,23 +1020,27 @@ static int redsocks_init() {
 	}
 
 	list_for_each_entry_safe(instance, tmp, &instances, list) {
-        if (instance->mptcp_test_mode) {
+        snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/login");
+        if (instance->config.mptcp_test_mode) {
 
-            running_info_test = calloc(SN_CNT, sizeof(server_config));
+            //running_info_test = (server_config **)calloc(SN_CNT * 3, sizeof(server_config));
+            /*
             if (!running_info_test) {
                 log_errno(LOG_ERR, "Failed to alloc memory!!!");
                 goto fail;
             }
+            */
 
             parse_key_file(instance, "/tmp/keyfile");
             for (i = 0; i < 3; i++) {
                 for (j = 0; j < SN_CNT; j++) {
-                    mptcp_login_test(instance, i, j);
+                    mptcp_login_test(instance, buf, i, j);
                 }
             }
 
             for (i = 0; i < 3; i++) {
                 for (j = 0; j < SN_CNT; j++) {
+                    //server_config *sc = &running_info_test[i][j];
                     server_config *sc = &running_info_test[i][j];
                     struct in_addr addr;
 
@@ -1034,8 +1053,8 @@ static int redsocks_init() {
                         exit(EXIT_FAILURE);
                     }
 
-                    instance->config.relayaddr[i][j].sin_port = htons(atoi(sc->proxy_port));
-                    instance->config.relayaddr[i][j].sin_addr = addr;
+                    instance->config.relayaddr[i * 3 + j].sin_port = htons(atoi(sc->proxy_port));
+                    instance->config.relayaddr[i *3 + j].sin_addr = addr;
 	 	    	    log_errno(LOG_ERR,"sin_port=%s, sin_addr=%s, uid=%s, key=%s, machine_id=%s",
                               sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
                 }
@@ -1043,7 +1062,7 @@ static int redsocks_init() {
         } else {
 
             for (i = 0; i < 3; i++) {
-                mptcp_auth_login(instance, i);
+                mptcp_auth_login(instance, buf, i);
             }
 
             for (i = 0; i < 3; i++) {
@@ -1076,12 +1095,10 @@ static int redsocks_init() {
         //url = IP_PORT"/v1/iplist";
         //mptcp_auth(instance, url);
 
-        /*
         tv.tv_sec = instance->config.mptcp_reauth_time;
         tv.tv_usec = 0;
         tracked_event_set(&instance->mptcp_reauth, -1, 0, redsocks_mptcp_auth, instance);
         tracked_event_add(&instance->mptcp_reauth, &tv);
-        */
 
         break;
 	}
@@ -1111,9 +1128,15 @@ static int redsocks_fini()
 		memset(&debug_dumper, 0, sizeof(debug_dumper));
 	}
 
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < SN_CNT; j++) {
-            redsocks_free_server_info(&running_info[i][j]);
+    if (instance->config.mptcp_test_mode) {
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < SN_CNT; j++) {
+                redsocks_free_server_info(&running_info_test[i][j]);
+            }
+        }
+    } else {
+        for (i = 0; i < 3; i++) {
+                redsocks_free_server_info(&running_info[i]);
         }
     }
 

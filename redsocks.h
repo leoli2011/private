@@ -24,10 +24,10 @@ typedef struct relay_subsys_t {
 	void       (*connect_relay)(struct redsocks_client_t *client);
 } relay_subsys;
 
-#define SN_CNT     10
+#define SN_CNT    3 
 typedef struct redsocks_config_t {
 	struct sockaddr_in bindaddr;
-	struct sockaddr_in relayaddr[3][SN_CNT];
+	struct sockaddr_in relayaddr[3 + 3 * SN_CNT];
 	char *type;
 	char *login;
 	char *password;
