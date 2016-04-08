@@ -120,7 +120,7 @@ try_optimize_cfg iteration 2
         (reg:SI 620)) md5.c:135 -1
      (nil))
 (insn 19 18 20 2 (set (reg/f:DI 59 [ w.0 ])
-        (symbol_ref:DI ("w.1788") [flags 0x2]  <var_decl 0x2b064e5cf688 w>)) md5.c:155 -1
+        (symbol_ref:DI ("w.1788") [flags 0x2]  <var_decl 0x2b1696cdf688 w>)) md5.c:155 -1
      (nil))
 (insn 20 19 21 2 (set (reg:QI 60 [ D.2446 ])
         (mem:QI (reg/f:DI 59 [ w.0 ]) [0 MEM[(const md5_byte_t *)w.0_10]+0 S1 A8])) md5.c:155 -1
@@ -8553,7 +8553,7 @@ Forwarding edge 13->14 to 16 failed.
         (reg/f:DI 76 [ D.2457 ])) md5.c:340 -1
      (nil))
 (call_insn 85 84 86 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b064e50af00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b1696c1af00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) md5.c:340 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8654,7 +8654,7 @@ Forwarding edge 13->14 to 16 failed.
 (insn 105 104 106 13 (set (reg:DI 5 di)
         (reg:DI 110)) md5.c:345 -1
      (nil))
-(call_insn 106 105 107 13 (call (mem:QI (symbol_ref:DI ("md5_process") [flags 0x3]  <function_decl 0x2b064e5e0700 md5_process>) [0 md5_process S1 A8])
+(call_insn 106 105 107 13 (call (mem:QI (symbol_ref:DI ("md5_process") [flags 0x3]  <function_decl 0x2b1696cf0700 md5_process>) [0 md5_process S1 A8])
         (const_int 0 [0])) md5.c:345 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8683,7 +8683,7 @@ Forwarding edge 13->14 to 16 failed.
 (insn 115 114 116 15 (set (reg:DI 5 di)
         (reg:DI 112)) md5.c:350 -1
      (nil))
-(call_insn 116 115 117 15 (call (mem:QI (symbol_ref:DI ("md5_process") [flags 0x3]  <function_decl 0x2b064e5e0700 md5_process>) [0 md5_process S1 A8])
+(call_insn 116 115 117 15 (call (mem:QI (symbol_ref:DI ("md5_process") [flags 0x3]  <function_decl 0x2b1696cf0700 md5_process>) [0 md5_process S1 A8])
         (const_int 0 [0])) md5.c:350 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8770,7 +8770,7 @@ Forwarding edge 13->14 to 16 failed.
         (reg/f:DI 81 [ D.2458 ])) md5.c:354 -1
      (nil))
 (call_insn 136 135 139 18 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b064e50af00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b1696c1af00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) md5.c:354 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8998,12 +8998,12 @@ try_optimize_cfg iteration 2
         (reg:SI 70 [ D.2459 ])) md5.c:372 -1
      (nil))
 (insn 42 41 43 6 (set (reg:DI 4 si)
-        (symbol_ref:DI ("pad.1814") [flags 0x2]  <var_decl 0x2b064e606558 pad>)) md5.c:372 -1
+        (symbol_ref:DI ("pad.1814") [flags 0x2]  <var_decl 0x2b1696d16558 pad>)) md5.c:372 -1
      (nil))
 (insn 43 42 44 6 (set (reg:DI 5 di)
         (reg:DI 87)) md5.c:372 -1
      (nil))
-(call_insn 44 43 45 6 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x3]  <function_decl 0x2b064e5b5200 md5_append>) [0 md5_append S1 A8])
+(call_insn 44 43 45 6 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x3]  <function_decl 0x2b1696cc5200 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) md5.c:372 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -9030,7 +9030,7 @@ try_optimize_cfg iteration 2
 (insn 49 48 50 6 (set (reg:DI 5 di)
         (reg:DI 89)) md5.c:374 -1
      (nil))
-(call_insn 50 49 51 6 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x3]  <function_decl 0x2b064e5b5200 md5_append>) [0 md5_append S1 A8])
+(call_insn 50 49 51 6 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x3]  <function_decl 0x2b1696cc5200 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) md5.c:374 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -9172,7 +9172,7 @@ try_optimize_cfg iteration 2
      (nil)
  -> 82)
 (note 84 79 80 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
-(call_insn 80 84 81 11 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2b064e64f300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+(call_insn 80 84 81 11 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2b1696d5f300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
         (const_int 0 [0])) md5.c:377 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])

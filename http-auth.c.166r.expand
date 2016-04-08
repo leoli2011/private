@@ -56,7 +56,7 @@ try_optimize_cfg iteration 2
         (reg:DI 75)) http-auth.c:34 -1
      (nil))
 (call_insn/i 9 8 10 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:34 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -76,7 +76,7 @@ try_optimize_cfg iteration 2
         (reg:DI 76)) http-auth.c:34 -1
      (nil))
 (call_insn/i 14 13 15 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:34 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -130,7 +130,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67 [ D.3284 ])) http-auth.c:35 -1
      (nil))
 (call_insn 25 24 26 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2af7c47d7d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2abae0b90d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-auth.c:35 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -164,7 +164,7 @@ try_optimize_cfg iteration 2
         (reg:DI 80)) http-auth.c:37 -1
      (nil))
 (insn 33 32 34 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2af7c49b8428 *.LC0>)) http-auth.c:37 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2abae0d71428 *.LC0>)) http-auth.c:37 -1
      (nil))
 (insn 34 33 35 2 (set (reg:DI 5 di)
         (reg:DI 81)) http-auth.c:37 -1
@@ -173,7 +173,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-auth.c:37 -1
      (nil))
 (call_insn 36 35 37 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2af7c47cb500 sprintf>) [0 __builtin_sprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2abae0b84500 sprintf>) [0 __builtin_sprintf S1 A8])
             (const_int 0 [0]))) http-auth.c:37 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -269,7 +269,7 @@ try_optimize_cfg iteration 2
         (reg:DI 72 [ D.3284 ])) http-auth.c:41 -1
      (nil))
 (call_insn 51 50 52 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2af7c47d7d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2abae0b90d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-auth.c:41 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -313,7 +313,7 @@ try_optimize_cfg iteration 2
         (reg:DI 92)) http-auth.c:43 -1
      (nil))
 (call_insn 62 61 63 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("base64_encode") [flags 0x41]  <function_decl 0x2af7c496a500 base64_encode>) [0 base64_encode S1 A8])
+        (call (mem:QI (symbol_ref:DI ("base64_encode") [flags 0x41]  <function_decl 0x2abae0d23500 base64_encode>) [0 base64_encode S1 A8])
             (const_int 0 [0]))) http-auth.c:43 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -449,7 +449,7 @@ try_optimize_cfg iteration 2
         (reg:SI 62 [ D.3291 ])) http-auth.c:56 -1
      (nil))
 (insn 19 18 20 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2af7c49b8d10 *.LC1>)) http-auth.c:56 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2abae0d71d10 *.LC1>)) http-auth.c:56 -1
      (nil))
 (insn 20 19 21 4 (set (reg:DI 5 di)
         (reg:DI 67)) http-auth.c:56 -1
@@ -458,7 +458,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-auth.c:56 -1
      (nil))
 (call_insn 22 21 23 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2af7c47cb500 sprintf>) [0 __builtin_sprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2abae0b84500 sprintf>) [0 __builtin_sprintf S1 A8])
             (const_int 0 [0]))) http-auth.c:56 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -702,7 +702,7 @@ try_optimize_cfg iteration 2
 (code_label 17 16 18 5 8 "" [1 uses])
 (note 18 17 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 19 18 20 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2af7c494ab00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2abae0d03b00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-auth.c:76 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -851,7 +851,7 @@ try_optimize_cfg iteration 2
  -> 85)
 (note 60 59 61 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 61 60 62 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2af7c494ab00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2abae0d03b00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-auth.c:87 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1019,7 +1019,7 @@ try_optimize_cfg iteration 2
 (code_label 106 105 107 18 16 "" [1 uses])
 (note 107 106 108 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 108 107 109 18 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2af7c494ab00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2abae0d03b00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-auth.c:93 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1125,7 +1125,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 135 134 136 21 (set (mem/f/j:DI (plus:DI (reg/f:DI 164)
                 (const_int 8 [0x8])) [0 value_71(D)->e+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2af7c49d1720 *.LC2>)) http-auth.c:97 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2abae0d8a720 *.LC2>)) http-auth.c:97 -1
      (nil))
 (insn 136 135 137 21 (set (reg/f:DI 165)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -1251,7 +1251,7 @@ try_optimize_cfg iteration 2
 (code_label 171 170 172 28 22 "" [1 uses])
 (note 172 171 173 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 173 172 174 28 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2af7c494ab00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2abae0d03b00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-auth.c:107 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1480,7 +1480,7 @@ try_optimize_cfg iteration 2
 (code_label 234 233 235 38 29 "" [1 uses])
 (note 235 234 236 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 236 235 237 38 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2af7c494ab00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2abae0d03b00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-auth.c:116 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1804,7 +1804,7 @@ try_optimize_cfg iteration 2
  -> 346)
 (note 329 328 330 54 [bb 54] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 330 329 331 54 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2af7c494ab00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2abae0d03b00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-auth.c:129 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2139,7 +2139,7 @@ try_optimize_cfg iteration 2
         (reg:SI 174)) http-auth.c:143 -1
      (nil))
 (insn 21 20 22 2 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2af7c49eca18 *.LC3>)) http-auth.c:143 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2abae0da5a18 *.LC3>)) http-auth.c:143 -1
      (nil))
 (insn 22 21 23 2 (set (reg:DI 5 di)
         (reg:DI 175)) http-auth.c:143 -1
@@ -2148,7 +2148,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-auth.c:143 -1
      (nil))
 (call_insn 24 23 25 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2af7c47cb500 sprintf>) [0 __builtin_sprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2abae0b84500 sprintf>) [0 __builtin_sprintf S1 A8])
             (const_int 0 [0]))) http-auth.c:143 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2237,13 +2237,13 @@ try_optimize_cfg iteration 2
         (reg:DI 71 [ D.3305 ])) http-auth.c:152 -1
      (nil))
 (insn 46 45 47 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2af7c49ecab0 *.LC4>)) http-auth.c:152 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2abae0da5ab0 *.LC4>)) http-auth.c:152 -1
      (nil))
 (insn 47 46 48 4 (set (reg:DI 5 di)
         (reg/f:DI 72 [ D.3303 ])) http-auth.c:152 -1
      (nil))
 (call_insn/i 48 47 49 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2af7c4889e00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2abae0c42e00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-auth.c:152 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2301,7 +2301,7 @@ try_optimize_cfg iteration 2
         (reg:DI 77 [ D.3305 ])) http-auth.c:153 -1
      (nil))
 (call_insn 61 60 62 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2af7c47d7d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2abae0b90d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-auth.c:153 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2330,7 +2330,7 @@ try_optimize_cfg iteration 2
         (reg:DI 181)) http-auth.c:153 -1
      (nil))
 (call_insn 68 67 69 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2af7c47c1d00 strncpy>) [0 __builtin_strncpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2abae0b7ad00 strncpy>) [0 __builtin_strncpy S1 A8])
             (const_int 0 [0]))) http-auth.c:153 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2384,13 +2384,13 @@ try_optimize_cfg iteration 2
         (reg:DI 80 [ D.3305 ])) http-auth.c:156 -1
      (nil))
 (insn 82 81 83 6 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2af7c49ecb48 *.LC5>)) http-auth.c:156 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2abae0da5b48 *.LC5>)) http-auth.c:156 -1
      (nil))
 (insn 83 82 84 6 (set (reg:DI 5 di)
         (reg/f:DI 81 [ D.3303 ])) http-auth.c:156 -1
      (nil))
 (call_insn/i 84 83 85 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2af7c4889e00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2abae0c42e00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-auth.c:156 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2448,7 +2448,7 @@ try_optimize_cfg iteration 2
         (reg:DI 86 [ D.3305 ])) http-auth.c:157 -1
      (nil))
 (call_insn 97 96 98 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2af7c47d7d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2abae0b90d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-auth.c:157 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2477,7 +2477,7 @@ try_optimize_cfg iteration 2
         (reg:DI 188)) http-auth.c:157 -1
      (nil))
 (call_insn 104 103 105 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2af7c47c1d00 strncpy>) [0 __builtin_strncpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2abae0b7ad00 strncpy>) [0 __builtin_strncpy S1 A8])
             (const_int 0 [0]))) http-auth.c:157 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2531,13 +2531,13 @@ try_optimize_cfg iteration 2
         (reg:DI 89 [ D.3305 ])) http-auth.c:160 -1
      (nil))
 (insn 118 117 119 8 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2af7c49ecbe0 *.LC6>)) http-auth.c:160 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2abae0da5be0 *.LC6>)) http-auth.c:160 -1
      (nil))
 (insn 119 118 120 8 (set (reg:DI 5 di)
         (reg/f:DI 90 [ D.3303 ])) http-auth.c:160 -1
      (nil))
 (call_insn/i 120 119 121 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2af7c4889e00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2abae0c42e00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-auth.c:160 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2595,7 +2595,7 @@ try_optimize_cfg iteration 2
         (reg:DI 95 [ D.3305 ])) http-auth.c:161 -1
      (nil))
 (call_insn 133 132 134 9 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2af7c47d7d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2abae0b90d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-auth.c:161 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2624,7 +2624,7 @@ try_optimize_cfg iteration 2
         (reg:DI 195)) http-auth.c:161 -1
      (nil))
 (call_insn 140 139 141 9 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2af7c47c1d00 strncpy>) [0 __builtin_strncpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2abae0b7ad00 strncpy>) [0 __builtin_strncpy S1 A8])
             (const_int 0 [0]))) http-auth.c:161 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2678,13 +2678,13 @@ try_optimize_cfg iteration 2
         (reg:DI 98 [ D.3305 ])) http-auth.c:164 -1
      (nil))
 (insn 154 153 155 10 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2af7c49ecc78 *.LC7>)) http-auth.c:164 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2abae0da5c78 *.LC7>)) http-auth.c:164 -1
      (nil))
 (insn 155 154 156 10 (set (reg:DI 5 di)
         (reg/f:DI 99 [ D.3303 ])) http-auth.c:164 -1
      (nil))
 (call_insn/i 156 155 157 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2af7c4889e00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2abae0c42e00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-auth.c:164 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2742,7 +2742,7 @@ try_optimize_cfg iteration 2
         (reg:DI 104 [ D.3305 ])) http-auth.c:165 -1
      (nil))
 (call_insn 169 168 170 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2af7c47d7d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2abae0b90d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-auth.c:165 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2771,7 +2771,7 @@ try_optimize_cfg iteration 2
         (reg:DI 202)) http-auth.c:165 -1
      (nil))
 (call_insn 176 175 177 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2af7c47c1d00 strncpy>) [0 __builtin_strncpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncpy") [flags 0x41]  <function_decl 0x2abae0b7ad00 strncpy>) [0 __builtin_strncpy S1 A8])
             (const_int 0 [0]))) http-auth.c:165 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2839,7 +2839,7 @@ try_optimize_cfg iteration 2
         (reg:DI 207)) http-auth.c:148 -1
      (nil))
 (call_insn 191 190 192 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("extract_param") [flags 0x3]  <function_decl 0x2af7c496aa00 extract_param>) [0 extract_param S1 A8])
+        (call (mem:QI (symbol_ref:DI ("extract_param") [flags 0x3]  <function_decl 0x2abae0d23a00 extract_param>) [0 extract_param S1 A8])
             (const_int 0 [0]))) http-auth.c:148 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2948,7 +2948,7 @@ try_optimize_cfg iteration 2
 (insn 217 216 218 19 (set (reg:DI 5 di)
         (reg:DI 208)) http-auth.c:171 -1
      (nil))
-(call_insn 218 217 219 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 218 217 219 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:171 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2961,7 +2961,7 @@ try_optimize_cfg iteration 2
 (insn 220 219 221 19 (set (reg:DI 5 di)
         (reg:DI 209)) http-auth.c:172 -1
      (nil))
-(call_insn 221 220 222 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 221 220 222 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:172 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2974,7 +2974,7 @@ try_optimize_cfg iteration 2
 (insn 223 222 224 19 (set (reg:DI 5 di)
         (reg:DI 210)) http-auth.c:173 -1
      (nil))
-(call_insn 224 223 225 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 224 223 225 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:173 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2987,7 +2987,7 @@ try_optimize_cfg iteration 2
 (insn 226 225 227 19 (set (reg:DI 5 di)
         (reg:DI 211)) http-auth.c:174 -1
      (nil))
-(call_insn 227 226 228 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 227 226 228 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:174 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3024,13 +3024,13 @@ try_optimize_cfg iteration 2
         (const_int 5 [0x5])) http-auth.c:178 -1
      (nil))
 (insn 238 237 239 21 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2af7c49ecd10 *.LC8>)) http-auth.c:178 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2abae0da5d10 *.LC8>)) http-auth.c:178 -1
      (nil))
 (insn 239 238 240 21 (set (reg:DI 5 di)
         (reg:DI 212)) http-auth.c:178 -1
      (nil))
 (call_insn/i 240 239 241 21 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2af7c4889e00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2abae0c42e00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-auth.c:178 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3060,7 +3060,7 @@ try_optimize_cfg iteration 2
 (insn 246 245 247 22 (set (reg:DI 5 di)
         (reg:DI 213)) http-auth.c:180 -1
      (nil))
-(call_insn 247 246 248 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 247 246 248 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:180 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3073,7 +3073,7 @@ try_optimize_cfg iteration 2
 (insn 249 248 250 22 (set (reg:DI 5 di)
         (reg:DI 214)) http-auth.c:181 -1
      (nil))
-(call_insn 250 249 251 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 250 249 251 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:181 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3086,7 +3086,7 @@ try_optimize_cfg iteration 2
 (insn 252 251 253 22 (set (reg:DI 5 di)
         (reg:DI 215)) http-auth.c:182 -1
      (nil))
-(call_insn 253 252 254 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 253 252 254 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:182 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3099,7 +3099,7 @@ try_optimize_cfg iteration 2
 (insn 255 254 256 22 (set (reg:DI 5 di)
         (reg:DI 216)) http-auth.c:183 -1
      (nil))
-(call_insn 256 255 257 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 256 255 257 22 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:183 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3125,7 +3125,7 @@ try_optimize_cfg iteration 2
 (insn 263 262 264 23 (set (reg:DI 5 di)
         (reg:DI 217)) http-auth.c:194 -1
      (nil))
-(call_insn 264 263 265 23 (call (mem:QI (symbol_ref:DI ("md5_init") [flags 0x41]  <function_decl 0x2af7c4960d00 md5_init>) [0 md5_init S1 A8])
+(call_insn 264 263 265 23 (call (mem:QI (symbol_ref:DI ("md5_init") [flags 0x41]  <function_decl 0x2abae0d19d00 md5_init>) [0 md5_init S1 A8])
         (const_int 0 [0])) http-auth.c:194 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3138,7 +3138,7 @@ try_optimize_cfg iteration 2
         (reg:DI 218)) http-auth.c:195 -1
      (nil))
 (call_insn/i 267 266 268 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:195 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3170,7 +3170,7 @@ try_optimize_cfg iteration 2
 (insn 274 273 275 23 (set (reg:DI 5 di)
         (reg:DI 220)) http-auth.c:195 -1
      (nil))
-(call_insn 275 274 276 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 275 274 276 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:195 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3188,12 +3188,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:196 -1
      (nil))
 (insn 278 277 279 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:196 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:196 -1
      (nil))
 (insn 279 278 280 23 (set (reg:DI 5 di)
         (reg:DI 221)) http-auth.c:196 -1
      (nil))
-(call_insn 280 279 281 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 280 279 281 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:196 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3208,7 +3208,7 @@ try_optimize_cfg iteration 2
         (reg:DI 222)) http-auth.c:197 -1
      (nil))
 (call_insn/i 283 282 284 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:197 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3240,7 +3240,7 @@ try_optimize_cfg iteration 2
 (insn 290 289 291 23 (set (reg:DI 5 di)
         (reg:DI 224)) http-auth.c:197 -1
      (nil))
-(call_insn 291 290 292 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 291 290 292 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:197 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3258,12 +3258,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:198 -1
      (nil))
 (insn 294 293 295 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:198 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:198 -1
      (nil))
 (insn 295 294 296 23 (set (reg:DI 5 di)
         (reg:DI 225)) http-auth.c:198 -1
      (nil))
-(call_insn 296 295 297 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 296 295 297 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:198 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3278,7 +3278,7 @@ try_optimize_cfg iteration 2
         (reg:DI 226)) http-auth.c:199 -1
      (nil))
 (call_insn/i 299 298 300 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:199 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3310,7 +3310,7 @@ try_optimize_cfg iteration 2
 (insn 306 305 307 23 (set (reg:DI 5 di)
         (reg:DI 228)) http-auth.c:199 -1
      (nil))
-(call_insn 307 306 308 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 307 306 308 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:199 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3337,7 +3337,7 @@ try_optimize_cfg iteration 2
 (insn 311 310 312 23 (set (reg:DI 5 di)
         (reg:DI 230)) http-auth.c:200 -1
      (nil))
-(call_insn 312 311 313 23 (call (mem:QI (symbol_ref:DI ("md5_finish") [flags 0x41]  <function_decl 0x2af7c4960f00 md5_finish>) [0 md5_finish S1 A8])
+(call_insn 312 311 313 23 (call (mem:QI (symbol_ref:DI ("md5_finish") [flags 0x41]  <function_decl 0x2abae0d19f00 md5_finish>) [0 md5_finish S1 A8])
         (const_int 0 [0])) http-auth.c:200 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3363,7 +3363,7 @@ try_optimize_cfg iteration 2
 (insn 316 315 317 23 (set (reg:DI 5 di)
         (reg:DI 232)) http-auth.c:201 -1
      (nil))
-(call_insn 317 316 318 23 (call (mem:QI (symbol_ref:DI ("dump_hash") [flags 0x3]  <function_decl 0x2af7c496a900 dump_hash>) [0 dump_hash S1 A8])
+(call_insn 317 316 318 23 (call (mem:QI (symbol_ref:DI ("dump_hash") [flags 0x3]  <function_decl 0x2abae0d23900 dump_hash>) [0 dump_hash S1 A8])
         (const_int 0 [0])) http-auth.c:201 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3379,7 +3379,7 @@ try_optimize_cfg iteration 2
 (insn 319 318 320 23 (set (reg:DI 5 di)
         (reg:DI 233)) http-auth.c:204 -1
      (nil))
-(call_insn 320 319 321 23 (call (mem:QI (symbol_ref:DI ("md5_init") [flags 0x41]  <function_decl 0x2af7c4960d00 md5_init>) [0 md5_init S1 A8])
+(call_insn 320 319 321 23 (call (mem:QI (symbol_ref:DI ("md5_init") [flags 0x41]  <function_decl 0x2abae0d19d00 md5_init>) [0 md5_init S1 A8])
         (const_int 0 [0])) http-auth.c:204 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3392,7 +3392,7 @@ try_optimize_cfg iteration 2
         (reg:DI 234)) http-auth.c:205 -1
      (nil))
 (call_insn/i 323 322 324 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:205 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3424,7 +3424,7 @@ try_optimize_cfg iteration 2
 (insn 330 329 331 23 (set (reg:DI 5 di)
         (reg:DI 236)) http-auth.c:205 -1
      (nil))
-(call_insn 331 330 332 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 331 330 332 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:205 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3442,12 +3442,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:206 -1
      (nil))
 (insn 334 333 335 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:206 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:206 -1
      (nil))
 (insn 335 334 336 23 (set (reg:DI 5 di)
         (reg:DI 237)) http-auth.c:206 -1
      (nil))
-(call_insn 336 335 337 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 336 335 337 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:206 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3462,7 +3462,7 @@ try_optimize_cfg iteration 2
         (reg:DI 238)) http-auth.c:207 -1
      (nil))
 (call_insn/i 339 338 340 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:207 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3494,7 +3494,7 @@ try_optimize_cfg iteration 2
 (insn 346 345 347 23 (set (reg:DI 5 di)
         (reg:DI 240)) http-auth.c:207 -1
      (nil))
-(call_insn 347 346 348 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 347 346 348 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:207 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3521,7 +3521,7 @@ try_optimize_cfg iteration 2
 (insn 351 350 352 23 (set (reg:DI 5 di)
         (reg:DI 242)) http-auth.c:208 -1
      (nil))
-(call_insn 352 351 353 23 (call (mem:QI (symbol_ref:DI ("md5_finish") [flags 0x41]  <function_decl 0x2af7c4960f00 md5_finish>) [0 md5_finish S1 A8])
+(call_insn 352 351 353 23 (call (mem:QI (symbol_ref:DI ("md5_finish") [flags 0x41]  <function_decl 0x2abae0d19f00 md5_finish>) [0 md5_finish S1 A8])
         (const_int 0 [0])) http-auth.c:208 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3547,7 +3547,7 @@ try_optimize_cfg iteration 2
 (insn 356 355 357 23 (set (reg:DI 5 di)
         (reg:DI 244)) http-auth.c:209 -1
      (nil))
-(call_insn 357 356 358 23 (call (mem:QI (symbol_ref:DI ("dump_hash") [flags 0x3]  <function_decl 0x2af7c496a900 dump_hash>) [0 dump_hash S1 A8])
+(call_insn 357 356 358 23 (call (mem:QI (symbol_ref:DI ("dump_hash") [flags 0x3]  <function_decl 0x2abae0d23900 dump_hash>) [0 dump_hash S1 A8])
         (const_int 0 [0])) http-auth.c:209 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3563,7 +3563,7 @@ try_optimize_cfg iteration 2
 (insn 359 358 360 23 (set (reg:DI 5 di)
         (reg:DI 245)) http-auth.c:213 -1
      (nil))
-(call_insn 360 359 361 23 (call (mem:QI (symbol_ref:DI ("md5_init") [flags 0x41]  <function_decl 0x2af7c4960d00 md5_init>) [0 md5_init S1 A8])
+(call_insn 360 359 361 23 (call (mem:QI (symbol_ref:DI ("md5_init") [flags 0x41]  <function_decl 0x2abae0d19d00 md5_init>) [0 md5_init S1 A8])
         (const_int 0 [0])) http-auth.c:213 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3579,7 +3579,7 @@ try_optimize_cfg iteration 2
         (reg:DI 246)) http-auth.c:214 -1
      (nil))
 (call_insn/i 363 362 364 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:214 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3614,7 +3614,7 @@ try_optimize_cfg iteration 2
 (insn 370 369 371 23 (set (reg:DI 5 di)
         (reg:DI 248)) http-auth.c:214 -1
      (nil))
-(call_insn 371 370 372 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 371 370 372 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:214 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3632,12 +3632,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:215 -1
      (nil))
 (insn 374 373 375 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:215 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:215 -1
      (nil))
 (insn 375 374 376 23 (set (reg:DI 5 di)
         (reg:DI 249)) http-auth.c:215 -1
      (nil))
-(call_insn 376 375 377 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 376 375 377 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:215 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3652,7 +3652,7 @@ try_optimize_cfg iteration 2
         (reg:DI 250)) http-auth.c:216 -1
      (nil))
 (call_insn/i 379 378 380 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:216 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3684,7 +3684,7 @@ try_optimize_cfg iteration 2
 (insn 386 385 387 23 (set (reg:DI 5 di)
         (reg:DI 252)) http-auth.c:216 -1
      (nil))
-(call_insn 387 386 388 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 387 386 388 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:216 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3702,12 +3702,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:217 -1
      (nil))
 (insn 390 389 391 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:217 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:217 -1
      (nil))
 (insn 391 390 392 23 (set (reg:DI 5 di)
         (reg:DI 253)) http-auth.c:217 -1
      (nil))
-(call_insn 392 391 393 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 392 391 393 23 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:217 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3738,7 +3738,7 @@ try_optimize_cfg iteration 2
         (reg:DI 254)) http-auth.c:219 -1
      (nil))
 (call_insn/i 398 397 399 24 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:219 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3773,7 +3773,7 @@ try_optimize_cfg iteration 2
 (insn 405 404 406 24 (set (reg:DI 5 di)
         (reg:DI 256)) http-auth.c:219 -1
      (nil))
-(call_insn 406 405 407 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 406 405 407 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:219 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3791,12 +3791,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:220 -1
      (nil))
 (insn 409 408 410 24 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:220 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:220 -1
      (nil))
 (insn 410 409 411 24 (set (reg:DI 5 di)
         (reg:DI 257)) http-auth.c:220 -1
      (nil))
-(call_insn 411 410 412 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 411 410 412 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:220 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3811,7 +3811,7 @@ try_optimize_cfg iteration 2
         (reg:DI 258)) http-auth.c:221 -1
      (nil))
 (call_insn/i 414 413 415 24 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:221 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3843,7 +3843,7 @@ try_optimize_cfg iteration 2
 (insn 421 420 422 24 (set (reg:DI 5 di)
         (reg:DI 260)) http-auth.c:221 -1
      (nil))
-(call_insn 422 421 423 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 422 421 423 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:221 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3861,12 +3861,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:222 -1
      (nil))
 (insn 425 424 426 24 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:222 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:222 -1
      (nil))
 (insn 426 425 427 24 (set (reg:DI 5 di)
         (reg:DI 261)) http-auth.c:222 -1
      (nil))
-(call_insn 427 426 428 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 427 426 428 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:222 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3881,7 +3881,7 @@ try_optimize_cfg iteration 2
         (reg:DI 262)) http-auth.c:223 -1
      (nil))
 (call_insn/i 430 429 431 24 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:223 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3913,7 +3913,7 @@ try_optimize_cfg iteration 2
 (insn 437 436 438 24 (set (reg:DI 5 di)
         (reg:DI 264)) http-auth.c:223 -1
      (nil))
-(call_insn 438 437 439 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 438 437 439 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:223 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3931,12 +3931,12 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-auth.c:224 -1
      (nil))
 (insn 441 440 442 24 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2af7c49ecda8 *.LC9>)) http-auth.c:224 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2abae0da5da8 *.LC9>)) http-auth.c:224 -1
      (nil))
 (insn 442 441 443 24 (set (reg:DI 5 di)
         (reg:DI 265)) http-auth.c:224 -1
      (nil))
-(call_insn 443 442 444 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 443 442 444 24 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:224 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3956,7 +3956,7 @@ try_optimize_cfg iteration 2
         (reg:DI 266)) http-auth.c:226 -1
      (nil))
 (call_insn/i 448 447 449 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:226 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3991,7 +3991,7 @@ try_optimize_cfg iteration 2
 (insn 455 454 456 25 (set (reg:DI 5 di)
         (reg:DI 268)) http-auth.c:226 -1
      (nil))
-(call_insn 456 455 457 25 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2af7c4960e00 md5_append>) [0 md5_append S1 A8])
+(call_insn 456 455 457 25 (call (mem:QI (symbol_ref:DI ("md5_append") [flags 0x41]  <function_decl 0x2abae0d19e00 md5_append>) [0 md5_append S1 A8])
         (const_int 0 [0])) http-auth.c:226 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4018,7 +4018,7 @@ try_optimize_cfg iteration 2
 (insn 460 459 461 25 (set (reg:DI 5 di)
         (reg:DI 270)) http-auth.c:227 -1
      (nil))
-(call_insn 461 460 462 25 (call (mem:QI (symbol_ref:DI ("md5_finish") [flags 0x41]  <function_decl 0x2af7c4960f00 md5_finish>) [0 md5_finish S1 A8])
+(call_insn 461 460 462 25 (call (mem:QI (symbol_ref:DI ("md5_finish") [flags 0x41]  <function_decl 0x2abae0d19f00 md5_finish>) [0 md5_finish S1 A8])
         (const_int 0 [0])) http-auth.c:227 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4044,7 +4044,7 @@ try_optimize_cfg iteration 2
 (insn 465 464 466 25 (set (reg:DI 5 di)
         (reg:DI 272)) http-auth.c:228 -1
      (nil))
-(call_insn 466 465 467 25 (call (mem:QI (symbol_ref:DI ("dump_hash") [flags 0x3]  <function_decl 0x2af7c496a900 dump_hash>) [0 dump_hash S1 A8])
+(call_insn 466 465 467 25 (call (mem:QI (symbol_ref:DI ("dump_hash") [flags 0x3]  <function_decl 0x2abae0d23900 dump_hash>) [0 dump_hash S1 A8])
         (const_int 0 [0])) http-auth.c:228 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4062,7 +4062,7 @@ try_optimize_cfg iteration 2
         (reg:DI 273)) http-auth.c:232 -1
      (nil))
 (call_insn/i 470 469 471 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:232 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4097,7 +4097,7 @@ try_optimize_cfg iteration 2
         (reg:DI 274)) http-auth.c:233 -1
      (nil))
 (call_insn/i 478 477 479 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:233 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4132,7 +4132,7 @@ try_optimize_cfg iteration 2
         (reg:DI 275)) http-auth.c:234 -1
      (nil))
 (call_insn/i 486 485 487 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:234 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4167,7 +4167,7 @@ try_optimize_cfg iteration 2
         (reg:DI 276)) http-auth.c:235 -1
      (nil))
 (call_insn/i 494 493 495 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:235 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4205,7 +4205,7 @@ try_optimize_cfg iteration 2
         (reg:DI 277)) http-auth.c:236 -1
      (nil))
 (call_insn/i 502 501 503 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:236 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4253,7 +4253,7 @@ try_optimize_cfg iteration 2
         (reg:DI 278)) http-auth.c:239 -1
      (nil))
 (call_insn/i 513 512 514 26 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:239 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4291,7 +4291,7 @@ try_optimize_cfg iteration 2
         (reg:DI 279)) http-auth.c:240 -1
      (nil))
 (call_insn/i 521 520 522 26 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:240 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4326,7 +4326,7 @@ try_optimize_cfg iteration 2
         (reg:DI 280)) http-auth.c:241 -1
      (nil))
 (call_insn/i 529 528 530 26 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:241 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4376,7 +4376,7 @@ try_optimize_cfg iteration 2
         (reg:DI 281)) http-auth.c:245 -1
      (nil))
 (call_insn/i 542 541 543 28 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:245 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4416,7 +4416,7 @@ try_optimize_cfg iteration 2
         (reg:DI 166 [ D.3305 ])) http-auth.c:248 -1
      (nil))
 (call_insn 553 552 554 29 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x2af7c47e2f00 malloc>) [0 __builtin_malloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x2abae0b9bf00 malloc>) [0 __builtin_malloc S1 A8])
             (const_int 0 [0]))) http-auth.c:248 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4488,7 +4488,7 @@ try_optimize_cfg iteration 2
         (reg:DI 287)) http-auth.c:250 -1
      (nil))
 (insn 570 569 571 30 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2af7c49ece40 *.LC10>)) http-auth.c:250 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2abae0da5e40 *.LC10>)) http-auth.c:250 -1
      (nil))
 (insn 571 570 572 30 (set (reg:DI 5 di)
         (reg:DI 288)) http-auth.c:250 -1
@@ -4497,7 +4497,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-auth.c:250 -1
      (nil))
 (call_insn 573 572 574 30 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2af7c47cb500 sprintf>) [0 __builtin_sprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2abae0b84500 sprintf>) [0 __builtin_sprintf S1 A8])
             (const_int 8 [0x8]))) http-auth.c:250 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4591,7 +4591,7 @@ try_optimize_cfg iteration 2
         (reg:DI 293)) http-auth.c:253 -1
      (nil))
 (insn 595 594 596 31 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2af7c49eced8 *.LC11>)) http-auth.c:253 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2abae0da5ed8 *.LC11>)) http-auth.c:253 -1
      (nil))
 (insn 596 595 597 31 (set (reg:DI 5 di)
         (reg:DI 294)) http-auth.c:253 -1
@@ -4600,7 +4600,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-auth.c:253 -1
      (nil))
 (call_insn 598 597 599 31 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2af7c47cb500 sprintf>) [0 __builtin_sprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("sprintf") [flags 0x41]  <function_decl 0x2abae0b84500 sprintf>) [0 __builtin_sprintf S1 A8])
             (const_int 32 [0x20]))) http-auth.c:253 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4642,7 +4642,7 @@ try_optimize_cfg iteration 2
         (reg:DI 299)) http-auth.c:258 -1
      (nil))
 (call_insn/i 606 605 607 33 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2af7c47c1600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2abae0b7a600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-auth.c:258 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4744,7 +4744,7 @@ try_optimize_cfg iteration 2
         (reg:DI 312)) http-auth.c:260 -1
      (nil))
 (call_insn 630 629 637 33 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcat") [flags 0x41]  <function_decl 0x2af7c47bea00 strcat>) [0 __builtin_strcat S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcat") [flags 0x41]  <function_decl 0x2abae0b77a00 strcat>) [0 __builtin_strcat S1 A8])
             (const_int 0 [0]))) http-auth.c:260 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4812,7 +4812,7 @@ try_optimize_cfg iteration 2
 (insn 644 643 645 34 (set (reg:DI 5 di)
         (reg:DI 320)) http-auth.c:264 -1
      (nil))
-(call_insn 645 644 646 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 645 644 646 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:264 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4825,7 +4825,7 @@ try_optimize_cfg iteration 2
 (insn 647 646 648 34 (set (reg:DI 5 di)
         (reg:DI 321)) http-auth.c:265 -1
      (nil))
-(call_insn 648 647 649 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 648 647 649 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:265 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4838,7 +4838,7 @@ try_optimize_cfg iteration 2
 (insn 650 649 651 34 (set (reg:DI 5 di)
         (reg:DI 322)) http-auth.c:266 -1
      (nil))
-(call_insn 651 650 652 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 651 650 652 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:266 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4851,7 +4851,7 @@ try_optimize_cfg iteration 2
 (insn 653 652 654 34 (set (reg:DI 5 di)
         (reg:DI 323)) http-auth.c:267 -1
      (nil))
-(call_insn 654 653 655 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2af7c47dd500 free>) [0 __builtin_free S1 A8])
+(call_insn 654 653 655 34 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2abae0b96500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-auth.c:267 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4887,7 +4887,7 @@ try_optimize_cfg iteration 2
      (nil)
  -> 671)
 (note 675 668 669 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
-(call_insn 669 675 670 38 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2af7c497ef00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+(call_insn 669 675 670 38 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2abae0d37f00 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
         (const_int 0 [0])) http-auth.c:269 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])

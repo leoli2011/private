@@ -116,7 +116,7 @@ try_optimize_cfg iteration 2
                 (const_int 16 [0x10])) [0 context_1(D)->line+0 S4 A64])) parser.c:56 -1
      (nil))
 (insn 28 27 29 5 (set (reg/f:DI 63 [ stderr.0 ])
-        (mem/f/c:DI (symbol_ref:DI ("stderr") [flags 0x40]  <var_decl 0x2b5c42dfc850 stderr>) [0 stderr+0 S8 A64])) parser.c:56 -1
+        (mem/f/c:DI (symbol_ref:DI ("stderr") [flags 0x40]  <var_decl 0x2ab58d6b9850 stderr>) [0 stderr+0 S8 A64])) parser.c:56 -1
      (nil))
 (insn 29 28 30 5 (set (reg:DI 70)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -129,7 +129,7 @@ try_optimize_cfg iteration 2
         (reg:SI 62 [ D.5322 ])) parser.c:56 -1
      (nil))
 (insn 32 31 33 5 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b5c43006850 *.LC0>)) parser.c:56 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ab58d8c3850 *.LC0>)) parser.c:56 -1
      (nil))
 (insn 33 32 34 5 (set (reg:DI 5 di)
         (reg/f:DI 63 [ stderr.0 ])) parser.c:56 -1
@@ -138,7 +138,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) parser.c:56 -1
      (nil))
 (call_insn 35 34 38 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x2b5c42cc6700 fprintf>) [0 __builtin_fprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fprintf") [flags 0x41]  <function_decl 0x2ab58d583700 fprintf>) [0 __builtin_fprintf S1 A8])
             (const_int 0 [0]))) parser.c:56 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -204,7 +204,7 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) parser.c:61 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2b5c42cd9d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ab58d596d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) parser.c:61 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -285,7 +285,7 @@ try_optimize_cfg iteration 2
         (reg:DI 60 [ D.5325 ])) parser.c:67 -1
      (nil))
 (call_insn 31 30 32 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x2b5c42ce4f00 malloc>) [0 __builtin_malloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x2ab58d5a1f00 malloc>) [0 __builtin_malloc S1 A8])
             (const_int 0 [0]))) parser.c:67 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -333,7 +333,7 @@ try_optimize_cfg iteration 2
 (insn 42 41 43 6 (set (reg:DI 5 di)
         (reg:DI 74)) parser.c:69 -1
      (nil))
-(call_insn 43 42 44 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 43 42 44 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:69 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -479,7 +479,7 @@ try_optimize_cfg iteration 2
 (insn 8 7 9 2 (set (reg:DI 5 di)
         (reg/f:DI 59 [ D.5329 ])) parser.c:84 -1
      (nil))
-(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:84 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -492,7 +492,7 @@ try_optimize_cfg iteration 2
 (insn 11 10 12 2 (set (reg:DI 5 di)
         (reg:DI 61)) parser.c:85 -1
      (nil))
-(call_insn 12 11 0 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 12 11 0 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:85 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -977,7 +977,7 @@ try_optimize_cfg iteration 2
  -> 40)
 (note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 25 24 26 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b5c42e31a00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ab58d6eea00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) parser.c:115 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1248,7 +1248,7 @@ try_optimize_cfg iteration 2
         (reg:SI 86 [ D.5338 ])) parser.c:132 -1
      (nil))
 (call_insn 100 99 101 17 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("unescape") [flags 0x3]  <function_decl 0x2b5c42f76d00 unescape>) [0 unescape S1 A8])
+        (call (mem:QI (symbol_ref:DI ("unescape") [flags 0x3]  <function_decl 0x2ab58d833d00 unescape>) [0 unescape S1 A8])
             (const_int 0 [0]))) parser.c:132 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -1289,12 +1289,12 @@ try_optimize_cfg iteration 2
                 (const_int -72 [0xffffffffffffffb8])) [0 context+0 S8 A64])) parser.c:135 -1
      (nil))
 (insn 111 110 112 19 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2b5c430372f8 *.LC1>)) parser.c:135 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2ab58d8f42f8 *.LC1>)) parser.c:135 -1
      (nil))
 (insn 112 111 113 19 (set (reg:DI 5 di)
         (reg:DI 209)) parser.c:135 -1
      (nil))
-(call_insn 113 112 114 19 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 113 112 114 19 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:135 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1353,7 +1353,7 @@ try_optimize_cfg iteration 2
 (code_label 133 132 134 23 26 "" [1 uses])
 (note 134 133 135 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 135 134 136 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b5c42e31a00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ab58d6eea00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) parser.c:147 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1463,7 +1463,7 @@ try_optimize_cfg iteration 2
 (code_label 163 162 164 27 36 "" [1 uses])
 (note 164 163 165 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 165 164 166 27 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b5c42e31a00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ab58d6eea00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) parser.c:153 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1579,7 +1579,7 @@ try_optimize_cfg iteration 2
  -> 230)
 (note 194 193 195 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 195 194 196 31 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b5c42e31a00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ab58d6eea00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) parser.c:156 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1780,7 +1780,7 @@ try_optimize_cfg iteration 2
 (code_label 249 248 250 39 35 "" [1 uses])
 (note 250 249 251 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 251 250 252 39 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b5c42e31a00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ab58d6eea00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) parser.c:168 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1890,7 +1890,7 @@ try_optimize_cfg iteration 2
 (code_label 279 278 280 43 45 "" [1 uses])
 (note 280 279 281 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 281 280 282 43 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b5c42e31a00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ab58d6eea00 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) parser.c:174 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2261,12 +2261,12 @@ try_optimize_cfg iteration 2
                 (const_int -72 [0xffffffffffffffb8])) [0 context+0 S8 A64])) parser.c:190 -1
      (nil))
 (insn 386 385 387 58 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b5c43037390 *.LC2>)) parser.c:190 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ab58d8f4390 *.LC2>)) parser.c:190 -1
      (nil))
 (insn 387 386 388 58 (set (reg:DI 5 di)
         (reg:DI 237)) parser.c:190 -1
      (nil))
-(call_insn 388 387 389 58 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 388 387 389 58 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:190 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2300,7 +2300,7 @@ try_optimize_cfg iteration 2
         (reg:DI 171 [ D.5336 ])) parser.c:194 -1
      (nil))
 (call_insn 397 396 398 59 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x2b5c42ce4f00 malloc>) [0 __builtin_malloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("malloc") [flags 0x41]  <function_decl 0x2ab58d5a1f00 malloc>) [0 __builtin_malloc S1 A8])
             (const_int 0 [0]))) parser.c:194 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2332,12 +2332,12 @@ try_optimize_cfg iteration 2
                 (const_int -72 [0xffffffffffffffb8])) [0 context+0 S8 A64])) parser.c:196 -1
      (nil))
 (insn 404 403 405 60 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2b5c43037428 *.LC3>)) parser.c:196 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2ab58d8f4428 *.LC3>)) parser.c:196 -1
      (nil))
 (insn 405 404 406 60 (set (reg:DI 5 di)
         (reg:DI 240)) parser.c:196 -1
      (nil))
-(call_insn 406 405 407 60 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 406 405 407 60 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:196 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2493,7 +2493,7 @@ try_optimize_cfg iteration 2
         (reg:SI 183 [ D.5338 ])) parser.c:209 -1
      (nil))
 (call_insn 450 449 451 66 (set (reg:QI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("unescape") [flags 0x3]  <function_decl 0x2b5c42f76d00 unescape>) [0 unescape S1 A8])
+        (call (mem:QI (symbol_ref:DI ("unescape") [flags 0x3]  <function_decl 0x2ab58d833d00 unescape>) [0 unescape S1 A8])
             (const_int 0 [0]))) parser.c:209 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -2644,7 +2644,7 @@ try_optimize_cfg iteration 2
         (reg:DI 259)) parser.c:221 -1
      (nil))
 (call_insn 497 496 498 71 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b5c42cbef00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ab58d57bf00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) parser.c:221 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2961,31 +2961,31 @@ try_optimize_cfg iteration 2
 (note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
 (insn 8 5 9 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -32 [0xffffffffffffffe0])) [0 strtrue+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2b5c43064130 *.LC4>)) parser.c:243 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2ab58d921130 *.LC4>)) parser.c:243 -1
      (nil))
 (insn 9 8 10 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -24 [0xffffffffffffffe8])) [0 strtrue+8 S8 A64])
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2b5c430641c8 *.LC5>)) parser.c:243 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2ab58d9211c8 *.LC5>)) parser.c:243 -1
      (nil))
 (insn 10 9 11 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -16 [0xfffffffffffffff0])) [0 strtrue+16 S8 A64])
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2b5c43064260 *.LC6>)) parser.c:243 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2ab58d921260 *.LC6>)) parser.c:243 -1
      (nil))
 (insn 11 10 12 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 strtrue+24 S8 A64])
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2b5c430642f8 *.LC7>)) parser.c:243 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2ab58d9212f8 *.LC7>)) parser.c:243 -1
      (nil))
 (insn 12 11 13 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -64 [0xffffffffffffffc0])) [0 strfalse+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2b5c43064390 *.LC8>)) parser.c:244 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2ab58d921390 *.LC8>)) parser.c:244 -1
      (nil))
 (insn 13 12 14 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -56 [0xffffffffffffffc8])) [0 strfalse+8 S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b5c43064428 *.LC9>)) parser.c:244 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ab58d921428 *.LC9>)) parser.c:244 -1
      (nil))
 (insn 14 13 15 2 (set (mem/f/j/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -48 [0xffffffffffffffd0])) [0 strfalse+16 S8 A64])
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b5c430644c0 *.LC10>)) parser.c:244 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2ab58d9214c0 *.LC10>)) parser.c:244 -1
      (nil))
 (insn 15 14 16 2 (parallel [
             (set (reg:DI 65)
@@ -3025,7 +3025,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67)) parser.c:248 -1
      (nil))
 (call_insn/i 25 24 26 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:248 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3140,7 +3140,7 @@ try_optimize_cfg iteration 2
         (reg:DI 73)) parser.c:254 -1
      (nil))
 (call_insn/i 56 55 57 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:254 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3222,12 +3222,12 @@ try_optimize_cfg iteration 2
                 (const_int -88 [0xffffffffffffffa8])) [0 context+0 S8 A64])) parser.c:259 -1
      (nil))
 (insn 78 77 79 13 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b5c43064558 *.LC11>)) parser.c:259 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2ab58d921558 *.LC11>)) parser.c:259 -1
      (nil))
 (insn 79 78 80 13 (set (reg:DI 5 di)
         (reg:DI 77)) parser.c:259 -1
      (nil))
-(call_insn 80 79 81 13 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 80 79 81 13 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:259 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3302,7 +3302,7 @@ try_optimize_cfg iteration 2
         (reg:DI 61)) parser.c:265 -1
      (nil))
 (call_insn 10 9 11 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strdup") [flags 0x41]  <function_decl 0x2b5c42e4ed00 strdup>) [0 strdup S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strdup") [flags 0x41]  <function_decl 0x2ab58d70bd00 strdup>) [0 strdup S1 A8])
             (const_int 0 [0]))) parser.c:265 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3334,12 +3334,12 @@ try_optimize_cfg iteration 2
                 (const_int -24 [0xffffffffffffffe8])) [0 context+0 S8 A64])) parser.c:267 -1
      (nil))
 (insn 17 16 18 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b5c4306b260 *.LC12>)) parser.c:267 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2ab58d928260 *.LC12>)) parser.c:267 -1
      (nil))
 (insn 18 17 19 4 (set (reg:DI 5 di)
         (reg:DI 63)) parser.c:267 -1
      (nil))
-(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:267 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3461,7 +3461,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) parser.c:277 -1
      (nil))
 (call_insn 13 12 14 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtoul") [flags 0x41]  <function_decl 0x2b5c42d97500 strtoul>) [0 strtoul S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtoul") [flags 0x41]  <function_decl 0x2ab58d654500 strtoul>) [0 strtoul S1 A8])
             (const_int 0 [0]))) parser.c:277 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3494,12 +3494,12 @@ try_optimize_cfg iteration 2
                 (const_int -24 [0xffffffffffffffe8])) [0 context+0 S8 A64])) parser.c:279 -1
      (nil))
 (insn 20 19 21 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2b5c4306ba18 *.LC13>)) parser.c:279 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ab58d928a18 *.LC13>)) parser.c:279 -1
      (nil))
 (insn 21 20 22 4 (set (reg:DI 5 di)
         (reg:DI 67)) parser.c:279 -1
      (nil))
-(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:279 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3539,12 +3539,12 @@ try_optimize_cfg iteration 2
                 (const_int -24 [0xffffffffffffffe8])) [0 context+0 S8 A64])) parser.c:283 -1
      (nil))
 (insn 34 33 35 6 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2b5c4306bab0 *.LC14>)) parser.c:283 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2ab58d928ab0 *.LC14>)) parser.c:283 -1
      (nil))
 (insn 35 34 36 6 (set (reg:DI 5 di)
         (reg:DI 68)) parser.c:283 -1
      (nil))
-(call_insn 36 35 37 6 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 36 35 37 6 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:283 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3707,7 +3707,7 @@ try_optimize_cfg iteration 2
         (reg:DI 75)) parser.c:294 -1
      (nil))
 (call_insn 12 11 13 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_aton") [flags 0x41]  <function_decl 0x2b5c42e8ef00 inet_aton>) [0 inet_aton S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_aton") [flags 0x41]  <function_decl 0x2ab58d74bf00 inet_aton>) [0 inet_aton S1 A8])
             (const_int 0 [0]))) parser.c:294 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3764,7 +3764,7 @@ try_optimize_cfg iteration 2
         (reg:DI 78)) parser.c:300 -1
      (nil))
 (call_insn 28 27 29 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2b5c42cc0400 memset>) [0 __builtin_memset S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2ab58d57d400 memset>) [0 __builtin_memset S1 A8])
             (const_int 0 [0]))) parser.c:300 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3821,7 +3821,7 @@ try_optimize_cfg iteration 2
         (reg:DI 81)) parser.c:305 -1
      (nil))
 (call_insn 40 39 41 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("getaddrinfo") [flags 0x41]  <function_decl 0x2b5c42ed7100 getaddrinfo>) [0 getaddrinfo S1 A8])
+        (call (mem:QI (symbol_ref:DI ("getaddrinfo") [flags 0x41]  <function_decl 0x2ab58d794100 getaddrinfo>) [0 getaddrinfo S1 A8])
             (const_int 0 [0]))) parser.c:305 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3905,7 +3905,7 @@ try_optimize_cfg iteration 2
  -> 58)
 (note 61 60 62 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
 (call_insn 62 61 63 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b5c42db2900 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2ab58d66f900 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) parser.c:312 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4044,18 +4044,18 @@ try_optimize_cfg iteration 2
 (code_label 96 95 97 14 88 "" [1 uses])
 (note 97 96 98 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
 (insn 98 97 99 14 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.4707") [flags 0x2]  <var_decl 0x2b5c42f8d8e8 __PRETTY_FUNCTION__>)) parser.c:316 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.4707") [flags 0x2]  <var_decl 0x2ab58d84a8e8 __PRETTY_FUNCTION__>)) parser.c:316 -1
      (nil))
 (insn 99 98 100 14 (set (reg:SI 1 dx)
         (const_int 316 [0x13c])) parser.c:316 -1
      (nil))
 (insn 100 99 101 14 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b5c430795f0 *.LC15>)) parser.c:316 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2ab58d9365f0 *.LC15>)) parser.c:316 -1
      (nil))
 (insn 101 100 102 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2b5c43079688 *.LC16>)) parser.c:316 -1
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2ab58d936688 *.LC16>)) parser.c:316 -1
      (nil))
-(call_insn 102 101 103 14 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b5c42e5de00 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 102 101 103 14 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ab58d71ae00 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) parser.c:316 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -4093,7 +4093,7 @@ try_optimize_cfg iteration 2
         (reg:SI 98)) parser.c:318 -1
      (nil))
 (call_insn 112 111 113 16 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b5c42e8ec00 inet_ntoa>) [0 inet_ntoa S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2ab58d74bc00 inet_ntoa>) [0 inet_ntoa S1 A8])
             (const_int 0 [0]))) parser.c:318 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4122,7 +4122,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 100)) parser.c:318 -1
      (nil))
 (insn 119 118 120 16 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x2b5c43079720 *.LC17>)) parser.c:318 -1
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x2ab58d936720 *.LC17>)) parser.c:318 -1
      (nil))
 (insn 120 119 121 16 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) parser.c:318 -1
@@ -4131,18 +4131,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) parser.c:318 -1
      (nil))
 (insn 122 121 123 16 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4708") [flags 0x2]  <var_decl 0x2b5c42f8d980 __func__>)) parser.c:318 -1
+        (symbol_ref:DI ("__func__.4708") [flags 0x2]  <var_decl 0x2ab58d84a980 __func__>)) parser.c:318 -1
      (nil))
 (insn 123 122 124 16 (set (reg:SI 4 si)
         (const_int 319 [0x13f])) parser.c:318 -1
      (nil))
 (insn 124 123 125 16 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b5c430795f0 *.LC15>)) parser.c:318 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2ab58d9365f0 *.LC15>)) parser.c:318 -1
      (nil))
 (insn 125 124 126 16 (set (reg:QI 0 ax)
         (const_int 0 [0])) parser.c:318 -1
      (nil))
-(call_insn 126 125 127 16 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b5c42f76800 _log_write>) [0 _log_write S1 A8])
+(call_insn 126 125 127 16 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2ab58d833800 _log_write>) [0 _log_write S1 A8])
         (const_int 24 [0x18])) parser.c:318 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -4188,7 +4188,7 @@ try_optimize_cfg iteration 2
         (reg:DI 102)) parser.c:320 -1
      (nil))
 (call_insn 135 134 136 17 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b5c42cbef00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ab58d57bf00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) parser.c:320 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4205,7 +4205,7 @@ try_optimize_cfg iteration 2
 (insn 137 136 138 17 (set (reg:DI 5 di)
         (reg/f:DI 68 [ ainfo.4 ])) parser.c:321 -1
      (nil))
-(call_insn 138 137 139 17 (call (mem:QI (symbol_ref:DI ("freeaddrinfo") [flags 0x41]  <function_decl 0x2b5c42ed7200 freeaddrinfo>) [0 freeaddrinfo S1 A8])
+(call_insn 138 137 139 17 (call (mem:QI (symbol_ref:DI ("freeaddrinfo") [flags 0x41]  <function_decl 0x2ab58d794200 freeaddrinfo>) [0 freeaddrinfo S1 A8])
         (const_int 0 [0])) parser.c:321 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4232,7 +4232,7 @@ try_optimize_cfg iteration 2
  -> 158)
 (note 145 144 146 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 146 145 147 19 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x2b5c42ed7500 __errno_location>) [0 __errno_location S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__errno_location") [flags 0x41]  <function_decl 0x2ab58d794500 __errno_location>) [0 __errno_location S1 A8])
             (const_int 0 [0]))) parser.c:325 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4247,7 +4247,7 @@ try_optimize_cfg iteration 2
         (reg:SI 70 [ D.5364 ])) parser.c:325 -1
      (nil))
 (call_insn 150 149 151 19 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x2b5c42e57a00 strerror>) [0 strerror S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strerror") [flags 0x41]  <function_decl 0x2ab58d714a00 strerror>) [0 strerror S1 A8])
             (const_int 0 [0]))) parser.c:325 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4266,7 +4266,7 @@ try_optimize_cfg iteration 2
 (insn 154 153 155 19 (set (reg:DI 5 di)
         (reg:DI 103)) parser.c:325 -1
      (nil))
-(call_insn 155 154 156 19 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 155 154 156 19 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:325 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4287,7 +4287,7 @@ try_optimize_cfg iteration 2
         (reg:SI 104)) parser.c:327 -1
      (nil))
 (call_insn 162 161 163 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gai_strerror") [flags 0x41]  <function_decl 0x2b5c42ed7300 gai_strerror>) [0 gai_strerror S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gai_strerror") [flags 0x41]  <function_decl 0x2ab58d794300 gai_strerror>) [0 gai_strerror S1 A8])
             (const_int 0 [0]))) parser.c:327 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4306,7 +4306,7 @@ try_optimize_cfg iteration 2
 (insn 166 165 167 20 (set (reg:DI 5 di)
         (reg:DI 105)) parser.c:327 -1
      (nil))
-(call_insn 167 166 168 20 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 167 166 168 20 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:327 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4464,7 +4464,7 @@ try_optimize_cfg iteration 2
         (reg:DI 70)) parser.c:340 -1
      (nil))
 (call_insn 13 12 14 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strdup") [flags 0x41]  <function_decl 0x2b5c42e4ed00 strdup>) [0 strdup S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strdup") [flags 0x41]  <function_decl 0x2ab58d70bd00 strdup>) [0 strdup S1 A8])
             (const_int 0 [0]))) parser.c:340 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4496,12 +4496,12 @@ try_optimize_cfg iteration 2
                 (const_int -56 [0xffffffffffffffc8])) [0 context+0 S8 A64])) parser.c:342 -1
      (nil))
 (insn 20 19 21 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b5c4306b260 *.LC12>)) parser.c:342 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2ab58d928260 *.LC12>)) parser.c:342 -1
      (nil))
 (insn 21 20 22 4 (set (reg:DI 5 di)
         (reg:DI 72)) parser.c:342 -1
      (nil))
-(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 22 21 23 4 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:342 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4528,7 +4528,7 @@ try_optimize_cfg iteration 2
         (reg:DI 73)) parser.c:345 -1
      (nil))
 (call_insn/i 31 30 32 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2b5c42cc0c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ab58d57dc00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) parser.c:345 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4591,7 +4591,7 @@ try_optimize_cfg iteration 2
         (reg:DI 77)) parser.c:351 -1
      (nil))
 (call_insn 46 45 47 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_aton") [flags 0x41]  <function_decl 0x2b5c42e8ef00 inet_aton>) [0 inet_aton S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_aton") [flags 0x41]  <function_decl 0x2ab58d74bf00 inet_aton>) [0 inet_aton S1 A8])
             (const_int 0 [0]))) parser.c:351 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4636,12 +4636,12 @@ try_optimize_cfg iteration 2
                 (const_int -56 [0xffffffffffffffc8])) [0 context+0 S8 A64])) parser.c:355 -1
      (nil))
 (insn 59 58 60 9 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2b5c43088d10 *.LC18>)) parser.c:355 -1
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2ab58d945d10 *.LC18>)) parser.c:355 -1
      (nil))
 (insn 60 59 61 9 (set (reg:DI 5 di)
         (reg:DI 80)) parser.c:355 -1
      (nil))
-(call_insn 61 60 62 9 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 61 60 62 9 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:355 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4705,7 +4705,7 @@ try_optimize_cfg iteration 2
         (reg:DI 86)) parser.c:362 -1
      (nil))
 (call_insn 79 78 80 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strtoul") [flags 0x41]  <function_decl 0x2b5c42d97500 strtoul>) [0 strtoul S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strtoul") [flags 0x41]  <function_decl 0x2ab58d654500 strtoul>) [0 strtoul S1 A8])
             (const_int 0 [0]))) parser.c:362 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4757,7 +4757,7 @@ try_optimize_cfg iteration 2
         (reg:DI 89)) parser.c:364 -1
      (nil))
 (call_insn 91 90 92 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_aton") [flags 0x41]  <function_decl 0x2b5c42e8ef00 inet_aton>) [0 inet_aton S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_aton") [flags 0x41]  <function_decl 0x2ab58d74bf00 inet_aton>) [0 inet_aton S1 A8])
             (const_int 0 [0]))) parser.c:364 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4800,7 +4800,7 @@ try_optimize_cfg iteration 2
         (reg:DI 91)) parser.c:365 -1
      (nil))
 (call_insn 101 100 102 13 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b5c42cbef00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ab58d57bf00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) parser.c:365 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4822,12 +4822,12 @@ try_optimize_cfg iteration 2
                 (const_int -56 [0xffffffffffffffc8])) [0 context+0 S8 A64])) parser.c:368 -1
      (nil))
 (insn 107 106 108 14 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2b5c43088d10 *.LC18>)) parser.c:368 -1
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2ab58d945d10 *.LC18>)) parser.c:368 -1
      (nil))
 (insn 108 107 109 14 (set (reg:DI 5 di)
         (reg:DI 92)) parser.c:368 -1
      (nil))
-(call_insn 109 108 110 14 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 109 108 110 14 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:368 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4904,7 +4904,7 @@ try_optimize_cfg iteration 2
         (reg:SI 67 [ D.5376 ])) parser.c:373 -1
      (nil))
 (call_insn/u 131 130 132 18 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("htonl") [flags 0x41]  <function_decl 0x2b5c42e8e300 htonl>) [0 htonl S1 A8])
+        (call (mem:QI (symbol_ref:DI ("htonl") [flags 0x41]  <function_decl 0x2ab58d74b300 htonl>) [0 htonl S1 A8])
             (const_int 0 [0]))) parser.c:373 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4932,12 +4932,12 @@ try_optimize_cfg iteration 2
                 (const_int -56 [0xffffffffffffffc8])) [0 context+0 S8 A64])) parser.c:376 -1
      (nil))
 (insn 140 139 141 19 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x2b5c43088da8 *.LC19>)) parser.c:376 -1
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x2ab58d945da8 *.LC19>)) parser.c:376 -1
      (nil))
 (insn 141 140 142 19 (set (reg:DI 5 di)
         (reg:DI 97)) parser.c:376 -1
      (nil))
-(call_insn 142 141 143 19 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 142 141 143 19 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:376 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4956,7 +4956,7 @@ try_optimize_cfg iteration 2
 (insn 149 148 150 21 (set (reg:DI 5 di)
         (reg:DI 98)) parser.c:381 -1
      (nil))
-(call_insn 150 149 151 21 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 150 149 151 21 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:381 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5363,18 +5363,18 @@ Forwarding edge 76->77 to 79 failed.
  -> 29)
 (note 22 21 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 23 22 24 5 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.4732") [flags 0x2]  <var_decl 0x2b5c42f9c390 __PRETTY_FUNCTION__>)) parser.c:402 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.4732") [flags 0x2]  <var_decl 0x2ab58d859390 __PRETTY_FUNCTION__>)) parser.c:402 -1
      (nil))
 (insn 24 23 25 5 (set (reg:SI 1 dx)
         (const_int 402 [0x192])) parser.c:402 -1
      (nil))
 (insn 25 24 26 5 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b5c430795f0 *.LC15>)) parser.c:402 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2ab58d9365f0 *.LC15>)) parser.c:402 -1
      (nil))
 (insn 26 25 27 5 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x2b5c43099558 *.LC20>)) parser.c:402 -1
+        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x2ab58d956558 *.LC20>)) parser.c:402 -1
      (nil))
-(call_insn 27 26 28 5 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b5c42e5de00 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 27 26 28 5 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ab58d71ae00 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) parser.c:402 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -5430,7 +5430,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 68 [ D.5382 ])) parser.c:405 -1
      (nil))
 (call_insn 41 40 42 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("realloc") [flags 0x41]  <function_decl 0x2b5c42ce6b00 realloc>) [0 __builtin_realloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("realloc") [flags 0x41]  <function_decl 0x2ab58d5a3b00 realloc>) [0 __builtin_realloc S1 A8])
             (const_int 0 [0]))) parser.c:405 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5462,12 +5462,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:407 -1
      (nil))
 (insn 48 47 49 8 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x2b5c430995f0 *.LC21>)) parser.c:407 -1
+        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x2ab58d9565f0 *.LC21>)) parser.c:407 -1
      (nil))
 (insn 49 48 50 8 (set (reg:DI 5 di)
         (reg:DI 172)) parser.c:407 -1
      (nil))
-(call_insn 50 49 51 8 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 50 49 51 8 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:407 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5619,7 +5619,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg:DI 183)) parser.c:418 -1
      (nil))
 (call_insn 90 89 91 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x2b5c42e26700 fgets>) [0 fgets S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fgets") [flags 0x41]  <function_decl 0x2ab58d6e3700 fgets>) [0 fgets S1 A8])
             (const_int 0 [0]))) parser.c:418 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5652,7 +5652,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 81 [ D.5380 ])) parser.c:419 -1
      (nil))
 (call_insn 98 97 99 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("ferror") [flags 0x41]  <function_decl 0x2b5c42e2cc00 ferror>) [0 ferror S1 A8])
+        (call (mem:QI (symbol_ref:DI ("ferror") [flags 0x41]  <function_decl 0x2ab58d6e9c00 ferror>) [0 ferror S1 A8])
             (const_int 0 [0]))) parser.c:419 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5678,12 +5678,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:420 -1
      (nil))
 (insn 104 103 105 13 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x2b5c43099688 *.LC22>)) parser.c:420 -1
+        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x2ab58d956688 *.LC22>)) parser.c:420 -1
      (nil))
 (insn 105 104 106 13 (set (reg:DI 5 di)
         (reg:DI 185)) parser.c:420 -1
      (nil))
-(call_insn 106 105 107 13 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 106 105 107 13 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:420 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5714,7 +5714,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg:DI 186)) parser.c:426 -1
      (nil))
 (call_insn/i 118 117 119 15 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b5c42cc3600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ab58d580600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) parser.c:426 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5741,7 +5741,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 124 123 125 15 (set (reg:DI 5 di)
         (reg:DI 188)) parser.c:427 -1
      (nil))
-(call_insn 125 124 126 15 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2b5c42f86200 context_filled_add>) [0 context_filled_add S1 A8])
+(call_insn 125 124 126 15 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2ab58d843200 context_filled_add>) [0 context_filled_add S1 A8])
         (const_int 0 [0])) parser.c:427 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5870,13 +5870,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int 48 [0x30])) [0 context_43(D)->buffer.data+0 S8 A64])) parser.c:439 -1
      (nil))
 (insn 158 157 159 20 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x2b5c43099720 *.LC23>)) parser.c:439 -1
+        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x2ab58d956720 *.LC23>)) parser.c:439 -1
      (nil))
 (insn 159 158 160 20 (set (reg:DI 5 di)
         (reg/f:DI 90 [ D.5382 ])) parser.c:439 -1
      (nil))
 (call_insn/i 160 159 161 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strstr") [flags 0x41]  <function_decl 0x2b5c42cc6500 strstr>) [0 __builtin_strstr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strstr") [flags 0x41]  <function_decl 0x2ab58d583500 strstr>) [0 __builtin_strstr S1 A8])
             (const_int 0 [0]))) parser.c:439 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5982,7 +5982,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 98 [ D.5382 ])) parser.c:443 -1
      (nil))
 (call_insn 184 183 185 21 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2b5c42cc0100 memmove>) [0 __builtin_memmove S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2ab58d57d100 memmove>) [0 __builtin_memmove S1 A8])
             (const_int 0 [0]))) parser.c:443 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6014,7 +6014,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 189 188 190 21 (set (reg:DI 5 di)
         (reg:DI 201)) parser.c:444 -1
      (nil))
-(call_insn 190 189 191 21 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2b5c42f86200 context_filled_add>) [0 context_filled_add S1 A8])
+(call_insn 190 189 191 21 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2ab58d843200 context_filled_add>) [0 context_filled_add S1 A8])
         (const_int 0 [0])) parser.c:444 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6041,7 +6041,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 198 197 199 22 (set (reg:DI 5 di)
         (reg:DI 202)) parser.c:448 -1
      (nil))
-(call_insn 199 198 200 22 (call (mem:QI (symbol_ref:DI ("context_filled_set") [flags 0x3]  <function_decl 0x2b5c42f86300 context_filled_set>) [0 context_filled_set S1 A8])
+(call_insn 199 198 200 22 (call (mem:QI (symbol_ref:DI ("context_filled_set") [flags 0x3]  <function_decl 0x2ab58d843300 context_filled_set>) [0 context_filled_set S1 A8])
         (const_int 0 [0])) parser.c:448 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6086,13 +6086,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -56 [0xffffffffffffffc8])) [0 token+0 S8 A64])) parser.c:456 -1
      (nil))
 (insn 213 212 214 24 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x2b5c430997b8 *.LC24>)) parser.c:456 -1
+        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x2ab58d9567b8 *.LC24>)) parser.c:456 -1
      (nil))
 (insn 214 213 215 24 (set (reg:DI 5 di)
         (reg:DI 204)) parser.c:456 -1
      (nil))
 (call_insn/i 215 214 216 24 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:456 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6125,7 +6125,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 104 [ iter.8 ])) parser.c:457 -1
      (nil))
 (call_insn/i 223 222 224 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2b5c42cc0c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ab58d57dc00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) parser.c:457 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6235,7 +6235,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 116 [ iter.12 ])) parser.c:462 -1
      (nil))
 (call_insn 248 247 249 25 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2b5c42cc0100 memmove>) [0 __builtin_memmove S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2ab58d57d100 memmove>) [0 __builtin_memmove S1 A8])
             (const_int 0 [0]))) parser.c:462 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6276,7 +6276,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 256 255 257 25 (set (reg:DI 5 di)
         (reg:DI 210)) parser.c:463 -1
      (nil))
-(call_insn 257 256 258 25 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2b5c42f86200 context_filled_add>) [0 context_filled_add S1 A8])
+(call_insn 257 256 258 25 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2ab58d843200 context_filled_add>) [0 context_filled_add S1 A8])
         (const_int 0 [0])) parser.c:463 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6294,13 +6294,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -56 [0xffffffffffffffc8])) [0 token+0 S8 A64])) parser.c:465 -1
      (nil))
 (insn 263 262 264 26 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x2b5c43099850 *.LC25>)) parser.c:465 -1
+        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x2ab58d956850 *.LC25>)) parser.c:465 -1
      (nil))
 (insn 264 263 265 26 (set (reg:DI 5 di)
         (reg:DI 211)) parser.c:465 -1
      (nil))
 (call_insn/i 265 264 266 26 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:465 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6395,7 +6395,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 132 [ D.5382 ])) parser.c:467 -1
      (nil))
 (call_insn 288 287 289 27 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2b5c42cc0100 memmove>) [0 __builtin_memmove S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2ab58d57d100 memmove>) [0 __builtin_memmove S1 A8])
             (const_int 0 [0]))) parser.c:467 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6427,7 +6427,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 293 292 294 27 (set (reg:DI 5 di)
         (reg:DI 217)) parser.c:468 -1
      (nil))
-(call_insn 294 293 295 27 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2b5c42f86200 context_filled_add>) [0 context_filled_add S1 A8])
+(call_insn 294 293 295 27 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2ab58d843200 context_filled_add>) [0 context_filled_add S1 A8])
         (const_int 0 [0])) parser.c:468 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6461,13 +6461,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -56 [0xffffffffffffffc8])) [0 token+0 S8 A64])) parser.c:472 -1
      (nil))
 (insn 304 303 305 28 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x2b5c430998e8 *.LC26>)) parser.c:472 -1
+        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x2ab58d9568e8 *.LC26>)) parser.c:472 -1
      (nil))
 (insn 305 304 306 28 (set (reg:DI 5 di)
         (reg:DI 219)) parser.c:472 -1
      (nil))
 (call_insn/i 306 305 307 28 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:472 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6507,12 +6507,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:474 -1
      (nil))
 (insn 315 314 316 30 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x2b5c43099980 *.LC27>)) parser.c:474 -1
+        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x2ab58d956980 *.LC27>)) parser.c:474 -1
      (nil))
 (insn 316 315 317 30 (set (reg:DI 5 di)
         (reg:DI 220)) parser.c:474 -1
      (nil))
-(call_insn 317 316 318 30 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 317 316 318 30 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:474 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6543,12 +6543,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:477 -1
      (nil))
 (insn 326 325 327 32 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x2b5c43099a18 *.LC28>)) parser.c:477 -1
+        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x2ab58d956a18 *.LC28>)) parser.c:477 -1
      (nil))
 (insn 327 326 328 32 (set (reg:DI 5 di)
         (reg:DI 221)) parser.c:477 -1
      (nil))
-(call_insn 328 327 329 32 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 328 327 329 32 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:477 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6599,7 +6599,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 136 [ D.5388 ])) parser.c:481 -1
      (nil))
 (call_insn/i 344 343 345 34 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:481 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6737,12 +6737,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:489 -1
      (nil))
 (insn 383 382 384 41 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x2b5c43099ab0 *.LC29>)) parser.c:489 -1
+        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x2ab58d956ab0 *.LC29>)) parser.c:489 -1
      (nil))
 (insn 384 383 385 41 (set (reg:DI 5 di)
         (reg:DI 232)) parser.c:489 -1
      (nil))
-(call_insn 385 384 388 41 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 385 384 388 41 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:489 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6760,12 +6760,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:492 -1
      (nil))
 (insn 393 392 394 43 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x2b5c43099b48 *.LC30>)) parser.c:492 -1
+        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x2ab58d956b48 *.LC30>)) parser.c:492 -1
      (nil))
 (insn 394 393 395 43 (set (reg:DI 5 di)
         (reg:DI 233)) parser.c:492 -1
      (nil))
-(call_insn 395 394 396 43 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 395 394 396 43 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:492 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6780,7 +6780,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 399 398 400 44 (set (reg:DI 5 di)
         (reg:DI 234)) parser.c:494 -1
      (nil))
-(call_insn 400 399 401 44 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 400 399 401 44 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:494 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6802,13 +6802,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -56 [0xffffffffffffffc8])) [0 token+0 S8 A64])) parser.c:497 -1
      (nil))
 (insn 409 408 410 46 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC31") [flags 0x2]  <var_decl 0x2b5c43099be0 *.LC31>)) parser.c:497 -1
+        (symbol_ref/f:DI ("*.LC31") [flags 0x2]  <var_decl 0x2ab58d956be0 *.LC31>)) parser.c:497 -1
      (nil))
 (insn 410 409 411 46 (set (reg:DI 5 di)
         (reg:DI 235)) parser.c:497 -1
      (nil))
 (call_insn/i 411 410 412 46 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:497 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6904,12 +6904,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:501 -1
      (nil))
 (insn 434 433 435 50 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC32") [flags 0x2]  <var_decl 0x2b5c43099c78 *.LC32>)) parser.c:501 -1
+        (symbol_ref/f:DI ("*.LC32") [flags 0x2]  <var_decl 0x2ab58d956c78 *.LC32>)) parser.c:501 -1
      (nil))
 (insn 435 434 436 50 (set (reg:DI 5 di)
         (reg:DI 239)) parser.c:501 -1
      (nil))
-(call_insn 436 435 437 50 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 436 435 437 50 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:501 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6933,12 +6933,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:505 -1
      (nil))
 (insn 445 444 446 52 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC33") [flags 0x2]  <var_decl 0x2b5c43099d10 *.LC33>)) parser.c:505 -1
+        (symbol_ref/f:DI ("*.LC33") [flags 0x2]  <var_decl 0x2ab58d956d10 *.LC33>)) parser.c:505 -1
      (nil))
 (insn 446 445 447 52 (set (reg:DI 5 di)
         (reg:DI 240)) parser.c:505 -1
      (nil))
-(call_insn 447 446 450 52 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 447 446 450 52 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:505 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6956,13 +6956,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -56 [0xffffffffffffffc8])) [0 token+0 S8 A64])) parser.c:508 -1
      (nil))
 (insn 455 454 456 54 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC34") [flags 0x2]  <var_decl 0x2b5c43099da8 *.LC34>)) parser.c:508 -1
+        (symbol_ref/f:DI ("*.LC34") [flags 0x2]  <var_decl 0x2ab58d956da8 *.LC34>)) parser.c:508 -1
      (nil))
 (insn 456 455 457 54 (set (reg:DI 5 di)
         (reg:DI 241)) parser.c:508 -1
      (nil))
 (call_insn/i 457 456 458 54 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:508 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7002,12 +7002,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:510 -1
      (nil))
 (insn 466 465 467 56 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC35") [flags 0x2]  <var_decl 0x2b5c43099e40 *.LC35>)) parser.c:510 -1
+        (symbol_ref/f:DI ("*.LC35") [flags 0x2]  <var_decl 0x2ab58d956e40 *.LC35>)) parser.c:510 -1
      (nil))
 (insn 467 466 468 56 (set (reg:DI 5 di)
         (reg:DI 242)) parser.c:510 -1
      (nil))
-(call_insn 468 467 469 56 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 468 467 469 56 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:510 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7038,12 +7038,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:513 -1
      (nil))
 (insn 477 476 478 58 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC36") [flags 0x2]  <var_decl 0x2b5c43099ed8 *.LC36>)) parser.c:513 -1
+        (symbol_ref/f:DI ("*.LC36") [flags 0x2]  <var_decl 0x2ab58d956ed8 *.LC36>)) parser.c:513 -1
      (nil))
 (insn 478 477 479 58 (set (reg:DI 5 di)
         (reg:DI 243)) parser.c:513 -1
      (nil))
-(call_insn 479 478 480 58 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 479 478 480 58 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:513 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7061,13 +7061,13 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -56 [0xffffffffffffffc8])) [0 token+0 S8 A64])) parser.c:519 -1
      (nil))
 (insn 485 484 486 59 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC37") [flags 0x2]  <var_decl 0x2b5c430b0000 *.LC37>)) parser.c:519 -1
+        (symbol_ref/f:DI ("*.LC37") [flags 0x2]  <var_decl 0x2ab58d96d000 *.LC37>)) parser.c:519 -1
      (nil))
 (insn 486 485 487 59 (set (reg:DI 5 di)
         (reg:DI 244)) parser.c:519 -1
      (nil))
 (call_insn/i 487 486 488 59 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:519 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7107,12 +7107,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:521 -1
      (nil))
 (insn 496 495 497 61 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC38") [flags 0x2]  <var_decl 0x2b5c430b0098 *.LC38>)) parser.c:521 -1
+        (symbol_ref/f:DI ("*.LC38") [flags 0x2]  <var_decl 0x2ab58d96d098 *.LC38>)) parser.c:521 -1
      (nil))
 (insn 497 496 498 61 (set (reg:DI 5 di)
         (reg:DI 245)) parser.c:521 -1
      (nil))
-(call_insn 498 497 499 61 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 498 497 499 61 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:521 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7156,12 +7156,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:524 -1
      (nil))
 (insn 510 509 511 64 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC39") [flags 0x2]  <var_decl 0x2b5c430b0130 *.LC39>)) parser.c:524 -1
+        (symbol_ref/f:DI ("*.LC39") [flags 0x2]  <var_decl 0x2ab58d96d130 *.LC39>)) parser.c:524 -1
      (nil))
 (insn 511 510 512 64 (set (reg:DI 5 di)
         (reg:DI 246)) parser.c:524 -1
      (nil))
-(call_insn 512 511 513 64 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 512 511 513 64 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:524 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7237,7 +7237,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 148 [ D.5388 ])) parser.c:529 -1
      (nil))
 (call_insn/i 534 533 535 68 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2b5c42cc0e00 strcmp>) [0 __builtin_strcmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcmp") [flags 0x41]  <function_decl 0x2ab58d57de00 strcmp>) [0 __builtin_strcmp S1 A8])
             (const_int 0 [0]))) parser.c:529 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7324,7 +7324,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 559 558 560 73 (set (reg/f:DI 151 [ D.5391 ])
         (mem/f/j:DI (plus:DI (mult:DI (reg:DI 253)
                     (const_int 8 [0x8]))
-                (symbol_ref:DI ("value_parser_by_type") [flags 0x2]  <var_decl 0x2b5c42f8de40 value_parser_by_type>)) [0 value_parser_by_type S8 A64])) parser.c:532 -1
+                (symbol_ref:DI ("value_parser_by_type") [flags 0x2]  <var_decl 0x2ab58d84ae40 value_parser_by_type>)) [0 value_parser_by_type S8 A64])) parser.c:532 -1
      (nil))
 (insn 560 559 561 73 (set (reg/f:DI 254)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -7379,12 +7379,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:533 -1
      (nil))
 (insn 573 572 574 74 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC40") [flags 0x2]  <var_decl 0x2b5c430b01c8 *.LC40>)) parser.c:533 -1
+        (symbol_ref/f:DI ("*.LC40") [flags 0x2]  <var_decl 0x2ab58d96d1c8 *.LC40>)) parser.c:533 -1
      (nil))
 (insn 574 573 575 74 (set (reg:DI 5 di)
         (reg:DI 257)) parser.c:533 -1
      (nil))
-(call_insn 575 574 578 74 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 575 574 578 74 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:533 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7402,12 +7402,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:536 -1
      (nil))
 (insn 583 582 584 76 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC41") [flags 0x2]  <var_decl 0x2b5c430b0260 *.LC41>)) parser.c:536 -1
+        (symbol_ref/f:DI ("*.LC41") [flags 0x2]  <var_decl 0x2ab58d96d260 *.LC41>)) parser.c:536 -1
      (nil))
 (insn 584 583 585 76 (set (reg:DI 5 di)
         (reg:DI 258)) parser.c:536 -1
      (nil))
-(call_insn 585 584 586 76 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 585 584 586 76 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:536 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7423,18 +7423,18 @@ Forwarding edge 76->77 to 79 failed.
 (code_label 590 589 591 78 146 "" [2 uses])
 (note 591 590 592 78 [bb 78] NOTE_INSN_BASIC_BLOCK)
 (insn 592 591 593 78 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.4732") [flags 0x2]  <var_decl 0x2b5c42f9c390 __PRETTY_FUNCTION__>)) parser.c:540 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.4732") [flags 0x2]  <var_decl 0x2ab58d859390 __PRETTY_FUNCTION__>)) parser.c:540 -1
      (nil))
 (insn 593 592 594 78 (set (reg:SI 1 dx)
         (const_int 540 [0x21c])) parser.c:540 -1
      (nil))
 (insn 594 593 595 78 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b5c430795f0 *.LC15>)) parser.c:540 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2ab58d9365f0 *.LC15>)) parser.c:540 -1
      (nil))
 (insn 595 594 596 78 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC42") [flags 0x2]  <var_decl 0x2b5c430b02f8 *.LC42>)) parser.c:540 -1
+        (symbol_ref/f:DI ("*.LC42") [flags 0x2]  <var_decl 0x2ab58d96d2f8 *.LC42>)) parser.c:540 -1
      (nil))
-(call_insn 596 595 597 78 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b5c42e5de00 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 596 595 597 78 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ab58d71ae00 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) parser.c:540 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -7454,7 +7454,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 601 600 602 79 (set (reg:DI 5 di)
         (reg:DI 259)) parser.c:542 -1
      (nil))
-(call_insn 602 601 603 79 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 602 601 603 79 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:542 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7471,7 +7471,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 605 604 606 79 (set (reg:DI 5 di)
         (reg:DI 260)) parser.c:543 -1
      (nil))
-(call_insn 606 605 607 79 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 606 605 607 79 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:543 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7641,12 +7641,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:559 -1
      (nil))
 (insn 655 654 656 90 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC43") [flags 0x2]  <var_decl 0x2b5c430b0390 *.LC43>)) parser.c:559 -1
+        (symbol_ref/f:DI ("*.LC43") [flags 0x2]  <var_decl 0x2ab58d96d390 *.LC43>)) parser.c:559 -1
      (nil))
 (insn 656 655 657 90 (set (reg:DI 5 di)
         (reg:DI 264)) parser.c:559 -1
      (nil))
-(call_insn 657 656 658 90 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 657 656 658 90 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:559 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7661,7 +7661,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 661 660 662 91 (set (reg:DI 5 di)
         (reg:DI 265)) parser.c:562 -1
      (nil))
-(call_insn 662 661 663 91 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 662 661 663 91 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:562 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7733,7 +7733,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg:DI 269)) parser.c:455 -1
      (nil))
 (call_insn 679 678 680 94 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("gettoken") [flags 0x3]  <function_decl 0x2b5c42f76e00 gettoken>) [0 gettoken S1 A8])
+        (call (mem:QI (symbol_ref:DI ("gettoken") [flags 0x3]  <function_decl 0x2ab58d833e00 gettoken>) [0 gettoken S1 A8])
             (const_int 0 [0]))) parser.c:455 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7833,7 +7833,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 163 [ D.5382 ])) parser.c:565 -1
      (nil))
 (call_insn 705 704 706 95 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2b5c42cc0100 memmove>) [0 __builtin_memmove S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memmove") [flags 0x41]  <function_decl 0x2ab58d57d100 memmove>) [0 __builtin_memmove S1 A8])
             (const_int 0 [0]))) parser.c:565 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7865,7 +7865,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 710 709 711 95 (set (reg:DI 5 di)
         (reg:DI 276)) parser.c:566 -1
      (nil))
-(call_insn 711 710 712 95 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2b5c42f86200 context_filled_add>) [0 context_filled_add S1 A8])
+(call_insn 711 710 712 95 (call (mem:QI (symbol_ref:DI ("context_filled_add") [flags 0x3]  <function_decl 0x2ab58d843200 context_filled_add>) [0 context_filled_add S1 A8])
         (const_int 0 [0])) parser.c:566 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7933,7 +7933,7 @@ Forwarding edge 76->77 to 79 failed.
         (reg/f:DI 62 [ D.5380 ])) parser.c:401 -1
      (nil))
 (call_insn 736 735 737 101 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("feof") [flags 0x41]  <function_decl 0x2b5c42e2cb00 feof>) [0 feof S1 A8])
+        (call (mem:QI (symbol_ref:DI ("feof") [flags 0x41]  <function_decl 0x2ab58d6e9b00 feof>) [0 feof S1 A8])
             (const_int 0 [0]))) parser.c:401 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7973,12 +7973,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:573 -1
      (nil))
 (insn 747 746 748 103 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC44") [flags 0x2]  <var_decl 0x2b5c430b0428 *.LC44>)) parser.c:573 -1
+        (symbol_ref/f:DI ("*.LC44") [flags 0x2]  <var_decl 0x2ab58d96d428 *.LC44>)) parser.c:573 -1
      (nil))
 (insn 748 747 749 103 (set (reg:DI 5 di)
         (reg:DI 279)) parser.c:573 -1
      (nil))
-(call_insn 749 748 750 103 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 749 748 750 103 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:573 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8004,12 +8004,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:575 -1
      (nil))
 (insn 756 755 757 105 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC45") [flags 0x2]  <var_decl 0x2b5c430b04c0 *.LC45>)) parser.c:575 -1
+        (symbol_ref/f:DI ("*.LC45") [flags 0x2]  <var_decl 0x2ab58d96d4c0 *.LC45>)) parser.c:575 -1
      (nil))
 (insn 757 756 758 105 (set (reg:DI 5 di)
         (reg:DI 280)) parser.c:575 -1
      (nil))
-(call_insn 758 757 759 105 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 758 757 759 105 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:575 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8022,7 +8022,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 760 759 761 105 (set (reg:DI 5 di)
         (reg:DI 281)) parser.c:576 -1
      (nil))
-(call_insn 761 760 762 105 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 761 760 762 105 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:576 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8048,12 +8048,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:579 -1
      (nil))
 (insn 768 767 769 107 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC46") [flags 0x2]  <var_decl 0x2b5c430b0558 *.LC46>)) parser.c:579 -1
+        (symbol_ref/f:DI ("*.LC46") [flags 0x2]  <var_decl 0x2ab58d96d558 *.LC46>)) parser.c:579 -1
      (nil))
 (insn 769 768 770 107 (set (reg:DI 5 di)
         (reg:DI 282)) parser.c:579 -1
      (nil))
-(call_insn 770 769 771 107 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 770 769 771 107 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:579 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8066,7 +8066,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 772 771 773 107 (set (reg:DI 5 di)
         (reg:DI 283)) parser.c:580 -1
      (nil))
-(call_insn 773 772 774 107 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 773 772 774 107 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:580 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8092,12 +8092,12 @@ Forwarding edge 76->77 to 79 failed.
                 (const_int -136 [0xffffffffffffff78])) [0 context+0 S8 A64])) parser.c:583 -1
      (nil))
 (insn 780 779 781 109 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC47") [flags 0x2]  <var_decl 0x2b5c430b05f0 *.LC47>)) parser.c:583 -1
+        (symbol_ref/f:DI ("*.LC47") [flags 0x2]  <var_decl 0x2ab58d96d5f0 *.LC47>)) parser.c:583 -1
      (nil))
 (insn 781 780 782 109 (set (reg:DI 5 di)
         (reg:DI 284)) parser.c:583 -1
      (nil))
-(call_insn 782 781 783 109 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2b5c42f67d00 parser_error>) [0 parser_error S1 A8])
+(call_insn 782 781 783 109 (call (mem:QI (symbol_ref:DI ("parser_error") [flags 0x3]  <function_decl 0x2ab58d824d00 parser_error>) [0 parser_error S1 A8])
         (const_int 0 [0])) parser.c:583 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8110,7 +8110,7 @@ Forwarding edge 76->77 to 79 failed.
 (insn 784 783 785 109 (set (reg:DI 5 di)
         (reg:DI 285)) parser.c:584 -1
      (nil))
-(call_insn 785 784 786 109 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5c42cdf500 free>) [0 __builtin_free S1 A8])
+(call_insn 785 784 786 109 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ab58d59c500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) parser.c:584 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
