@@ -143,17 +143,13 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 #define MPTCP_AUTH_CLIENT_SET_UUID 30
         int enable = 1;
         redsocks_client * cl = (redsocks_client *)cbarg;
-        if (cl != NULL && cl->instance->config.mptcp_auth_key) {
+        if (cl != NULL && cl->instance->config.mptcp_enable) {
             if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_ENABLED, &enable, sizeof(enable))) {
                 log_errno(LOG_WARNING, "setsockopt enable MPTCP failed");
             }
 
             if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT, &enable, sizeof(enable))) {
                 log_errno(LOG_WARNING, "setsockopt enable MPTCP Auth failed");
-            }
-
-            if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT, &enable, sizeof(enable))) {
-                log_errno(LOG_WARNING, "setsockopt enable MPTCP client Auth failed");
             }
 
             if (cl->instance->config.mptcp_test_mode) {

@@ -174,7 +174,7 @@ size_t process_data(void *buffer, size_t size, size_t nmemb, void *user_p)
 	}
 
 	json_object_object_get_ex(json_result, "msg", &msg);
-    printf("status: (%d), msg = %s \n", json_object_get_int(status),
+    log_error(LOG_DEBUG, "status: (%d), msg = %s \n", json_object_get_int(status),
            json_object_get_string(msg));
 
     if (json_object_get_int(status) != 200)
@@ -228,7 +228,7 @@ update_key:
 			&& json_object_get_type(uid) == json_type_string
 			&& json_object_object_get_ex(data, "key", &key)
 			&& json_object_get_type(key) == json_type_string) {
-		    printf("got : uid(%s), key(%s)\n", json_object_get_string(uid), json_object_get_string(key));
+		    log_error(LOG_DEBUG, "got : uid(%s), key(%s)\n", json_object_get_string(uid), json_object_get_string(key));
             char buf[92] = {0};
             int j;
 
@@ -262,7 +262,7 @@ update_key:
 		fprintf(stderr, "uid_len(%d), key_len(%d)\n", client_uid_len, client_key_len);
 
 		if (client_uid_len != 4 ||client_key_len != 64) {
-			fprintf(stderr, "wrong uid or key\n");
+			log_error(LOG_ERR, "wrong uid or key\n");
 					goto exit;
 		}
 
@@ -356,7 +356,7 @@ int update_key(json_object *json_result, server_config *sc)
 
 	if (!json_object_object_get_ex(json_result, "data", &data)
 	    || json_object_get_type(data) != json_type_object) {
-		fprintf(stderr, "Failed to get data\n");
+		log_error(LOG_ERR, "Failed to get data\n");
 		goto exit;
 	}
 
@@ -383,10 +383,10 @@ int update_key(json_object *json_result, server_config *sc)
 
 	client_uid_len = Base64decode(client_uid, sc->key.uid);
 	client_key_len = Base64decode(client_key, sc->key.key);
-	fprintf(stderr, "uid_len(%d), key_len(%d)\n", client_uid_len, client_key_len);
+	log_error(LOG_DEBUG, "uid_len(%d), key_len(%d)\n", client_uid_len, client_key_len);
 
 	if (client_uid_len != 4 ||client_key_len != 64) {
-		fprintf(stderr, "wrong uid or key\n");
+		log_error(LOG_ERR, "wrong uid or key\n");
 				goto exit;
 	}
 
@@ -426,7 +426,7 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
     instance = (redsocks_instance *)user_p;
     server_config *sc = &running_info_test[instance->if_index][instance->sn_number];
 
-	fprintf(stdout, "%s\n if_index=%d\n", (char*) buffer, instance->if_index);
+	log_error(LOG_WARNING, "%s\n if_index=%d\n", (char*) buffer, instance->if_index);
 	json_result = json_tokener_parse(buffer);
 	if (json_result == NULL) {
 		fprintf(stderr, "Failed to get json result\n");
@@ -440,7 +440,7 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 	}
 
 	json_object_object_get_ex(json_result, "msg", &msg);
-    fprintf(stdout, "status: (%d), msg = %s \n",
+    log_error(LOG_DEBUG, "status: (%d), msg = %s \n",
             json_object_get_int(status), json_object_get_string(msg));
 
     if (json_object_get_int(status) != 200)
@@ -470,8 +470,8 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 		json_object *jproxy = json_object_array_get_idx(proxy, i);
 		json_object_object_get_ex(jproxy, "ip", &ip);
 		json_object_object_get_ex(jproxy, "operator_type", &o_type);
-		printf("\t[%d], ip=%s, operator_type=%s\n",
-		       i, json_object_to_json_string(ip), json_object_to_json_string(o_type));
+		//log_error(LOG_WARNING, "\t[%d], ip=%s, operator_type=%s\n",
+		 //      i, json_object_to_json_string(ip), json_object_to_json_string(o_type));
 
         snprintf(buf[i], sizeof(buf[i]), "%s", json_object_to_json_string(ip));
         snprintf(buf[i], sizeof(buf[i]), "%s", (char *)buf[i] + 1);
@@ -535,7 +535,7 @@ int doreporter(CURL *handle, int type)
         fprintf(stderr, "curl_easy_perform() failed: %s\n",
                 curl_easy_strerror(ret));
     } else {
-        printf("########%lu bytes retrieved\n", (long)chunk.size);
+        log_errno(LOG_WARNING, "########%lu bytes retrieved\n", (long)chunk.size);
 		FILE * file;
 
 		file = fopen("/tmp/iplist", "w");
@@ -585,7 +585,7 @@ int doreporter(CURL *handle, int type)
 char *l_ifname[3] = {
     "eth0",
     "eth0",
-    "eth0"
+    "eth0",
 };
 
 #define NO_SN_TEST  0xffffffff
@@ -615,12 +615,15 @@ char const* build_json(redsocks_instance *instance, int type, int index, int sn_
                 json_object_array_add(jarray, json_object_new_string(""));
         }
 
-       	json_object_object_add(jlogin, "sn", json_object_new_string(instance->config.mptcp_auth_sn[sn_number]));
-       	json_object_object_add(jlogin, "key", json_object_new_string(instance->config.mptcp_auth_key[sn_number]));
+        if (instance->config.mptcp_auth_sn[sn_number]) {
+       	    json_object_object_add(jlogin, "sn", json_object_new_string(instance->config.mptcp_auth_sn[sn_number]));
+       	    json_object_object_add(jlogin, "key", json_object_new_string(instance->config.mptcp_auth_key[sn_number]));
+        }
+
        	json_object_object_add(jlogin, "last_id", jarray);
 
        	post_str = json_object_to_json_string(jlogin);
-		log_error(LOG_ERR, "login post_str=%s.", post_str);
+		log_error(LOG_DEBUG, "login post_str=%s.", post_str);
 	}
 	break;
 
@@ -628,7 +631,7 @@ char const* build_json(redsocks_instance *instance, int type, int index, int sn_
        		json_object *jlogout = json_object_new_object();
    	    	json_object_object_add(jlogout, "uid", json_object_new_string(sc->key.uid));
    	    	post_str = json_object_to_json_string(jlogout);
-		    log_error(LOG_ERR, "logout post_str=%s.", post_str);
+		    log_error(LOG_DEBUG, "logout post_str=%s.", post_str);
     }
 	break;
 
@@ -637,12 +640,12 @@ char const* build_json(redsocks_instance *instance, int type, int index, int sn_
 	        json_object_object_add(heart, "uid", json_object_new_string(sc->key.uid));
 	        json_object_object_add(heart, "update_key", json_object_new_string("1"));
     	    post_str = json_object_to_json_string(heart);
-		    log_error(LOG_ERR, "heartbeat post_str=%s.", post_str);
+		    log_error(LOG_DEBUG, "heartbeat post_str=%s.", post_str);
 	}
 	break;
 
 	default:
-	    printf ("unknown auth type : %d\n", type);
+	    log_error(LOG_ERR, "unknown auth type : %d\n", type);
 	    return NULL;
 	}
 
@@ -682,7 +685,7 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 	else if (strstr(url, "iplist"))
 		doreporter(easy_handle, 0);
 	else
-		printf("Unsupport operation!\n");
+		log_error(LOG_ERR, "Unsupport operation!\n");
 
     if (!post_str) {
 		log_error(LOG_ERR, "Failed to build json string.");

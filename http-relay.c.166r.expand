@@ -70,7 +70,7 @@ try_optimize_cfg iteration 2
         (reg:DI 61 [ D.6038 ])) http-relay.c:69 -1
      (nil))
 (call_insn 15 14 16 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:69 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -174,7 +174,7 @@ try_optimize_cfg iteration 2
 (insn 8 7 9 2 (set (reg:DI 5 di)
         (reg/f:DI 59 [ D.6041 ])) http-relay.c:77 -1
      (nil))
-(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 9 8 10 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:77 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -340,7 +340,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67 [ D.6043 ])) http-relay.c:87 -1
      (nil))
 (call_insn 34 33 35 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:87 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -410,7 +410,7 @@ try_optimize_cfg iteration 2
         (reg:DI 91)) http-relay.c:91 -1
      (nil))
 (call_insn 54 53 55 8 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2adc942f5f00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ac65efb7f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:91 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -466,7 +466,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 74 [ D.6044 ])) http-relay.c:92 -1
      (nil))
 (call_insn 66 65 67 8 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2adc942f5f00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ac65efb7f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:92 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -544,7 +544,7 @@ try_optimize_cfg iteration 2
 (insn 81 80 82 8 (set (reg:DI 5 di)
         (reg/f:DI 80 [ D.6044 ])) http-relay.c:95 -1
      (nil))
-(call_insn 82 81 83 8 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 82 81 83 8 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:95 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -647,7 +647,7 @@ try_optimize_cfg iteration 2
         (reg:DI 66)) http-relay.c:105 -1
      (nil))
 (call_insn 18 17 19 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2adc942f7400 memset>) [0 __builtin_memset S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memset") [flags 0x41]  <function_decl 0x2ac65efb9400 memset>) [0 __builtin_memset S1 A8])
             (const_int 0 [0]))) http-relay.c:105 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -675,7 +675,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 59 [ D.6046 ])) http-relay.c:106 -1
      (nil))
 (call_insn 22 21 23 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2adc9462d300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2ac65f2ef300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
             (const_int 0 [0]))) http-relay.c:106 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -698,7 +698,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 60 [ D.6046 ])) http-relay.c:107 -1
      (nil))
 (call_insn 26 25 0 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2adc9462d300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2ac65f2ef300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
             (const_int 0 [0]))) http-relay.c:107 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -764,7 +764,7 @@ try_optimize_cfg iteration 2
 (insn 14 13 15 2 (set (reg:DI 5 di)
         (reg/f:DI 59 [ D.6047 ])) http-relay.c:114 -1
      (nil))
-(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:114 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -788,7 +788,7 @@ try_optimize_cfg iteration 2
 (insn 20 19 21 2 (set (reg:DI 5 di)
         (reg/f:DI 60 [ D.6047 ])) http-relay.c:116 -1
      (nil))
-(call_insn 21 20 22 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 21 20 22 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:116 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -819,7 +819,7 @@ try_optimize_cfg iteration 2
 (insn 26 25 27 2 (set (reg:DI 5 di)
         (reg/f:DI 61 [ D.6048 ])) http-relay.c:118 -1
      (nil))
-(call_insn 27 26 28 2 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2adc9462d400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
+(call_insn 27 26 28 2 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2ac65f2ef400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
         (const_int 0 [0])) http-relay.c:118 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -841,7 +841,7 @@ try_optimize_cfg iteration 2
 (insn 30 29 31 2 (set (reg:DI 5 di)
         (reg/f:DI 62 [ D.6048 ])) http-relay.c:119 -1
      (nil))
-(call_insn 31 30 0 2 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2adc9462d400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
+(call_insn 31 30 0 2 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2ac65f2ef400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
         (const_int 0 [0])) http-relay.c:119 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -907,7 +907,7 @@ try_optimize_cfg iteration 2
 (insn 14 13 15 2 (set (reg:DI 5 di)
         (reg/f:DI 59 [ D.6049 ])) http-relay.c:125 -1
      (nil))
-(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:125 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -975,7 +975,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67)) http-relay.c:133 -1
      (nil))
 (call_insn 8 7 9 3 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2adc945fb700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2ac65f2bd700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-relay.c:133 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1030,7 +1030,7 @@ try_optimize_cfg iteration 2
         (reg:DI 70)) http-relay.c:134 -1
      (nil))
 (call_insn/i 22 21 23 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2adc942f7c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ac65efb9c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-relay.c:134 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1060,7 +1060,7 @@ try_optimize_cfg iteration 2
 (insn 29 28 30 6 (set (reg:DI 5 di)
         (reg:DI 71)) http-relay.c:135 -1
      (nil))
-(call_insn 30 29 31 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 30 29 31 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:135 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1077,13 +1077,13 @@ try_optimize_cfg iteration 2
 (code_label 34 33 35 7 15 "" [1 uses])
 (note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 36 35 37 7 (set (reg/f:DI 62 [ auth_request_header.0 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2adc9461fd10 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-relay.c:138 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2ac65f2e1d10 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-relay.c:138 -1
      (nil))
 (insn 37 36 38 7 (set (reg:DI 5 di)
         (reg/f:DI 62 [ auth_request_header.0 ])) http-relay.c:138 -1
      (nil))
 (call_insn/i 38 37 39 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:138 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1093,7 +1093,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) http-relay.c:138 -1
      (nil))
 (insn 40 39 41 7 (set (reg/f:DI 64 [ auth_request_header.1 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2adc9461fd10 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-relay.c:138 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2ac65f2e1d10 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-relay.c:138 -1
      (nil))
 (insn 41 40 42 7 (set (reg:DI 72)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -1109,7 +1109,7 @@ try_optimize_cfg iteration 2
         (reg:DI 72)) http-relay.c:138 -1
      (nil))
 (call_insn/i 45 44 46 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2adc94482a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2ac65f144a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-relay.c:138 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1150,7 +1150,7 @@ try_optimize_cfg iteration 2
 (insn 56 55 57 9 (set (reg:DI 5 di)
         (reg:DI 73)) http-relay.c:140 -1
      (nil))
-(call_insn 57 56 59 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 57 56 59 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:140 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1365,18 +1365,18 @@ try_optimize_cfg iteration 2
  -> 27)
 (note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 21 20 22 4 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.5440") [flags 0x2]  <var_decl 0x2adc94639390 __PRETTY_FUNCTION__>)) http-relay.c:150 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.5440") [flags 0x2]  <var_decl 0x2ac65f2fb390 __PRETTY_FUNCTION__>)) http-relay.c:150 -1
      (nil))
 (insn 22 21 23 4 (set (reg:SI 1 dx)
         (const_int 150 [0x96])) http-relay.c:150 -1
      (nil))
 (insn 23 22 24 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:150 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:150 -1
      (nil))
 (insn 24 23 25 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2adc946f88e8 *.LC1>)) http-relay.c:150 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2ac65f3ba8e8 *.LC1>)) http-relay.c:150 -1
      (nil))
-(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2adc943a8400 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 25 24 26 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ac65f06a400 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) http-relay.c:150 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -1396,7 +1396,7 @@ try_optimize_cfg iteration 2
 (insn 30 29 31 5 (set (reg:DI 5 di)
         (reg:DI 135)) http-relay.c:152 -1
      (nil))
-(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2adc9460e400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 31 30 32 5 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2ac65f2d0400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) http-relay.c:152 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1418,7 +1418,7 @@ try_optimize_cfg iteration 2
 (insn 34 33 35 5 (set (reg:DI 5 di)
         (reg/f:DI 60 [ D.6055 ])) http-relay.c:154 -1
      (nil))
-(call_insn 35 34 36 5 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2adc9462d400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
+(call_insn 35 34 36 5 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2ac65f2ef400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
         (const_int 0 [0])) http-relay.c:154 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1441,7 +1441,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 61 [ D.6055 ])) http-relay.c:155 -1
      (nil))
 (call_insn 39 38 40 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2adc9462d300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2ac65f2ef300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
             (const_int 0 [0]))) http-relay.c:155 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1478,7 +1478,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 63 [ D.6056 ])) http-relay.c:158 -1
      (nil))
 (call_insn 48 47 49 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x2adc945c8400 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x2ac65f28a400 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
             (const_int 0 [0]))) http-relay.c:158 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1502,7 +1502,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 64 [ D.6056 ])) http-relay.c:159 -1
      (nil))
 (call_insn 54 53 55 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2adc945fb700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2ac65f2bd700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-relay.c:159 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1535,7 +1535,7 @@ try_optimize_cfg iteration 2
         (reg:DI 143)) http-relay.c:161 -1
      (nil))
 (call_insn/i 62 61 63 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:161 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1575,7 +1575,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 67 [ D.6055 ])) http-relay.c:161 -1
      (nil))
 (call_insn 71 70 72 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:161 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1600,13 +1600,13 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) http-relay.c:162 -1
      (nil))
 (insn 75 74 76 7 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2adc946f8980 *.LC2>)) http-relay.c:162 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ac65f3ba980 *.LC2>)) http-relay.c:162 -1
      (nil))
 (insn 76 75 77 7 (set (reg:DI 5 di)
         (reg/f:DI 68 [ D.6055 ])) http-relay.c:162 -1
      (nil))
 (call_insn 77 76 78 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:162 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1628,7 +1628,7 @@ try_optimize_cfg iteration 2
         (reg:DI 147)) http-relay.c:164 -1
      (nil))
 (insn 81 80 82 7 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2adc946f8a18 *.LC3>)) http-relay.c:164 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2ac65f3baa18 *.LC3>)) http-relay.c:164 -1
      (nil))
 (insn 82 81 83 7 (set (reg:DI 5 di)
         (reg:DI 148)) http-relay.c:164 -1
@@ -1637,7 +1637,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:164 -1
      (nil))
 (call_insn 84 83 85 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_sscanf") [flags 0x41]  <function_decl 0x2adc94304700 sscanf>) [0 __builtin_sscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_sscanf") [flags 0x41]  <function_decl 0x2ac65efc6700 sscanf>) [0 __builtin_sscanf S1 A8])
             (const_int 0 [0]))) http-relay.c:164 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1767,7 +1767,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 111 110 112 11 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2adc946f8ab0 *.LC4>)) http-relay.c:169 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2ac65f3baab0 *.LC4>)) http-relay.c:169 -1
      (nil))
 (insn 112 111 113 11 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:169 -1
@@ -1782,18 +1782,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:169 -1
      (nil))
 (insn 116 115 117 11 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:169 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:169 -1
      (nil))
 (insn 117 116 118 11 (set (reg:SI 4 si)
         (const_int 169 [0xa9])) http-relay.c:169 -1
      (nil))
 (insn 118 117 119 11 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:169 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:169 -1
      (nil))
 (insn 119 118 120 11 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:169 -1
      (nil))
-(call_insn 120 119 121 11 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 120 119 121 11 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:169 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1814,7 +1814,7 @@ try_optimize_cfg iteration 2
 (insn 122 121 123 11 (set (reg:DI 5 di)
         (reg:DI 155)) http-relay.c:170 -1
      (nil))
-(call_insn 123 122 124 11 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 123 122 124 11 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:170 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1909,7 +1909,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 146 145 147 14 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2adc946f8b48 *.LC5>)) http-relay.c:174 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2ac65f3bab48 *.LC5>)) http-relay.c:174 -1
      (nil))
 (insn 147 146 148 14 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:174 -1
@@ -1924,18 +1924,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:174 -1
      (nil))
 (insn 151 150 152 14 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:174 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:174 -1
      (nil))
 (insn 152 151 153 14 (set (reg:SI 4 si)
         (const_int 174 [0xae])) http-relay.c:174 -1
      (nil))
 (insn 153 152 154 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:174 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:174 -1
      (nil))
 (insn 154 153 155 14 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:174 -1
      (nil))
-(call_insn 155 154 156 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 155 154 156 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:174 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1956,7 +1956,7 @@ try_optimize_cfg iteration 2
 (insn 157 156 158 14 (set (reg:DI 5 di)
         (reg:DI 160)) http-relay.c:175 -1
      (nil))
-(call_insn 158 157 159 14 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 158 157 159 14 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:175 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1979,7 +1979,7 @@ try_optimize_cfg iteration 2
 (insn 165 164 166 15 (set (reg:DI 5 di)
         (reg:DI 161)) http-relay.c:179 -1
      (nil))
-(call_insn 166 165 167 15 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 166 165 167 15 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:179 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1997,7 +1997,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 80 [ D.6056 ])) http-relay.c:180 -1
      (nil))
 (call_insn 170 169 171 15 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("get_auth_request_header") [flags 0x3]  <function_decl 0x2adc94602900 get_auth_request_header>) [0 get_auth_request_header S1 A8])
+        (call (mem:QI (symbol_ref:DI ("get_auth_request_header") [flags 0x3]  <function_decl 0x2ac65f2c4900 get_auth_request_header>) [0 get_auth_request_header S1 A8])
             (const_int 0 [0]))) http-relay.c:180 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2052,7 +2052,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 180 179 181 16 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2adc946f8be0 *.LC6>)) http-relay.c:183 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2ac65f3babe0 *.LC6>)) http-relay.c:183 -1
      (nil))
 (insn 181 180 182 16 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:183 -1
@@ -2067,18 +2067,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:183 -1
      (nil))
 (insn 185 184 186 16 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:183 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:183 -1
      (nil))
 (insn 186 185 187 16 (set (reg:SI 4 si)
         (const_int 183 [0xb7])) http-relay.c:183 -1
      (nil))
 (insn 187 186 188 16 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:183 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:183 -1
      (nil))
 (insn 188 187 189 16 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:183 -1
      (nil))
-(call_insn 189 188 190 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 189 188 190 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:183 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2099,7 +2099,7 @@ try_optimize_cfg iteration 2
 (insn 191 190 192 16 (set (reg:DI 5 di)
         (reg:DI 166)) http-relay.c:184 -1
      (nil))
-(call_insn 192 191 193 16 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 192 191 193 16 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:184 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2125,7 +2125,7 @@ try_optimize_cfg iteration 2
 (insn 200 199 201 17 (set (reg:DI 5 di)
         (reg/f:DI 83 [ D.6059 ])) http-relay.c:187 -1
      (nil))
-(call_insn 201 200 202 17 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 201 200 202 17 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:187 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2140,13 +2140,13 @@ try_optimize_cfg iteration 2
         (reg/f:DI 168)) http-relay.c:188 -1
      (nil))
 (insn 204 203 205 17 (set (reg/f:DI 84 [ auth_request_header.3 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2adc9461fd10 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-relay.c:190 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2ac65f2e1d10 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-relay.c:190 -1
      (nil))
 (insn 205 204 206 17 (set (reg:DI 5 di)
         (reg/f:DI 84 [ auth_request_header.3 ])) http-relay.c:190 -1
      (nil))
 (call_insn/i 206 205 207 17 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:190 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2183,7 +2183,7 @@ try_optimize_cfg iteration 2
 (code_label 213 212 214 19 30 "" [1 uses])
 (note 214 213 215 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 215 214 216 19 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2adc94489100 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ac65f14b100 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-relay.c:191 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2251,7 +2251,7 @@ try_optimize_cfg iteration 2
         (reg:DI 170)) http-relay.c:194 -1
      (nil))
 (call_insn/i 232 231 233 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:194 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2274,7 +2274,7 @@ try_optimize_cfg iteration 2
         (reg:DI 96 [ D.6057 ])) http-relay.c:194 -1
      (nil))
 (call_insn 237 236 238 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:194 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2313,7 +2313,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 98 [ D.6059 ])) http-relay.c:195 -1
      (nil))
 (call_insn 247 246 248 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2adc942fa000 strcpy>) [0 __builtin_strcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2ac65efbc000 strcpy>) [0 __builtin_strcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:195 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2337,7 +2337,7 @@ try_optimize_cfg iteration 2
 (insn 251 250 252 20 (set (reg:DI 5 di)
         (reg:DI 176)) http-relay.c:198 -1
      (nil))
-(call_insn 252 251 253 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 252 251 253 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:198 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2360,7 +2360,7 @@ try_optimize_cfg iteration 2
 (insn 255 254 256 20 (set (reg:DI 5 di)
         (reg/f:DI 99 [ D.6055 ])) http-relay.c:200 -1
      (nil))
-(call_insn 256 255 257 20 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2adc9462d400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
+(call_insn 256 255 257 20 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2ac65f2ef400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
         (const_int 0 [0])) http-relay.c:200 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2380,7 +2380,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 100 [ D.6066 ])) http-relay.c:202 -1
      (nil))
 (call_insn 261 260 262 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_disable") [flags 0x41]  <function_decl 0x2adc945e1e00 bufferevent_disable>) [0 bufferevent_disable S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_disable") [flags 0x41]  <function_decl 0x2ac65f2a3e00 bufferevent_disable>) [0 bufferevent_disable S1 A8])
             (const_int 0 [0]))) http-relay.c:202 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2431,7 +2431,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 270 269 271 21 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2adc946f8c78 *.LC7>)) http-relay.c:203 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2ac65f3bac78 *.LC7>)) http-relay.c:203 -1
      (nil))
 (insn 271 270 272 21 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:203 -1
@@ -2446,18 +2446,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:203 -1
      (nil))
 (insn 275 274 276 21 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:203 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:203 -1
      (nil))
 (insn 276 275 277 21 (set (reg:SI 4 si)
         (const_int 203 [0xcb])) http-relay.c:203 -1
      (nil))
 (insn 277 276 278 21 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:203 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:203 -1
      (nil))
 (insn 278 277 279 21 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:203 -1
      (nil))
-(call_insn 279 278 280 21 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 279 278 280 21 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:203 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2497,7 +2497,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 105 [ D.6067 ])) http-relay.c:208 -1
      (nil))
 (call_insn 288 287 289 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2adc945bb200 event_get_fd>) [0 event_get_fd S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2ac65f27d200 event_get_fd>) [0 event_get_fd S1 A8])
             (const_int 0 [0]))) http-relay.c:208 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2506,18 +2506,18 @@ try_optimize_cfg iteration 2
         (reg:SI 0 ax)) http-relay.c:208 -1
      (nil))
 (insn 290 289 291 22 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:208 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:208 -1
      (nil))
 (insn 291 290 292 22 (set (reg:SI 1 dx)
         (const_int 208 [0xd0])) http-relay.c:208 -1
      (nil))
 (insn 292 291 293 22 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:208 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:208 -1
      (nil))
 (insn 293 292 294 22 (set (reg:SI 5 di)
         (reg:SI 106 [ D.6054 ])) http-relay.c:208 -1
      (nil))
-(call_insn 294 293 295 22 (call (mem:QI (symbol_ref:DI ("redsocks_close_internal") [flags 0x41]  <function_decl 0x2adc9460ee00 redsocks_close_internal>) [0 redsocks_close_internal S1 A8])
+(call_insn 294 293 295 22 (call (mem:QI (symbol_ref:DI ("redsocks_close_internal") [flags 0x41]  <function_decl 0x2ac65f2d0e00 redsocks_close_internal>) [0 redsocks_close_internal S1 A8])
         (const_int 0 [0])) http-relay.c:208 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -2536,7 +2536,7 @@ try_optimize_cfg iteration 2
 (insn 297 296 298 22 (set (reg:DI 5 di)
         (reg/f:DI 107 [ D.6066 ])) http-relay.c:209 -1
      (nil))
-(call_insn 298 297 299 22 (call (mem:QI (symbol_ref:DI ("bufferevent_free") [flags 0x41]  <function_decl 0x2adc945e1200 bufferevent_free>) [0 bufferevent_free S1 A8])
+(call_insn 298 297 299 22 (call (mem:QI (symbol_ref:DI ("bufferevent_free") [flags 0x41]  <function_decl 0x2ac65f2a3200 bufferevent_free>) [0 bufferevent_free S1 A8])
         (const_int 0 [0])) http-relay.c:209 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2556,7 +2556,7 @@ try_optimize_cfg iteration 2
 (insn 302 301 303 22 (set (reg:DI 5 di)
         (reg:DI 184)) http-relay.c:215 -1
      (nil))
-(call_insn 303 302 304 22 (call (mem:QI (symbol_ref:DI ("redsocks_connect_relay") [flags 0x41]  <function_decl 0x2adc9460e500 redsocks_connect_relay>) [0 redsocks_connect_relay S1 A8])
+(call_insn 303 302 304 22 (call (mem:QI (symbol_ref:DI ("redsocks_connect_relay") [flags 0x41]  <function_decl 0x2ac65f2d0500 redsocks_connect_relay>) [0 redsocks_connect_relay S1 A8])
         (const_int 0 [0])) http-relay.c:215 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2660,7 +2660,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 332 331 333 27 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2adc946f8d10 *.LC8>)) http-relay.c:222 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2ac65f3bad10 *.LC8>)) http-relay.c:222 -1
      (nil))
 (insn 333 332 334 27 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:222 -1
@@ -2675,18 +2675,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:222 -1
      (nil))
 (insn 337 336 338 27 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:222 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:222 -1
      (nil))
 (insn 338 337 339 27 (set (reg:SI 4 si)
         (const_int 222 [0xde])) http-relay.c:222 -1
      (nil))
 (insn 339 338 340 27 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:222 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:222 -1
      (nil))
 (insn 340 339 341 27 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:222 -1
      (nil))
-(call_insn 341 340 342 27 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 341 340 342 27 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 24 [0x18])) http-relay.c:222 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2709,7 +2709,7 @@ try_optimize_cfg iteration 2
 (insn 343 342 344 27 (set (reg:DI 5 di)
         (reg:DI 189)) http-relay.c:223 -1
      (nil))
-(call_insn 344 343 345 27 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 344 343 345 27 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:223 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2727,7 +2727,7 @@ try_optimize_cfg iteration 2
 (insn 349 348 350 28 (set (reg:DI 5 di)
         (reg:DI 190)) http-relay.c:227 -1
      (nil))
-(call_insn 350 349 351 28 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 350 349 351 28 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:227 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2767,7 +2767,7 @@ try_optimize_cfg iteration 2
 (insn 363 362 364 31 (set (reg:DI 5 di)
         (reg:DI 191)) http-relay.c:230 -1
      (nil))
-(call_insn 364 363 365 31 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 364 363 365 31 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:230 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2817,7 +2817,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 115 [ D.6056 ])) http-relay.c:239 -1
      (nil))
 (call_insn 381 380 382 35 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2adc945fb700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2ac65f2bd700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-relay.c:239 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2850,7 +2850,7 @@ try_optimize_cfg iteration 2
         (reg:DI 194)) http-relay.c:241 -1
      (nil))
 (call_insn/i 389 388 390 36 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:241 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2890,7 +2890,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 118 [ D.6055 ])) http-relay.c:241 -1
      (nil))
 (call_insn 398 397 399 36 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:241 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2915,13 +2915,13 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) http-relay.c:242 -1
      (nil))
 (insn 402 401 403 36 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2adc946f8980 *.LC2>)) http-relay.c:242 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ac65f3ba980 *.LC2>)) http-relay.c:242 -1
      (nil))
 (insn 403 402 404 36 (set (reg:DI 5 di)
         (reg/f:DI 119 [ D.6055 ])) http-relay.c:242 -1
      (nil))
 (call_insn 404 403 405 36 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:242 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2964,7 +2964,7 @@ try_optimize_cfg iteration 2
 (insn 415 414 416 38 (set (reg:DI 5 di)
         (reg:DI 200)) http-relay.c:246 -1
      (nil))
-(call_insn 416 415 417 38 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 416 415 417 38 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:246 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3062,7 +3062,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 125 [ D.6066 ])) http-relay.c:254 -1
      (nil))
 (call_insn 447 446 448 42 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:254 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3114,7 +3114,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 456 455 457 43 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2adc946f8da8 *.LC9>)) http-relay.c:255 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ac65f3bada8 *.LC9>)) http-relay.c:255 -1
      (nil))
 (insn 457 456 458 43 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:255 -1
@@ -3129,18 +3129,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:255 -1
      (nil))
 (insn 461 460 462 43 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2adc94639688 __func__>)) http-relay.c:255 -1
+        (symbol_ref:DI ("__func__.5445") [flags 0x2]  <var_decl 0x2ac65f2fb688 __func__>)) http-relay.c:255 -1
      (nil))
 (insn 462 461 463 43 (set (reg:SI 4 si)
         (const_int 255 [0xff])) http-relay.c:255 -1
      (nil))
 (insn 463 462 464 43 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:255 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:255 -1
      (nil))
 (insn 464 463 465 43 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:255 -1
      (nil))
-(call_insn 465 464 466 43 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 465 464 466 43 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:255 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -3161,7 +3161,7 @@ try_optimize_cfg iteration 2
 (insn 467 466 468 43 (set (reg:DI 5 di)
         (reg:DI 208)) http-relay.c:256 -1
      (nil))
-(call_insn 468 467 469 43 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 468 467 469 43 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:256 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3180,7 +3180,7 @@ try_optimize_cfg iteration 2
 (insn 474 473 475 44 (set (reg:DI 5 di)
         (reg:DI 209)) http-relay.c:259 -1
      (nil))
-(call_insn 475 474 478 44 (call (mem:QI (symbol_ref:DI ("redsocks_start_relay") [flags 0x41]  <function_decl 0x2adc9460e600 redsocks_start_relay>) [0 redsocks_start_relay S1 A8])
+(call_insn 475 474 478 44 (call (mem:QI (symbol_ref:DI ("redsocks_start_relay") [flags 0x41]  <function_decl 0x2ac65f2d0600 redsocks_start_relay>) [0 redsocks_start_relay S1 A8])
         (const_int 0 [0])) http-relay.c:259 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3362,18 +3362,18 @@ try_optimize_cfg iteration 2
  -> 28)
 (note 21 20 22 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 22 21 23 4 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.5462") [flags 0x2]  <var_decl 0x2adc94639ab0 __PRETTY_FUNCTION__>)) http-relay.c:270 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.5462") [flags 0x2]  <var_decl 0x2ac65f2fbab0 __PRETTY_FUNCTION__>)) http-relay.c:270 -1
      (nil))
 (insn 23 22 24 4 (set (reg:SI 1 dx)
         (const_int 270 [0x10e])) http-relay.c:270 -1
      (nil))
 (insn 24 23 25 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:270 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:270 -1
      (nil))
 (insn 25 24 26 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2adc9471e428 *.LC10>)) http-relay.c:270 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2ac65f3e0428 *.LC10>)) http-relay.c:270 -1
      (nil))
-(call_insn 26 25 27 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2adc943a8400 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 26 25 27 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ac65f06a400 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) http-relay.c:270 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -3393,7 +3393,7 @@ try_optimize_cfg iteration 2
 (insn 31 30 32 5 (set (reg:DI 5 di)
         (reg:DI 166)) http-relay.c:272 -1
      (nil))
-(call_insn 32 31 33 5 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2adc9460e400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 32 31 33 5 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2ac65f2d0400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) http-relay.c:272 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3448,7 +3448,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 62 [ D.6079 ])) http-relay.c:276 -1
      (nil))
 (call_insn/i 46 45 47 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:276 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3482,7 +3482,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 65 [ D.6081 ])) http-relay.c:276 -1
      (nil))
 (call_insn 55 54 56 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:276 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3539,7 +3539,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 65 64 66 8 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2adc946f8da8 *.LC9>)) http-relay.c:278 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ac65f3bada8 *.LC9>)) http-relay.c:278 -1
      (nil))
 (insn 66 65 67 8 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:278 -1
@@ -3554,18 +3554,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:278 -1
      (nil))
 (insn 70 69 71 8 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2adc94639b48 __func__>)) http-relay.c:278 -1
+        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2ac65f2fbb48 __func__>)) http-relay.c:278 -1
      (nil))
 (insn 71 70 72 8 (set (reg:SI 4 si)
         (const_int 278 [0x116])) http-relay.c:278 -1
      (nil))
 (insn 72 71 73 8 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:278 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:278 -1
      (nil))
 (insn 73 72 74 8 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:278 -1
      (nil))
-(call_insn 74 73 75 8 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 74 73 75 8 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:278 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -3586,7 +3586,7 @@ try_optimize_cfg iteration 2
 (insn 76 75 77 8 (set (reg:DI 5 di)
         (reg:DI 175)) http-relay.c:279 -1
      (nil))
-(call_insn 77 76 78 8 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 77 76 78 8 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:279 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3680,13 +3680,13 @@ try_optimize_cfg iteration 2
         (const_int 5 [0x5])) http-relay.c:294 -1
      (nil))
 (insn 101 100 102 10 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2adc9471e4c0 *.LC11>)) http-relay.c:294 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2ac65f3e04c0 *.LC11>)) http-relay.c:294 -1
      (nil))
 (insn 102 101 103 10 (set (reg:DI 5 di)
         (reg/f:DI 72 [ D.6079 ])) http-relay.c:294 -1
      (nil))
 (call_insn/i 103 102 104 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2adc94482a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2ac65f144a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-relay.c:294 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3740,7 +3740,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 77 [ D.6079 ])) http-relay.c:295 -1
      (nil))
 (call_insn 116 115 117 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("basic_authentication_encode") [flags 0x41]  <function_decl 0x2adc9462d000 basic_authentication_encode>) [0 basic_authentication_encode S1 A8])
+        (call (mem:QI (symbol_ref:DI ("basic_authentication_encode") [flags 0x41]  <function_decl 0x2ac65f2ef000 basic_authentication_encode>) [0 basic_authentication_encode S1 A8])
             (const_int 0 [0]))) http-relay.c:295 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3755,7 +3755,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 119 118 120 11 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -104 [0xffffffffffffff98])) [0 auth_scheme+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2adc9471e4c0 *.LC11>)) http-relay.c:296 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2ac65f3e04c0 *.LC11>)) http-relay.c:296 -1
      (nil))
 (jump_insn 120 119 121 11 (set (pc)
         (label_ref 351)) -1
@@ -3775,13 +3775,13 @@ try_optimize_cfg iteration 2
         (const_int 6 [0x6])) http-relay.c:297 -1
      (nil))
 (insn 127 126 128 12 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2adc9471e558 *.LC12>)) http-relay.c:297 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2ac65f3e0558 *.LC12>)) http-relay.c:297 -1
      (nil))
 (insn 128 127 129 12 (set (reg:DI 5 di)
         (reg/f:DI 78 [ D.6079 ])) http-relay.c:297 -1
      (nil))
 (call_insn/i 129 128 130 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2adc94482a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2ac65f144a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-relay.c:297 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3837,7 +3837,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 81 [ D.6079 ])) http-relay.c:299 -1
      (nil))
 (call_insn/i 143 142 144 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2adc942f7c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ac65efb9c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-relay.c:299 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3889,7 +3889,7 @@ try_optimize_cfg iteration 2
         (reg:DI 87 [ D.6080 ])) http-relay.c:300 -1
      (nil))
 (call_insn 155 154 156 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:300 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -3949,7 +3949,7 @@ try_optimize_cfg iteration 2
         (reg:DI 193)) http-relay.c:301 -1
      (nil))
 (call_insn 170 169 171 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2adc942f5f00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ac65efb7f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:301 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4014,7 +4014,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 100 [ D.6079 ])) http-relay.c:304 -1
      (nil))
 (call_insn/i 184 183 185 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2adc942f7c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ac65efb9c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-relay.c:304 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4077,7 +4077,7 @@ try_optimize_cfg iteration 2
 (insn 198 197 199 16 (set (reg:DI 5 di)
         (reg:DI 199)) http-relay.c:306 -1
      (nil))
-(call_insn 199 198 200 16 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 199 198 200 16 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:306 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4113,7 +4113,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 204 203 205 16 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2adc9471e5f0 *.LC13>)) http-relay.c:307 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ac65f3e05f0 *.LC13>)) http-relay.c:307 -1
      (nil))
 (insn 205 204 206 16 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:307 -1
@@ -4128,18 +4128,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:307 -1
      (nil))
 (insn 209 208 210 16 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2adc94639b48 __func__>)) http-relay.c:307 -1
+        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2ac65f2fbb48 __func__>)) http-relay.c:307 -1
      (nil))
 (insn 210 209 211 16 (set (reg:SI 4 si)
         (const_int 307 [0x133])) http-relay.c:307 -1
      (nil))
 (insn 211 210 212 16 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:307 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:307 -1
      (nil))
 (insn 212 211 213 16 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:307 -1
      (nil))
-(call_insn 213 212 214 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 213 212 214 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:307 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -4160,7 +4160,7 @@ try_optimize_cfg iteration 2
 (insn 215 214 216 16 (set (reg:DI 5 di)
         (reg:DI 202)) http-relay.c:308 -1
      (nil))
-(call_insn 216 215 217 16 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 216 215 217 16 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:308 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4192,7 +4192,7 @@ try_optimize_cfg iteration 2
         (reg:DI 203)) http-relay.c:311 -1
      (nil))
 (call_insn/i 225 224 226 17 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2adc942f7c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ac65efb9c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-relay.c:311 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4230,7 +4230,7 @@ try_optimize_cfg iteration 2
         (reg:DI 205)) http-relay.c:311 -1
      (nil))
 (call_insn/i 234 233 235 18 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2adc942f7c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ac65efb9c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-relay.c:311 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4265,7 +4265,7 @@ try_optimize_cfg iteration 2
 (insn 242 241 243 19 (set (reg:DI 5 di)
         (reg:DI 207)) http-relay.c:312 -1
      (nil))
-(call_insn 243 242 244 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 243 242 244 19 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:312 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4301,7 +4301,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 248 247 249 19 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2adc9471e5f0 *.LC13>)) http-relay.c:313 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ac65f3e05f0 *.LC13>)) http-relay.c:313 -1
      (nil))
 (insn 249 248 250 19 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:313 -1
@@ -4316,18 +4316,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:313 -1
      (nil))
 (insn 253 252 254 19 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2adc94639b48 __func__>)) http-relay.c:313 -1
+        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2ac65f2fbb48 __func__>)) http-relay.c:313 -1
      (nil))
 (insn 254 253 255 19 (set (reg:SI 4 si)
         (const_int 313 [0x139])) http-relay.c:313 -1
      (nil))
 (insn 255 254 256 19 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:313 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:313 -1
      (nil))
 (insn 256 255 257 19 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:313 -1
      (nil))
-(call_insn 257 256 258 19 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 257 256 258 19 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:313 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -4348,7 +4348,7 @@ try_optimize_cfg iteration 2
 (insn 259 258 260 19 (set (reg:DI 5 di)
         (reg:DI 210)) http-relay.c:314 -1
      (nil))
-(call_insn 260 259 261 19 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 260 259 261 19 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:314 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4392,7 +4392,7 @@ try_optimize_cfg iteration 2
         (reg:DI 106 [ D.6080 ])) http-relay.c:317 -1
      (nil))
 (call_insn 272 271 273 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:317 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4443,7 +4443,7 @@ try_optimize_cfg iteration 2
         (reg:DI 213)) http-relay.c:318 -1
      (nil))
 (call_insn 284 283 285 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2adc942f5f00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2ac65efb7f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:318 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4489,7 +4489,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:319 -1
      (nil))
 (call_insn 292 291 293 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2adc9444a400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2ac65f10c400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-relay.c:324 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4501,7 +4501,7 @@ try_optimize_cfg iteration 2
         (zero_extend:SI (subreg:HI (reg:SI 116 [ D.6078 ]) 0))) http-relay.c:323 -1
      (nil))
 (call_insn 295 294 296 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2adc9444a400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2ac65f10c400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-relay.c:324 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4513,7 +4513,7 @@ try_optimize_cfg iteration 2
         (zero_extend:SI (subreg:HI (reg:SI 118 [ D.6078 ]) 0))) http-relay.c:323 -1
      (nil))
 (call_insn 298 297 299 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2adc9444a400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2ac65f10c400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-relay.c:324 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4525,7 +4525,7 @@ try_optimize_cfg iteration 2
         (zero_extend:SI (subreg:HI (reg:SI 120 [ D.6078 ]) 0))) http-relay.c:323 -1
      (nil))
 (call_insn 301 300 302 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2adc9444a400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2ac65f10c400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-relay.c:324 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4556,7 +4556,7 @@ try_optimize_cfg iteration 2
         (reg:SI 123 [ D.6078 ])) http-relay.c:323 -1
      (nil))
 (insn 309 308 310 20 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2adc9471e688 *.LC14>)) http-relay.c:323 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2ac65f3e0688 *.LC14>)) http-relay.c:323 -1
      (nil))
 (insn 310 309 311 20 (set (reg:DI 4 si)
         (const_int 17 [0x11])) http-relay.c:323 -1
@@ -4568,7 +4568,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:323 -1
      (nil))
 (call_insn 313 312 314 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2adc94304300 snprintf>) [0 __builtin_snprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2ac65efc6300 snprintf>) [0 __builtin_snprintf S1 A8])
             (const_int 8 [0x8]))) http-relay.c:323 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4666,7 +4666,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 130 [ D.6087 ])) http-relay.c:326 -1
      (nil))
 (call_insn 335 334 336 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("digest_authentication_encode") [flags 0x41]  <function_decl 0x2adc9462d100 digest_authentication_encode>) [0 digest_authentication_encode S1 A8])
+        (call (mem:QI (symbol_ref:DI ("digest_authentication_encode") [flags 0x41]  <function_decl 0x2ac65f2ef100 digest_authentication_encode>) [0 digest_authentication_encode S1 A8])
             (const_int 8 [0x8]))) http-relay.c:326 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4691,7 +4691,7 @@ try_optimize_cfg iteration 2
 (insn 339 338 340 20 (set (reg:DI 5 di)
         (reg:DI 224)) http-relay.c:330 -1
      (nil))
-(call_insn 340 339 341 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 340 339 341 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:330 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4704,7 +4704,7 @@ try_optimize_cfg iteration 2
 (insn 342 341 343 20 (set (reg:DI 5 di)
         (reg:DI 225)) http-relay.c:331 -1
      (nil))
-(call_insn 343 342 344 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 343 342 344 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:331 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4712,7 +4712,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 344 343 345 20 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -104 [0xffffffffffffff98])) [0 auth_scheme+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2adc9471e558 *.LC12>)) http-relay.c:332 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2ac65f3e0558 *.LC12>)) http-relay.c:332 -1
      (nil))
 (jump_insn 345 344 346 20 (set (pc)
         (label_ref 351)) -1
@@ -4746,13 +4746,13 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:337 -1
      (nil))
 (insn 357 356 358 23 (set (reg/f:DI 135 [ auth_response_header.15 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_response_header") [flags 0x40]  <var_decl 0x2adc9461fda8 auth_response_header>) [0 auth_response_header+0 S8 A64])) http-relay.c:338 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_response_header") [flags 0x40]  <var_decl 0x2ac65f2e1da8 auth_response_header>) [0 auth_response_header+0 S8 A64])) http-relay.c:338 -1
      (nil))
 (insn 358 357 359 23 (set (reg:DI 5 di)
         (reg/f:DI 135 [ auth_response_header.15 ])) http-relay.c:338 -1
      (nil))
 (call_insn/i 359 358 360 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:338 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4762,7 +4762,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) http-relay.c:338 -1
      (nil))
 (insn 361 360 362 23 (set (reg/f:DI 137 [ auth_response_header.16 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_response_header") [flags 0x40]  <var_decl 0x2adc9461fda8 auth_response_header>) [0 auth_response_header+0 S8 A64])) http-relay.c:338 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_response_header") [flags 0x40]  <var_decl 0x2ac65f2e1da8 auth_response_header>) [0 auth_response_header+0 S8 A64])) http-relay.c:338 -1
      (nil))
 (insn 362 361 363 23 (set (reg/f:DI 226)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -4782,7 +4782,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 138 [ D.6081 ])) http-relay.c:338 -1
      (nil))
 (call_insn 367 366 368 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:338 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4813,13 +4813,13 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:339 -1
      (nil))
 (insn 373 372 374 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2adc9471e720 *.LC15>)) http-relay.c:339 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2ac65f3e0720 *.LC15>)) http-relay.c:339 -1
      (nil))
 (insn 374 373 375 23 (set (reg:DI 5 di)
         (reg/f:DI 140 [ D.6081 ])) http-relay.c:339 -1
      (nil))
 (call_insn 375 374 376 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:339 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4846,7 +4846,7 @@ try_optimize_cfg iteration 2
         (reg:DI 228)) http-relay.c:340 -1
      (nil))
 (call_insn/i 380 379 381 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:340 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4877,7 +4877,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 143 [ D.6081 ])) http-relay.c:340 -1
      (nil))
 (call_insn 388 387 389 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:340 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4908,13 +4908,13 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:341 -1
      (nil))
 (insn 394 393 395 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2adc9471e720 *.LC15>)) http-relay.c:341 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2ac65f3e0720 *.LC15>)) http-relay.c:341 -1
      (nil))
 (insn 395 394 396 23 (set (reg:DI 5 di)
         (reg/f:DI 145 [ D.6081 ])) http-relay.c:341 -1
      (nil))
 (call_insn 396 395 397 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:341 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4941,7 +4941,7 @@ try_optimize_cfg iteration 2
         (reg:DI 232)) http-relay.c:342 -1
      (nil))
 (call_insn/i 401 400 402 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:342 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -4972,7 +4972,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 148 [ D.6081 ])) http-relay.c:342 -1
      (nil))
 (call_insn 409 408 410 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:342 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5003,13 +5003,13 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) http-relay.c:343 -1
      (nil))
 (insn 415 414 416 23 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2adc946f8980 *.LC2>)) http-relay.c:343 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ac65f3ba980 *.LC2>)) http-relay.c:343 -1
      (nil))
 (insn 416 415 417 23 (set (reg:DI 5 di)
         (reg/f:DI 150 [ D.6081 ])) http-relay.c:343 -1
      (nil))
 (call_insn 417 416 418 23 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:343 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5071,7 +5071,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 427 426 428 24 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2adc946f8da8 *.LC9>)) http-relay.c:345 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ac65f3bada8 *.LC9>)) http-relay.c:345 -1
      (nil))
 (insn 428 427 429 24 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:345 -1
@@ -5086,18 +5086,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:345 -1
      (nil))
 (insn 432 431 433 24 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2adc94639b48 __func__>)) http-relay.c:345 -1
+        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2ac65f2fbb48 __func__>)) http-relay.c:345 -1
      (nil))
 (insn 433 432 434 24 (set (reg:SI 4 si)
         (const_int 345 [0x159])) http-relay.c:345 -1
      (nil))
 (insn 434 433 435 24 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:345 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:345 -1
      (nil))
 (insn 435 434 436 24 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:345 -1
      (nil))
-(call_insn 436 435 437 24 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 436 435 437 24 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:345 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -5118,7 +5118,7 @@ try_optimize_cfg iteration 2
 (insn 438 437 439 24 (set (reg:DI 5 di)
         (reg:DI 238)) http-relay.c:346 -1
      (nil))
-(call_insn 439 438 440 24 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 439 438 440 24 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:346 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5137,7 +5137,7 @@ try_optimize_cfg iteration 2
 (insn 445 444 446 25 (set (reg:DI 5 di)
         (reg:DI 239)) http-relay.c:351 -1
      (nil))
-(call_insn 446 445 447 25 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 446 445 447 25 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:351 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5180,7 +5180,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 157 [ D.6081 ])) http-relay.c:353 -1
      (nil))
 (call_insn 457 456 458 25 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:353 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5237,7 +5237,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 467 466 468 26 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2adc946f8da8 *.LC9>)) http-relay.c:355 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ac65f3bada8 *.LC9>)) http-relay.c:355 -1
      (nil))
 (insn 468 467 469 26 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:355 -1
@@ -5252,18 +5252,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:355 -1
      (nil))
 (insn 472 471 473 26 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2adc94639b48 __func__>)) http-relay.c:355 -1
+        (symbol_ref:DI ("__func__.5463") [flags 0x2]  <var_decl 0x2ac65f2fbb48 __func__>)) http-relay.c:355 -1
      (nil))
 (insn 473 472 474 26 (set (reg:SI 4 si)
         (const_int 355 [0x163])) http-relay.c:355 -1
      (nil))
 (insn 474 473 475 26 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:355 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:355 -1
      (nil))
 (insn 475 474 476 26 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:355 -1
      (nil))
-(call_insn 476 475 477 26 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 476 475 477 26 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:355 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -5284,7 +5284,7 @@ try_optimize_cfg iteration 2
 (insn 478 477 479 26 (set (reg:DI 5 di)
         (reg:DI 246)) http-relay.c:356 -1
      (nil))
-(call_insn 479 478 480 26 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 479 478 480 26 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:356 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5331,7 +5331,7 @@ try_optimize_cfg iteration 2
         (reg:DI 250)) http-relay.c:364 -1
      (nil))
 (call_insn 493 492 496 27 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_enable") [flags 0x41]  <function_decl 0x2adc945e1d00 bufferevent_enable>) [0 bufferevent_enable S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_enable") [flags 0x41]  <function_decl 0x2ac65f2a3d00 bufferevent_enable>) [0 bufferevent_enable S1 A8])
             (const_int 0 [0]))) http-relay.c:364 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5357,7 +5357,7 @@ try_optimize_cfg iteration 2
      (nil)
  -> 501)
 (note 503 498 499 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
-(call_insn 499 503 500 30 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2adc946f6300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+(call_insn 499 503 500 30 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2ac65f3b8300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
         (const_int 0 [0])) http-relay.c:366 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -5440,7 +5440,7 @@ try_optimize_cfg iteration 2
         (reg:DI 71)) http-relay.c:373 -1
      (nil))
 (call_insn/i 15 14 16 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:373 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5480,7 +5480,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 62 [ D.6099 ])) http-relay.c:373 -1
      (nil))
 (call_insn 24 23 25 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:373 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5530,13 +5530,13 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) http-relay.c:375 -1
      (nil))
 (insn 37 36 38 5 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2adc946f8980 *.LC2>)) http-relay.c:375 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ac65f3ba980 *.LC2>)) http-relay.c:375 -1
      (nil))
 (insn 38 37 39 5 (set (reg:DI 5 di)
         (reg/f:DI 64 [ D.6099 ])) http-relay.c:375 -1
      (nil))
 (call_insn 39 38 40 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:375 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -5642,7 +5642,7 @@ try_optimize_cfg iteration 2
         (reg:SI 61 [ D.6102 ])) http-relay.c:384 -1
      (nil))
 (call_insn/u 13 12 14 2 (set (reg:HI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2adc94529e00 ntohs>) [0 ntohs S1 A8])
+        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2ac65f1ebe00 ntohs>) [0 ntohs S1 A8])
             (const_int 0 [0]))) http-relay.c:384 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5671,7 +5671,7 @@ try_optimize_cfg iteration 2
         (reg:SI 72)) http-relay.c:385 -1
      (nil))
 (call_insn 20 19 21 4 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2adc94555800 inet_ntoa>) [0 inet_ntoa S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2ac65f217800 inet_ntoa>) [0 inet_ntoa S1 A8])
             (const_int 0 [0]))) http-relay.c:385 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5698,7 +5698,7 @@ try_optimize_cfg iteration 2
         (reg:SI 64 [ D.6102 ])) http-relay.c:390 -1
      (nil))
 (call_insn/u 29 28 30 5 (set (reg:HI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2adc94529e00 ntohs>) [0 ntohs S1 A8])
+        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2ac65f1ebe00 ntohs>) [0 ntohs S1 A8])
             (const_int 0 [0]))) http-relay.c:390 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5718,7 +5718,7 @@ try_optimize_cfg iteration 2
         (reg:SI 73)) http-relay.c:387 -1
      (nil))
 (call_insn 34 33 35 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2adc94555800 inet_ntoa>) [0 inet_ntoa S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2ac65f217800 inet_ntoa>) [0 inet_ntoa S1 A8])
             (const_int 0 [0]))) http-relay.c:387 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5734,19 +5734,19 @@ try_optimize_cfg iteration 2
         (reg/f:DI 67 [ D.6100 ])) http-relay.c:387 -1
      (nil))
 (insn 38 37 39 5 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2adc94749428 *.LC16>)) http-relay.c:387 -1
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2ac65f40b428 *.LC16>)) http-relay.c:387 -1
      (nil))
 (insn 39 38 40 5 (set (reg:DI 4 si)
         (const_int 22 [0x16])) http-relay.c:387 -1
      (nil))
 (insn 40 39 41 5 (set (reg:DI 5 di)
-        (symbol_ref:DI ("host.5480") [flags 0x2]  <var_decl 0x2adc9464f1c8 host>)) http-relay.c:387 -1
+        (symbol_ref:DI ("host.5480") [flags 0x2]  <var_decl 0x2ac65f3111c8 host>)) http-relay.c:387 -1
      (nil))
 (insn 41 40 42 5 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:387 -1
      (nil))
 (call_insn 42 41 43 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2adc94304300 snprintf>) [0 __builtin_snprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2ac65efc6300 snprintf>) [0 __builtin_snprintf S1 A8])
             (const_int 0 [0]))) http-relay.c:387 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -5758,7 +5758,7 @@ try_optimize_cfg iteration 2
                         (expr_list:REG_BR_PRED (use (reg:SI 37 r8))
                             (nil))))))))
 (insn 43 42 44 5 (set (reg/f:DI 59 [ D.6100 ])
-        (symbol_ref:DI ("host.5480") [flags 0x2]  <var_decl 0x2adc9464f1c8 host>)) http-relay.c:392 -1
+        (symbol_ref:DI ("host.5480") [flags 0x2]  <var_decl 0x2ac65f3111c8 host>)) http-relay.c:392 -1
      (nil))
 (code_label 44 43 45 6 63 "" [1 uses])
 (note 45 44 46 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
@@ -5938,7 +5938,7 @@ try_optimize_cfg iteration 2
         (reg:DI 102)) http-relay.c:400 -1
      (nil))
 (call_insn 29 28 30 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fmt_http_host") [flags 0x3]  <function_decl 0x2adc9462df00 fmt_http_host>) [0 fmt_http_host S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fmt_http_host") [flags 0x3]  <function_decl 0x2ac65f2eff00 fmt_http_host>) [0 fmt_http_host S1 A8])
             (const_int 0 [0]))) http-relay.c:400 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:DI 4 si))
@@ -5973,18 +5973,18 @@ try_optimize_cfg iteration 2
  -> 45)
 (note 38 37 39 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 39 38 40 7 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.5487") [flags 0x2]  <var_decl 0x2adc9464f428 __PRETTY_FUNCTION__>)) http-relay.c:402 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.5487") [flags 0x2]  <var_decl 0x2ac65f311428 __PRETTY_FUNCTION__>)) http-relay.c:402 -1
      (nil))
 (insn 40 39 41 7 (set (reg:SI 1 dx)
         (const_int 402 [0x192])) http-relay.c:402 -1
      (nil))
 (insn 41 40 42 7 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:402 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:402 -1
      (nil))
 (insn 42 41 43 7 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x2adc94749da8 *.LC17>)) http-relay.c:402 -1
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x2ac65f40bda8 *.LC17>)) http-relay.c:402 -1
      (nil))
-(call_insn 43 42 44 7 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2adc943a8400 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 43 42 44 7 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ac65f06a400 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) http-relay.c:402 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -6011,7 +6011,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 63 [ D.6105 ])) http-relay.c:404 -1
      (nil))
 (call_insn/i 51 50 52 8 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2adc942f7c00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2ac65efb9c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-relay.c:404 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6084,7 +6084,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 66 65 67 10 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2adc9471e5f0 *.LC13>)) http-relay.c:408 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2ac65f3e05f0 *.LC13>)) http-relay.c:408 -1
      (nil))
 (insn 67 66 68 10 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-relay.c:408 -1
@@ -6099,18 +6099,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:408 -1
      (nil))
 (insn 71 70 72 10 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2adc9464f4c0 __func__>)) http-relay.c:408 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2ac65f3114c0 __func__>)) http-relay.c:408 -1
      (nil))
 (insn 72 71 73 10 (set (reg:SI 4 si)
         (const_int 408 [0x198])) http-relay.c:408 -1
      (nil))
 (insn 73 72 74 10 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:408 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:408 -1
      (nil))
 (insn 74 73 75 10 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:408 -1
      (nil))
-(call_insn 75 74 76 10 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 75 74 76 10 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:408 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -6142,7 +6142,7 @@ try_optimize_cfg iteration 2
         (reg:DI 108)) http-relay.c:413 -1
      (nil))
 (call_insn 82 81 83 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2adc9462d300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_init") [flags 0x3]  <function_decl 0x2ac65f2ef300 httpr_buffer_init>) [0 httpr_buffer_init S1 A8])
             (const_int 0 [0]))) http-relay.c:413 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6192,7 +6192,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 91 90 92 12 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2adc94749e40 *.LC18>)) http-relay.c:414 -1
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2ac65f40be40 *.LC18>)) http-relay.c:414 -1
      (nil))
 (insn 92 91 93 12 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:414 -1
@@ -6207,18 +6207,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:414 -1
      (nil))
 (insn 96 95 97 12 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2adc9464f4c0 __func__>)) http-relay.c:414 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2ac65f3114c0 __func__>)) http-relay.c:414 -1
      (nil))
 (insn 97 96 98 12 (set (reg:SI 4 si)
         (const_int 414 [0x19e])) http-relay.c:414 -1
      (nil))
 (insn 98 97 99 12 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:414 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:414 -1
      (nil))
 (insn 99 98 100 12 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:414 -1
      (nil))
-(call_insn 100 99 101 12 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 100 99 101 12 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:414 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -6287,7 +6287,7 @@ try_optimize_cfg iteration 2
         (reg:DI 113)) http-relay.c:418 -1
      (nil))
 (call_insn 117 116 118 13 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:418 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6327,13 +6327,13 @@ try_optimize_cfg iteration 2
         (const_int 7 [0x7])) http-relay.c:420 -1
      (nil))
 (insn 128 127 129 15 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x2adc94749ed8 *.LC19>)) http-relay.c:420 -1
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x2ac65f40bed8 *.LC19>)) http-relay.c:420 -1
      (nil))
 (insn 129 128 130 15 (set (reg:DI 5 di)
         (reg:DI 114)) http-relay.c:420 -1
      (nil))
 (call_insn 130 129 131 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:420 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6370,7 +6370,7 @@ try_optimize_cfg iteration 2
         (reg:DI 115)) http-relay.c:422 -1
      (nil))
 (call_insn/i 141 140 142 17 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:422 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6403,7 +6403,7 @@ try_optimize_cfg iteration 2
         (reg:DI 117)) http-relay.c:422 -1
      (nil))
 (call_insn 149 148 150 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:422 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6440,7 +6440,7 @@ try_optimize_cfg iteration 2
         (reg:DI 118)) http-relay.c:424 -1
      (nil))
 (call_insn/i 160 159 161 19 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:424 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6473,7 +6473,7 @@ try_optimize_cfg iteration 2
         (reg:DI 120)) http-relay.c:424 -1
      (nil))
 (call_insn 168 167 169 19 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:424 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6513,13 +6513,13 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) http-relay.c:426 -1
      (nil))
 (insn 179 178 180 21 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2adc946f8980 *.LC2>)) http-relay.c:426 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2ac65f3ba980 *.LC2>)) http-relay.c:426 -1
      (nil))
 (insn 180 179 181 21 (set (reg:DI 5 di)
         (reg:DI 121)) http-relay.c:426 -1
      (nil))
 (call_insn 181 180 182 21 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:426 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6558,7 +6558,7 @@ try_optimize_cfg iteration 2
 (insn 192 191 193 23 (set (reg:DI 5 di)
         (reg/f:DI 82 [ D.6105 ])) http-relay.c:429 -1
      (nil))
-(call_insn 193 192 194 23 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 193 192 194 23 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:429 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6585,7 +6585,7 @@ try_optimize_cfg iteration 2
         (reg:DI 85 [ D.6108 ])) http-relay.c:431 -1
      (nil))
 (call_insn 199 198 200 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:431 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6624,7 +6624,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 88 [ D.6105 ])) http-relay.c:432 -1
      (nil))
 (call_insn 209 208 210 23 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2adc942fa000 strcpy>) [0 __builtin_strcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2ac65efbc000 strcpy>) [0 __builtin_strcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:432 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6643,7 +6643,7 @@ try_optimize_cfg iteration 2
 (insn 211 210 212 23 (set (reg:DI 5 di)
         (reg:DI 126)) http-relay.c:433 -1
      (nil))
-(call_insn 212 211 213 23 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2adc9462d400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
+(call_insn 212 211 213 23 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2ac65f2ef400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
         (const_int 0 [0])) http-relay.c:433 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6668,7 +6668,7 @@ try_optimize_cfg iteration 2
 (insn 219 218 220 24 (set (reg:DI 5 di)
         (reg:DI 127)) http-relay.c:437 -1
      (nil))
-(call_insn 220 219 221 24 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2adc9462d400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
+(call_insn 220 219 221 24 (call (mem:QI (symbol_ref:DI ("httpr_buffer_fini") [flags 0x3]  <function_decl 0x2ac65f2ef400 httpr_buffer_fini>) [0 httpr_buffer_fini S1 A8])
         (const_int 0 [0])) http-relay.c:437 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6705,7 +6705,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 227 226 228 25 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x2adc9475c000 *.LC20>)) http-relay.c:439 -1
+        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x2ac65f41e000 *.LC20>)) http-relay.c:439 -1
      (nil))
 (insn 228 227 229 25 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:439 -1
@@ -6720,18 +6720,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:439 -1
      (nil))
 (insn 232 231 233 25 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2adc9464f4c0 __func__>)) http-relay.c:439 -1
+        (symbol_ref:DI ("__func__.5488") [flags 0x2]  <var_decl 0x2ac65f3114c0 __func__>)) http-relay.c:439 -1
      (nil))
 (insn 233 232 234 25 (set (reg:SI 4 si)
         (const_int 439 [0x1b7])) http-relay.c:439 -1
      (nil))
 (insn 234 233 235 25 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:439 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:439 -1
      (nil))
 (insn 235 234 236 25 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:439 -1
      (nil))
-(call_insn 236 235 237 25 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 236 235 237 25 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:439 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -6845,7 +6845,7 @@ try_optimize_cfg iteration 2
         (reg:DI 78)) http-relay.c:445 -1
      (nil))
 (insn 13 12 14 2 (set (reg:SI 59 [ post_buffer_len.19 ])
-        (mem/c:SI (symbol_ref:DI ("post_buffer_len.5497") [flags 0x2]  <var_decl 0x2adc9464f688 post_buffer_len>) [0 post_buffer_len+0 S4 A32])) http-relay.c:448 -1
+        (mem/c:SI (symbol_ref:DI ("post_buffer_len.5497") [flags 0x2]  <var_decl 0x2ac65f311688 post_buffer_len>) [0 post_buffer_len+0 S4 A32])) http-relay.c:448 -1
      (nil))
 (insn 14 13 15 2 (set (reg:DI 60 [ D.6114 ])
         (sign_extend:DI (reg:SI 59 [ post_buffer_len.19 ]))) http-relay.c:448 -1
@@ -6857,7 +6857,7 @@ try_optimize_cfg iteration 2
         (reg:DI 60 [ D.6114 ])) http-relay.c:448 -1
      (nil))
 (call_insn 17 16 18 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:448 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -6915,7 +6915,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 27 26 28 4 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x2adc94761850 *.LC21>)) http-relay.c:450 -1
+        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x2ac65f423850 *.LC21>)) http-relay.c:450 -1
      (nil))
 (insn 28 27 29 4 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:450 -1
@@ -6930,18 +6930,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:450 -1
      (nil))
 (insn 32 31 33 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5499") [flags 0x2]  <var_decl 0x2adc9464f7b8 __func__>)) http-relay.c:450 -1
+        (symbol_ref:DI ("__func__.5499") [flags 0x2]  <var_decl 0x2ac65f3117b8 __func__>)) http-relay.c:450 -1
      (nil))
 (insn 33 32 34 4 (set (reg:SI 4 si)
         (const_int 450 [0x1c2])) http-relay.c:450 -1
      (nil))
 (insn 34 33 35 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:450 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:450 -1
      (nil))
 (insn 35 34 36 4 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:450 -1
      (nil))
-(call_insn 36 35 37 4 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 36 35 37 4 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:450 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -6962,7 +6962,7 @@ try_optimize_cfg iteration 2
 (insn 38 37 39 4 (set (reg:DI 5 di)
         (reg:DI 83)) http-relay.c:451 -1
      (nil))
-(call_insn 39 38 40 4 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 39 38 40 4 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:451 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -6975,7 +6975,7 @@ try_optimize_cfg iteration 2
 (code_label 42 41 43 5 82 "" [2 uses])
 (note 43 42 44 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 44 43 45 5 (set (reg:SI 63 [ post_buffer_len.20 ])
-        (mem/c:SI (symbol_ref:DI ("post_buffer_len.5497") [flags 0x2]  <var_decl 0x2adc9464f688 post_buffer_len>) [0 post_buffer_len+0 S4 A32])) http-relay.c:456 -1
+        (mem/c:SI (symbol_ref:DI ("post_buffer_len.5497") [flags 0x2]  <var_decl 0x2ac65f311688 post_buffer_len>) [0 post_buffer_len+0 S4 A32])) http-relay.c:456 -1
      (nil))
 (insn 45 44 46 5 (set (reg:DI 64 [ D.6114 ])
         (sign_extend:DI (reg:SI 63 [ post_buffer_len.20 ]))) http-relay.c:456 -1
@@ -7002,7 +7002,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 65 [ D.6116 ])) http-relay.c:456 -1
      (nil))
 (call_insn 52 51 53 5 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("evbuffer_remove") [flags 0x41]  <function_decl 0x2adc945c8a00 evbuffer_remove>) [0 evbuffer_remove S1 A8])
+        (call (mem:QI (symbol_ref:DI ("evbuffer_remove") [flags 0x41]  <function_decl 0x2ac65f28aa00 evbuffer_remove>) [0 evbuffer_remove S1 A8])
             (const_int 0 [0]))) http-relay.c:456 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7036,7 +7036,7 @@ try_optimize_cfg iteration 2
 (insn 59 58 60 6 (set (reg:DI 5 di)
         (reg:DI 87)) http-relay.c:458 -1
      (nil))
-(call_insn 60 59 61 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 60 59 61 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:458 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7072,7 +7072,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 65 64 66 6 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x2adc947618e8 *.LC22>)) http-relay.c:459 -1
+        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x2ac65f4238e8 *.LC22>)) http-relay.c:459 -1
      (nil))
 (insn 66 65 67 6 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:459 -1
@@ -7087,18 +7087,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:459 -1
      (nil))
 (insn 70 69 71 6 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5499") [flags 0x2]  <var_decl 0x2adc9464f7b8 __func__>)) http-relay.c:459 -1
+        (symbol_ref:DI ("__func__.5499") [flags 0x2]  <var_decl 0x2ac65f3117b8 __func__>)) http-relay.c:459 -1
      (nil))
 (insn 71 70 72 6 (set (reg:SI 4 si)
         (const_int 459 [0x1cb])) http-relay.c:459 -1
      (nil))
 (insn 72 71 73 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:459 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:459 -1
      (nil))
 (insn 73 72 74 6 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:459 -1
      (nil))
-(call_insn 74 73 75 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 74 73 75 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:459 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -7119,7 +7119,7 @@ try_optimize_cfg iteration 2
 (insn 76 75 77 6 (set (reg:DI 5 di)
         (reg:DI 90)) http-relay.c:460 -1
      (nil))
-(call_insn 77 76 78 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 77 76 78 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:460 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7183,7 +7183,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 68 [ D.6117 ])) http-relay.c:465 -1
      (nil))
 (call_insn 96 95 97 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2adc9462d500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_buffer_append") [flags 0x3]  <function_decl 0x2ac65f2ef500 httpr_buffer_append>) [0 httpr_buffer_append S1 A8])
             (const_int 0 [0]))) http-relay.c:465 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7259,7 +7259,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 72 [ D.6118 ])) http-relay.c:467 -1
      (nil))
 (call_insn 115 114 116 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2adc945e1700 bufferevent_write>) [0 bufferevent_write S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_write") [flags 0x41]  <function_decl 0x2ac65f2a3700 bufferevent_write>) [0 bufferevent_write S1 A8])
             (const_int 0 [0]))) http-relay.c:467 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7288,7 +7288,7 @@ try_optimize_cfg iteration 2
 (insn 121 120 122 12 (set (reg:DI 5 di)
         (reg:DI 99)) http-relay.c:468 -1
      (nil))
-(call_insn 122 121 123 12 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 122 121 123 12 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:468 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7324,7 +7324,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 127 126 128 12 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2adc946f8da8 *.LC9>)) http-relay.c:469 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2ac65f3bada8 *.LC9>)) http-relay.c:469 -1
      (nil))
 (insn 128 127 129 12 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:469 -1
@@ -7339,18 +7339,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:469 -1
      (nil))
 (insn 132 131 133 12 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5499") [flags 0x2]  <var_decl 0x2adc9464f7b8 __func__>)) http-relay.c:469 -1
+        (symbol_ref:DI ("__func__.5499") [flags 0x2]  <var_decl 0x2ac65f3117b8 __func__>)) http-relay.c:469 -1
      (nil))
 (insn 133 132 134 12 (set (reg:SI 4 si)
         (const_int 469 [0x1d5])) http-relay.c:469 -1
      (nil))
 (insn 134 133 135 12 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:469 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:469 -1
      (nil))
 (insn 135 134 136 12 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:469 -1
      (nil))
-(call_insn 136 135 137 12 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 136 135 137 12 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:469 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -7371,7 +7371,7 @@ try_optimize_cfg iteration 2
 (insn 138 137 139 12 (set (reg:DI 5 di)
         (reg:DI 102)) http-relay.c:470 -1
      (nil))
-(call_insn 139 138 140 12 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 139 138 140 12 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:470 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7397,7 +7397,7 @@ try_optimize_cfg iteration 2
 (insn 149 148 150 14 (set (reg:DI 5 di)
         (reg:DI 103)) http-relay.c:476 -1
      (nil))
-(call_insn 150 149 153 14 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 150 149 153 14 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:476 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7600,7 +7600,7 @@ try_optimize_cfg iteration 2
 (insn 17 16 18 2 (set (reg:DI 5 di)
         (reg:DI 94)) http-relay.c:484 -1
      (nil))
-(call_insn 18 17 19 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2adc9460e400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 18 17 19 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2ac65f2d0400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) http-relay.c:484 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7639,7 +7639,7 @@ try_optimize_cfg iteration 2
 (insn 27 26 28 4 (set (reg:DI 5 di)
         (reg:DI 97)) http-relay.c:487 -1
      (nil))
-(call_insn 28 27 29 4 (call (mem:QI (symbol_ref:DI ("httpr_client_read_content") [flags 0x3]  <function_decl 0x2adc94659200 httpr_client_read_content>) [0 httpr_client_read_content S1 A8])
+(call_insn 28 27 29 4 (call (mem:QI (symbol_ref:DI ("httpr_client_read_content") [flags 0x3]  <function_decl 0x2ac65f31b200 httpr_client_read_content>) [0 httpr_client_read_content S1 A8])
         (const_int 0 [0])) http-relay.c:487 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -7743,13 +7743,13 @@ try_optimize_cfg iteration 2
         (const_int 4 [0x4])) http-relay.c:503 -1
      (nil))
 (insn 60 59 61 9 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x2adc947718e8 *.LC23>)) http-relay.c:503 -1
+        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x2ac65f4338e8 *.LC23>)) http-relay.c:503 -1
      (nil))
 (insn 61 60 62 9 (set (reg:DI 5 di)
         (reg:DI 102)) http-relay.c:503 -1
      (nil))
 (call_insn/i 62 61 63 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2adc94482a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2ac65f144a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-relay.c:503 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7836,7 +7836,7 @@ try_optimize_cfg iteration 2
  -> 100)
 (note 85 84 86 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 86 85 87 13 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2adc94489100 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2ac65f14b100 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-relay.c:506 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7905,7 +7905,7 @@ try_optimize_cfg iteration 2
         (reg:DI 110)) http-relay.c:508 -1
      (nil))
 (call_insn/i 104 103 105 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2adc942fa600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2ac65efbc600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-relay.c:508 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7928,7 +7928,7 @@ try_optimize_cfg iteration 2
         (reg:DI 75 [ D.6128 ])) http-relay.c:508 -1
      (nil))
 (call_insn 109 108 110 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2adc94310d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2ac65efd2d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-relay.c:508 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7969,7 +7969,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 77 [ D.6125 ])) http-relay.c:509 -1
      (nil))
 (call_insn 119 118 120 14 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2adc942fa000 strcpy>) [0 __builtin_strcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strcpy") [flags 0x41]  <function_decl 0x2ac65efbc000 strcpy>) [0 __builtin_strcpy S1 A8])
             (const_int 0 [0]))) http-relay.c:509 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -7993,13 +7993,13 @@ try_optimize_cfg iteration 2
         (const_int 16 [0x10])) http-relay.c:510 -1
      (nil))
 (insn 126 125 127 15 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x2adc94771980 *.LC24>)) http-relay.c:510 -1
+        (symbol_ref/f:DI ("*.LC24") [flags 0x2]  <var_decl 0x2ac65f433980 *.LC24>)) http-relay.c:510 -1
      (nil))
 (insn 127 126 128 15 (set (reg:DI 5 di)
         (reg:DI 115)) http-relay.c:510 -1
      (nil))
 (call_insn/i 128 127 129 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2adc94482a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2ac65f144a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-relay.c:510 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8041,13 +8041,13 @@ try_optimize_cfg iteration 2
         (const_int 10 [0xa])) http-relay.c:512 -1
      (nil))
 (insn 140 139 141 17 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x2adc94771a18 *.LC25>)) http-relay.c:512 -1
+        (symbol_ref/f:DI ("*.LC25") [flags 0x2]  <var_decl 0x2ac65f433a18 *.LC25>)) http-relay.c:512 -1
      (nil))
 (insn 141 140 142 17 (set (reg:DI 5 di)
         (reg:DI 116)) http-relay.c:512 -1
      (nil))
 (call_insn/i 142 141 143 17 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2adc94482a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2ac65f144a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-relay.c:512 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8108,7 +8108,7 @@ try_optimize_cfg iteration 2
         (reg:DI 118)) http-relay.c:517 -1
      (nil))
 (call_insn 161 160 162 21 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_toss_http_firstline") [flags 0x3]  <function_decl 0x2adc94659000 httpr_toss_http_firstline>) [0 httpr_toss_http_firstline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_toss_http_firstline") [flags 0x3]  <function_decl 0x2ac65f31b000 httpr_toss_http_firstline>) [0 httpr_toss_http_firstline S1 A8])
             (const_int 0 [0]))) http-relay.c:517 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8174,7 +8174,7 @@ try_optimize_cfg iteration 2
         (reg:DI 122)) http-relay.c:522 -1
      (nil))
 (call_insn 180 179 181 24 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("fmt_http_host") [flags 0x3]  <function_decl 0x2adc9462df00 fmt_http_host>) [0 fmt_http_host S1 A8])
+        (call (mem:QI (symbol_ref:DI ("fmt_http_host") [flags 0x3]  <function_decl 0x2ac65f2eff00 fmt_http_host>) [0 fmt_http_host S1 A8])
             (const_int 0 [0]))) http-relay.c:522 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:DI 4 si))
@@ -8194,7 +8194,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 83 [ D.6125 ])) http-relay.c:522 -1
      (nil))
 (insn 184 183 185 24 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x2adc94771ab0 *.LC26>)) http-relay.c:522 -1
+        (symbol_ref/f:DI ("*.LC26") [flags 0x2]  <var_decl 0x2ac65f433ab0 *.LC26>)) http-relay.c:522 -1
      (nil))
 (insn 185 184 186 24 (set (reg:DI 4 si)
         (const_int 32 [0x20])) http-relay.c:522 -1
@@ -8206,7 +8206,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-relay.c:522 -1
      (nil))
 (call_insn 188 187 189 24 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2adc94304300 snprintf>) [0 __builtin_snprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2ac65efc6300 snprintf>) [0 __builtin_snprintf S1 A8])
             (const_int 0 [0]))) http-relay.c:522 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8254,18 +8254,18 @@ try_optimize_cfg iteration 2
 (code_label 197 196 198 26 104 "" [1 uses])
 (note 198 197 199 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
 (insn 199 198 200 26 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.5519") [flags 0x2]  <var_decl 0x2adc9464fe40 __PRETTY_FUNCTION__>)) http-relay.c:525 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.5519") [flags 0x2]  <var_decl 0x2ac65f311e40 __PRETTY_FUNCTION__>)) http-relay.c:525 -1
      (nil))
 (insn 200 199 201 26 (set (reg:SI 1 dx)
         (const_int 525 [0x20d])) http-relay.c:525 -1
      (nil))
 (insn 201 200 202 26 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:525 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:525 -1
      (nil))
 (insn 202 201 203 26 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x2adc94771b48 *.LC27>)) http-relay.c:525 -1
+        (symbol_ref/f:DI ("*.LC27") [flags 0x2]  <var_decl 0x2ac65f433b48 *.LC27>)) http-relay.c:525 -1
      (nil))
-(call_insn 203 202 204 26 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2adc943a8400 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 203 202 204 26 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2ac65f06a400 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) http-relay.c:525 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -8296,7 +8296,7 @@ try_optimize_cfg iteration 2
         (reg:DI 126)) http-relay.c:526 -1
      (nil))
 (call_insn 211 210 212 27 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2adc9462de00 httpr_append_header>) [0 httpr_append_header S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2ac65f2efe00 httpr_append_header>) [0 httpr_append_header S1 A8])
             (const_int 0 [0]))) http-relay.c:526 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8328,13 +8328,13 @@ try_optimize_cfg iteration 2
                 (const_int -64 [0xffffffffffffffc0])) [0 client+0 S8 A64])) http-relay.c:530 -1
      (nil))
 (insn 222 221 223 30 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x2adc94771be0 *.LC28>)) http-relay.c:530 -1
+        (symbol_ref/f:DI ("*.LC28") [flags 0x2]  <var_decl 0x2ac65f433be0 *.LC28>)) http-relay.c:530 -1
      (nil))
 (insn 223 222 224 30 (set (reg:DI 5 di)
         (reg:DI 127)) http-relay.c:530 -1
      (nil))
 (call_insn 224 223 225 30 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2adc9462de00 httpr_append_header>) [0 httpr_append_header S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2ac65f2efe00 httpr_append_header>) [0 httpr_append_header S1 A8])
             (const_int 0 [0]))) http-relay.c:530 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8366,13 +8366,13 @@ try_optimize_cfg iteration 2
                 (const_int -64 [0xffffffffffffffc0])) [0 client+0 S8 A64])) http-relay.c:533 -1
      (nil))
 (insn 233 232 234 32 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x2adc94771c78 *.LC29>)) http-relay.c:533 -1
+        (symbol_ref/f:DI ("*.LC29") [flags 0x2]  <var_decl 0x2ac65f433c78 *.LC29>)) http-relay.c:533 -1
      (nil))
 (insn 234 233 235 32 (set (reg:DI 5 di)
         (reg:DI 128)) http-relay.c:533 -1
      (nil))
 (call_insn 235 234 236 32 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2adc9462de00 httpr_append_header>) [0 httpr_append_header S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2ac65f2efe00 httpr_append_header>) [0 httpr_append_header S1 A8])
             (const_int 0 [0]))) http-relay.c:533 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8446,7 +8446,7 @@ try_optimize_cfg iteration 2
         (reg:DI 130)) http-relay.c:540 -1
      (nil))
 (call_insn 256 255 257 37 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2adc9462de00 httpr_append_header>) [0 httpr_append_header S1 A8])
+        (call (mem:QI (symbol_ref:DI ("httpr_append_header") [flags 0x3]  <function_decl 0x2ac65f2efe00 httpr_append_header>) [0 httpr_append_header S1 A8])
             (const_int 0 [0]))) http-relay.c:540 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8480,7 +8480,7 @@ try_optimize_cfg iteration 2
 (insn 265 264 266 39 (set (reg:DI 5 di)
         (reg:DI 131)) http-relay.c:543 -1
      (nil))
-(call_insn 266 265 267 39 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2adc94316500 free>) [0 __builtin_free S1 A8])
+(call_insn 266 265 267 39 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2ac65efd8500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-relay.c:543 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -8506,7 +8506,7 @@ try_optimize_cfg iteration 2
 (insn 271 270 272 40 (set (reg:DI 5 di)
         (reg:DI 132)) http-relay.c:546 -1
      (nil))
-(call_insn 272 271 273 40 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 272 271 273 40 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:546 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8543,7 +8543,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 60 [ D.6123 ])) http-relay.c:494 -1
      (nil))
 (call_insn 283 282 284 42 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2adc945fb700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2ac65f2bd700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-relay.c:494 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8604,7 +8604,7 @@ try_optimize_cfg iteration 2
 (insn 299 298 300 44 (set (reg:DI 5 di)
         (reg:DI 137)) http-relay.c:553 -1
      (nil))
-(call_insn 300 299 301 44 (call (mem:QI (symbol_ref:DI ("httpr_client_read_content") [flags 0x3]  <function_decl 0x2adc94659200 httpr_client_read_content>) [0 httpr_client_read_content S1 A8])
+(call_insn 300 299 301 44 (call (mem:QI (symbol_ref:DI ("httpr_client_read_content") [flags 0x3]  <function_decl 0x2ac65f31b200 httpr_client_read_content>) [0 httpr_client_read_content S1 A8])
         (const_int 0 [0])) http-relay.c:553 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8617,7 +8617,7 @@ try_optimize_cfg iteration 2
 (insn 302 301 303 44 (set (reg:DI 5 di)
         (reg:DI 138)) http-relay.c:554 -1
      (nil))
-(call_insn 303 302 306 44 (call (mem:QI (symbol_ref:DI ("redsocks_connect_relay") [flags 0x41]  <function_decl 0x2adc9460e500 redsocks_connect_relay>) [0 redsocks_connect_relay S1 A8])
+(call_insn 303 302 306 44 (call (mem:QI (symbol_ref:DI ("redsocks_connect_relay") [flags 0x41]  <function_decl 0x2ac65f2d0500 redsocks_connect_relay>) [0 redsocks_connect_relay S1 A8])
         (const_int 0 [0])) http-relay.c:554 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8642,7 +8642,7 @@ try_optimize_cfg iteration 2
      (nil)
  -> 311)
 (note 313 308 309 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
-(call_insn 309 313 310 47 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2adc946f6300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+(call_insn 309 313 310 47 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2ac65f3b8300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
         (const_int 0 [0])) http-relay.c:556 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -8699,7 +8699,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 8 7 9 2 (set (mem/f/j:DI (plus:DI (reg/f:DI 59 [ D.6139 ])
                 (const_int 336 [0x150])) [0 _2->readcb+0 S8 A64])
-        (symbol_ref:DI ("httpr_client_read_cb") [flags 0x3]  <function_decl 0x2adc94659300 httpr_client_read_cb>)) http-relay.c:562 -1
+        (symbol_ref:DI ("httpr_client_read_cb") [flags 0x3]  <function_decl 0x2ac65f31b300 httpr_client_read_cb>)) http-relay.c:562 -1
      (nil))
 (insn 9 8 10 2 (set (reg/f:DI 64)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -8716,7 +8716,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 60 [ D.6139 ])) http-relay.c:563 -1
      (nil))
 (call_insn 13 12 14 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_enable") [flags 0x41]  <function_decl 0x2adc945e1d00 bufferevent_enable>) [0 bufferevent_enable S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_enable") [flags 0x41]  <function_decl 0x2ac65f2a3d00 bufferevent_enable>) [0 bufferevent_enable S1 A8])
             (const_int 0 [0]))) http-relay.c:563 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -8772,7 +8772,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 23 22 24 4 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x2adc94787c78 *.LC30>)) http-relay.c:565 -1
+        (symbol_ref/f:DI ("*.LC30") [flags 0x2]  <var_decl 0x2ac65f449c78 *.LC30>)) http-relay.c:565 -1
      (nil))
 (insn 24 23 25 4 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-relay.c:565 -1
@@ -8787,18 +8787,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-relay.c:565 -1
      (nil))
 (insn 28 27 29 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5527") [flags 0x2]  <var_decl 0x2adc94669000 __func__>)) http-relay.c:565 -1
+        (symbol_ref:DI ("__func__.5527") [flags 0x2]  <var_decl 0x2ac65f32b000 __func__>)) http-relay.c:565 -1
      (nil))
 (insn 29 28 30 4 (set (reg:SI 4 si)
         (const_int 565 [0x235])) http-relay.c:565 -1
      (nil))
 (insn 30 29 31 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2adc946f8850 *.LC0>)) http-relay.c:565 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2ac65f3ba850 *.LC0>)) http-relay.c:565 -1
      (nil))
 (insn 31 30 32 4 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-relay.c:565 -1
      (nil))
-(call_insn 32 31 33 4 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2adc9460ef00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 32 31 33 4 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2ac65f2d0f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-relay.c:565 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -8819,7 +8819,7 @@ try_optimize_cfg iteration 2
 (insn 34 33 35 4 (set (reg:DI 5 di)
         (reg:DI 68)) http-relay.c:566 -1
      (nil))
-(call_insn 35 34 38 4 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2adc9460e300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 35 34 38 4 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2ac65f2d0300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-relay.c:566 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))

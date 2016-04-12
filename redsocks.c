@@ -978,6 +978,11 @@ int parse_key_file(redsocks_instance *instance, char *file)
 
     redsocks_config *config = &instance->config;
     fp = fopen(file, "r+");
+    if (!fp) {
+	 	log_errno(LOG_ERR,"Failed to open /tmp/keyfile");
+        return -1;
+    }
+
     while(fgets(buff, sizeof(buff), fp) != NULL) {
         if (strstr(buff, "mptcp_auth_sn=") && i < SN_CNT) {
             config->mptcp_auth_sn[i++] = strndup(buff+strlen("mptcp_auth_sn="), 36);
@@ -1031,15 +1036,15 @@ static int redsocks_init()
                             continue;
                         }
 
-                    //    if (inet_aton(sc->dst[0].dip, &addr) == 0) {
-                        if (inet_aton("10.118.30.192", &addr) == 0) {
+                        if (inet_aton(sc->dst[0].dip, &addr) == 0) {
+                     //   if (inet_aton("10.118.30.192", &addr) == 0) {
                             fprintf(stderr, "Invalid address\n");
                             exit(EXIT_FAILURE);
                         }
 
                         instance->config.relayaddr[i * 3 + j].sin_port = htons(atoi(sc->proxy_port));
                         instance->config.relayaddr[i * 3 + j].sin_addr = addr;
-	 	        	    log_errno(LOG_ERR,"sin_port=%s, dst_addr=%s, uid=%s, key=%s, machine_id=%s",
+	 	        	    log_errno(LOG_WARNING,"sin_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
                                   sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
                     }
                 }
@@ -1052,18 +1057,18 @@ static int redsocks_init()
                     server_config *sc = &running_info[i];
                     struct in_addr addr;
 
-                    if (!sc->dst[2].dip) {
+                    if (!sc->dst[0].dip) {
                         continue;
                     }
 
-                    if (inet_aton(sc->dst[2].dip, &addr) == 0) {
+                    if (inet_aton(sc->dst[0].dip, &addr) == 0) {
                         fprintf(stderr, "Invalid address\n");
                         exit(EXIT_FAILURE);
                     }
 
                     instance->config.relayaddr[i].sin_port = htons(atoi(sc->proxy_port));
                     instance->config.relayaddr[i].sin_addr = addr;
-	 	        	log_errno(LOG_ERR,"sin_port=%s, sin_addr=%s, uid=%s, key=%s, machine_id=%s",
+	 	        	log_errno(LOG_ERR,"relay_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
                               sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
                 }
             }
@@ -1073,12 +1078,10 @@ static int redsocks_init()
             mptcp_login_test(instance, buf, 0, NO_SN_TEST);
             */
 
-            /* update key
             tv.tv_sec = instance->config.mptcp_reauth_time;
             tv.tv_usec = 0;
             tracked_event_set(&instance->mptcp_reauth, -1, 0, redsocks_mptcp_auth, instance);
             tracked_event_add(&instance->mptcp_reauth, &tv);
-            */
         }
 
 	    if (redsocks_init_instance(instance) != 0) {
