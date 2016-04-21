@@ -1,4 +1,4 @@
-cscope 15 $HOME/redsocks-master               0001437984
+cscope 15 $HOME/redsocks-master               0001433149
 	@base.c
 
 17 
@@ -2182,14 +2182,6 @@ ušt8_t
 (
 x
 è(((x)+2è/ 3 * 4 + 1)
-
-	)
-
-	@config.h
-
-1 
-	#USE_IPTABLES
-
 
 	)
 
@@ -13669,877 +13661,7 @@ li¡_h—d
 š¡ªûs
 ;
 
-114 
-»dsocks_fši_š¡ªû
-(
-»dsocks_š¡ªû
- *
-š¡ªû
-);
-
-145 
-size_t
- 
-	$´oûss_d©a
-(*
-bufãr
-, 
-size_t
- 
-size
-, size_ˆ
-nmemb
-, *
-u£r_p
-)
-
-147 
-jsÚ_objeù
- *
-jsÚ_»suÉ
-;
-
-148 
-jsÚ_objeù
- *
-d©a
-, *
-¡©us
-;
-
-149 
-jsÚ_objeù
- *
-uid
-, *
-key
-;
-
-150 
-jsÚ_objeù
- *
-msg
-, *
-machše_id
-, *
-´oxy_pÜt
-, *
-´oxy
-,
-
-151 *
-ş›Á_
-;
-
-152 
-»dsocks_š¡ªû
- *
-š¡ªû
-;
-
-153 
-buf
-[3][20]= {{0}};
-
-154 
-aùiÚ
- = 0;
-
-155 
-i
-;
-
-156 
-j
-;
-
-158 
-š¡ªû
- = (
-»dsocks_š¡ªû
- *)
-u£r_p
-;
-
-159 
-£rv”_cÚfig
- *
-sc
- = &
-ruÂšg_šfo
-[
-š¡ªû
-->
-if_šdex
-];
-
-161 
-	`årštf
-(
-¡dout
-, "% \Àif_šdex=%d", (*è
-bufãr
-, 
-š¡ªû
-->
-if_šdex
-);
-
-163 
-jsÚ_»suÉ
- = 
-	`jsÚ_tok’”_·r£
-(
-bufãr
-);
-
-164 ià(
-jsÚ_»suÉ
- =ğ
-NULL
-) {
-
-165 
-	`årštf
-(
-¡d”r
-, "Failedo get json„esult\n");
-
-169 ià(!
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "¡©us", &
-¡©us
-)
-
-170 || 
-	`jsÚ_objeù_g‘_ty³
-(
-¡©us
-è!ğ
-jsÚ_ty³_št
-) {
-
-172 
-	`årštf
-(
-¡d”r
-, "Failedo get status\n");
-
-173 
-ex™
-;
-
-176 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "msg", &
-msg
-);
-
-177 
-	`´štf
-("¡©us: (%d), msg = % \n", 
-	`jsÚ_objeù_g‘_št
-(
-¡©us
-),
-
-178 
-	`jsÚ_objeù_g‘_¡ršg
-(
-msg
-));
-
-180 ià(
-	`jsÚ_objeù_g‘_št
-(
-¡©us
-) != 200)
-
-183 ià(
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "ş›Á_", &
-ş›Á_
-)) {
-
-184 
-	`´štf
-("logouˆsucûs : = % \n", 
-	`jsÚ_objeù_g‘_¡ršg
-(
-ş›Á_
-));
-
-188 ià(
-	`¡r¡r
-(
-	`jsÚ_objeù_g‘_¡ršg
-(
-msg
-), "heart")) {
-
-189 
-aùiÚ
- = 1;
-
-190 
-upd©e_key
-;
-
-193 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "machše_id", &
-machše_id
-);
-
-194 
-	`´štf
-("machše_id = % \n", 
-	`jsÚ_objeù_g‘_¡ršg
-(
-machše_id
-));
-
-195 
-sc
-->
-machše_id
- = 
-	`¡rdup
-(
-	`jsÚ_objeù_g‘_¡ršg
-(machine_id));
-
-197 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "´oxy_pÜt", &
-´oxy_pÜt
-);
-
-198 
-	`´štf
-("´oxy_pÜˆğ% \n", 
-	`jsÚ_objeù_g‘_¡ršg
-(
-´oxy_pÜt
-));
-
-199 
-sc
-->
-´oxy_pÜt
- = 
-	`¡rdup
-(
-	`jsÚ_objeù_g‘_¡ršg
-(proxy_port));
-
-201 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "´oxy", &
-´oxy
-);
-
-203 
-i
- = 0; i < 
-	`jsÚ_objeù_¬¿y_Ëngth
-(
-´oxy
-); i++) {
-
-204 
-jsÚ_objeù
- *
-
-, *
-o_ty³
-;
-
-206 
-jsÚ_objeù
- *
-j´oxy
- = 
-	`jsÚ_objeù_¬¿y_g‘_idx
-(
-´oxy
-, 
-i
-);
-
-207 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-j´oxy
-, "", &
-
-);
-
-208 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-j´oxy
-, "İ”©Ü_ty³", &
-o_ty³
-);
-
-209 
-	`´štf
-("\t[%d], ip=%s, operator_type=%s\n",
-
-210 
-i
-, 
-	`jsÚ_objeù_to_jsÚ_¡ršg
-(
-
-), jsÚ_objeù_to_jsÚ_¡ršg(
-o_ty³
-));
-
-212 
-	`¢´štf
-(
-buf
-[
-i
-], 20, "%s", 
-	`jsÚ_objeù_to_jsÚ_¡ršg
-(
-
-));
-
-213 
-	`¢´štf
-(
-buf
-[
-i
-], 20, "%s", (*)buf[i] + 1);
-
-214 
-j
- = 
-	`¡¾’
-(
-buf
-[
-i
-]);
-
-215 
-buf
-[
-i
-][
-j
--1] = '\0';
-
-216 
-sc
-->
-d¡
-[
-i
-].
-d
- = 
-	`¡rdup
-(
-buf
-[i]);
-
-217 
-sc
-->
-d¡
-[
-i
-].
-İ”©Ü_ty³
- = 
-	`¡rdup
-(
-	`jsÚ_objeù_to_jsÚ_¡ršg
-(
-o_ty³
-));
-
-220 
-upd©e_key
-:
-
-221 ià(!
-	`jsÚ_objeù_objeù_g‘_ex
-(
-jsÚ_»suÉ
-, "d©a", &
-d©a
-)
-
-222 || 
-	`jsÚ_objeù_g‘_ty³
-(
-d©a
-è!ğ
-jsÚ_ty³_objeù
-) {
-
-223 
-	`årštf
-(
-¡d”r
-, "Failedo get data\n");
-
-224 
-ex™
-;
-
-227 ià(
-	`jsÚ_objeù_objeù_g‘_ex
-(
-d©a
-, "uid", &
-uid
-)
-
-228 && 
-	`jsÚ_objeù_g‘_ty³
-(
-uid
-è=ğ
-jsÚ_ty³_¡ršg
-
-
-229 && 
-	`jsÚ_objeù_objeù_g‘_ex
-(
-d©a
-, "key", &
-key
-)
-
-230 && 
-	`jsÚ_objeù_g‘_ty³
-(
-key
-è=ğ
-jsÚ_ty³_¡ršg
-) {
-
-231 
-	`´štf
-("gÙ : uid(%s), key(%s)\n", 
-	`jsÚ_objeù_g‘_¡ršg
-(
-uid
-), jsÚ_objeù_g‘_¡ršg(
-key
-));
-
-232 
-buf
-[92] = {0};
-
-233 
-j
-;
-
-235 
-	`¢´štf
-(
-buf
-, (buf), "%s", 
-	`jsÚ_objeù_to_jsÚ_¡ršg
-(
-uid
-));
-
-236 
-	`¢´štf
-(
-buf
-, (buf), "%s", buf + 1);
-
-237 
-j
- = 
-	`¡¾’
-(
-buf
-);
-
-238 
-buf
-[
-j
--1] = '\0';
-
-239 
-	`¢´štf
-(
-sc
-->
-key
-.
-uid
-, 9, "%s", 
-buf
-);
-
-241 
-	`mem£t
-(
-buf
-, 0x0, 92);
-
-242 
-	`¢´štf
-(
-buf
-, (buf), "%s", 
-	`jsÚ_objeù_to_jsÚ_¡ršg
-(
-key
-));
-
-243 
-	`¢´štf
-(
-buf
-, (buf), "%s", buf + 1);
-
-244 
-j
- = 
-	`¡¾’
-(
-buf
-);
-
-245 
-buf
-[
-j
--1] = '\0';
-
-246 
-	`¢´štf
-(
-sc
-->
-key
-.key, 89, "%s", 
-buf
-);
-
-249 
-ş›Á_uid
-[7], 
-ş›Á_key
-[67];
-
-250 
-ş›Á_uid_Ën
-, 
-ş›Á_key_Ën
-;
-
-251 cÚ¡ *
-jsÚ_uid
- = 
-	`jsÚ_objeù_g‘_¡ršg
-(
-uid
-);
-
-252 cÚ¡ *
-jsÚ_key
- = 
-	`jsÚ_objeù_g‘_¡ršg
-(
-key
-);
-
-260 
-ş›Á_uid_Ën
- = 
-	`Ba£64decode
-(
-ş›Á_uid
-, 
-jsÚ_uid
-);
-
-261 
-ş›Á_key_Ën
- = 
-	`Ba£64decode
-(
-ş›Á_key
-, 
-jsÚ_key
-);
-
-262 
-	`årštf
-(
-¡d”r
-, "uid_Ën(%d), key_Ën(%d)\n", 
-ş›Á_uid_Ën
-, 
-ş›Á_key_Ën
-);
-
-264 ià(
-ş›Á_uid_Ën
- !ğ4 ||
-ş›Á_key_Ën
- != 64) {
-
-265 
-	`årštf
-(
-¡d”r
-, "wrong uid or key\n");
-
-266 
-ex™
-;
-
-269 
-ş›Á_uid_št
- = 0x12345678;
-
-270 
-	`mem£t
-(
-ş›Á_key
-, 0x01, 64);
-
-274 
-	`årštf
-(
-¡d”r
-, "uid: ");
-
-275 
-i
- = 0; i < 3; i++) {
-
-276 
-	`årštf
-(
-¡d”r
-, "%02x:", (è
-ş›Á_uid
-[
-i
-]);
-
-278 
-	`årštf
-(
-¡d”r
-, "%02x\n", (è
-ş›Á_uid
-[3]);
-
-279 
-	`årštf
-(
-¡d”r
-, "key: ");
-
-280 
-i
- = 0; i < 63; i++) {
-
-281 
-	`årštf
-(
-¡d”r
-, "%02x:", (è
-ş›Á_key
-[
-i
-]);
-
-283 
-	`årštf
-(
-¡d”r
-, "%02x\n", (è
-ş›Á_key
-[63]);
-
-287 
-FILE
- * 
-fe
-;
-
-288 
-fe
- = 
-	`fİ’
-(
-MPTCP_AUTH
-, "wb");
-
-289 ià(
-fe
- =ğ
-NULL
-) {
-
-290 
-	`årštf
-(
-¡d”r
-, "FaedØİ’ %s\n", 
-MPTCP_AUTH
-);
-
-291 
-ex™
-;
-
-294 
-rc
-;
-
-295 
-rc
- = 
-	`fwr™e
-(&
-ş›Á_uid_št
-, (ş›Á_uid_št), 1, 
-fe
-);
-
-296 ià(
-rc
- != 1) {
-
-297 
-	`årštf
-(
-¡d”r
-, "FaedØwœ‹ %s\n", 
-MPTCP_AUTH
-);
-
-298 
-	`fşo£
-(
-fe
-);
-
-299 
-ex™
-;
-
-301 
-	`fşo£
-(
-fe
-);
-
-302 
-fe
- = 
-	`fİ’
-(
-KEY_FILE
-, "w");
-
-303 ià(
-fe
- =ğ
-NULL
-) {
-
-304 
-	`årštf
-(
-¡d”r
-, "FaedØİ’ %s\n", 
-MPTCP_AUTH
-);
-
-305 
-ex™
-;
-
-307 ià(
-	`fwr™e
-(
-ş›Á_key
-, 1, 64, 
-fe
-) != 64) {
-
-308 
-	`årštf
-(
-¡d”r
-, "FaedØwœ‹ %s\n", 
-MPTCP_AUTH
-);
-
-309 
-	`fşo£
-(
-fe
-);
-
-310 
-ex™
-;
-
-312 
-	`fşo£
-(
-fe
-);
-
-317 ià(
-aùiÚ
-) {
-
-318 
-ex™
-;
-
-321 
-ex™
-:
-
-323 
-	`jsÚ_objeù_put
-(
-jsÚ_»suÉ
-);
-
-326 
-	}
-}
-
-328 
+144 
 	$wr™e_keyfe
 (*
 âame
@@ -14549,17 +13671,17 @@ m±ı_auth_cÚ‹Á
 key
 )
 
-330 
+146 
 rc
 ;
 
-331 
+147 
 FILE
  * 
 fe
 ;
 
-332 
+148 
 fe
  = 
 	`fİ’
@@ -14567,13 +13689,13 @@ fe
 âame
 , "wb");
 
-333 ià(
+149 ià(
 fe
  =ğ
 NULL
 ) {
 
-334 
+150 
 	`årštf
 (
 ¡d”r
@@ -14581,7 +13703,7 @@ NULL
 MPTCP_AUTH
 );
 
-338 
+154 
 rc
  = 
 	`fwr™e
@@ -14593,11 +13715,11 @@ m±ı_auth_cÚ‹Á
 fe
 );
 
-339 ià(
+155 ià(
 rc
  != 1) {
 
-340 
+156 
 	`årštf
 (
 ¡d”r
@@ -14605,23 +13727,23 @@ rc
 MPTCP_AUTH
 );
 
-341 
+157 
 	`fşo£
 (
 fe
 );
 
-345 
+161 
 	`fşo£
 (
 fe
 );
 
-347 
+163 
 	}
 }
 
-349 
+165 
 	$upd©e_key
 (
 jsÚ_objeù
@@ -14633,31 +13755,31 @@ jsÚ_»suÉ
 sc
 )
 
-351 
+167 
 jsÚ_objeù
  *
 d©a
 ;
 
-352 
+168 
 m±ı_auth_cÚ‹Á
  
 key_‹¡
 ;
 
-353 
+169 
 ş›Á_uid
 [7], 
 ş›Á_key
 [67];
 
-354 
+170 
 ş›Á_uid_Ën
 , 
 ş›Á_key_Ën
 ;
 
-355 
+171 
 jsÚ_objeù
  *
 uid
@@ -14665,7 +13787,7 @@ uid
 key
 ;
 
-357 ià(!
+173 ià(!
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -14673,7 +13795,7 @@ jsÚ_»suÉ
 d©a
 )
 
-358 || 
+174 || 
 	`jsÚ_objeù_g‘_ty³
 (
 d©a
@@ -14681,17 +13803,17 @@ d©a
 jsÚ_ty³_objeù
 ) {
 
-359 
-	`årštf
+175 
+	`log_”rÜ
 (
-¡d”r
+LOG_ERR
 , "Failedo get data\n");
 
-360 
+176 
 ex™
 ;
 
-363 ià(
+179 ià(
 	`jsÚ_objeù_objeù_g‘_ex
 (
 d©a
@@ -14699,7 +13821,7 @@ d©a
 uid
 )
 
-364 && 
+180 && 
 	`jsÚ_objeù_g‘_ty³
 (
 uid
@@ -14707,7 +13829,7 @@ uid
 jsÚ_ty³_¡ršg
 
 
-365 && 
+181 && 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 d©a
@@ -14715,7 +13837,7 @@ d©a
 key
 )
 
-366 && 
+182 && 
 	`jsÚ_objeù_g‘_ty³
 (
 key
@@ -14723,15 +13845,15 @@ key
 jsÚ_ty³_¡ršg
 ) {
 
-367 
+183 
 buf
 [92] = {0};
 
-368 
+184 
 j
 ;
 
-370 
+186 
 	`¢´štf
 (
 buf
@@ -14741,13 +13863,13 @@ buf
 uid
 ));
 
-371 
+187 
 	`¢´štf
 (
 buf
 , (buf), "%s", buf + 1);
 
-372 
+188 
 j
  = 
 	`¡¾’
@@ -14755,13 +13877,13 @@ j
 buf
 );
 
-373 
+189 
 buf
 [
 j
 -1] = '\0';
 
-374 
+190 
 	`¢´štf
 (
 sc
@@ -14773,13 +13895,13 @@ uid
 buf
 );
 
-376 
+192 
 	`mem£t
 (
 buf
 , 0x0, 92);
 
-377 
+193 
 	`¢´štf
 (
 buf
@@ -14789,13 +13911,13 @@ buf
 key
 ));
 
-378 
+194 
 	`¢´štf
 (
 buf
 , (buf), "%s", buf + 1);
 
-379 
+195 
 j
  = 
 	`¡¾’
@@ -14803,13 +13925,13 @@ j
 buf
 );
 
-380 
+196 
 buf
 [
 j
 -1] = '\0';
 
-381 
+197 
 	`¢´štf
 (
 sc
@@ -14819,7 +13941,7 @@ key
 buf
 );
 
-384 
+200 
 ş›Á_uid_Ën
  = 
 	`Ba£64decode
@@ -14833,7 +13955,7 @@ key
 uid
 );
 
-385 
+201 
 ş›Á_key_Ën
  = 
 	`Ba£64decode
@@ -14845,39 +13967,39 @@ sc
 key
 .key);
 
-386 
-	`årštf
+202 
+	`log_”rÜ
 (
-¡d”r
+LOG_DEBUG
 , "uid_Ën(%d), key_Ën(%d)\n", 
 ş›Á_uid_Ën
 , 
 ş›Á_key_Ën
 );
 
-388 ià(
+204 ià(
 ş›Á_uid_Ën
  !ğ4 ||
 ş›Á_key_Ën
  != 64) {
 
-389 
-	`årštf
+205 
+	`log_”rÜ
 (
-¡d”r
+LOG_ERR
 , "wrong uid or key\n");
 
-390 
+206 
 ex™
 ;
 
-393 
+209 
 key_‹¡
 .
 cmd
  = 0x01;
 
-394 
+210 
 	`memıy
 (&
 key_‹¡
@@ -14889,7 +14011,7 @@ uuid
 ş›Á_uid_Ën
 );
 
-395 
+211 
 	`memıy
 (&
 key_‹¡
@@ -14901,7 +14023,7 @@ key
 ş›Á_key_Ën
 );
 
-397 
+213 
 	`wr™e_keyfe
 (
 MPTCP_AUTH
@@ -14909,17 +14031,17 @@ MPTCP_AUTH
 key_‹¡
 );
 
-401 
+217 
 	`årštf
 (
 ¡d”r
 , "uid: ");
 
-402 
+218 
 i
  = 0; i < 3; i++) {
 
-403 
+219 
 	`årštf
 (
 ¡d”r
@@ -14929,7 +14051,7 @@ i
 i
 ]);
 
-405 
+221 
 	`årštf
 (
 ¡d”r
@@ -14937,17 +14059,17 @@ i
 ş›Á_uid
 [3]);
 
-406 
+222 
 	`årštf
 (
 ¡d”r
 , "key: ");
 
-407 
+223 
 i
  = 0; i < 63; i++) {
 
-408 
+224 
 	`årštf
 (
 ¡d”r
@@ -14957,7 +14079,7 @@ i
 i
 ]);
 
-410 
+226 
 	`årštf
 (
 ¡d”r
@@ -14965,15 +14087,15 @@ i
 ş›Á_key
 [63]);
 
-414 
+230 
 ex™
 :
 
-416 
+232 
 	}
 }
 
-418 
+234 
 size_t
  
 	$´oûss_d©a_‹¡
@@ -14989,7 +14111,7 @@ nmemb
 u£r_p
 )
 
-420 
+236 
 jsÚ_objeù
  *
 jsÚ_»suÉ
@@ -14997,7 +14119,7 @@ jsÚ_»suÉ
 ¡©us
 ;
 
-421 
+237 
 jsÚ_objeù
  *
 msg
@@ -15011,23 +14133,29 @@ machše_id
 ş›Á_
 ;
 
-422 
+238 
 »dsocks_š¡ªû
  *
 š¡ªû
 ;
 
-423 
+239 
 buf
 [3][20] = {{0}};
 
-424 
+240 
 i
 , 
 j
 ;
 
-426 
+241 
+£rv”_cÚfig
+ *
+sc
+;
+
+242 
 š¡ªû
  = (
 »dsocks_š¡ªû
@@ -15035,9 +14163,15 @@ j
 u£r_p
 ;
 
-427 
-£rv”_cÚfig
- *
+243 ià(
+š¡ªû
+->
+cÚfig
+.
+m±ı_‹¡_mode
+) {
+
+244 
 sc
  = &
 ruÂšg_šfo_‹¡
@@ -15049,7 +14183,29 @@ if_šdex
 ¢_numb”
 ];
 
-430 
+246 
+sc
+ = &
+ruÂšg_šfo
+[
+š¡ªû
+->
+if_šdex
+];
+
+249 
+	`log_”rÜ
+(
+LOG_WARNING
+, "%s\Àif_šdex=%d\n", (*è
+bufãr
+, 
+š¡ªû
+->
+if_šdex
+);
+
+250 
 jsÚ_»suÉ
  = 
 	`jsÚ_tok’”_·r£
@@ -15057,19 +14213,19 @@ jsÚ_»suÉ
 bufãr
 );
 
-431 ià(
+251 ià(
 jsÚ_»suÉ
  =ğ
 NULL
 ) {
 
-432 
+252 
 	`årštf
 (
 ¡d”r
 , "Failedo get json„esult\n");
 
-436 ià(!
+256 ià(!
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15077,7 +14233,7 @@ jsÚ_»suÉ
 ¡©us
 )
 
-437 || 
+257 || 
 	`jsÚ_objeù_g‘_ty³
 (
 ¡©us
@@ -15085,17 +14241,17 @@ jsÚ_»suÉ
 jsÚ_ty³_št
 ) {
 
-438 
+258 
 	`årštf
 (
 ¡d”r
 , "Failedo get status\n");
 
-439 
+259 
 ex™
 ;
 
-442 
+262 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15103,13 +14259,13 @@ jsÚ_»suÉ
 msg
 );
 
-443 
-	`årštf
+263 
+	`log_”rÜ
 (
-¡dout
+LOG_DEBUG
 , "status: (%d), msg = %s \n",
 
-444 
+264 
 	`jsÚ_objeù_g‘_št
 (
 ¡©us
@@ -15119,13 +14275,13 @@ msg
 msg
 ));
 
-446 ià(
+266 ià(
 	`jsÚ_objeù_g‘_št
 (
 ¡©us
 ) != 200)
 
-449 ià(
+269 ià(
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15133,7 +14289,7 @@ jsÚ_»suÉ
 ş›Á_
 )) {
 
-450 
+270 
 	`årštf
 (
 ¡dout
@@ -15143,7 +14299,7 @@ jsÚ_»suÉ
 ş›Á_
 ));
 
-454 ià(
+274 ià(
 	`¡r¡r
 (
 	`jsÚ_objeù_g‘_¡ršg
@@ -15151,7 +14307,7 @@ jsÚ_»suÉ
 msg
 ), "heart")) {
 
-455 
+275 
 	`upd©e_key
 (
 jsÚ_»suÉ
@@ -15159,11 +14315,11 @@ jsÚ_»suÉ
 sc
 );
 
-456 
+276 
 ex™
 ;
 
-459 
+279 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15171,7 +14327,7 @@ jsÚ_»suÉ
 machše_id
 );
 
-460 
+280 
 sc
 ->
 machše_id
@@ -15181,7 +14337,7 @@ machše_id
 	`jsÚ_objeù_g‘_¡ršg
 (machine_id));
 
-462 
+282 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15189,7 +14345,7 @@ jsÚ_»suÉ
 ´oxy_pÜt
 );
 
-463 
+283 
 sc
 ->
 ´oxy_pÜt
@@ -15199,7 +14355,7 @@ sc
 	`jsÚ_objeù_g‘_¡ršg
 (proxy_port));
 
-465 
+285 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15207,7 +14363,7 @@ jsÚ_»suÉ
 ´oxy
 );
 
-467 
+287 
 i
  = 0; i < 
 	`jsÚ_objeù_¬¿y_Ëngth
@@ -15215,7 +14371,7 @@ i
 ´oxy
 ); i++) {
 
-468 
+288 
 jsÚ_objeù
  *
 
@@ -15223,7 +14379,7 @@ jsÚ_objeù
 o_ty³
 ;
 
-470 
+290 
 jsÚ_objeù
  *
 j´oxy
@@ -15235,7 +14391,7 @@ j´oxy
 i
 );
 
-471 
+291 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 j´oxy
@@ -15243,7 +14399,7 @@ j´oxy
 
 );
 
-472 
+292 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 j´oxy
@@ -15251,21 +14407,7 @@ j´oxy
 o_ty³
 );
 
-473 
-	`´štf
-("\t[%d], ip=%s, operator_type=%s\n",
-
-474 
-i
-, 
-	`jsÚ_objeù_to_jsÚ_¡ršg
-(
-
-), jsÚ_objeù_to_jsÚ_¡ršg(
-o_ty³
-));
-
-476 
+296 
 	`¢´štf
 (
 buf
@@ -15277,7 +14419,7 @@ i
 
 ));
 
-477 
+297 
 	`¢´štf
 (
 buf
@@ -15285,7 +14427,7 @@ buf
 i
 ], (buf[i]), "%s", (*)buf[i] + 1);
 
-478 
+298 
 j
  = 
 	`¡¾’
@@ -15295,7 +14437,7 @@ buf
 i
 ]);
 
-479 
+299 
 buf
 [
 i
@@ -15303,7 +14445,7 @@ i
 j
 -1] = '\0';
 
-480 
+300 
 sc
 ->
 d¡
@@ -15317,7 +14459,7 @@ d
 buf
 [i]);
 
-481 
+301 
 sc
 ->
 d¡
@@ -15333,7 +14475,7 @@ i
 o_ty³
 ));
 
-484 
+304 
 	`upd©e_key
 (
 jsÚ_»suÉ
@@ -15341,39 +14483,39 @@ jsÚ_»suÉ
 sc
 );
 
-486 
+306 
 ex™
 :
 
-487 
+307 
 	`jsÚ_objeù_put
 (
 jsÚ_»suÉ
 );
 
-490 
+310 
 	}
 }
 
-492 
+312 
 	sMemÜySŒuù
  {
 
-493 *
+313 *
 	mmemÜy
 ;
 
-494 
+314 
 size_t
  
 	msize
 ;
 
-497 
+317 
 size_t
 
 
-498 
+318 
 	$Wr™eMemÜyC®lback
 (*
 cÚ‹Ás
@@ -15387,7 +14529,7 @@ nmemb
 u£½
 )
 
-500 
+320 
 size_t
  
 »®size
@@ -15397,7 +14539,7 @@ size
 nmemb
 ;
 
-502 
+322 
 MemÜySŒuù
  *
 mem
@@ -15405,7 +14547,7 @@ mem
 u£½
 ;
 
-504 
+324 
 mem
 ->
 memÜy
@@ -15417,7 +14559,7 @@ size
 »®size
  + 1);
 
-505 if(
+325 if(
 mem
 ->
 memÜy
@@ -15425,11 +14567,11 @@ memÜy
 NULL
 ) {
 
-506 
+326 
 	`´štf
 ("notƒnough memory (realloc„eturned NULL)\n");
 
-510 
+330 
 	`memıy
 (&(
 mem
@@ -15443,7 +14585,7 @@ cÚ‹Ás
 »®size
 );
 
-511 
+331 
 mem
 ->
 size
@@ -15451,7 +14593,7 @@ size
 »®size
 ;
 
-512 
+332 
 mem
 ->
 memÜy
@@ -15459,25 +14601,25 @@ memÜy
 size
 ] = 0;
 
-514  
+334  
 »®size
 ;
 
-515 
+335 
 	}
 }
 
-517 
+337 
 MemÜySŒuù
  
 	gchunk
 ;
 
-518 
+338 
 	gg__v”
  = 0;
 
-519 
+339 
 	$dÜ•Ü‹r
 (
 CURL
@@ -15487,15 +14629,15 @@ hªdË
 ty³
 )
 
-521 
+341 
 »t
  = -1;
 
-522 cÚ¡ *
+342 cÚ¡ *
 po¡_¡r
 ;
 
-524 
+344 
 jsÚ_objeù
  *
 _upd©e
@@ -15503,7 +14645,7 @@ jsÚ_objeù
 	`jsÚ_objeù_Ãw_objeù
 ();
 
-525 
+345 
 	`jsÚ_objeù_objeù_add
 (
 _upd©e
@@ -15513,7 +14655,7 @@ jsÚ_objeù
 g__v”
 ));
 
-527 
+347 
 po¡_¡r
  = 
 	`jsÚ_objeù_to_jsÚ_¡ršg
@@ -15521,7 +14663,7 @@ po¡_¡r
 _upd©e
 );
 
-529 
+349 
 	`cu¾_—sy_£tİt
 (
 hªdË
@@ -15531,7 +14673,7 @@ CURLOPT_POSTFIELDS
 po¡_¡r
 );
 
-530 
+350 
 	`cu¾_—sy_£tİt
 (
 hªdË
@@ -15541,7 +14683,7 @@ CURLOPT_WRITEFUNCTION
 Wr™eMemÜyC®lback
 );
 
-531 
+351 
 	`cu¾_—sy_£tİt
 (
 hªdË
@@ -15551,7 +14693,7 @@ CURLOPT_WRITEDATA
 chunk
 );
 
-532 
+352 
 	`cu¾_—sy_£tİt
 (
 hªdË
@@ -15559,7 +14701,7 @@ hªdË
 CURLOPT_VERBOSE
 , 1L);
 
-533 
+353 
 »t
  = 
 	`cu¾_—sy_³rfÜm
@@ -15567,57 +14709,59 @@ CURLOPT_VERBOSE
 hªdË
 );
 
-534 if(
+354 if(
 »t
  !ğ
 CURLE_OK
 ) {
 
-535 
+355 
 	`årštf
 (
 ¡d”r
 , "curl_easy_perform() failed: %s\n",
 
-536 
+356 
 	`cu¾_—sy_¡»¼Ü
 (
 »t
 ));
 
-538 
-	`´štf
-("########%lu by‹ »Œ›ved\n", ()
+358 
+	`log_”ºo
+(
+LOG_WARNING
+, "########%lu by‹ »Œ›ved\n", ()
 chunk
 .
 size
 );
 
-539 
+359 
 FILE
  * 
 fe
 ;
 
-541 
+361 
 fe
  = 
 	`fİ’
 ("/tmp/iplist", "w");
 
-542 ià(
+362 ià(
 fe
  =ğ
 NULL
 ) {
 
-543 
+363 
 	`log_”rÜ
 (
 LOG_ERR
 , "Failedo open /tmp/iplist");
 
-547 ià(
+367 ià(
 	`fwr™e
 (
 chunk
@@ -15629,25 +14773,25 @@ size
 fe
 ) != chunk.size) {
 
-548 
+368 
 	`log_”rÜ
 (
 LOG_ERR
 , "Failedo wirte /tmp/iplist");
 
-549 
+369 
 	`fşo£
 (
 fe
 );
 
-552 
+372 
 	`fşo£
 (
 fe
 );
 
-554 
+374 
 jsÚ_objeù
  *
 jsÚ_»suÉ
@@ -15659,7 +14803,7 @@ chunk
 memÜy
 );
 
-555 
+375 
 jsÚ_objeù
  *
 ¡©us
@@ -15669,19 +14813,19 @@ v”
 msg
 ;
 
-556 ià(
+376 ià(
 jsÚ_»suÉ
  =ğ
 NULL
 ) {
 
-557 
+377 
 	`årštf
 (
 ¡d”r
 , "Failedo get json„esult\n");
 
-561 ià(!
+381 ià(!
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15689,7 +14833,7 @@ jsÚ_»suÉ
 ¡©us
 )
 
-562 || 
+382 || 
 	`jsÚ_objeù_g‘_ty³
 (
 ¡©us
@@ -15697,13 +14841,13 @@ jsÚ_»suÉ
 jsÚ_ty³_št
 ) {
 
-563 
+383 
 	`årštf
 (
 ¡d”r
 , "Failedo get status\n");
 
-567 
+387 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15711,7 +14855,7 @@ jsÚ_»suÉ
 msg
 );
 
-568 
+388 
 	`jsÚ_objeù_objeù_g‘_ex
 (
 jsÚ_»suÉ
@@ -15719,35 +14863,35 @@ jsÚ_»suÉ
 v”
 );
 
-569 
+389 
 	`´štf
 ("status: (%d),ip_version=%d, msg = %s \n",
 
-570 
+390 
 	`jsÚ_objeù_g‘_št
 (
 ¡©us
 ),
 
-571 
+391 
 	`jsÚ_objeù_g‘_št
 (
 v”
 ),
 
-572 
+392 
 	`jsÚ_objeù_g‘_¡ršg
 (
 msg
 ));
 
-574 ià(
+394 ià(
 	`jsÚ_objeù_g‘_št
 (
 ¡©us
 ) != 200)
 
-577 
+397 
 g__v”
  = 
 	`jsÚ_objeù_g‘_št
@@ -15755,25 +14899,25 @@ g__v”
 v”
 );
 
-582  
+402  
 »t
 ;
 
-583 
+403 
 	}
 }
 
-585 *
+405 *
 	gl_iâame
 [3] = {
 
-591 
+411 
 	#NO_SN_TEST
  0xffffffff
 
 	)
 
-592 cÚ¡* 
+412 cÚ¡* 
 	$bud_jsÚ
 (
 »dsocks_š¡ªû
@@ -15787,23 +14931,23 @@ ty³
 ¢_numb”
 )
 
-594 cÚ¡ *
+414 cÚ¡ *
 po¡_¡r
 ;
 
-595 
+415 
 £rv”_cÚfig
  *
 sc
 ;
 
-596 ià(
+416 ià(
 ¢_numb”
  =ğ
 NO_SN_TEST
 ) {
 
-597 
+417 
 sc
  = &
 ruÂšg_šfo
@@ -15811,11 +14955,11 @@ ruÂšg_šfo
 šdex
 ];
 
-598 
+418 
 ¢_numb”
  = 0;
 
-600 
+420 
 sc
  = &
 ruÂšg_šfo_‹¡
@@ -15825,15 +14969,15 @@ ruÂšg_šfo_‹¡
 ¢_numb”
 ];
 
-603 
+423 
 ty³
 ) {
 
-604 
+424 
 AUTH_LOGIN
 : {
 
-605 
+425 
 jsÚ_objeù
  *
 jlogš
@@ -15841,7 +14985,7 @@ jlogš
 	`jsÚ_objeù_Ãw_objeù
 ();
 
-606 
+426 
 jsÚ_objeù
  *
 j¬¿y
@@ -15849,13 +14993,13 @@ j¬¿y
 	`jsÚ_objeù_Ãw_¬¿y
 ();
 
-607 
+427 
 jsÚ_objeù
  *
 jID
 ;
 
-608 ià(
+428 ià(
 sc
 ->
 Ï¡ID
@@ -15863,11 +15007,11 @@ sc
 NULL
 ) {
 
-609 
+429 
 i
  = 0;
 
-610 
+430 
 i
  = 0; 
 sc
@@ -15877,7 +15021,7 @@ sc
 NULL
 ; i++) {
 
-611 
+431 
 jID
  = 
 	`jsÚ_objeù_Ãw_¡ršg
@@ -15889,7 +15033,7 @@ sc
 i
 ]);
 
-612 
+432 
 	`jsÚ_objeù_¬¿y_add
 (
 j¬¿y
@@ -15897,7 +15041,7 @@ j¬¿y
 jID
 );
 
-615 
+435 
 	`jsÚ_objeù_¬¿y_add
 (
 j¬¿y
@@ -15905,7 +15049,7 @@ j¬¿y
 	`jsÚ_objeù_Ãw_¡ršg
 (""));
 
-618 ià(
+438 ià(
 š¡ªû
 ->
 cÚfig
@@ -15915,7 +15059,7 @@ m±ı_auth_¢
 ¢_numb”
 ]) {
 
-619 
+439 
 	`jsÚ_objeù_objeù_add
 (
 jlogš
@@ -15931,7 +15075,7 @@ m±ı_auth_¢
 ¢_numb”
 ]));
 
-620 
+440 
 	`jsÚ_objeù_objeù_add
 (
 jlogš
@@ -15947,7 +15091,7 @@ m±ı_auth_key
 ¢_numb”
 ]));
 
-623 
+443 
 	`jsÚ_objeù_objeù_add
 (
 jlogš
@@ -15955,7 +15099,7 @@ jlogš
 j¬¿y
 );
 
-625 
+445 
 po¡_¡r
  = 
 	`jsÚ_objeù_to_jsÚ_¡ršg
@@ -15963,19 +15107,19 @@ po¡_¡r
 jlogš
 );
 
-626 
+446 
 	`log_”rÜ
 (
-LOG_ERR
+LOG_DEBUG
 , "logš…o¡_¡r=%s.", 
 po¡_¡r
 );
 
-630 
+450 
 AUTH_LOGOUT
 : {
 
-631 
+451 
 jsÚ_objeù
  *
 jlogout
@@ -15983,7 +15127,7 @@ jlogout
 	`jsÚ_objeù_Ãw_objeù
 ();
 
-632 
+452 
 	`jsÚ_objeù_objeù_add
 (
 jlogout
@@ -15997,7 +15141,7 @@ key
 uid
 ));
 
-633 
+453 
 po¡_¡r
  = 
 	`jsÚ_objeù_to_jsÚ_¡ršg
@@ -16005,19 +15149,19 @@ po¡_¡r
 jlogout
 );
 
-634 
+454 
 	`log_”rÜ
 (
-LOG_ERR
+LOG_DEBUG
 , "logouˆpo¡_¡r=%s.", 
 po¡_¡r
 );
 
-638 
+458 
 AUTH_HEARTBEAT
 : {
 
-639 
+459 
 jsÚ_objeù
  *
 h—¹
@@ -16025,7 +15169,7 @@ h—¹
 	`jsÚ_objeù_Ãw_objeù
 ();
 
-640 
+460 
 	`jsÚ_objeù_objeù_add
 (
 h—¹
@@ -16039,7 +15183,7 @@ key
 uid
 ));
 
-641 
+461 
 	`jsÚ_objeù_objeù_add
 (
 h—¹
@@ -16047,7 +15191,7 @@ h—¹
 	`jsÚ_objeù_Ãw_¡ršg
 ("1"));
 
-642 
+462 
 po¡_¡r
  = 
 	`jsÚ_objeù_to_jsÚ_¡ršg
@@ -16055,33 +15199,35 @@ po¡_¡r
 h—¹
 );
 
-643 
+463 
 	`log_”rÜ
 (
-LOG_ERR
+LOG_DEBUG
 , "h—¹b—ˆpo¡_¡r=%s.", 
 po¡_¡r
 );
 
-648 
-	`´štf
- ("unknowÀauthy³ : %d\n", 
+468 
+	`log_”rÜ
+(
+LOG_ERR
+, "unknowÀauthy³ : %d\n", 
 ty³
 );
 
-649  
+469  
 NULL
 ;
 
-652  
+472  
 po¡_¡r
 ;
 
-653 
+473 
 	}
 }
 
-655 
+475 
 	$m±ı_logš_‹¡
 (
 »dsocks_š¡ªû
@@ -16095,23 +15241,23 @@ if_šdex
 ¢_numb”
 )
 
-657 
+477 
 CURLcode
  
 »tuº_code
 ;
 
-658 
+478 
 CURL
  *
 —sy_hªdË
 ;
 
-659 cÚ¡ *
+479 cÚ¡ *
 po¡_¡r
 ;
 
-661 
+481 
 »tuº_code
  = 
 	`cu¾_glob®_š™
@@ -16119,41 +15265,41 @@ po¡_¡r
 CURL_GLOBAL_ALL
 );
 
-662 ià(
+482 ià(
 CURLE_OK
  !ğ
 »tuº_code
 ) {
 
-663 
+483 
 	`log_”rÜ
 (
 LOG_ERR
 , "init†ibcurl failed.");
 
-667 
+487 
 —sy_hªdË
  = 
 	`cu¾_—sy_š™
 ();
 
-668 ià(
+488 ià(
 NULL
  =ğ
 —sy_hªdË
 ) {
 
-669 
+489 
 	`log_”rÜ
 (
 LOG_ERR
 , "get‡ƒasy handle failed.");
 
-670 
+490 
 	`cu¾_glob®_ş—nup
 ();
 
-674 
+494 
 	`cu¾_—sy_£tİt
 (
 —sy_hªdË
@@ -16163,7 +15309,7 @@ CURLOPT_URL
 u¾
 );
 
-675 
+495 
 	`cu¾_—sy_£tİt
 (
 —sy_hªdË
@@ -16175,25 +15321,25 @@ l_iâame
 if_šdex
 ]);
 
-676 
+496 
 šs
 ->
 if_šdex
  = if_index;
 
-677 
+497 
 šs
 ->
 ¢_numb”
  = sn_number;
 
-679 ià(
+499 ià(
 	`¡r¡r
 (
 u¾
 , "login"))
 
-680 
+500 
 po¡_¡r
  = 
 	`bud_jsÚ
@@ -16207,13 +15353,13 @@ if_šdex
 ¢_numb”
 );
 
-681 ià(
+501 ià(
 	`¡r¡r
 (
 u¾
 , "logout"))
 
-682 
+502 
 po¡_¡r
  = 
 	`bud_jsÚ
@@ -16227,13 +15373,13 @@ if_šdex
 ¢_numb”
 );
 
-683 ià(
+503 ià(
 	`¡r¡r
 (
 u¾
 , "heart"))
 
-684 
+504 
 po¡_¡r
  = 
 	`bud_jsÚ
@@ -16247,37 +15393,39 @@ if_šdex
 ¢_numb”
 );
 
-685 ià(
+505 ià(
 	`¡r¡r
 (
 u¾
 , "iplist"))
 
-686 
+506 
 	`dÜ•Ü‹r
 (
 —sy_hªdË
 , 0);
 
-688 
-	`´štf
-("Unsupport operation!\n");
+508 
+	`log_”rÜ
+(
+LOG_ERR
+, "Unsupport operation!\n");
 
-690 ià(!
+510 ià(!
 po¡_¡r
 ) {
 
-691 
+511 
 	`log_”rÜ
 (
 LOG_ERR
 , "Failedo build json string.");
 
-692 
+512 
 ex™
 ;
 
-695 
+515 
 	`cu¾_—sy_£tİt
 (
 —sy_hªdË
@@ -16287,7 +15435,7 @@ CURLOPT_POSTFIELDS
 po¡_¡r
 );
 
-696 
+516 
 	`cu¾_—sy_£tİt
 (
 —sy_hªdË
@@ -16297,7 +15445,7 @@ CURLOPT_WRITEFUNCTION
 ´oûss_d©a_‹¡
 );
 
-697 
+517 
 	`cu¾_—sy_£tİt
 (
 —sy_hªdË
@@ -16307,35 +15455,35 @@ CURLOPT_WRITEDATA
 šs
 );
 
-698 
+518 
 	`cu¾_—sy_£tİt
 (
 —sy_hªdË
 , 
 CURLOPT_VERBOSE
-, 0L);
+, 1L);
 
-699 
+519 
 	`cu¾_—sy_³rfÜm
 (
 —sy_hªdË
 );
 
-701 
+521 
 ex™
 :
 
-702 
+522 
 	`cu¾_—sy_ş—nup
 (
 —sy_hªdË
 );
 
-703 
+523 
 	`cu¾_glob®_ş—nup
 ();
 
-706 
+526 
 	}
 }
 
@@ -19348,16 +18496,6 @@ SN_CNT
 ];
 
 47 
-m±ı_auth
-(
-»dsocks_š¡ªû
- *
-šs
-, * 
-u¾
-);
-
-48 
 m±ı_logš_‹¡
 (
 »dsocks_š¡ªû
@@ -19371,53 +18509,53 @@ if_šdex
 ¢_num
 );
 
-49 
+48 
 »Ïy_subsys
  
 h‰p_cÚÃù_subsys
+;
+
+49 
+»Ïy_subsys
+ 
+h‰p_»Ïy_subsys
 ;
 
 50 
 »Ïy_subsys
  
-h‰p_»Ïy_subsys
+socks4_subsys
 ;
 
 51 
 »Ïy_subsys
  
-socks4_subsys
-;
-
-52 
-»Ïy_subsys
- 
 socks5_subsys
 ;
 
-53 
+52 
 »Ïy_subsys
  *
 	g»Ïy_subsy¡ems
 [] =
 
-55 &
+54 &
 h‰p_cÚÃù_subsys
 ,
 
-56 &
+55 &
 h‰p_»Ïy_subsys
 ,
 
-57 &
+56 &
 socks4_subsys
 ,
 
-58 &
+57 &
 socks5_subsys
 ,
 
-61 
+60 
 li¡_h—d
  
 	gš¡ªûs
@@ -19427,13 +18565,13 @@ LIST_HEAD_INIT
 š¡ªûs
 );
 
-63 
+62 
 ·r£r_’Œy
  
 	g»dsocks_’Œ›s
 [] =
 
-65 { .
+64 { .
 key
  = "loÿl_", .
 	gty³
@@ -19441,7 +18579,7 @@ key
 ±_š_addr
  },
 
-66 { .
+65 { .
 	gkey
  = "loÿl_pÜt", .
 	gty³
@@ -19449,7 +18587,7 @@ key
 ±_ušt16
  },
 
-67 { .
+66 { .
 	gkey
  = "", .
 	gty³
@@ -19457,7 +18595,7 @@ key
 ±_š_addr
  },
 
-68 { .
+67 { .
 	gkey
  = "pÜt", .
 	gty³
@@ -19465,7 +18603,7 @@ key
 ±_ušt16
  },
 
-69 { .
+68 { .
 	gkey
  = "ty³", .
 	gty³
@@ -19473,7 +18611,7 @@ key
 ±_pch¬
  },
 
-70 { .
+69 { .
 	gkey
  = "logš", .
 	gty³
@@ -19481,7 +18619,7 @@ key
 ±_pch¬
  },
 
-71 { .
+70 { .
 	gkey
  = "·sswÜd", .
 	gty³
@@ -19489,7 +18627,7 @@ key
 ±_pch¬
  },
 
-72 { .
+71 { .
 	gkey
  = "li¡’q", .
 	gty³
@@ -19497,7 +18635,7 @@ key
 ±_ušt16
  },
 
-73 { .
+72 { .
 	gkey
  = "mš_acû±_backoff", .
 	gty³
@@ -19505,7 +18643,7 @@ key
 ±_ušt16
  },
 
-74 { .
+73 { .
 	gkey
  = "max_acû±_backoff", .
 	gty³
@@ -19513,7 +18651,7 @@ key
 ±_ušt16
  },
 
-75 { .
+74 { .
 	gkey
  = "m±ı_auth_¢", .
 	gty³
@@ -19521,7 +18659,7 @@ key
 ±_pch¬
  },
 
-76 { .
+75 { .
 	gkey
  = "m±ı_auth_key", .
 	gty³
@@ -19529,7 +18667,7 @@ key
 ±_pch¬
  },
 
-77 { .
+76 { .
 	gkey
  = "m±ı_Ï¡ID", .
 	gty³
@@ -19537,7 +18675,7 @@ key
 ±_pch¬
  },
 
-78 { .
+77 { .
 	gkey
  = "m±ı_»auth_time", .
 	gty³
@@ -19545,7 +18683,7 @@ key
 ±_ušt16
  },
 
-79 { .
+78 { .
 	gkey
  = "m±ı_’abË", .
 	gty³
@@ -19553,7 +18691,7 @@ key
 ±_ušt16
  },
 
-80 { .
+79 { .
 	gkey
  = "m±ı_u¾", .
 	gty³
@@ -19561,7 +18699,7 @@ key
 ±_pch¬
  },
 
-81 { .
+80 { .
 	gkey
  = "m±ı_‹¡_mode", .
 	gty³
@@ -19569,11 +18707,11 @@ key
 ±_ušt16
  },
 
-87 
+86 
 Œacked_ev’t_£t
 (
 
-88 
+87 
 Œacked_ev’t
  *
 ‹v
@@ -19585,7 +18723,7 @@ fd
 ev’ts
 ,
 
-89 (*
+88 (*
 ÿÎback
 )(
 evut_sock‘_t
@@ -19593,7 +18731,7 @@ evut_sock‘_t
 ¬g
 )
 
-91 
+90 
 	`ev’t_£t
 (&
 ‹v
@@ -19609,7 +18747,7 @@ ev’ts
 ¬g
 );
 
-92 
+91 
 	`tim”ş—r
 (&
 ‹v
@@ -19617,11 +18755,11 @@ ev’ts
 š£¹ed
 );
 
-93 
+92 
 	}
 }
 
-95 
+94 
 	$Œacked_ev’t_add
 (
 Œacked_ev’t
@@ -19633,7 +18771,7 @@ timev®
 tv
 )
 
-97 
+96 
 »t
  = 
 	`ev’t_add
@@ -19645,11 +18783,11 @@ ev
 tv
 );
 
-98 ià(
+97 ià(
 »t
  == 0)
 
-99 
+98 
 	`g‘timeofday
 (&
 ‹v
@@ -19659,15 +18797,15 @@ tv
 NULL
 );
 
-100  
+99  
 »t
 ;
 
-101 
+100 
 	}
 }
 
-103 
+102 
 	$Œacked_ev’t_d–
 (
 Œacked_ev’t
@@ -19675,7 +18813,7 @@ NULL
 ‹v
 )
 
-105 
+104 
 »t
  = 
 	`ev’t_d–
@@ -19685,11 +18823,11 @@ NULL
 ev
 );
 
-106 ià(
+105 ià(
 »t
  == 0)
 
-107 
+106 
 	`tim”ş—r
 (&
 ‹v
@@ -19697,15 +18835,15 @@ ev
 š£¹ed
 );
 
-108  
+107  
 »t
 ;
 
-109 
+108 
 	}
 }
 
-111 
+110 
 	$»dsocks_Ú’‹r
 (
 ·r£r_£ùiÚ
@@ -19713,17 +18851,17 @@ ev
 £ùiÚ
 )
 
-114 
+113 
 š¡ªû_·ylßd_Ën
  = 0;
 
-115 
+114 
 »Ïy_subsys
  **
 ss
 ;
 
-116 
+115 
 	`FOREACH
 (
 ss
@@ -19731,19 +18869,19 @@ ss
 »Ïy_subsy¡ems
 )
 
-117 ià(
+116 ià(
 š¡ªû_·ylßd_Ën
  < (*
 ss
 )->instance_payload_len)
 
-118 
+117 
 š¡ªû_·ylßd_Ën
  = (*
 ss
 )->instance_payload_len;
 
-120 
+119 
 »dsocks_š¡ªû
  *
 š¡ªû
@@ -19753,11 +18891,11 @@ ss
 š¡ªû_·ylßd_Ën
 );
 
-121 ià(!
+120 ià(!
 š¡ªû
 ) {
 
-122 
+121 
 	`·r£r_”rÜ
 (
 £ùiÚ
@@ -19765,7 +18903,7 @@ ss
 cÚ‹xt
 , "Notƒnough memory");
 
-126 
+125 
 	`INIT_LIST_HEAD
 (&
 š¡ªû
@@ -19773,13 +18911,25 @@ cÚ‹xt
 li¡
 );
 
-127 
+126 
 	`INIT_LIST_HEAD
 (&
 š¡ªû
 ->
 ş›Ás
 );
+
+127 
+š¡ªû
+->
+cÚfig
+.
+bšdaddr
+.
+sš_çmy
+ = 
+AF_INET
+;
 
 128 
 š¡ªû
@@ -19788,18 +18938,6 @@ cÚfig
 .
 bšdaddr
 .
-sš_çmy
- = 
-AF_INET
-;
-
-129 
-š¡ªû
-->
-cÚfig
-.
-bšdaddr
-.
 sš_addr
 .
 s_addr
@@ -19808,6 +18946,18 @@ s_addr
 (
 INADDR_LOOPBACK
 );
+
+129 
+š¡ªû
+->
+cÚfig
+.
+»Ïyaddr
+[0].
+sš_çmy
+ = 
+AF_INET
+;
 
 130 
 š¡ªû
@@ -19816,18 +18966,6 @@ cÚfig
 .
 »Ïyaddr
 [0].
-sš_çmy
- = 
-AF_INET
-;
-
-131 
-š¡ªû
-->
-cÚfig
-.
-»Ïyaddr
-[0].
 sš_addr
 .
 s_addr
@@ -19837,7 +18975,7 @@ s_addr
 INADDR_LOOPBACK
 );
 
-135 
+134 
 š¡ªû
 ->
 cÚfig
@@ -19847,7 +18985,7 @@ li¡’q
 SOMAXCONN
 ;
 
-136 
+135 
 š¡ªû
 ->
 cÚfig
@@ -19855,7 +18993,7 @@ cÚfig
 mš_backoff_ms
  = 100;
 
-137 
+136 
 š¡ªû
 ->
 cÚfig
@@ -19863,7 +19001,7 @@ cÚfig
 max_backoff_ms
  = 60000;
 
-139 
+138 
 ·r£r_’Œy
  *
 ’Œy
@@ -19875,13 +19013,13 @@ max_backoff_ms
 key
 ;ƒntry++)
 
-140 
+139 
 ’Œy
 ->
 addr
  =
 
-141 (
+140 (
 	`¡rcmp
 (
 ’Œy
@@ -19897,7 +19035,7 @@ bšdaddr
 sš_addr
  :
 
-142 (
+141 (
 	`¡rcmp
 (
 ’Œy
@@ -19913,7 +19051,7 @@ bšdaddr
 sš_pÜt
  :
 
-143 (
+142 (
 	`¡rcmp
 (
 ’Œy
@@ -19929,7 +19067,7 @@ cÚfig
 sš_addr
  :
 
-144 (
+143 (
 	`¡rcmp
 (
 ’Œy
@@ -19945,7 +19083,7 @@ cÚfig
 sš_pÜt
  :
 
-145 (
+144 (
 	`¡rcmp
 (
 ’Œy
@@ -19959,7 +19097,7 @@ cÚfig
 ty³
  :
 
-146 (
+145 (
 	`¡rcmp
 (
 ’Œy
@@ -19973,7 +19111,7 @@ cÚfig
 logš
  :
 
-147 (
+146 (
 	`¡rcmp
 (
 ’Œy
@@ -19987,7 +19125,7 @@ cÚfig
 ·sswÜd
  :
 
-148 (
+147 (
 	`¡rcmp
 (
 ’Œy
@@ -20001,7 +19139,7 @@ cÚfig
 li¡’q
  :
 
-149 (
+148 (
 	`¡rcmp
 (
 ’Œy
@@ -20015,7 +19153,7 @@ cÚfig
 mš_backoff_ms
  :
 
-150 (
+149 (
 	`¡rcmp
 (
 ’Œy
@@ -20029,7 +19167,7 @@ cÚfig
 max_backoff_ms
  :
 
-151 (
+150 (
 	`¡rcmp
 (
 ’Œy
@@ -20043,7 +19181,7 @@ cÚfig
 m±ı_auth_¢
  :
 
-152 (
+151 (
 	`¡rcmp
 (
 ’Œy
@@ -20057,7 +19195,7 @@ cÚfig
 m±ı_auth_key
  :
 
-153 (
+152 (
 	`¡rcmp
 (
 ’Œy
@@ -20071,7 +19209,7 @@ cÚfig
 m±ı_Ï¡ID
  :
 
-154 (
+153 (
 	`¡rcmp
 (
 ’Œy
@@ -20085,7 +19223,7 @@ cÚfig
 m±ı_»auth_time
  :
 
-156 (
+155 (
 	`¡rcmp
 (
 ’Œy
@@ -20099,7 +19237,7 @@ cÚfig
 m±ı_’abË
  :
 
-157 (
+156 (
 	`¡rcmp
 (
 ’Œy
@@ -20113,7 +19251,7 @@ cÚfig
 m±ı_‹¡_mode
  :
 
-158 (
+157 (
 	`¡rcmp
 (
 ’Œy
@@ -20127,11 +19265,11 @@ cÚfig
 m±ı_u¾
  :
 
-159 
+158 
 NULL
 ;
 
-160 
+159 
 £ùiÚ
 ->
 d©a
@@ -20139,11 +19277,11 @@ d©a
 š¡ªû
 ;
 
-162 
+161 
 	}
 }
 
-164 
+163 
 	$»dsocks_Úex™
 (
 ·r£r_£ùiÚ
@@ -20151,13 +19289,13 @@ d©a
 £ùiÚ
 )
 
-170 cÚ¡ *
+169 cÚ¡ *
 ”r
  = 
 NULL
 ;
 
-171 
+170 
 »dsocks_š¡ªû
  *
 š¡ªû
@@ -20167,7 +19305,7 @@ NULL
 d©a
 ;
 
-173 
+172 
 £ùiÚ
 ->
 d©a
@@ -20175,7 +19313,7 @@ d©a
 NULL
 ;
 
-174 
+173 
 ·r£r_’Œy
  *
 ’Œy
@@ -20187,7 +19325,7 @@ NULL
 key
 ;ƒntry++)
 
-175 
+174 
 ’Œy
 ->
 addr
@@ -20195,7 +19333,7 @@ addr
 NULL
 ;
 
-177 
+176 
 š¡ªû
 ->
 cÚfig
@@ -20207,7 +19345,7 @@ sš_pÜt
 	`htÚs
 (instance->config.bindaddr.sin_port);
 
-178 
+177 
 š¡ªû
 ->
 cÚfig
@@ -20219,7 +19357,7 @@ sš_pÜt
 	`htÚs
 (instance->config.relayaddr[0].sin_port);
 
-180 ià(
+179 ià(
 š¡ªû
 ->
 cÚfig
@@ -20227,13 +19365,13 @@ cÚfig
 ty³
 ) {
 
-181 
+180 
 »Ïy_subsys
  **
 ss
 ;
 
-182 
+181 
 	`FOREACH
 (
 ss
@@ -20241,7 +19379,7 @@ ss
 »Ïy_subsy¡ems
 ) {
 
-183 ià(!
+182 ià(!
 	`¡rcmp
 ((*
 ss
@@ -20255,7 +19393,7 @@ cÚfig
 ty³
 )) {
 
-184 
+183 
 š¡ªû
 ->
 »Ïy_ss
@@ -20263,7 +19401,7 @@ ty³
 ss
 ;
 
-185 
+184 
 	`li¡_add
 (&
 š¡ªû
@@ -20273,21 +19411,21 @@ li¡
 š¡ªûs
 );
 
-190 ià(!
+189 ià(!
 š¡ªû
 ->
 »Ïy_ss
 )
 
-191 
+190 
 ”r
  = "invalid `type` for„edsocks";
 
-194 
+193 
 ”r
  = "no `type` for„edsocks";
 
-197 ià(!
+196 ià(!
 ”r
  && !
 š¡ªû
@@ -20297,11 +19435,11 @@ cÚfig
 mš_backoff_ms
 ) {
 
-198 
+197 
 ”r
  = "`min_accept_backoff` must be…ositive, 0 ms isoo†ow";
 
-201 ià(!
+200 ià(!
 ”r
  && !
 š¡ªû
@@ -20311,11 +19449,11 @@ cÚfig
 max_backoff_ms
 ) {
 
-202 
+201 
 ”r
  = "`max_accept_backoff` must be…ositive, 0 ms isoo†ow";
 
-205 ià(!
+204 ià(!
 ”r
  && !(
 š¡ªû
@@ -20327,15 +19465,15 @@ mš_backoff_ms
 max_backoff_ms
 )) {
 
-206 
+205 
 ”r
  = "`min_accept_backoff` must be†esshan `max_accept_backoff`";
 
-209 ià(
+208 ià(
 ”r
 )
 
-210 
+209 
 	`·r£r_”rÜ
 (
 £ùiÚ
@@ -20345,47 +19483,47 @@ cÚ‹xt
 ”r
 );
 
-212  
+211  
 ”r
  ? -1 : 0;
 
-213 
+212 
 	}
 }
 
-215 
+214 
 ·r£r_£ùiÚ
  
 	g»dsocks_cÚf_£ùiÚ
  =
 
-217 .
+216 .
 Çme
  = "redsocks",
 
-218 .
+217 .
 	g’Œ›s
  = 
 »dsocks_’Œ›s
 ,
 
-219 .
+218 .
 	gÚ’‹r
  = 
 »dsocks_Ú’‹r
 ,
 
-220 .
+219 .
 	gÚex™
  = 
 »dsocks_Úex™
 
 
-223 
+222 
 	$»dsocks_log_wr™e_¶aš
 (
 
-224 cÚ¡ *
+223 cÚ¡ *
 fe
 , 
 lše
@@ -20395,7 +19533,7 @@ func
 do_”ºo
 ,
 
-225 cÚ¡ 
+224 cÚ¡ 
 sockaddr_š
  *
 ş›Áaddr
@@ -20403,19 +19541,19 @@ sockaddr_š
 de¡addr
 ,
 
-226 
+225 
 ´iÜ™y
 , cÚ¡ *
 Üig_fmt
 , ...
 
-228 
+227 
 §ved_”ºo
  = 
 ”ºo
 ;
 
-229 
+228 
 evbufãr
  *
 fmt
@@ -20423,13 +19561,13 @@ fmt
 	`evbufãr_Ãw
 ();
 
-230 
+229 
 va_li¡
  
 ­
 ;
 
-231 
+230 
 ş›Áaddr_¡r
 [
 RED_INET_ADDRSTRLEN
@@ -20437,27 +19575,27 @@ RED_INET_ADDRSTRLEN
 de¡addr_¡r
 [RED_INET_ADDRSTRLEN];
 
-233 ià(!
+232 ià(!
 fmt
 ) {
 
-234 
+233 
 	`log_”ºo
 (
 LOG_ERR
 , "evbuffer_new()");
 
-238 ià(
+237 ià(
 fmt
 ) {
 
-239 
+238 
 	`evbufãr_add_´štf
 (
 fmt
 , "[%s->%s]: %s",
 
-240 
+239 
 	`»d_š‘_Áİ
 (
 ş›Áaddr
@@ -20465,7 +19603,7 @@ fmt
 ş›Áaddr_¡r
 , (clientaddr_str)),
 
-241 
+240 
 	`»d_š‘_Áİ
 (
 de¡addr
@@ -20473,11 +19611,11 @@ de¡addr
 de¡addr_¡r
 , (destaddr_str)),
 
-242 
+241 
 Üig_fmt
 );
 
-245 
+244 
 	`va_¡¬t
 (
 ­
@@ -20485,17 +19623,17 @@ de¡addr_¡r
 Üig_fmt
 );
 
-246 ià(
+245 ià(
 fmt
 ) {
 
-247 
+246 
 ”ºo
  = 
 §ved_”ºo
 ;
 
-248 
+247 
 	`_log_vwr™e
 (
 fe
@@ -20515,23 +19653,23 @@ fmt
 ­
 );
 
-249 
+248 
 	`evbufãr_ä“
 (
 fmt
 );
 
-251 
+250 
 	`va_’d
 (
 ­
 );
 
-252 
+251 
 	}
 }
 
-254 
+253 
 	$»dsocks_touch_ş›Á
 (
 »dsocks_ş›Á
@@ -20539,7 +19677,7 @@ fmt
 ş›Á
 )
 
-256 
+255 
 	`»dsocks_time
 (&
 ş›Á
@@ -20547,11 +19685,11 @@ fmt
 Ï¡_ev’t
 );
 
-257 
+256 
 	}
 }
 
-260 
+259 
 	$»dsocks_»Ïy_»adcb
 (
 »dsocks_ş›Á
@@ -20565,7 +19703,7 @@ bufã»v’t
 to
 )
 
-262 ià(
+261 ià(
 	`EVBUFFER_LENGTH
 (
 to
@@ -20577,7 +19715,7 @@ wm_wr™e
 high
 ) {
 
-263 ià(
+262 ià(
 	`bufã»v’t_wr™e_bufãr
 (
 to
@@ -20587,7 +19725,7 @@ to
 šput
 ) == -1)
 
-264 
+263 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -20595,7 +19733,7 @@ to
 LOG_ERR
 , "bufferevent_write_buffer");
 
-267 ià(
+266 ià(
 	`bufã»v’t_di§bË
 (
 äom
@@ -20603,7 +19741,7 @@ LOG_ERR
 EV_READ
 ) == -1)
 
-268 
+267 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -20611,11 +19749,11 @@ EV_READ
 LOG_ERR
 , "bufferevent_disable");
 
-270 
+269 
 	}
 }
 
-272 
+271 
 	$»dsocks_»Ïy_wr™ecb
 (
 »dsocks_ş›Á
@@ -20629,7 +19767,7 @@ bufã»v’t
 to
 )
 
-274 
+273 
 	`as£¹
 (
 äom
@@ -20639,7 +19777,7 @@ to
 »Ïy
 );
 
-275 
+274 
 äom_eof
  = (
 äom
@@ -20653,7 +19791,7 @@ to
 EV_READ
 ;
 
-277 ià(
+276 ià(
 	`EVBUFFER_LENGTH
 (
 äom
@@ -20663,7 +19801,7 @@ EV_READ
 äom_eof
 ) {
 
-278 
+277 
 	`»dsocks_shutdown
 (
 ş›Á
@@ -20673,7 +19811,7 @@ to
 SHUT_WR
 );
 
-280 ià(
+279 ià(
 	`EVBUFFER_LENGTH
 (
 to
@@ -20685,7 +19823,7 @@ wm_wr™e
 high
 ) {
 
-281 ià(
+280 ià(
 	`bufã»v’t_wr™e_bufãr
 (
 to
@@ -20695,7 +19833,7 @@ to
 šput
 ) == -1)
 
-282 
+281 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -20703,7 +19841,7 @@ to
 LOG_ERR
 , "bufferevent_write_buffer");
 
-283 ià(
+282 ià(
 	`bufã»v’t_’abË
 (
 äom
@@ -20711,7 +19849,7 @@ LOG_ERR
 EV_READ
 ) == -1)
 
-284 
+283 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -20719,11 +19857,11 @@ EV_READ
 LOG_ERR
 , "bufferevent_enable");
 
-286 
+285 
 	}
 }
 
-289 
+288 
 	$»dsocks_»Ïy_»Ïy»adcb
 (
 bufã»v’t
@@ -20733,7 +19871,7 @@ bufã»v’t
 _ş›Á
 )
 
-291 
+290 
 »dsocks_ş›Á
  *
 ş›Á
@@ -20741,13 +19879,13 @@ _ş›Á
 _ş›Á
 ;
 
-292 
+291 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-293 
+292 
 	`»dsocks_»Ïy_»adcb
 (
 ş›Á
@@ -20755,11 +19893,11 @@ _ş›Á
 »Ïy
 , client->client);
 
-294 
+293 
 	}
 }
 
-296 
+295 
 	$»dsocks_»Ïy_»Ïywr™ecb
 (
 bufã»v’t
@@ -20769,7 +19907,7 @@ to
 _ş›Á
 )
 
-298 
+297 
 »dsocks_ş›Á
  *
 ş›Á
@@ -20777,13 +19915,13 @@ _ş›Á
 _ş›Á
 ;
 
-299 
+298 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-300 
+299 
 	`»dsocks_»Ïy_wr™ecb
 (
 ş›Á
@@ -20791,11 +19929,11 @@ _ş›Á
 »Ïy
 );
 
-301 
+300 
 	}
 }
 
-303 
+302 
 	$»dsocks_»Ïy_ş›Á»adcb
 (
 bufã»v’t
@@ -20805,7 +19943,7 @@ bufã»v’t
 _ş›Á
 )
 
-305 
+304 
 »dsocks_ş›Á
  *
 ş›Á
@@ -20813,13 +19951,13 @@ _ş›Á
 _ş›Á
 ;
 
-306 
+305 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-307 
+306 
 	`»dsocks_»Ïy_»adcb
 (
 ş›Á
@@ -20827,11 +19965,11 @@ _ş›Á
 »Ïy
 );
 
-308 
+307 
 	}
 }
 
-310 
+309 
 	$»dsocks_»Ïy_ş›Áwr™ecb
 (
 bufã»v’t
@@ -20841,7 +19979,7 @@ to
 _ş›Á
 )
 
-312 
+311 
 »dsocks_ş›Á
  *
 ş›Á
@@ -20849,13 +19987,13 @@ _ş›Á
 _ş›Á
 ;
 
-313 
+312 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-314 
+313 
 	`»dsocks_»Ïy_wr™ecb
 (
 ş›Á
@@ -20863,11 +20001,11 @@ _ş›Á
 »Ïy
 , client->client);
 
-315 
+314 
 	}
 }
 
-317 
+316 
 	$»dsocks_¡¬t_»Ïy
 (
 »dsocks_ş›Á
@@ -20875,11 +20013,11 @@ _ş›Á
 ş›Á
 )
 
-319 
+318 
 ”rÜ
 ;
 
-321 ià(
+320 ià(
 ş›Á
 ->
 š¡ªû
@@ -20889,7 +20027,7 @@ _ş›Á
 fši
 )
 
-322 
+321 
 ş›Á
 ->
 š¡ªû
@@ -20899,7 +20037,7 @@ fši
 	`fši
 (client);
 
-324 
+323 
 ş›Á
 ->
 »Ïy
@@ -20909,12 +20047,20 @@ wm_»ad
 low
  = 0;
 
-325 
+324 
 ş›Á
 ->
 »Ïy
 ->
 wm_wr™e
+.
+low
+ = 0;
+
+325 
+ş›Á
+->ş›Á->
+wm_»ad
 .
 low
  = 0;
@@ -20922,20 +20068,12 @@ low
 326 
 ş›Á
 ->ş›Á->
-wm_»ad
-.
-low
- = 0;
-
-327 
-ş›Á
-->ş›Á->
 wm_wr™e
 .
 low
  = 0;
 
-328 
+327 
 ş›Á
 ->
 »Ïy
@@ -20947,12 +20085,22 @@ high
 REDSOCKS_RELAY_HALFBUFF
 ;
 
-329 
+328 
 ş›Á
 ->
 »Ïy
 ->
 wm_wr™e
+.
+high
+ = 
+REDSOCKS_RELAY_HALFBUFF
+;
+
+329 
+ş›Á
+->ş›Á->
+wm_»ad
 .
 high
  = 
@@ -20962,16 +20110,6 @@ REDSOCKS_RELAY_HALFBUFF
 330 
 ş›Á
 ->ş›Á->
-wm_»ad
-.
-high
- = 
-REDSOCKS_RELAY_HALFBUFF
-;
-
-331 
-ş›Á
-->ş›Á->
 wm_wr™e
 .
 high
@@ -20979,7 +20117,7 @@ high
 REDSOCKS_RELAY_HALFBUFF
 ;
 
-333 
+332 
 ş›Á
 ->ş›Á->
 »adcb
@@ -20987,7 +20125,7 @@ REDSOCKS_RELAY_HALFBUFF
 »dsocks_»Ïy_ş›Á»adcb
 ;
 
-334 
+333 
 ş›Á
 ->ş›Á->
 wr™ecb
@@ -20995,7 +20133,7 @@ wr™ecb
 »dsocks_»Ïy_ş›Áwr™ecb
 ;
 
-335 
+334 
 ş›Á
 ->
 »Ïy
@@ -21005,7 +20143,7 @@ wr™ecb
 »dsocks_»Ïy_»Ïy»adcb
 ;
 
-336 
+335 
 ş›Á
 ->
 »Ïy
@@ -21015,7 +20153,7 @@ wr™ecb
 »dsocks_»Ïy_»Ïywr™ecb
 ;
 
-338 
+337 
 ”rÜ
  = 
 	`bufã»v’t_’abË
@@ -21027,11 +20165,11 @@ EV_READ
 EV_WRITE
 );
 
-339 ià(!
+338 ià(!
 ”rÜ
 )
 
-340 
+339 
 ”rÜ
  = 
 	`bufã»v’t_’abË
@@ -21045,11 +20183,11 @@ EV_READ
 EV_WRITE
 );
 
-342 ià(!
+341 ià(!
 ”rÜ
 ) {
 
-343 
+342 
 	`»dsocks_log_”rÜ
 (
 ş›Á
@@ -21057,7 +20195,7 @@ EV_WRITE
 LOG_DEBUG
 , "data„elaying started");
 
-346 
+345 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -21065,17 +20203,17 @@ LOG_DEBUG
 LOG_ERR
 , "bufferevent_enable");
 
-347 
+346 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-349 
+348 
 	}
 }
 
-351 
+350 
 	$»dsocks_ä“_£rv”_šfo
 (
 £rv”_cÚfig
@@ -21083,17 +20221,17 @@ LOG_ERR
 sc
 )
 
-353 
+352 
 i
  = 0;
 
-355 ià(
+354 ià(
 sc
 ->
 machše_id
 ) {
 
-356 
+355 
 	`ä“
 (
 sc
@@ -21101,13 +20239,13 @@ sc
 machše_id
 );
 
-359 ià(
+358 ià(
 sc
 ->
 ´oxy_pÜt
 ) {
 
-360 
+359 
 	`ä“
 (
 sc
@@ -21115,11 +20253,11 @@ sc
 ´oxy_pÜt
 );
 
-363 
+362 
 i
  = 0; i < 10; i++) {
 
-364 ià(
+363 ià(
 sc
 ->
 Ï¡ID
@@ -21127,7 +20265,7 @@ sc
 i
 ])
 
-365 
+364 
 	`ä“
 (
 sc
@@ -21137,11 +20275,59 @@ sc
 i
 ]);
 
+367 
+i
+ = 0; i < 3; i++) {
+
+368 ià(
+sc
+->
+d¡
+[
+i
+].
+d
+) {
+
 369 
+	`ä“
+(
+sc
+->
+d¡
+[
+i
+].
+d
+);
+
+372 ià(
+sc
+->
+d¡
+[
+i
+].
+İ”©Ü_ty³
+) {
+
+373 
+	`ä“
+(
+sc
+->
+d¡
+[
+i
+].
+İ”©Ü_ty³
+);
+
+378 
 	}
 }
 
-371 
+380 
 	$»dsocks_drİ_ş›Á
 (
 »dsocks_ş›Á
@@ -21149,7 +20335,7 @@ i
 ş›Á
 )
 
-373 
+382 
 	`»dsocks_log_”rÜ
 (
 ş›Á
@@ -21157,7 +20343,7 @@ i
 LOG_INFO
 , "dropping client");
 
-375 ià(
+384 ià(
 ş›Á
 ->
 š¡ªû
@@ -21167,7 +20353,7 @@ LOG_INFO
 fši
 )
 
-376 
+385 
 ş›Á
 ->
 š¡ªû
@@ -21177,11 +20363,11 @@ fši
 	`fši
 (client);
 
-378 ià(
+387 ià(
 ş›Á
 ->client) {
 
-379 
+388 
 	`»dsocks_şo£
 (
 	`EVENT_FD
@@ -21191,19 +20377,19 @@ fši
 ev_wr™e
 ));
 
-380 
+389 
 	`bufã»v’t_ä“
 (
 ş›Á
 ->client);
 
-383 ià(
+392 ià(
 ş›Á
 ->
 »Ïy
 ) {
 
-384 
+393 
 	`»dsocks_şo£
 (
 	`EVENT_FD
@@ -21215,7 +20401,7 @@ ev_wr™e
 ev_wr™e
 ));
 
-385 
+394 
 	`bufã»v’t_ä“
 (
 ş›Á
@@ -21223,7 +20409,7 @@ ev_wr™e
 »Ïy
 );
 
-388 
+397 
 	`li¡_d–
 (&
 ş›Á
@@ -21231,17 +20417,17 @@ ev_wr™e
 li¡
 );
 
-389 
+398 
 	`ä“
 (
 ş›Á
 );
 
-390 
+399 
 	}
 }
 
-392 
+401 
 	$»dsocks_shutdown
 (
 »dsocks_ş›Á
@@ -21255,11 +20441,11 @@ bufãv
 how
 )
 
-394 
+403 
 evhow
  = 0;
 
-395 *
+404 *
 ¡»v
 , *
 ¡rhow
@@ -21269,11 +20455,11 @@ NULL
 ¡»vhow
  = NULL;
 
-396 *
+405 *
 ³vshut
 ;
 
-398 
+407 
 	`as£¹
 (
 how
@@ -21285,7 +20471,7 @@ SHUT_WR
 SHUT_RDWR
 );
 
-399 
+408 
 	`as£¹
 (
 bufãv
@@ -21295,7 +20481,7 @@ bufãv
 »Ïy
 );
 
-400 
+409 
 	`as£¹
 (
 	`EVENT_FD
@@ -21307,57 +20493,57 @@ ev_»ad
 ev_wr™e
 ));
 
-402 ià(
+411 ià(
 how
  =ğ
 SHUT_RD
 ) {
 
-403 
+412 
 ¡rhow
  = "SHUT_RD";
 
-404 
+413 
 evhow
  = 
 EV_READ
 ;
 
-405 
+414 
 ¡»vhow
  = "EV_READ";
 
-407 ià(
+416 ià(
 how
  =ğ
 SHUT_WR
 ) {
 
-408 
+417 
 ¡rhow
  = "SHUT_WR";
 
-409 
+418 
 evhow
  = 
 EV_WRITE
 ;
 
-410 
+419 
 ¡»vhow
  = "EV_WRITE";
 
-412 ià(
+421 ià(
 how
  =ğ
 SHUT_RDWR
 ) {
 
-413 
+422 
 ¡rhow
  = "SHUT_RDWR";
 
-414 
+423 
 evhow
  = 
 EV_READ
@@ -21365,11 +20551,11 @@ EV_READ
 EV_WRITE
 ;
 
-415 
+424 
 ¡»vhow
  = "EV_READ|EV_WRITE";
 
-418 
+427 
 	`as£¹
 (
 ¡rhow
@@ -21377,7 +20563,7 @@ EV_WRITE
 ¡»vhow
 );
 
-420 
+429 
 ¡»v
  = 
 bufãv
@@ -21385,7 +20571,7 @@ bufãv
 ş›Á
 ->client ? "client" : "relay";
 
-421 
+430 
 ³vshut
  = 
 bufãv
@@ -21397,7 +20583,7 @@ bufãv
 »Ïy_evshut
 ;
 
-426 iàĞ!(
+435 iàĞ!(
 how
  =ğ
 SHUT_RD
@@ -21407,7 +20593,7 @@ SHUT_RD
 EV_WRITE
 )) )
 
-427 ià(
+436 ià(
 	`shutdown
 (
 	`EVENT_FD
@@ -21419,7 +20605,7 @@ ev_»ad
 how
 ) != 0)
 
-428 
+437 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -21431,7 +20617,7 @@ LOG_ERR
 ¡rhow
 );
 
-430 ià(
+439 ià(
 	`bufã»v’t_di§bË
 (
 bufãv
@@ -21439,7 +20625,7 @@ bufãv
 evhow
 ) != 0)
 
-431 
+440 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -21451,13 +20637,13 @@ LOG_ERR
 ¡»vhow
 );
 
-433 *
+442 *
 ³vshut
  |ğ
 evhow
 ;
 
-435 ià(
+444 ià(
 ş›Á
 ->
 »Ïy_evshut
@@ -21469,7 +20655,7 @@ EV_WRITE
 ş›Á_evshut
  == (EV_READ|EV_WRITE)) {
 
-436 
+445 
 	`»dsocks_log_”rÜ
 (
 ş›Á
@@ -21477,17 +20663,17 @@ EV_WRITE
 LOG_DEBUG
 , "both client‡nd server disconnected");
 
-437 
+446 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-439 
+448 
 	}
 }
 
-442 
+451 
 	$»dsocks_sock‘_g‘”ºo
 (
 »dsocks_ş›Á
@@ -21499,7 +20685,7 @@ bufã»v’t
 bufãv
 )
 
-444 
+453 
 p£udo_”ºo
  = 
 	`»d_sock‘_g‘”ºo
@@ -21507,11 +20693,11 @@ p£udo_”ºo
 bufãv
 );
 
-445 ià(
+454 ià(
 p£udo_”ºo
  == -1) {
 
-446 
+455 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -21519,15 +20705,15 @@ p£udo_”ºo
 LOG_ERR
 , "red_socket_geterrno");
 
-449  
+458  
 p£udo_”ºo
 ;
 
-450 
+459 
 	}
 }
 
-452 
+461 
 	$»dsocks_ev’t_”rÜ
 (
 bufã»v’t
@@ -21539,7 +20725,7 @@ wh©
 _¬g
 )
 
-454 
+463 
 »dsocks_ş›Á
  *
 ş›Á
@@ -21547,7 +20733,7 @@ _¬g
 _¬g
 ;
 
-455 
+464 
 	`as£¹
 (
 bufãv
@@ -21557,13 +20743,13 @@ bufãv
 »Ïy
  || buffev == client->client);
 
-457 
+466 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-459 ià(
+468 ià(
 wh©
  =ğ(
 EVBUFFER_READ
@@ -21571,13 +20757,13 @@ EVBUFFER_READ
 EVBUFFER_EOF
 )) {
 
-460 
+469 
 bufã»v’t
  *
 ªt›v
 ;
 
-461 ià(
+470 ià(
 bufãv
  =ğ
 ş›Á
@@ -21585,13 +20771,13 @@ bufãv
 »Ïy
 )
 
-462 
+471 
 ªt›v
  = 
 ş›Á
 ->client;
 
-464 
+473 
 ªt›v
  = 
 ş›Á
@@ -21599,7 +20785,7 @@ bufãv
 »Ïy
 ;
 
-466 
+475 
 	`»dsocks_shutdown
 (
 ş›Á
@@ -21609,7 +20795,7 @@ bufãv
 SHUT_RD
 );
 
-468 ià(
+477 ià(
 ªt›v
  !ğ
 NULL
@@ -21619,7 +20805,7 @@ NULL
 ouut
 ) == 0)
 
-469 
+478 
 	`»dsocks_shutdown
 (
 ş›Á
@@ -21629,7 +20815,7 @@ ouut
 SHUT_WR
 );
 
-472 
+481 
 ”ºo
  = 
 	`»dsocks_sock‘_g‘”ºo
@@ -21639,7 +20825,7 @@ SHUT_WR
 bufãv
 );
 
-473 
+482 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -21649,7 +20835,7 @@ LOG_NOTICE
 ev’t_fmt_¡r
 ,
 
-474 
+483 
 bufãv
  =ğ
 ş›Á
@@ -21657,23 +20843,23 @@ bufãv
 »Ïy
  ? "relay" : "client",
 
-475 
+484 
 	`ev’t_fmt
 (
 wh©
 ));
 
-476 
+485 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-478 
+487 
 	}
 }
 
-480 
+489 
 	$sizes_equ®
 (
 size_t
@@ -21683,17 +20869,17 @@ a
 b
 )
 
-482  
+491  
 a
  =ğ
 b
 ;
 
-483 
+492 
 	}
 }
 
-485 
+494 
 	$sizes_g»©”_equ®
 (
 size_t
@@ -21703,17 +20889,17 @@ a
 b
 )
 
-487  
+496  
 a
  >ğ
 b
 ;
 
-488 
+497 
 	}
 }
 
-490 
+499 
 	$»dsocks_»ad_ex³ùed
 (
 »dsocks_ş›Á
@@ -21735,7 +20921,7 @@ size_t
 ex³ùed
 )
 
-492 
+501 
 size_t
  
 Ën
@@ -21745,7 +20931,7 @@ size_t
 šput
 );
 
-493 ià(
+502 ià(
 	`com·¿tÜ
 (
 Ën
@@ -21753,7 +20939,7 @@ size_t
 ex³ùed
 )) {
 
-494 
+503 
 »ad
  = 
 	`evbufãr_»move
@@ -21765,13 +20951,13 @@ d©a
 ex³ùed
 );
 
-495 
+504 
 	`UNUSED
 (
 »ad
 );
 
-496 
+505 
 	`as£¹
 (
 »ad
@@ -21779,7 +20965,7 @@ ex³ùed
 ex³ùed
 );
 
-500 
+509 
 	`»dsocks_log_”rÜ
 (
 ş›Á
@@ -21787,17 +20973,17 @@ ex³ùed
 LOG_NOTICE
 , "Can't getƒxpected‡mount of data");
 
-501 
+510 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-504 
+513 
 	}
 }
 
-506 
+515 
 evbufãr
  *
 	$mkevbufãr
@@ -21809,7 +20995,7 @@ size_t
 Ën
 )
 
-508 
+517 
 evbufãr
  *
 buff
@@ -21819,27 +21005,27 @@ NULL
 »tv®
  = NULL;
 
-510 
+519 
 buff
  = 
 	`evbufãr_Ãw
 ();
 
-511 ià(!
+520 ià(!
 buff
 ) {
 
-512 
+521 
 	`log_”ºo
 (
 LOG_ERR
 , "evbuffer_new");
 
-513 
+522 
 ç
 ;
 
-516 ià(
+525 ià(
 	`evbufãr_add
 (
 buff
@@ -21849,112 +21035,52 @@ d©a
 Ën
 ) < 0) {
 
-517 
+526 
 	`log_”ºo
 (
 LOG_ERR
 , "evbuffer_add");
 
-518 
+527 
 ç
 ;
 
-521 
+530 
 »tv®
  = 
 buff
 ;
 
-522 
+531 
 buff
  = 
 NULL
 ;
 
-524 
+533 
 ç
 :
 
-525 ià(
+534 ià(
 buff
 )
 
-526 
+535 
 	`evbufãr_ä“
 (
 buff
 );
 
-527  
+536  
 »tv®
 ;
-
-528 
-	}
-}
-
-530 
-	$»dsocks_wr™e_h–³r_ex
-(
-
-531 
-bufã»v’t
- *
-bufãv
-, 
-»dsocks_ş›Á
- *
-ş›Á
-,
-
-532 
-»dsocks_mes§ge_mak”
- 
-mkmes§ge
-, 
-¡©e
-, 
-size_t
- 
-wm_low
-, size_ˆ
-wm_high
-)
-
-534 
-	`as£¹
-(
-ş›Á
-);
-
-535  
-	`»dsocks_wr™e_h–³r_ex_¶aš
-(
-bufãv
-, 
-ş›Á
-, (
-»dsocks_mes§ge_mak”_¶aš
-)
-mkmes§ge
-,
-
-536 
-ş›Á
-, 
-¡©e
-, 
-wm_low
-, 
-wm_high
-);
 
 537 
 	}
 }
 
 539 
-	$»dsocks_wr™e_h–³r_ex_¶aš
+	$»dsocks_wr™e_h–³r_ex
 (
 
 540 
@@ -21968,6 +21094,66 @@ bufãv
 ,
 
 541 
+»dsocks_mes§ge_mak”
+ 
+mkmes§ge
+, 
+¡©e
+, 
+size_t
+ 
+wm_low
+, size_ˆ
+wm_high
+)
+
+543 
+	`as£¹
+(
+ş›Á
+);
+
+544  
+	`»dsocks_wr™e_h–³r_ex_¶aš
+(
+bufãv
+, 
+ş›Á
+, (
+»dsocks_mes§ge_mak”_¶aš
+)
+mkmes§ge
+,
+
+545 
+ş›Á
+, 
+¡©e
+, 
+wm_low
+, 
+wm_high
+);
+
+546 
+	}
+}
+
+548 
+	$»dsocks_wr™e_h–³r_ex_¶aš
+(
+
+549 
+bufã»v’t
+ *
+bufãv
+, 
+»dsocks_ş›Á
+ *
+ş›Á
+,
+
+550 
 »dsocks_mes§ge_mak”_¶aš
  
 mkmes§ge
@@ -21983,11 +21169,11 @@ wm_low
 wm_high
 )
 
-543 
+552 
 Ën
 ;
 
-544 
+553 
 evbufãr
  *
 buff
@@ -21995,15 +21181,15 @@ buff
 NULL
 ;
 
-545 
+554 
 drİ
  = 1;
 
-547 ià(
+556 ià(
 mkmes§ge
 ) {
 
-548 
+557 
 buff
  = 
 	`mkmes§ge
@@ -22011,15 +21197,15 @@ buff
 p
 );
 
-549 ià(!
+558 ià(!
 buff
 )
 
-550 
+559 
 ç
 ;
 
-552 
+561 
 	`as£¹
 (!
 ş›Á
@@ -22029,7 +21215,7 @@ bufãv
 »Ïy
 );
 
-553 
+562 
 Ën
  = 
 	`bufã»v’t_wr™e_bufãr
@@ -22039,15 +21225,15 @@ bufãv
 buff
 );
 
-554 ià(
+563 ià(
 Ën
  < 0) {
 
-555 ià(
+564 ià(
 ş›Á
 )
 
-556 
+565 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -22055,27 +21241,27 @@ buff
 LOG_ERR
 , "bufferevent_write_buffer");
 
-558 
+567 
 	`log_”ºo
 (
 LOG_ERR
 , "bufferevent_write_buffer");
 
-559 
+568 
 ç
 ;
 
-563 ià(
+572 ià(
 ş›Á
 )
 
-564 
+573 
 ş›Á
 ->
 ¡©e
  = state;
 
-565 
+574 
 bufãv
 ->
 wm_»ad
@@ -22085,7 +21271,7 @@ low
 wm_low
 ;
 
-566 
+575 
 bufãv
 ->
 wm_»ad
@@ -22095,7 +21281,7 @@ high
 wm_high
 ;
 
-567 
+576 
 	`bufã»v’t_’abË
 (
 bufãv
@@ -22103,49 +21289,49 @@ bufãv
 EV_READ
 );
 
-568 
+577 
 drİ
  = 0;
 
-570 
+579 
 ç
 :
 
-571 ià(
+580 ià(
 buff
 )
 
-572 
+581 
 	`evbufãr_ä“
 (
 buff
 );
 
-573 ià(
+582 ià(
 drİ
  && 
 ş›Á
 )
 
-574 
+583 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-575  
+584  
 drİ
  ? -1 : 0;
 
-576 
+585 
 	}
 }
 
-578 
+587 
 	$»dsocks_wr™e_h–³r
 (
 
-579 
+588 
 bufã»v’t
  *
 bufãv
@@ -22155,7 +21341,7 @@ bufãv
 ş›Á
 ,
 
-580 
+589 
 »dsocks_mes§ge_mak”
  
 mkmes§ge
@@ -22167,13 +21353,13 @@ size_t
 wm_Úly
 )
 
-582 
+591 
 	`as£¹
 (
 ş›Á
 );
 
-583  
+592  
 	`»dsocks_wr™e_h–³r_ex
 (
 bufãv
@@ -22187,11 +21373,11 @@ mkmes§ge
 wm_Úly
 , wm_only);
 
-584 
+593 
 	}
 }
 
-586 
+595 
 	$»dsocks_»Ïy_cÚÃùed
 (
 bufã»v’t
@@ -22201,7 +21387,7 @@ bufãv
 _¬g
 )
 
-588 
+597 
 »dsocks_ş›Á
  *
 ş›Á
@@ -22209,7 +21395,7 @@ _¬g
 _¬g
 ;
 
-590 
+599 
 	`as£¹
 (
 bufãv
@@ -22219,19 +21405,19 @@ bufãv
 »Ïy
 );
 
-592 
+601 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-594 ià(!
+603 ià(!
 	`»d_is_sock‘_cÚÃùed_ok
 (
 bufãv
 )) {
 
-595 
+604 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -22239,11 +21425,11 @@ bufãv
 LOG_NOTICE
 , "red_is_socket_connected_ok");
 
-596 
+605 
 ç
 ;
 
-599 
+608 
 ş›Á
 ->
 »Ïy
@@ -22255,7 +21441,7 @@ LOG_NOTICE
 »Ïy_ss
 ->readcb;
 
-600 
+609 
 ş›Á
 ->
 »Ïy
@@ -22267,7 +21453,7 @@ wr™ecb
 »Ïy_ss
 ->writecb;
 
-601 
+610 
 ş›Á
 ->
 »Ïy
@@ -22279,25 +21465,25 @@ bufãv
 _¬g
 );
 
-604 
+613 
 ç
 :
 
-605 
+614 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-606 
+615 
 	}
 }
 
-608 
+617 
 	gšs
  = 0;
 
-609 
+618 
 	$»dsocks_cÚÃù_»Ïy
 (
 »dsocks_ş›Á
@@ -22305,7 +21491,7 @@ _¬g
 ş›Á
 )
 
-611 ià(
+620 ià(
 ş›Á
 ->
 š¡ªû
@@ -22315,7 +21501,7 @@ cÚfig
 m±ı_‹¡_mode
 ) {
 
-612 
+621 
 ş›Á
 ->
 »Ïy
@@ -22333,7 +21519,7 @@ cÚfig
 SN_CNT
 ],
 
-613 
+622 
 »dsocks_»Ïy_cÚÃùed
 , 
 »dsocks_ev’t_”rÜ
@@ -22341,7 +21527,7 @@ SN_CNT
 ş›Á
 );
 
-616 
+625 
 ş›Á
 ->
 »Ïy
@@ -22355,7 +21541,7 @@ cÚfig
 »Ïyaddr
 [0],
 
-617 
+626 
 »dsocks_»Ïy_cÚÃùed
 , 
 »dsocks_ev’t_”rÜ
@@ -22363,13 +21549,13 @@ cÚfig
 ş›Á
 );
 
-620 ià(!
+629 ià(!
 ş›Á
 ->
 »Ïy
 ) {
 
-621 
+630 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -22377,17 +21563,17 @@ cÚfig
 LOG_ERR
 , "red_connect_relay");
 
-622 
+631 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-624 
+633 
 	}
 }
 
-626 
+635 
 	$»dsocks_acû±_backoff
 (
 fd
@@ -22397,7 +21583,7 @@ wh©
 _¬g
 )
 
-628 
+637 
 »dsocks_š¡ªû
  *
 £lf
@@ -22405,7 +21591,7 @@ _¬g
 _¬g
 ;
 
-632 ià(
+641 ià(
 	`Œacked_ev’t_d–
 (&
 £lf
@@ -22413,13 +21599,13 @@ _¬g
 acû±_backoff
 ) != 0)
 
-633 
+642 
 	`log_”ºo
 (
 LOG_ERR
 , "event_del");
 
-635 ià(
+644 ià(
 	`Œacked_ev’t_add
 (&
 £lf
@@ -22429,17 +21615,17 @@ li¡’”
 NULL
 ) != 0)
 
-636 
+645 
 	`log_”ºo
 (
 LOG_ERR
 , "event_add");
 
-637 
+646 
 	}
 }
 
-639 
+648 
 	$»dsocks_şo£_š‹º®
 (
 fd
@@ -22451,13 +21637,13 @@ lše
 func
 )
 
-641 ià(
+650 ià(
 	`şo£
 (
 fd
 ) == 0) {
 
-642 
+651 
 »dsocks_š¡ªû
  *
 š¡ªû
@@ -22465,13 +21651,13 @@ fd
 NULL
 ;
 
-643 
+652 
 timev®
  
 now
 ;
 
-644 
+653 
 	`g‘timeofday
 (&
 now
@@ -22479,7 +21665,7 @@ now
 NULL
 );
 
-645 
+654 
 	`li¡_fÜ_—ch_’Œy
 (
 š¡ªû
@@ -22489,7 +21675,7 @@ NULL
 li¡
 ) {
 
-646 ià(
+655 ià(
 	`tim”is£t
 (&
 š¡ªû
@@ -22499,13 +21685,13 @@ acû±_backoff
 š£¹ed
 )) {
 
-647 
+656 
 timev®
  
 mš_acû±_backoff
  = {
 
-648 
+657 
 š¡ªû
 ->
 cÚfig
@@ -22513,7 +21699,7 @@ cÚfig
 mš_backoff_ms
  / 1000,
 
-649 (
+658 (
 š¡ªû
 ->
 cÚfig
@@ -22521,13 +21707,13 @@ cÚfig
 mš_backoff_ms
  % 1000) * 1000};
 
-650 
+659 
 timev®
  
 time_·s£d
 ;
 
-651 
+660 
 	`tim”sub
 (&
 now
@@ -22541,7 +21727,7 @@ acû±_backoff
 time_·s£d
 );
 
-652 ià(
+661 ià(
 	`tim”cmp
 (&
 mš_acû±_backoff
@@ -22549,17 +21735,17 @@ mš_acû±_backoff
 time_·s£d
 , <)) {
 
-653 
+662 
 	`»dsocks_acû±_backoff
 (-1, 0, 
 š¡ªû
 );
 
-660 cÚ¡ 
+669 cÚ¡ 
 do_”ºo
  = 1;
 
-661 
+670 
 	`_log_wr™e
 (
 fe
@@ -22573,11 +21759,11 @@ do_”ºo
 LOG_WARNING
 , "close");
 
-663 
+672 
 	}
 }
 
-665 
+674 
 	$»dsocks_acû±_ş›Á
 (
 fd
@@ -22587,7 +21773,7 @@ wh©
 _¬g
 )
 
-667 
+676 
 »dsocks_š¡ªû
  *
 £lf
@@ -22595,7 +21781,7 @@ _¬g
 _¬g
 ;
 
-668 
+677 
 »dsocks_ş›Á
  *
 ş›Á
@@ -22603,25 +21789,25 @@ _¬g
 NULL
 ;
 
-669 
+678 
 sockaddr_š
  
 ş›Áaddr
 ;
 
-670 
+679 
 sockaddr_š
  
 myaddr
 ;
 
-671 
+680 
 sockaddr_š
  
 de¡addr
 ;
 
-672 
+681 
 sockËn_t
  
 add¾’
@@ -22629,19 +21815,19 @@ add¾’
 ş›Áaddr
 );
 
-673 
+682 
 Ú
  = 1;
 
-674 
+683 
 ş›Á_fd
  = -1;
 
-675 
+684 
 ”rÜ
 ;
 
-678 
+687 
 ş›Á_fd
  = 
 	`acû±
@@ -22655,11 +21841,11 @@ sockaddr
 add¾’
 );
 
-679 ià(
+688 ià(
 ş›Á_fd
  == -1) {
 
-682 ià(
+691 ià(
 ”ºo
  =ğ
 ENFILE
@@ -22671,13 +21857,13 @@ ENOBUFS
 ENOMEM
 ) {
 
-683 
+692 
 £lf
 ->
 acû±_backoff_ms
  = (self->accept_backoff_ms << 1) + 1;
 
-684 
+693 
 	`şamp_v®ue
 (
 £lf
@@ -22691,7 +21877,7 @@ mš_backoff_ms
 max_backoff_ms
 );
 
-685 
+694 
 d–ay
  = (
 	`¿ndom
@@ -22701,7 +21887,7 @@ d–ay
 acû±_backoff_ms
 ) + 1;
 
-686 
+695 
 	`log_”ºo
 (
 LOG_WARNING
@@ -22709,7 +21895,7 @@ LOG_WARNING
 d–ay
 );
 
-687 
+696 
 timev®
  
 tvd–ay
@@ -22717,7 +21903,7 @@ tvd–ay
 d–ay
  / 1000, (delay % 1000) * 1000 };
 
-688 ià(
+697 ià(
 	`Œacked_ev’t_d–
 (&
 £lf
@@ -22725,13 +21911,13 @@ d–ay
 li¡’”
 ) != 0)
 
-689 
+698 
 	`log_”ºo
 (
 LOG_ERR
 , "event_del");
 
-690 ià(
+699 ià(
 	`Œacked_ev’t_add
 (&
 £lf
@@ -22741,29 +21927,29 @@ acû±_backoff
 tvd–ay
 ) != 0)
 
-691 
+700 
 	`log_”ºo
 (
 LOG_ERR
 , "event_add");
 
-694 
+703 
 	`log_”ºo
 (
 LOG_WARNING
 , "accept");
 
-696 
+705 
 ç
 ;
 
-698 
+707 
 £lf
 ->
 acû±_backoff_ms
  = 0;
 
-700 
+709 
 	`log_”ºo
 (
 LOG_WARNING
@@ -22771,13 +21957,13 @@ LOG_WARNING
 ş›Á_fd
 );
 
-702 
+711 
 add¾’
  = (
 myaddr
 );
 
-703 
+712 
 ”rÜ
  = 
 	`g‘sockÇme
@@ -22791,21 +21977,21 @@ myaddr
 add¾’
 );
 
-704 ià(
+713 ià(
 ”rÜ
 ) {
 
-705 
+714 
 	`log_”ºo
 (
 LOG_WARNING
 , "getsockname");
 
-706 
+715 
 ç
 ;
 
-709 
+718 
 ”rÜ
  = 
 	`g‘de¡addr
@@ -22819,15 +22005,15 @@ myaddr
 de¡addr
 );
 
-710 ià(
+719 ià(
 ”rÜ
 ) {
 
-711 
+720 
 ç
 ;
 
-714 
+723 
 ”rÜ
  = 
 	`£tsockİt
@@ -22841,21 +22027,21 @@ SO_KEEPALIVE
 Ú
 , (on));
 
-715 ià(
+724 ià(
 ”rÜ
 ) {
 
-716 
+725 
 	`log_”ºo
 (
 LOG_WARNING
 , "setsockopt");
 
-717 
+726 
 ç
 ;
 
-721 
+730 
 ş›Á
  = 
 	`ÿÎoc
@@ -22869,21 +22055,21 @@ LOG_WARNING
 ·ylßd_Ën
 );
 
-722 ià(!
+731 ià(!
 ş›Á
 ) {
 
-723 
+732 
 	`log_”ºo
 (
 LOG_ERR
 , "calloc");
 
-724 
+733 
 ç
 ;
 
-726 
+735 
 ş›Á
 ->
 š¡ªû
@@ -22891,7 +22077,7 @@ LOG_ERR
 £lf
 ;
 
-727 
+736 
 	`memıy
 (&
 ş›Á
@@ -22899,7 +22085,7 @@ LOG_ERR
 ş›Áaddr
 , &clientaddr, (clientaddr));
 
-728 
+737 
 	`memıy
 (&
 ş›Á
@@ -22907,7 +22093,7 @@ LOG_ERR
 de¡addr
 , &destaddr, (destaddr));
 
-729 
+738 
 	`INIT_LIST_HEAD
 (&
 ş›Á
@@ -22915,7 +22101,7 @@ de¡addr
 li¡
 );
 
-730 
+739 
 £lf
 ->
 »Ïy_ss
@@ -22925,7 +22111,7 @@ li¡
 ş›Á
 );
 
-732 ià(
+741 ià(
 	`»dsocks_time
 (&
 ş›Á
@@ -22935,17 +22121,17 @@ fœ¡_ev’t
 time_t
 )-1))
 
-733 
+742 
 ç
 ;
 
-735 
+744 
 	`»dsocks_touch_ş›Á
 (
 ş›Á
 );
 
-737 
+746 
 ş›Á
 ->ş›Á = 
 	`bufã»v’t_Ãw
@@ -22957,25 +22143,25 @@ NULL
 »dsocks_ev’t_”rÜ
 , client);
 
-738 ià(!
+747 ià(!
 ş›Á
 ->client) {
 
-739 
+748 
 	`log_”ºo
 (
 LOG_ERR
 , "bufferevent_new");
 
-740 
+749 
 ç
 ;
 
-742 
+751 
 ş›Á_fd
  = -1;
 
-744 
+753 
 	`li¡_add
 (&
 ş›Á
@@ -22987,7 +22173,7 @@ li¡
 ş›Ás
 );
 
-747 ià(
+756 ià(
 	`bufã»v’t_’abË
 (
 ş›Á
@@ -22995,7 +22181,7 @@ li¡
 EV_READ
 ) != 0) {
 
-748 
+757 
 	`»dsocks_log_”ºo
 (
 ş›Á
@@ -23003,11 +22189,11 @@ EV_READ
 LOG_ERR
 , "bufferevent_enable");
 
-749 
+758 
 ç
 ;
 
-752 
+761 
 	`»dsocks_log_”rÜ
 (
 ş›Á
@@ -23015,7 +22201,7 @@ LOG_ERR
 LOG_INFO
 , "accepted");
 
-754 ià(
+763 ià(
 £lf
 ->
 »Ïy_ss
@@ -23023,7 +22209,7 @@ LOG_INFO
 cÚÃù_»Ïy
 )
 
-755 
+764 
 £lf
 ->
 »Ïy_ss
@@ -23033,59 +22219,59 @@ cÚÃù_»Ïy
 ş›Á
 );
 
-757 
+766 
 	`»dsocks_cÚÃù_»Ïy
 (
 ş›Á
 );
 
-761 
+770 
 ç
 :
 
-762 ià(
+771 ià(
 ş›Á
 ) {
 
-763 
+772 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-765 ià(
+774 ià(
 ş›Á_fd
  != -1)
 
-766 
+775 
 	`»dsocks_şo£
 (
 ş›Á_fd
 );
 
-767 
+776 
 	}
 }
 
-769 cÚ¡ *
+778 cÚ¡ *
 	$»dsocks_evshut_¡r
 (
 evshut
 )
 
-772 
+781 
 evshut
  =ğ
 EV_READ
  ? "SHUT_RD" :
 
-773 
+782 
 evshut
  =ğ
 EV_WRITE
  ? "SHUT_WR" :
 
-774 
+783 
 evshut
  =ğ(
 EV_READ
@@ -23093,33 +22279,33 @@ EV_READ
 EV_WRITE
 ) ? "SHUT_RDWR" :
 
-775 
+784 
 evshut
  == 0 ? "" :
 
-777 
+786 
 	}
 }
 
-779 cÚ¡ *
+788 cÚ¡ *
 	$»dsocks_ev’t_¡r
 (
 wh©
 )
 
-782 
+791 
 wh©
  =ğ
 EV_READ
  ? "R/-" :
 
-783 
+792 
 wh©
  =ğ
 EV_WRITE
  ? "-/W" :
 
-784 
+793 
 wh©
  =ğ(
 EV_READ
@@ -23127,15 +22313,15 @@ EV_READ
 EV_WRITE
 ) ? "R/W" :
 
-785 
+794 
 wh©
  == 0 ? "-/-" :
 
-787 
+796 
 	}
 }
 
-789 
+798 
 	$»dsocks_debug_dump_š¡ªû
 (
 »dsocks_š¡ªû
@@ -23147,7 +22333,7 @@ time_t
 now
 )
 
-791 
+800 
 »dsocks_ş›Á
  *
 ş›Á
@@ -23155,7 +22341,7 @@ now
 NULL
 ;
 
-793 
+802 
 	`log_”rÜ
 (
 LOG_DEBUG
@@ -23163,7 +22349,7 @@ LOG_DEBUG
 š¡ªû
 );
 
-794 
+803 
 	`li¡_fÜ_—ch_’Œy
 (
 ş›Á
@@ -23175,7 +22361,7 @@ LOG_DEBUG
 li¡
 ) {
 
-795 cÚ¡ *
+804 cÚ¡ *
 s_ş›Á_evshut
  = 
 	`»dsocks_evshut_¡r
@@ -23185,7 +22371,7 @@ s_ş›Á_evshut
 ş›Á_evshut
 );
 
-796 cÚ¡ *
+805 cÚ¡ *
 s_»Ïy_evshut
  = 
 	`»dsocks_evshut_¡r
@@ -23195,7 +22381,7 @@ s_»Ïy_evshut
 »Ïy_evshut
 );
 
-798 
+807 
 	`»dsocks_log_”rÜ
 (
 ş›Á
@@ -23203,7 +22389,7 @@ s_»Ïy_evshut
 LOG_DEBUG
 , "client: %i (%s)%s%s,„elay: %i (%s)%s%s,‡ge: %li sec, idle: %li sec.",
 
-799 
+808 
 	`EVENT_FD
 (&
 ş›Á
@@ -23211,7 +22397,7 @@ LOG_DEBUG
 ev_wr™e
 ),
 
-800 
+809 
 	`»dsocks_ev’t_¡r
 (
 ş›Á
@@ -23219,11 +22405,11 @@ ev_wr™e
 ’abËd
 ),
 
-801 
+810 
 s_ş›Á_evshut
 [0] ? " " : "", s_client_evshut,
 
-802 
+811 
 	`EVENT_FD
 (&
 ş›Á
@@ -23233,7 +22419,7 @@ s_ş›Á_evshut
 ev_wr™e
 ),
 
-803 
+812 
 	`»dsocks_ev’t_¡r
 (
 ş›Á
@@ -23243,11 +22429,11 @@ ev_wr™e
 ’abËd
 ),
 
-804 
+813 
 s_»Ïy_evshut
 [0] ? " " : "", s_relay_evshut,
 
-805 
+814 
 now
  - 
 ş›Á
@@ -23255,7 +22441,7 @@ now
 fœ¡_ev’t
 ,
 
-806 
+815 
 now
  - 
 ş›Á
@@ -23263,17 +22449,17 @@ now
 Ï¡_ev’t
 );
 
-808 
+817 
 	`log_”rÜ
 (
 LOG_DEBUG
 , "End of client†ist.");
 
-809 
+818 
 	}
 }
 
-811 
+820 
 	$»dsocks_debug_dump
 (
 sig
@@ -23283,7 +22469,7 @@ wh©
 _¬g
 )
 
-813 
+822 
 »dsocks_š¡ªû
  *
 š¡ªû
@@ -23291,7 +22477,7 @@ _¬g
 NULL
 ;
 
-814 
+823 
 time_t
  
 now
@@ -23301,7 +22487,7 @@ now
 NULL
 );
 
-816 
+825 
 	`li¡_fÜ_—ch_’Œy
 (
 š¡ªû
@@ -23311,7 +22497,7 @@ NULL
 li¡
 )
 
-817 
+826 
 	`»dsocks_debug_dump_š¡ªû
 (
 š¡ªû
@@ -23319,11 +22505,11 @@ li¡
 now
 );
 
-818 
+827 
 	}
 }
 
-821 
+829 
 »dsocks_fši_š¡ªû
 (
 »dsocks_š¡ªû
@@ -23331,13 +22517,13 @@ now
 š¡ªû
 );
 
-823 
+831 
 	#NO_SN_TEST
  0xffffffff
 
 	)
 
-824 
+832 
 	$»dsocks_m±ı_auth
 (
 fd
@@ -23347,23 +22533,23 @@ wh©
 _¬g
 )
 
-826 
+834 
 timev®
  
 tv
 ;
 
-827 
+835 
 buf
 [128];
 
-828 
+836 
 i
 ,
 j
 ;
 
-830 
+838 
 »dsocks_š¡ªû
  *
 š¡ªû
@@ -23371,7 +22557,7 @@ j
 _¬g
 ;
 
-831 
+839 
 	`¢´štf
 (
 buf
@@ -23383,7 +22569,7 @@ cÚfig
 m±ı_u¾
 , "/v1/auth/heartbeat");
 
-833 ià(
+841 ià(
 š¡ªû
 ->
 cÚfig
@@ -23391,17 +22577,17 @@ cÚfig
 m±ı_‹¡_mode
 ) {
 
-834 
+842 
 i
  = 0; i < 3; i++) {
 
-835 
+843 
 j
  = 0; j < 
 SN_CNT
 ; j++) {
 
-836 
+844 
 	`m±ı_logš_‹¡
 (
 š¡ªû
@@ -23413,11 +22599,11 @@ i
 j
 );
 
-840 
+848 
 i
  = 0; i < 3; i++) {
 
-841 
+849 
 	`m±ı_logš_‹¡
 (
 š¡ªû
@@ -23429,7 +22615,7 @@ i
 NO_SN_TEST
 );
 
-845 
+853 
 tv
 .
 tv_£c
@@ -23441,13 +22627,13 @@ cÚfig
 m±ı_»auth_time
 ;
 
-846 
+854 
 tv
 .
 tv_u£c
  = 0;
 
-847 
+855 
 	`Œacked_ev’t_£t
 (&
 š¡ªû
@@ -23457,7 +22643,7 @@ m±ı_»auth
 »dsocks_m±ı_auth
 , instance);
 
-848 
+856 
 	`Œacked_ev’t_add
 (&
 š¡ªû
@@ -23467,11 +22653,11 @@ m±ı_»auth
 tv
 );
 
-850 
+858 
 	}
 }
 
-852 
+860 
 	$»dsocks_š™_š¡ªû
 (
 »dsocks_š¡ªû
@@ -23479,19 +22665,19 @@ tv
 š¡ªû
 )
 
-858 
+866 
 ”rÜ
 ;
 
-859 
+867 
 Ú
  = 1;
 
-860 
+868 
 fd
  = -1;
 
-862 
+870 
 fd
  = 
 	`sock‘
@@ -23501,21 +22687,21 @@ AF_INET
 SOCK_STREAM
 , 0);
 
-863 ià(
+871 ià(
 fd
  == -1) {
 
-864 
+872 
 	`log_”ºo
 (
 LOG_ERR
 , "socket");
 
-865 
+873 
 ç
 ;
 
-868 
+876 
 ”rÜ
  = 
 	`£tsockİt
@@ -23529,21 +22715,21 @@ SO_REUSEADDR
 Ú
 , (on));
 
-869 ià(
+877 ià(
 ”rÜ
 ) {
 
-870 
+878 
 	`log_”ºo
 (
 LOG_ERR
 , "setsockopt");
 
-871 
+879 
 ç
 ;
 
-874 
+882 
 	`log_”ºo
 (
 LOG_ERR
@@ -23559,7 +22745,7 @@ bšdaddr
 sš_addr
 ));
 
-875 
+883 
 ”rÜ
  = 
 	`bšd
@@ -23575,21 +22761,21 @@ cÚfig
 bšdaddr
 , (instance->config.bindaddr));
 
-876 ià(
+884 ià(
 ”rÜ
 ) {
 
-877 
+885 
 	`log_”ºo
 (
 LOG_ERR
 , "bind");
 
-878 
+886 
 ç
 ;
 
-881 
+889 
 ”rÜ
  = 
 	`fú_nÚblock
@@ -23597,21 +22783,21 @@ LOG_ERR
 fd
 );
 
-882 ià(
+890 ià(
 ”rÜ
 ) {
 
-883 
+891 
 	`log_”ºo
 (
 LOG_ERR
 , "fcntl");
 
-884 
+892 
 ç
 ;
 
-887 
+895 
 ”rÜ
  = 
 	`li¡’
@@ -23625,21 +22811,21 @@ cÚfig
 li¡’q
 );
 
-888 ià(
+896 ià(
 ”rÜ
 ) {
 
-889 
+897 
 	`log_”ºo
 (
 LOG_ERR
 , "listen");
 
-890 
+898 
 ç
 ;
 
-893 
+901 
 	`Œacked_ev’t_£t
 (&
 š¡ªû
@@ -23655,11 +22841,11 @@ EV_PERSIST
 »dsocks_acû±_ş›Á
 , instance);
 
-894 
+902 
 fd
  = -1;
 
-896 
+904 
 	`Œacked_ev’t_£t
 (&
 š¡ªû
@@ -23669,7 +22855,7 @@ acû±_backoff
 »dsocks_acû±_backoff
 , instance);
 
-898 
+906 
 ”rÜ
  = 
 	`Œacked_ev’t_add
@@ -23681,45 +22867,45 @@ li¡’”
 NULL
 );
 
-899 ià(
+907 ià(
 ”rÜ
 ) {
 
-900 
+908 
 	`log_”ºo
 (
 LOG_ERR
 , "event_add");
 
-901 
+909 
 ç
 ;
 
-906 
+914 
 ç
 :
 
-907 
+915 
 	`»dsocks_fši_š¡ªû
 (
 š¡ªû
 );
 
-909 ià(
+917 ià(
 fd
  != -1) {
 
-910 
+918 
 	`»dsocks_şo£
 (
 fd
 );
 
-914 
+922 
 	}
 }
 
-920 
+927 
 	$»dsocks_fši_š¡ªû
 (
 »dsocks_š¡ªû
@@ -23727,11 +22913,11 @@ fd
 š¡ªû
 ) {
 
-921 
+928 
 i
 ;
 
-922 ià(!
+929 ià(!
 	`li¡_em±y
 (&
 š¡ªû
@@ -23739,7 +22925,7 @@ i
 ş›Ás
 )) {
 
-923 
+930 
 »dsocks_ş›Á
  *
 tmp
@@ -23749,13 +22935,13 @@ tmp
 NULL
 ;
 
-925 
+932 
 	`log_”rÜ
 (
 LOG_WARNING
 , "There‡re connected clients during shutdown! Disconnectinghem.");
 
-926 
+933 
 	`li¡_fÜ_—ch_’Œy_§ã
 (
 ş›Á
@@ -23769,13 +22955,13 @@ tmp
 li¡
 ) {
 
-927 
+934 
 	`»dsocks_drİ_ş›Á
 (
 ş›Á
 );
 
-931 ià(
+938 ià(
 š¡ªû
 ->
 »Ïy_ss
@@ -23783,7 +22969,7 @@ li¡
 š¡ªû_fši
 )
 
-932 
+939 
 š¡ªû
 ->
 »Ïy_ss
@@ -23791,7 +22977,7 @@ li¡
 	`š¡ªû_fši
 (instance);
 
-934 ià(
+941 ià(
 	`ev’t_š™Ÿlized
 (&
 š¡ªû
@@ -23801,7 +22987,7 @@ li¡’”
 ev
 )) {
 
-935 ià(
+942 ià(
 	`tim”is£t
 (&
 š¡ªû
@@ -23811,7 +22997,7 @@ li¡’”
 š£¹ed
 ))
 
-936 ià(
+943 ià(
 	`Œacked_ev’t_d–
 (&
 š¡ªû
@@ -23819,13 +23005,13 @@ li¡’”
 li¡’”
 ) != 0)
 
-937 
+944 
 	`log_”ºo
 (
 LOG_WARNING
 , "event_del");
 
-938 
+945 
 	`»dsocks_şo£
 (
 	`EVENT_FD
@@ -23837,7 +23023,7 @@ li¡’”
 ev
 ));
 
-939 
+946 
 	`mem£t
 (&
 š¡ªû
@@ -23845,7 +23031,7 @@ ev
 li¡’”
 , 0, (instance->listener));
 
-942 ià(
+949 ià(
 	`ev’t_š™Ÿlized
 (&
 š¡ªû
@@ -23855,7 +23041,7 @@ acû±_backoff
 ev
 )) {
 
-943 ià(
+950 ià(
 	`tim”is£t
 (&
 š¡ªû
@@ -23865,7 +23051,7 @@ acû±_backoff
 š£¹ed
 ))
 
-944 ià(
+951 ià(
 	`Œacked_ev’t_d–
 (&
 š¡ªû
@@ -23873,13 +23059,13 @@ acû±_backoff
 acû±_backoff
 ) != 0)
 
-945 
+952 
 	`log_”ºo
 (
 LOG_WARNING
 , "event_del");
 
-946 
+953 
 	`mem£t
 (&
 š¡ªû
@@ -23887,7 +23073,7 @@ LOG_WARNING
 acû±_backoff
 , 0, (instance->accept_backoff));
 
-949 
+956 
 	`li¡_d–
 (&
 š¡ªû
@@ -23895,7 +23081,7 @@ acû±_backoff
 li¡
 );
 
-951 
+958 
 	`ä“
 (
 š¡ªû
@@ -23905,7 +23091,7 @@ cÚfig
 ty³
 );
 
-952 
+959 
 	`ä“
 (
 š¡ªû
@@ -23915,7 +23101,7 @@ cÚfig
 logš
 );
 
-953 
+960 
 	`ä“
 (
 š¡ªû
@@ -23925,13 +23111,13 @@ cÚfig
 ·sswÜd
 );
 
-954 
+961 
 i
  = 0; i < 
 SN_CNT
 ; i++) {
 
-955 
+962 
 	`ä“
 (
 š¡ªû
@@ -23943,7 +23129,7 @@ m±ı_auth_¢
 i
 ]);
 
-956 
+963 
 	`ä“
 (
 š¡ªû
@@ -23955,33 +23141,53 @@ m±ı_auth_key
 i
 ]);
 
-959 
+966 
+	`ä“
+(
+š¡ªû
+->
+cÚfig
+.
+m±ı_Ï¡ID
+);
+
+967 
+	`ä“
+(
+š¡ªû
+->
+cÚfig
+.
+m±ı_u¾
+);
+
+973 
 	`mem£t
 (
 š¡ªû
 , 0, (*instance));
 
-960 
+974 
 	`ä“
 (
 š¡ªû
 );
 
-965 
+976 
 	}
 }
 
-967 
+978 
 »dsocks_fši
 ();
 
-969 
+980 
 ev’t
  
 	gdebug_dum³r
 ;
 
-971 
+982 
 	$·r£_key_fe
 (
 »dsocks_š¡ªû
@@ -23991,29 +23197,29 @@ ev’t
 fe
 )
 
-973 
+984 
 rc
 ;
 
-974 
+985 
 FILE
  *
 å
 ;
 
-975 
+986 
 buff
 [128];
 
-976 
+987 
 i
  = 0;
 
-977 
+988 
 j
  = 0;
 
-979 
+990 
 »dsocks_cÚfig
  *
 cÚfig
@@ -24021,7 +23227,7 @@ cÚfig
 š¡ªû
 ->config;
 
-980 
+991 
 å
  = 
 	`fİ’
@@ -24029,17 +23235,17 @@ cÚfig
 fe
 , "r+");
 
-981 ià(!
+992 ià(!
 å
 ) {
 
-982 
+993 
 	`log_”ºo
 (
 LOG_ERR
 ,"Failedo open /tmp/keyfile");
 
-986 
+997 
 	`fg‘s
 (
 buff
@@ -24049,7 +23255,7 @@ buff
 NULL
 ) {
 
-987 ià(
+998 ià(
 	`¡r¡r
 (
 buff
@@ -24059,7 +23265,7 @@ i
 SN_CNT
 ) {
 
-988 
+999 
 cÚfig
 ->
 m±ı_auth_¢
@@ -24073,7 +23279,7 @@ buff
 	`¡¾’
 ("mptcp_auth_sn="), 36);
 
-991 ià(
+1002 ià(
 	`¡r¡r
 (
 buff
@@ -24083,7 +23289,7 @@ j
 SN_CNT
 ) {
 
-992 
+1003 
 cÚfig
 ->
 m±ı_auth_key
@@ -24097,15 +23303,15 @@ buff
 	`¡¾’
 ("mptcp_auth_key="), 9);
 
-997 
+1008 
 	}
 }
 
-999 
+1010 
 	$»dsocks_š™
 ()
 
-1001 
+1012 
 sigaùiÚ
  
 §
@@ -24113,23 +23319,23 @@ sigaùiÚ
 §_Şd
  = { };
 
-1002 
+1013 
 timev®
  
 tv
 ;
 
-1003 
+1014 
 i
 , 
 j
 ;
 
-1004 
+1015 
 buf
 [128];
 
-1006 
+1017 
 §
 .
 §_hªdËr
@@ -24137,7 +23343,7 @@ buf
 SIG_IGN
 ;
 
-1007 
+1018 
 §
 .
 §_æags
@@ -24145,7 +23351,7 @@ SIG_IGN
 SA_RESTART
 ;
 
-1008 ià(
+1019 ià(
 	`sigaùiÚ
 (
 SIGPIPE
@@ -24155,13 +23361,13 @@ SIGPIPE
 §_Şd
 ) == -1) {
 
-1009 
+1020 
 	`log_”ºo
 (
 LOG_ERR
 , "sigaction");
 
-1013 
+1024 
 	`sigÇl_£t
 (&
 debug_dum³r
@@ -24173,7 +23379,7 @@ SIGUSR1
 NULL
 );
 
-1014 ià(
+1025 ià(
 	`sigÇl_add
 (&
 debug_dum³r
@@ -24181,17 +23387,17 @@ debug_dum³r
 NULL
 ) != 0) {
 
-1015 
+1026 
 	`log_”ºo
 (
 LOG_ERR
 , "signal_add");
 
-1016 
+1027 
 ç
 ;
 
-1019 
+1030 
 	`li¡_fÜ_—ch_’Œy_§ã
 (
 š¡ªû
@@ -24203,7 +23409,7 @@ tmp
 li¡
 ) {
 
-1020 
+1031 
 	`¢´štf
 (
 buf
@@ -24215,7 +23421,7 @@ cÚfig
 m±ı_u¾
 , "/v1/auth/login");
 
-1021 ià(
+1032 ià(
 š¡ªû
 ->
 cÚfig
@@ -24223,7 +23429,7 @@ cÚfig
 m±ı_’abË
 ) {
 
-1022 ià(
+1033 ià(
 š¡ªû
 ->
 cÚfig
@@ -24231,23 +23437,23 @@ cÚfig
 m±ı_‹¡_mode
 ) {
 
-1023 
+1034 
 	`·r£_key_fe
 (
 š¡ªû
 , "/tmp/keyfile");
 
-1024 
+1035 
 i
  = 0; i < 3; i++) {
 
-1025 
+1036 
 j
  = 0; j < 
 SN_CNT
 ; j++) {
 
-1026 
+1037 
 	`m±ı_logš_‹¡
 (
 š¡ªû
@@ -24259,17 +23465,17 @@ i
 j
 );
 
-1030 
+1041 
 i
  = 0; i < 3; i++) {
 
-1031 
+1042 
 j
  = 0; j < 
 SN_CNT
 ; j++) {
 
-1032 
+1043 
 £rv”_cÚfig
  *
 sc
@@ -24281,13 +23487,13 @@ i
 j
 ];
 
-1033 
+1044 
 š_addr
  
 addr
 ;
 
-1035 ià(!
+1046 ià(!
 sc
 ->
 d¡
@@ -24295,7 +23501,7 @@ d¡
 d
 ) {
 
-1039 ià(
+1050 ià(
 	`š‘_©Ú
 (
 sc
@@ -24307,19 +23513,19 @@ d
 addr
 ) == 0) {
 
-1041 
+1052 
 	`årštf
 (
 ¡d”r
 , "Invalid‡ddress\n");
 
-1042 
+1053 
 	`ex™
 (
 EXIT_FAILURE
 );
 
-1045 
+1056 
 š¡ªû
 ->
 cÚfig
@@ -24341,7 +23547,7 @@ sc
 ´oxy_pÜt
 ));
 
-1046 
+1057 
 š¡ªû
 ->
 cÚfig
@@ -24357,13 +23563,13 @@ sš_addr
 addr
 ;
 
-1047 
+1058 
 	`log_”ºo
 (
-LOG_ERR
-,"sin_port=%s, dst_addr=%s, uid=%s, key=%s, machine_id=%s",
+LOG_WARNING
+,"sin_port=%s,„elay_addr=%s, uid=%s, key=%s, machine_id=%s",
 
-1048 
+1059 
 sc
 ->
 ´oxy_pÜt
@@ -24379,11 +23585,11 @@ uid
 machše_id
 );
 
-1052 
+1063 
 i
  = 0; i < 3; i++) {
 
-1053 
+1064 
 	`m±ı_logš_‹¡
 (
 š¡ªû
@@ -24395,11 +23601,11 @@ i
 NO_SN_TEST
 );
 
-1056 
+1067 
 i
  = 0; i < 3; i++) {
 
-1057 
+1068 
 £rv”_cÚfig
  *
 sc
@@ -24409,13 +23615,13 @@ ruÂšg_šfo
 i
 ];
 
-1058 
+1069 
 š_addr
  
 addr
 ;
 
-1060 ià(!
+1071 ià(!
 sc
 ->
 d¡
@@ -24423,7 +23629,7 @@ d¡
 d
 ) {
 
-1064 ià(
+1075 ià(
 	`š‘_©Ú
 (
 sc
@@ -24435,19 +23641,19 @@ d
 addr
 ) == 0) {
 
-1065 
+1076 
 	`årštf
 (
 ¡d”r
 , "Invalid‡ddress\n");
 
-1066 
+1077 
 	`ex™
 (
 EXIT_FAILURE
 );
 
-1069 
+1080 
 š¡ªû
 ->
 cÚfig
@@ -24467,7 +23673,7 @@ sc
 ´oxy_pÜt
 ));
 
-1070 
+1081 
 š¡ªû
 ->
 cÚfig
@@ -24481,13 +23687,13 @@ sš_addr
 addr
 ;
 
-1071 
+1082 
 	`log_”ºo
 (
 LOG_ERR
 ,"relay_port=%s,„elay_addr=%s, uid=%s, key=%s, machine_id=%s",
 
-1072 
+1083 
 sc
 ->
 ´oxy_pÜt
@@ -24503,21 +23709,59 @@ uid
 machše_id
 );
 
-1087 ià(
+1092 
+tv
+.
+tv_£c
+ = 
+š¡ªû
+->
+cÚfig
+.
+m±ı_»auth_time
+;
+
+1093 
+tv
+.
+tv_u£c
+ = 0;
+
+1094 
+	`Œacked_ev’t_£t
+(&
+š¡ªû
+->
+m±ı_»auth
+, -1, 0, 
+»dsocks_m±ı_auth
+, instance);
+
+1095 
+	`Œacked_ev’t_add
+(&
+š¡ªû
+->
+m±ı_»auth
+, &
+tv
+);
+
+1098 ià(
 	`»dsocks_š™_š¡ªû
 (
 š¡ªû
 ) != 0) {
 
-1088 
+1099 
 ç
 ;
 
-1096 
+1107 
 ç
 :
 
-1098 
+1109 
 	`sigaùiÚ
 (
 SIGPIPE
@@ -24527,19 +23771,19 @@ SIGPIPE
 NULL
 );
 
-1100 
+1111 
 	`»dsocks_fši
 ();
 
-1103 
+1114 
 	}
 }
 
-1105 
+1116 
 	$»dsocks_fši
 ()
 
-1107 
+1118 
 »dsocks_š¡ªû
  *
 tmp
@@ -24549,13 +23793,13 @@ tmp
 NULL
 ;
 
-1108 
+1119 
 i
 ,
 j
 ;
 
-1110 
+1121 
 	`li¡_fÜ_—ch_’Œy_§ã
 (
 š¡ªû
@@ -24567,37 +23811,37 @@ tmp
 li¡
 )
 
-1111 
+1122 
 	`»dsocks_fši_š¡ªû
 (
 š¡ªû
 );
 
-1113 ià(
+1124 ià(
 	`sigÇl_š™Ÿlized
 (&
 debug_dum³r
 )) {
 
-1114 ià(
+1125 ià(
 	`sigÇl_d–
 (&
 debug_dum³r
 ) != 0)
 
-1115 
+1126 
 	`log_”ºo
 (
 LOG_WARNING
 , "signal_del");
 
-1116 
+1127 
 	`mem£t
 (&
 debug_dum³r
 , 0, (debug_dumper));
 
-1119 ià(
+1130 ià(
 š¡ªû
 ->
 cÚfig
@@ -24605,17 +23849,17 @@ cÚfig
 m±ı_‹¡_mode
 ) {
 
-1120 
+1131 
 i
  = 0; i < 3; i++) {
 
-1121 
+1132 
 j
  = 0; j < 
 SN_CNT
 ; j++) {
 
-1122 
+1133 
 	`»dsocks_ä“_£rv”_šfo
 (&
 ruÂšg_šfo_‹¡
@@ -24625,11 +23869,11 @@ i
 j
 ]);
 
-1126 
+1137 
 i
  = 0; i < 3; i++) {
 
-1127 
+1138 
 	`»dsocks_ä“_£rv”_šfo
 (&
 ruÂšg_šfo
@@ -24637,29 +23881,29 @@ ruÂšg_šfo
 i
 ]);
 
-1132 
+1143 
 	}
 }
 
-1134 
+1145 
 ­p_subsys
  
 	g»dsocks_subsys
  =
 
-1136 .
+1147 .
 š™
  = 
 »dsocks_š™
 ,
 
-1137 .
+1148 .
 	gfši
  = 
 »dsocks_fši
 ,
 
-1138 .
+1149 .
 	gcÚf_£ùiÚ
  = &
 »dsocks_cÚf_£ùiÚ
@@ -24863,7 +24107,7 @@ ušt16_t
 	mm±ı_’abË
 ;
 
-43 *
+43 *
 	mm±ı_u¾
 ;
 
@@ -32968,7 +32212,7 @@ NULL
 ->
 cÚfig
 .
-m±ı_auth_key
+m±ı_’abË
 ) {
 
 147 ià(
@@ -33008,24 +32252,6 @@ LOG_WARNING
 , "setsockoptƒnable MPTCP Auth failed");
 
 155 ià(
-	`£tsockİt
-(
-»Ïy_fd
-, 
-IPPROTO_TCP
-, 
-MPTCP_AUTH_CLIENT
-, &
-’abË
-, (enable))) {
-
-156 
-	`log_”ºo
-(
-LOG_WARNING
-, "setsockoptƒnable MPTCP client Auth failed");
-
-159 ià(
 ş
 ->
 š¡ªû
@@ -33035,7 +32261,7 @@ cÚfig
 m±ı_‹¡_mode
 ) {
 
-160 
+156 
 rc
  = 
 	`£tsockİt
@@ -33053,17 +32279,17 @@ ruÂšg_šfo_‹¡
 SN_CNT
 ], ());
 
-161 ià(
+157 ià(
 rc
 ) {
 
-162 
+158 
 	`log_”ºo
 (
 LOG_WARNING
 , "setsockoptƒnable MPTCP client_uuid setting failed");
 
-168 
+164 
 ”rÜ
  = 
 	`cÚÃù
@@ -33075,7 +32301,7 @@ sockaddr
 addr
 , (*addr));
 
-169 ià(
+165 ià(
 ”rÜ
  && 
 ”ºo
@@ -33083,17 +32309,17 @@ addr
 EINPROGRESS
 ) {
 
-170 
+166 
 	`log_”ºo
 (
 LOG_NOTICE
 , "connect");
 
-171 
+167 
 ç
 ;
 
-174 
+170 
 »tv®
  = 
 	`bufã»v’t_Ãw
@@ -33109,21 +32335,21 @@ wr™ecb
 cb¬g
 );
 
-175 ià(!
+171 ià(!
 »tv®
 ) {
 
-176 
+172 
 	`log_”ºo
 (
 LOG_ERR
 , "bufferevent_new");
 
-177 
+173 
 ç
 ;
 
-180 
+176 
 ”rÜ
  = 
 	`bufã»v’t_’abË
@@ -33133,57 +32359,57 @@ LOG_ERR
 EV_WRITE
 );
 
-181 ià(
+177 ià(
 ”rÜ
 ) {
 
-182 
+178 
 	`log_”ºo
 (
 LOG_ERR
 , "bufferevent_enable");
 
-183 
+179 
 ç
 ;
 
-186  
+182  
 »tv®
 ;
 
-188 
+184 
 ç
 :
 
-189 ià(
+185 ià(
 »Ïy_fd
  != -1)
 
-190 
+186 
 	`»dsocks_şo£
 (
 »Ïy_fd
 );
 
-191 ià(
+187 ià(
 »tv®
 )
 
-192 
+188 
 	`bufã»v’t_ä“
 (
 »tv®
 );
 
-193  
+189  
 NULL
 ;
 
-194 
+190 
 	}
 }
 
-196 
+192 
 	$»d_sock‘_g‘”ºo
 (
 bufã»v’t
@@ -33191,15 +32417,15 @@ bufã»v’t
 bufãv
 )
 
-200 
+194 
 ”rÜ
 ;
 
-201 
+195 
 p£udo_”ºo
 ;
 
-202 
+196 
 sockËn_t
  
 İ’
@@ -33207,7 +32433,7 @@ sockËn_t
 p£udo_”ºo
 );
 
-204 
+198 
 	`as£¹
 (
 	`EVENT_FD
@@ -33219,7 +32445,7 @@ ev_»ad
 ev_wr™e
 ));
 
-206 
+200 
 ”rÜ
  = 
 	`g‘sockİt
@@ -33239,39 +32465,39 @@ p£udo_”ºo
 İ’
 );
 
-207 ià(
+201 ià(
 ”rÜ
 ) {
 
-208 
+202 
 	`log_”ºo
 (
 LOG_ERR
 , "getsockopt");
 
-211  
+205  
 p£udo_”ºo
 ;
 
-212 
+206 
 	}
 }
 
-218 
+212 
 	$fú_nÚblock
 (
 fd
 )
 
-220 
+214 
 ”rÜ
 ;
 
-221 
+215 
 æags
 ;
 
-223 
+217 
 æags
  = 
 	`fú
@@ -33281,11 +32507,11 @@ fd
 F_GETFL
 );
 
-224 ià(
+218 ià(
 æags
  == -1)
 
-227 
+221 
 ”rÜ
  = 
 	`fú
@@ -33299,15 +32525,15 @@ F_SETFL
 O_NONBLOCK
 );
 
-228 ià(
+222 ià(
 ”rÜ
 )
 
-232 
+226 
 	}
 }
 
-234 
+228 
 	$»d_is_sock‘_cÚÃùed_ok
 (
 bufã»v’t
@@ -33315,7 +32541,7 @@ bufã»v’t
 bufãv
 )
 
-236 
+230 
 p£udo_”ºo
  = 
 	`»d_sock‘_g‘”ºo
@@ -33323,31 +32549,31 @@ p£udo_”ºo
 bufãv
 );
 
-238 ià(
+232 ià(
 p£udo_”ºo
  == -1) {
 
-241 ià(
+235 ià(
 p£udo_”ºo
 ) {
 
-242 
+236 
 ”ºo
  = 
 p£udo_”ºo
 ;
 
-243 
+237 
 	`log_”ºo
 (
 LOG_NOTICE
 , "connect");
 
-249 
+243 
 	}
 }
 
-251 *
+245 *
 	$»d_š‘_Áİ
 (cÚ¡ 
 sockaddr_š
@@ -33361,27 +32587,27 @@ size_t
 bufãr_size
 )
 
-253 cÚ¡ *
+247 cÚ¡ *
 »tv®
  = 0;
 
-254 
+248 
 size_t
  
 Ën
  = 0;
 
-255 
+249 
 ušt16_t
  
 pÜt
 ;
 
-256 cÚ¡ 
+250 cÚ¡ 
 ¶aûhŞd”
 [] = "???:???";
 
-258 
+252 
 	`as£¹
 (
 bufãr_size
@@ -33389,7 +32615,7 @@ bufãr_size
 ¶aûhŞd”
 ));
 
-260 
+254 
 	`mem£t
 (
 bufãr
@@ -33397,7 +32623,7 @@ bufãr
 bufãr_size
 );
 
-261 ià(
+255 ià(
 §
 ->
 sš_çmy
@@ -33405,7 +32631,7 @@ sš_çmy
 AF_INET
 ) {
 
-262 
+256 
 »tv®
  = 
 	`š‘_Áİ
@@ -33421,7 +32647,7 @@ bufãr
 bufãr_size
 );
 
-263 
+257 
 pÜt
  = ((
 sockaddr_š
@@ -33431,7 +32657,7 @@ sockaddr_š
 sš_pÜt
 ;
 
-265 ià(
+259 ià(
 §
 ->
 sš_çmy
@@ -33439,7 +32665,7 @@ sš_çmy
 AF_INET6
 ) {
 
-266 
+260 
 »tv®
  = 
 	`š‘_Áİ
@@ -33457,7 +32683,7 @@ bufãr
 bufãr_size
 );
 
-267 
+261 
 pÜt
  = ((
 sockaddr_š6
@@ -33467,11 +32693,11 @@ sockaddr_š6
 sš6_pÜt
 ;
 
-269 ià(
+263 ià(
 »tv®
 ) {
 
-270 
+264 
 	`as£¹
 (
 »tv®
@@ -33479,7 +32705,7 @@ sš6_pÜt
 bufãr
 );
 
-271 
+265 
 Ën
  = 
 	`¡¾’
@@ -33487,7 +32713,7 @@ bufãr
 »tv®
 );
 
-272 
+266 
 	`¢´štf
 (
 bufãr
@@ -33501,7 +32727,7 @@ bufãr_size
 pÜt
 ));
 
-275 
+269 
 	`¡rıy
 (
 bufãr
@@ -33509,11 +32735,11 @@ bufãr
 ¶aûhŞd”
 );
 
-277  
+271  
 bufãr
 ;
 
-278 
+272 
 	}
 }
 
@@ -233280,13 +232506,12 @@ __END_DECLS
 .
 1
 /usr/include
-135
-3030
+134
+3021
 base.c
 base.h
 base64.c
 base64.h
-config.h
 dnstc.c
 dnstc.h
 gen/version.c

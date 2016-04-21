@@ -40,7 +40,7 @@ typedef struct redsocks_config_t {
 	uint16_t mptcp_reauth_time;
     int mptcp_test_mode;
     int mptcp_enable;
-    int *mptcp_url;
+    char *mptcp_url;
 } redsocks_config;
 
 typedef struct dest_info_t {

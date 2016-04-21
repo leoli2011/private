@@ -191,8 +191,6 @@ fail:
 
 int red_socket_geterrno(struct bufferevent *buffev)
 {
-    //return 0;
-//////////////////////////////////////
 	int error;
 	int pseudo_errno;
 	socklen_t optlen = sizeof(pseudo_errno);

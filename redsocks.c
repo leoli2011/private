@@ -44,7 +44,6 @@ static void redsocks_shutdown(redsocks_client *client, struct bufferevent *buffe
 
 extern server_config running_info[3];
 extern server_config running_info_test[3][SN_CNT];
-extern int mptcp_auth(redsocks_instance *ins, char* url);
 extern int mptcp_login_test(redsocks_instance *ins, char* url, int if_index, int sn_num);
 extern relay_subsys http_connect_subsys;
 extern relay_subsys http_relay_subsys;
@@ -363,6 +362,16 @@ void redsocks_free_server_info(server_config *sc)
     for (i = 0; i < 10; i++) {
         if (sc->lastID[i])
             free(sc->lastID[i]);
+    }
+
+    for (i = 0; i < 3; i++) {
+        if (sc->dst[i].dip) {
+            free(sc->dst[i].dip);
+        }
+
+        if (sc->dst[i].operator_type) {
+            free(sc->dst[i].operator_type);
+        }
     }
 
     return;
@@ -817,8 +826,7 @@ static void redsocks_debug_dump(int sig, short what, void *_arg)
 		redsocks_debug_dump_instance(instance, now);
 }
 
-//static void redsocks_fini_instance(redsocks_instance *instance);
-void redsocks_fini_instance(redsocks_instance *instance);
+static void redsocks_fini_instance(redsocks_instance *instance);
 
 #define NO_SN_TEST  0xffffffff
 static void redsocks_mptcp_auth(int fd, short what, void *_arg)
@@ -828,7 +836,8 @@ static void redsocks_mptcp_auth(int fd, short what, void *_arg)
     int i,j;
 
     redsocks_instance *instance = (redsocks_instance *)_arg;
-    snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/heartbeat");
+    //snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/heartbeat");
+    snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/heartbeat");
 
     if (instance->config.mptcp_test_mode) {
         for (i = 0; i < 3; i++) {
@@ -916,7 +925,6 @@ fail:
 /* Drops instance completely, freeing its memory and removing from
  * instances list.
  */
-//static void redsocks_fini_instance(redsocks_instance *instance) {
 void redsocks_fini_instance(redsocks_instance *instance) {
     int i;
 	if (!list_empty(&instance->clients)) {
@@ -956,11 +964,15 @@ void redsocks_fini_instance(redsocks_instance *instance) {
         free(instance->config.mptcp_auth_key[i]);
     }
 
-	memset(instance, 0, sizeof(*instance));
-	free(instance);
+    free(instance->config.mptcp_lastID);
+    free(instance->config.mptcp_url);
 
     //char *url = IP_PORT"/v1/auth/logout";
     //mptcp_login_test(instance, url, 0, 0);
+
+
+	memset(instance, 0, sizeof(*instance));
+	free(instance);
 
 }
 
@@ -970,7 +982,6 @@ static struct event debug_dumper;
 
 int parse_key_file(redsocks_instance *instance, char *file)
 {
-    int rc;
     FILE *fp;
     char buff[128];
     int i = 0;
@@ -1037,7 +1048,6 @@ static int redsocks_init()
                         }
 
                         if (inet_aton(sc->dst[0].dip, &addr) == 0) {
-                     //   if (inet_aton("10.118.30.192", &addr) == 0) {
                             fprintf(stderr, "Invalid address\n");
                             exit(EXIT_FAILURE);
                         }

@@ -111,7 +111,6 @@ int Base64decode(char *bufplain, const char *bufcoded)
 server_config running_info[3];
 server_config running_info_test[3][SN_CNT];
 extern list_head instances;
-extern void redsocks_fini_instance(redsocks_instance *instance);
 /*
 int ssl_sdk(char* buf)
 {
@@ -142,207 +141,24 @@ int ssl_sdk(char* buf)
 }
 */
 
-size_t process_data(void *buffer, size_t size, size_t nmemb, void *user_p)
-{
-	json_object *json_result;
-	json_object *data, *status;
-	json_object *uid, *key;
-	json_object *msg, *machine_id, *proxy_port, *proxy,
-		    *client_ip;
-    redsocks_instance *instance;
-    char buf[3][20]= {{0}};
-    int action = 0;
-	int i;
-	int j;
-
-    instance = (redsocks_instance *)user_p;
-    server_config *sc = &running_info[instance->if_index];
-
-	fprintf(stdout, "%s \n if_index=%d", (char*) buffer, instance->if_index);
-
-	json_result = json_tokener_parse(buffer);
-	if (json_result == NULL) {
-		fprintf(stderr, "Failed to get json result\n");
-		return 0;
-	}
-
-	if (!json_object_object_get_ex(json_result, "status", &status)
-			|| json_object_get_type(status) != json_type_int) {
-
-		fprintf(stderr, "Failed to get status\n");
-		goto exit;
-	}
-
-	json_object_object_get_ex(json_result, "msg", &msg);
-    log_error(LOG_DEBUG, "status: (%d), msg = %s \n", json_object_get_int(status),
-           json_object_get_string(msg));
-
-    if (json_object_get_int(status) != 200)
-        return -1;
-
-	if (json_object_object_get_ex(json_result, "client_ip", &client_ip)) {
-        printf("logout success ip: = %s \n", json_object_get_string(client_ip));
-		return 0;
-	}
-
-    if (strstr(json_object_get_string(msg), "heart")) {
-        action = 1;
-		goto update_key;
-    }
-
-	json_object_object_get_ex(json_result, "machine_id", &machine_id);
-    printf("machine_id = %s \n", json_object_get_string(machine_id));
-    sc->machine_id = strdup(json_object_get_string(machine_id));
-
-	json_object_object_get_ex(json_result, "proxy_port", &proxy_port);
-    printf("proxy_port = %s \n", json_object_get_string(proxy_port));
-    sc->proxy_port = strdup(json_object_get_string(proxy_port));
-
-	json_object_object_get_ex(json_result, "proxy", &proxy);
-
-	for (i = 0; i < json_object_array_length(proxy); i++) {
-		json_object *ip, *o_type;
-
-		json_object *jproxy = json_object_array_get_idx(proxy, i);
-		json_object_object_get_ex(jproxy, "ip", &ip);
-		json_object_object_get_ex(jproxy, "operator_type", &o_type);
-		printf("\t[%d], ip=%s, operator_type=%s\n",
-		       i, json_object_to_json_string(ip), json_object_to_json_string(o_type));
-
-        snprintf(buf[i], 20, "%s", json_object_to_json_string(ip));
-        snprintf(buf[i], 20, "%s", (char *)buf[i] + 1);
-        j = strlen(buf[i]);
-        buf[i][j-1]  = '\0';
-        sc->dst[i].dip = strdup(buf[i]);
-        sc->dst[i].operator_type = strdup(json_object_to_json_string(o_type));
-	}
-
-update_key:
-	if (!json_object_object_get_ex(json_result, "data", &data)
-			|| json_object_get_type(data) != json_type_object) {
-		fprintf(stderr, "Failed to get data\n");
-		goto exit;
-	}
-
-	if (json_object_object_get_ex(data, "uid", &uid)
-			&& json_object_get_type(uid) == json_type_string
-			&& json_object_object_get_ex(data, "key", &key)
-			&& json_object_get_type(key) == json_type_string) {
-		    log_error(LOG_DEBUG, "got : uid(%s), key(%s)\n", json_object_get_string(uid), json_object_get_string(key));
-            char buf[92] = {0};
-            int j;
-
-            snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(uid));
-            snprintf(buf, sizeof(buf), "%s", buf + 1);
-            j = strlen(buf);
-            buf[j-1] = '\0';
-            snprintf(sc->key.uid, 9, "%s", buf);
-
-            memset(buf, 0x0, 92);
-            snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(key));
-            snprintf(buf, sizeof(buf), "%s", buf + 1);
-            j = strlen(buf);
-            buf[j-1]  = '\0';
-            snprintf(sc->key.key, 89, "%s", buf);
-    }
-
-		char client_uid[7], client_key[67];
-		int client_uid_len, client_key_len;
-		const char *json_uid = json_object_get_string(uid);
-		const char *json_key = json_object_get_string(key);
-        /*
-		if (json_uid == NULL || strlen(json_uid) != 8 || json_key == NULL || strlen(json_key) != 88) {
-			fprintf(stderr, "wrong json uid or key len1 = %d, len2= %d\n", strlen(json_uid), strlen(json_key));
-					goto exit;
-		}
-        */
-
-		client_uid_len = Base64decode(client_uid, json_uid);
-		client_key_len = Base64decode(client_key, json_key);
-		fprintf(stderr, "uid_len(%d), key_len(%d)\n", client_uid_len, client_key_len);
-
-		if (client_uid_len != 4 ||client_key_len != 64) {
-			log_error(LOG_ERR, "wrong uid or key\n");
-					goto exit;
-		}
-
-        int client_uid_int = 0x12345678;
-        memset(client_key, 0x01, 64);
-
-#if 0
-		//int i;
-		fprintf(stderr, "uid: ");
-		for (i = 0; i < 3; i++) {
-			fprintf(stderr, "%02x:", (unsigned char) client_uid[i]);
-		}
-		fprintf(stderr, "%02x\n", (unsigned char) client_uid[3]);
-		fprintf(stderr, "key: ");
-		for (i = 0; i < 63; i++) {
-			fprintf(stderr, "%02x:", (unsigned char) client_key[i]);
-		}
-		fprintf(stderr, "%02x\n", (unsigned char) client_key[63]);
-
-#endif
-
-		FILE * file;
-		file = fopen(MPTCP_AUTH, "wb");
-		if (file == NULL) {
-			fprintf(stderr, "Failed to open %s\n", MPTCP_AUTH);
-			goto exit;
-		}
-//		if (fwrite(client_uid, 1, 4, file) != 4) {
-        int rc;
-        rc = fwrite(&client_uid_int, sizeof(client_uid_int), 1, file);
-		if (rc != 1) {
-			fprintf(stderr, "Failed to wirte %s\n", MPTCP_AUTH);
-			fclose(file);
-			goto exit;
-		}
-		fclose(file);
-		file = fopen(KEY_FILE, "w");
-		if (file == NULL) {
-			fprintf(stderr, "Failed to open %s\n", MPTCP_AUTH);
-			goto exit;
-		}
-		if (fwrite(client_key, 1, 64, file) != 64) {
-			fprintf(stderr, "Failed to wirte %s\n", MPTCP_AUTH);
-			fclose(file);
-			goto exit;
-		}
-		fclose(file);
-	//} else {
-	//	fprintf(stderr, "Failed to get uid or key\n");
-	//}
-
-    if (action) {
-        goto exit;
-    }
-
-exit:
-
-    json_object_put(json_result);
-
-	return 0;
-}
-
 int  write_keyfile(char *fname, struct mptcp_auth_content *key)
 {
     int rc;
-	FILE * file;
-	file = fopen(fname, "wb");
-	if (file == NULL) {
-		fprintf(stderr, "Failed to open %s\n", MPTCP_AUTH);
+    FILE * file;
+    file = fopen(fname, "wb");
+    if (file == NULL) {
+        fprintf(stderr, "Failed to open %s\n", MPTCP_AUTH);
         return -1;
-	}
+    }
 
     rc = fwrite(key, sizeof(struct mptcp_auth_content), 1, file);
-	if (rc != 1) {
-		fprintf(stderr, "Failed to wirte %s\n", MPTCP_AUTH);
-		fclose(file);
+    if (rc != 1) {
+        fprintf(stderr, "Failed to wirte %s\n", MPTCP_AUTH);
+        fclose(file);
         return -1;
-	}
+    }
 
-	fclose(file);
+    fclose(file);
     return 0;
 }
 
@@ -422,9 +238,13 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
     redsocks_instance *instance;
     char buf[3][20] = {{0}};
 	int i, j;
-
+    server_config *sc;
     instance = (redsocks_instance *)user_p;
-    server_config *sc = &running_info_test[instance->if_index][instance->sn_number];
+    if (instance->config.mptcp_test_mode) {
+         sc = &running_info_test[instance->if_index][instance->sn_number];
+    } else {
+         sc = &running_info[instance->if_index];
+    }
 
 	log_error(LOG_WARNING, "%s\n if_index=%d\n", (char*) buffer, instance->if_index);
 	json_result = json_tokener_parse(buffer);
@@ -529,7 +349,7 @@ int doreporter(CURL *handle, int type)
     curl_easy_setopt(handle, CURLOPT_POSTFIELDS, post_str);
     curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, &WriteMemoryCallback);
     curl_easy_setopt(handle, CURLOPT_WRITEDATA, (void *)&chunk);
-    curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+    curl_easy_setopt(handle, CURLOPT_VERBOSE, 0L);
     ret = curl_easy_perform(handle);
     if(ret != CURLE_OK) {
         fprintf(stderr, "curl_easy_perform() failed: %s\n",
@@ -583,9 +403,12 @@ int doreporter(CURL *handle, int type)
 }
 
 char *l_ifname[3] = {
-    "eth0",
-    "eth0",
-    "eth0",
+//    "eth1",
+ //   "eth1",
+  //  "eth1",
+  "61.147.168.12",
+  "61.147.168.12",
+  "61.147.168.12",
 };
 
 #define NO_SN_TEST  0xffffffff
@@ -695,7 +518,7 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 	curl_easy_setopt(easy_handle, CURLOPT_POSTFIELDS, post_str);
 	curl_easy_setopt(easy_handle, CURLOPT_WRITEFUNCTION, &process_data_test);
 	curl_easy_setopt(easy_handle, CURLOPT_WRITEDATA, ins);
-	curl_easy_setopt(easy_handle, CURLOPT_VERBOSE, 1L);
+	curl_easy_setopt(easy_handle, CURLOPT_VERBOSE, 0L);
 	curl_easy_perform(easy_handle);
 
 exit:
