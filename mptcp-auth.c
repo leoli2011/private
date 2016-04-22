@@ -429,12 +429,12 @@ int doreporter(CURL *handle, int type)
 }
 
 char *l_ifname[3] = {
-    "eth0",
-    "eth0",
-    "eth0",
-//  "61.147.168.12",
-//  "61.147.168.12",
-//  "61.147.168.12",
+//    "eth0",
+//    "eth0",
+//    "eth0",
+  "61.147.168.12",
+  "61.147.168.12",
+  "61.147.168.12",
 };
 
 #define NO_SN_TEST  0xffffffff
