@@ -12,7 +12,7 @@
 
 #define UID_FILE "/proc/net/mptcp_net/client_uuid"
 #define KEY_FILE "/proc/net/mptcp_net/client_key"
-#define MPTCP_AUTH "/proc/net/mptcp_net/mptcp_auth"
+#define MPTCP_AUTH_FILE "/proc/net/mptcp_net/mptcp_auth"
 
 struct mptcp_auth_content {
     int cmd;
@@ -147,13 +147,13 @@ int  write_keyfile(char *fname, struct mptcp_auth_content *key)
     FILE * file;
     file = fopen(fname, "wb");
     if (file == NULL) {
-        fprintf(stderr, "Failed to open %s\n", MPTCP_AUTH);
+        fprintf(stderr, "Failed to open %s\n", fname);
         return -1;
     }
 
     rc = fwrite(key, sizeof(struct mptcp_auth_content), 1, file);
     if (rc != 1) {
-        fprintf(stderr, "Failed to wirte %s\n", MPTCP_AUTH);
+        fprintf(stderr, "Failed to wirte %s\n", fname);
         fclose(file);
         return -1;
     }
@@ -206,11 +206,11 @@ int update_key(json_object *json_result, server_config *sc)
 				goto exit;
 	}
 
-    key_test.cmd = 0x01;
+    key_test.cmd = MPTP_AUTH_CMD_ADD;
     memcpy(&key_test.uuid, client_uid, client_uid_len);
     memcpy(&key_test.key, client_key, client_key_len);
 
-    write_keyfile(MPTCP_AUTH, &key_test);
+    write_keyfile(MPTCP_AUTH_FILE, &key_test);
 
 #if 0
 		//int i;
@@ -231,20 +231,45 @@ exit:
         return 0;
 }
 
+int delete_key(redsocks_instance *instance, int if_index, int sn_number)
+{
+	int client_uid_len, client_key_len;
+	char client_uid[7], client_key[67];
+	server_config *sc = NULL;
+	struct mptcp_auth_content key_test;
+
+        if (instance->config.mptcp_test_mode) {
+             sc = &running_info_test[instance->if_index][instance->sn_number];
+        } else {
+             sc = &running_info[instance->if_index];
+        }
+
+	client_uid_len = Base64decode(client_uid, sc->key.uid);
+	client_key_len = Base64decode(client_key, sc->key.key);
+
+    key_test.cmd = MPTP_AUTH_CMD_DEL;
+    memcpy(&key_test.uuid, client_uid, client_uid_len);
+    memcpy(&key_test.key, client_key, client_key_len);
+
+    write_keyfile(MPTCP_AUTH_FILE, &key_test);
+
+    return 0;
+}
+
 size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 {
 	json_object *json_result, *status;
 	json_object *msg, *machine_id, *proxy_port, *proxy, *client_ip;
-    redsocks_instance *instance;
-    char buf[3][20] = {{0}};
-	int i, j;
-    server_config *sc;
-    instance = (redsocks_instance *)user_p;
-    if (instance->config.mptcp_test_mode) {
-         sc = &running_info_test[instance->if_index][instance->sn_number];
-    } else {
-         sc = &running_info[instance->if_index];
-    }
+        redsocks_instance *instance;
+        char buf[3][20] = {{0}};
+            int i, j;
+        server_config *sc;
+        instance = (redsocks_instance *)user_p;
+        if (instance->config.mptcp_test_mode) {
+             sc = &running_info_test[instance->if_index][instance->sn_number];
+        } else {
+             sc = &running_info[instance->if_index];
+        }
 
 	log_error(LOG_WARNING, "%s\n if_index=%d\n", (char*) buffer, instance->if_index);
 	json_result = json_tokener_parse(buffer);
@@ -260,31 +285,32 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 	}
 
 	json_object_object_get_ex(json_result, "msg", &msg);
-    log_error(LOG_DEBUG, "status: (%d), msg = %s \n",
-            json_object_get_int(status), json_object_get_string(msg));
+    	log_error(LOG_DEBUG, "status: (%d), msg = %s \n",
+            		json_object_get_int(status), json_object_get_string(msg));
 
-    if (json_object_get_int(status) != 200)
-        return -1;
+	if (json_object_get_int(status) != 200)
+        	return -1;
 
 	if (json_object_object_get_ex(json_result, "client_ip", &client_ip)) {
-        fprintf(stdout, "logout success ip: = %s \n", json_object_get_string(client_ip));
+	        fprintf(stdout, "logout success ip: = %s \n", json_object_get_string(client_ip));
 		return 0;
 	}
 
-    if (strstr(json_object_get_string(msg), "heart")) {
-        update_key(json_result, sc);
-		goto exit;
-    }
+        if (strstr(json_object_get_string(msg), "heart")) {
+            update_key(json_result, sc);
+            	goto exit;
+        }
 
 	json_object_object_get_ex(json_result, "machine_id", &machine_id);
-    sc->machine_id = strdup(json_object_get_string(machine_id));
+    	sc->machine_id = strdup(json_object_get_string(machine_id));
 
 	json_object_object_get_ex(json_result, "proxy_port", &proxy_port);
-    sc->proxy_port = strdup(json_object_get_string(proxy_port));
+    	sc->proxy_port = strdup(json_object_get_string(proxy_port));
 
 	json_object_object_get_ex(json_result, "proxy", &proxy);
 
 	for (i = 0; i < json_object_array_length(proxy); i++) {
+
 		json_object *ip, *o_type;
 
 		json_object *jproxy = json_object_array_get_idx(proxy, i);
@@ -293,12 +319,12 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 		//log_error(LOG_WARNING, "\t[%d], ip=%s, operator_type=%s\n",
 		 //      i, json_object_to_json_string(ip), json_object_to_json_string(o_type));
 
-        snprintf(buf[i], sizeof(buf[i]), "%s", json_object_to_json_string(ip));
-        snprintf(buf[i], sizeof(buf[i]), "%s", (char *)buf[i] + 1);
-        j = strlen(buf[i]);
-        buf[i][j-1] = '\0';
-        sc->dst[i].dip = strdup(buf[i]);
-        sc->dst[i].operator_type = strdup(json_object_to_json_string(o_type));
+                snprintf(buf[i], sizeof(buf[i]), "%s", json_object_to_json_string(ip));
+                snprintf(buf[i], sizeof(buf[i]), "%s", (char *)buf[i] + 1);
+                j = strlen(buf[i]);
+                buf[i][j-1] = '\0';
+                sc->dst[i].dip = strdup(buf[i]);
+                sc->dst[i].operator_type = strdup(json_object_to_json_string(o_type));
 	}
 
     update_key(json_result, sc);
@@ -403,12 +429,12 @@ int doreporter(CURL *handle, int type)
 }
 
 char *l_ifname[3] = {
-//    "eth1",
- //   "eth1",
-  //  "eth1",
-  "61.147.168.12",
-  "61.147.168.12",
-  "61.147.168.12",
+    "eth0",
+    "eth0",
+    "eth0",
+//  "61.147.168.12",
+//  "61.147.168.12",
+//  "61.147.168.12",
 };
 
 #define NO_SN_TEST  0xffffffff
@@ -455,7 +481,7 @@ char const* build_json(redsocks_instance *instance, int type, int index, int sn_
    	    	json_object_object_add(jlogout, "uid", json_object_new_string(sc->key.uid));
    	    	post_str = json_object_to_json_string(jlogout);
 		    log_error(LOG_DEBUG, "logout post_str=%s.", post_str);
-    }
+    	}
 	break;
 
 	case AUTH_HEARTBEAT: {

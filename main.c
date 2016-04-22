@@ -168,7 +168,7 @@ shutdown:
 		if ((*ss)->fini)
 			(*ss)->fini();
 
-	//event_base_free(NULL);
+	event_base_free(NULL);
 
 	return !error ? EXIT_SUCCESS : EXIT_FAILURE;
 }

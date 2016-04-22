@@ -148,7 +148,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 27 26 28 5 (set (reg:QI 71 [ D.3956 ])
         (mem/u/j:QI (plus:DI (reg:DI 93)
-                (symbol_ref:DI ("map2") [flags 0x2]  <var_decl 0x2ad0de1a22f8 map2>)) [0 map2 S1 A8])) base64.c:54 -1
+                (symbol_ref:DI ("map2") [flags 0x2]  <var_decl 0x2b3c9c0bf2f8 map2>)) [0 map2 S1 A8])) base64.c:54 -1
      (nil))
 (insn 28 27 29 5 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg:QI 71 [ D.3956 ])
@@ -193,7 +193,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 40 39 41 7 (set (reg:QI 73 [ D.3956 ])
         (mem/u/j:QI (plus:DI (reg:DI 95)
-                (symbol_ref:DI ("map2") [flags 0x2]  <var_decl 0x2ad0de1a22f8 map2>)) [0 map2 S1 A8])) base64.c:56 -1
+                (symbol_ref:DI ("map2") [flags 0x2]  <var_decl 0x2b3c9c0bf2f8 map2>)) [0 map2 S1 A8])) base64.c:56 -1
      (nil))
 (insn 41 40 42 7 (set (reg:SI 74 [ D.3952 ])
         (zero_extend:SI (reg:QI 73 [ D.3956 ]))) base64.c:56 -1
@@ -784,7 +784,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 62 61 63 8 (set (reg:QI 73 [ D.3962 ])
         (mem/u/j:QI (plus:DI (reg:DI 93)
-                (symbol_ref:DI ("b64.3870") [flags 0x2]  <var_decl 0x2ad0de1a2688 b64>)) [0 b64 S1 A8])) base64.c:92 -1
+                (symbol_ref:DI ("b64.3870") [flags 0x2]  <var_decl 0x2b3c9c0bf688 b64>)) [0 b64 S1 A8])) base64.c:92 -1
      (nil))
 (insn 63 62 64 8 (set (mem:QI (reg/f:DI 69 [ dst.7 ]) [0 *dst.7_32+0 S1 A8])
         (reg:QI 73 [ D.3962 ])) base64.c:92 -1

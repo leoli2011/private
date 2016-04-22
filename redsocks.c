@@ -836,7 +836,6 @@ static void redsocks_mptcp_auth(int fd, short what, void *_arg)
     int i,j;
 
     redsocks_instance *instance = (redsocks_instance *)_arg;
-    //snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/heartbeat");
     snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/heartbeat");
 
     if (instance->config.mptcp_test_mode) {
@@ -926,7 +925,11 @@ fail:
  * instances list.
  */
 void redsocks_fini_instance(redsocks_instance *instance) {
-    int i;
+    int i,j;
+    char buf[128];
+
+    snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/logout");
+
 	if (!list_empty(&instance->clients)) {
 		redsocks_client *tmp, *client = NULL;
 
@@ -967,9 +970,19 @@ void redsocks_fini_instance(redsocks_instance *instance) {
     free(instance->config.mptcp_lastID);
     free(instance->config.mptcp_url);
 
-    //char *url = IP_PORT"/v1/auth/logout";
-    //mptcp_login_test(instance, url, 0, 0);
-
+    if (instance->config.mptcp_test_mode) {
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < SN_CNT; j++) {
+                mptcp_login_test(instance, buf, i, j);
+                delete_key(instance, i, j);
+            }
+        }
+    } else {
+        for (i = 0; i < 3; i++) {
+            mptcp_login_test(instance, buf, i, NO_SN_TEST);
+            delete_key(instance, i, 0);
+        }
+    }
 
 	memset(instance, 0, sizeof(*instance));
 	free(instance);

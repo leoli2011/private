@@ -25,6 +25,13 @@ typedef struct relay_subsys_t {
 } relay_subsys;
 
 #define SN_CNT    3
+
+enum{
+    MPTP_AUTH_CMD_NULL = 0x00,
+    MPTP_AUTH_CMD_ADD = 0x01,
+    MPTP_AUTH_CMD_DEL = 0x02,
+};
+
 typedef struct redsocks_config_t {
 	struct sockaddr_in bindaddr;
 	struct sockaddr_in relayaddr[3 + 3 * SN_CNT];
