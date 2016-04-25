@@ -522,8 +522,8 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 
 	curl_easy_setopt(easy_handle, CURLOPT_URL, url);
 	curl_easy_setopt(easy_handle, CURLOPT_INTERFACE, l_ifname[if_index]);
-    ins->if_index = if_index;
-    ins->sn_number = sn_number;
+	ins->if_index = if_index;
+    	ins->sn_number = sn_number;
 
 	if (strstr(url, "login"))
 	    post_str = build_json(ins, AUTH_LOGIN, if_index, sn_number);
@@ -536,10 +536,10 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 	else
 		log_error(LOG_ERR, "Unsupport operation!\n");
 
-    if (!post_str) {
-		log_error(LOG_ERR, "Failed to build json string.");
-        goto exit;
-    }
+        if (!post_str) {
+            	log_error(LOG_ERR, "Failed to build json string.");
+            goto exit;
+        }
 
 	curl_easy_setopt(easy_handle, CURLOPT_POSTFIELDS, post_str);
 	curl_easy_setopt(easy_handle, CURLOPT_WRITEFUNCTION, &process_data_test);
