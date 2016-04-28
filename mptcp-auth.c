@@ -212,8 +212,8 @@ int update_key(json_object *json_result, server_config *sc)
 
     write_keyfile(MPTCP_AUTH_FILE, &key_test);
 
-#if 0
-		//int i;
+#if 1
+		int i;
 		fprintf(stderr, "uid: ");
 		for (i = 0; i < 3; i++) {
 			fprintf(stderr, "%02x:", (unsigned char) client_uid[i]);
@@ -343,21 +343,20 @@ struct MemoryStruct {
 static size_t
 WriteMemoryCallback(void *contents, size_t size, size_t nmemb, void *userp)
 {
-  size_t realsize = size * nmemb;
-  //fprintf(stdout, "########## size = %d, %s\n", (int)realsize, (char*)contents);
-  struct MemoryStruct *mem = (struct MemoryStruct *)userp;
+	size_t realsize = size * nmemb;
+ 	   //fprintf(stdout, "########## size = %d, %s\n", (int)realsize, (char*)contents);
+ 	struct MemoryStruct *mem = (struct MemoryStruct *)userp;
 
-  mem->memory = realloc(mem->memory, mem->size + realsize + 1);
-  if(mem->memory == NULL) {
-    printf("not enough memory (realloc returned NULL)\n");
-    return 0;
-  }
+ 	mem->memory = realloc(mem->memory, mem->size + realsize + 1);
+ 	if(mem->memory == NULL) {
+ 	     printf("not enough memory (realloc returned NULL)\n");
+ 	     return 0;
+ 	}
+ 	memcpy(&(mem->memory[mem->size]), contents, realsize);
+ 	mem->size += realsize;
+ 	mem->memory[mem->size] = 0;
 
-  memcpy(&(mem->memory[mem->size]), contents, realsize);
-  mem->size += realsize;
-  mem->memory[mem->size] = 0;
-
-  return realsize;
+    return realsize;
 }
 
 struct MemoryStruct chunk;
@@ -381,60 +380,61 @@ int doreporter(CURL *handle, int type)
         fprintf(stderr, "curl_easy_perform() failed: %s\n",
                 curl_easy_strerror(ret));
     } else {
-        log_errno(LOG_WARNING, "########%lu bytes retrieved\n", (long)chunk.size);
-		FILE * file;
 
-		file = fopen("/tmp/iplist", "w");
-		if (file == NULL) {
-			log_error(LOG_ERR, "Failed to open /tmp/iplist");
-            return -1;
-		}
+	log_errno(LOG_WARNING, "########%lu bytes retrieved\n", (long)chunk.size);
+	FILE * file;
 
-		if (fwrite(chunk.memory, 1, chunk.size, file) != chunk.size) {
-			log_error(LOG_ERR, "Failed to wirte /tmp/iplist");
-			fclose(file);
-            return -1;
-		}
+	file = fopen("/tmp/iplist", "w");
+	if (file == NULL) {
+		log_error(LOG_ERR, "Failed to open /tmp/iplist");
+		return -1;
+	}
+
+	if (fwrite(chunk.memory, 1, chunk.size, file) != chunk.size) {
+		log_error(LOG_ERR, "Failed to wirte /tmp/iplist");
 		fclose(file);
+            	return -1;
+	}
+
+	fclose(file);
 
         json_object *json_result = json_tokener_parse(chunk.memory);
         json_object *status, *ver, *msg;
-	    if (json_result == NULL) {
-	    	fprintf(stderr, "Failed to get json result\n");
-	    	return 0;
-	    }
+	if (json_result == NULL) {
+		fprintf(stderr, "Failed to get json result\n");
+		return 0;
+	}
 
-	    if (!json_object_object_get_ex(json_result, "status", &status)
-			|| json_object_get_type(status) != json_type_int) {
+	if (!json_object_object_get_ex(json_result, "status", &status)
+		|| json_object_get_type(status) != json_type_int) {
 		    fprintf(stderr, "Failed to get status\n");
-            return 0;
-	    }
+            		return 0;
+	}
 
-	    json_object_object_get_ex(json_result, "msg", &msg);
-	    json_object_object_get_ex(json_result, "ver", &ver);
+	json_object_object_get_ex(json_result, "msg", &msg);
+	json_object_object_get_ex(json_result, "ver", &ver);
         printf("status: (%d),ip_version=%d, msg = %s \n",
                 json_object_get_int(status),
                 json_object_get_int(ver),
                 json_object_get_string(msg));
 
         if (json_object_get_int(status) != 200)
-            return -1;
+		return -1;
 
         g_ip_ver = json_object_get_int(ver);
-
-        }
+    }
 
 
     return ret;
 }
 
 char *l_ifname[3] = {
-//    "eth0",
-//    "eth0",
-//    "eth0",
-  "61.147.168.12",
-  "61.147.168.12",
-  "61.147.168.12",
+    "eth0",
+    "eth0",
+    "eth0",
+//  "61.147.168.12",
+ // "61.147.168.12",
+  //"61.147.168.12",
 };
 
 #define NO_SN_TEST  0xffffffff
@@ -531,8 +531,10 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 		post_str = build_json(ins, AUTH_LOGOUT, if_index, sn_number);
 	else if (strstr(url, "heart"))
 		post_str = build_json(ins, AUTH_HEARTBEAT, if_index, sn_number);
-	else if (strstr(url, "iplist"))
+	else if (strstr(url, "iplist")) {
 		doreporter(easy_handle, 0);
+		goto exit;
+	}
 	else
 		log_error(LOG_ERR, "Unsupport operation!\n");
 

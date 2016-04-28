@@ -24,7 +24,7 @@ typedef struct relay_subsys_t {
 	void       (*connect_relay)(struct redsocks_client_t *client);
 } relay_subsys;
 
-#define SN_CNT    3
+#define SN_CNT    1
 
 enum{
     MPTP_AUTH_CMD_NULL = 0x00,

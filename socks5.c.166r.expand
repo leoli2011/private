@@ -83,7 +83,7 @@ try_optimize_cfg iteration 2
 (insn 17 16 18 5 (set (reg/f:DI 59 [ D.5111 ])
         (mem/f/j:DI (plus:DI (mult:DI (reg:DI 64)
                     (const_int 8 [0x8]))
-                (symbol_ref:DI ("socks5_strstatus") [flags 0x2]  <var_decl 0x2b578bf28720 socks5_strstatus>)) [0 socks5_strstatus S8 A64])) socks5.c:57 -1
+                (symbol_ref:DI ("socks5_strstatus") [flags 0x2]  <var_decl 0x2b56782d0720 socks5_strstatus>)) [0 socks5_strstatus S8 A64])) socks5.c:57 -1
      (nil))
 (jump_insn 18 17 19 5 (set (pc)
         (label_ref 23)) socks5.c:57 -1
@@ -93,7 +93,7 @@ try_optimize_cfg iteration 2
 (code_label 20 19 21 6 2 "" [2 uses])
 (note 21 20 22 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (insn 22 21 23 6 (set (reg/f:DI 59 [ D.5111 ])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b578bf81a18 *.LC9>)) socks5.c:60 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b5678329a18 *.LC9>)) socks5.c:60 -1
      (nil))
 (code_label 23 22 24 7 3 "" [1 uses])
 (note 24 23 25 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
@@ -202,7 +202,7 @@ try_optimize_cfg iteration 2
         (reg:DI 63)) socks5.c:68 -1
      (nil))
 (call_insn/i 21 20 22 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b578bc5f600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b5678007600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) socks5.c:68 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -231,7 +231,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 64)) socks5.c:69 -1
      (nil))
 (insn 28 27 29 7 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b578bf8f260 *.LC10>)) socks5.c:69 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b5678337260 *.LC10>)) socks5.c:69 -1
      (nil))
 (insn 29 28 30 7 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) socks5.c:69 -1
@@ -240,18 +240,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:69 -1
      (nil))
 (insn 31 30 32 7 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4729") [flags 0x2]  <var_decl 0x2b578bf288e8 __func__>)) socks5.c:69 -1
+        (symbol_ref:DI ("__func__.4729") [flags 0x2]  <var_decl 0x2b56782d08e8 __func__>)) socks5.c:69 -1
      (nil))
 (insn 32 31 33 7 (set (reg:SI 4 si)
         (const_int 69 [0x45])) socks5.c:69 -1
      (nil))
 (insn 33 32 34 7 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:69 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:69 -1
      (nil))
 (insn 34 33 35 7 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:69 -1
      (nil))
-(call_insn 35 34 36 7 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b578beef300 _log_write>) [0 _log_write S1 A8])
+(call_insn 35 34 36 7 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b5678297300 _log_write>) [0 _log_write S1 A8])
         (const_int 8 [0x8])) socks5.c:69 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -281,7 +281,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) socks5.c:72 -1
      (nil))
 (call_insn/i 43 42 44 8 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b578bc5f600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b5678007600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) socks5.c:72 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -310,7 +310,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 66)) socks5.c:73 -1
      (nil))
 (insn 50 49 51 9 (set (reg:DI 38 r9)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b578bf8f390 *.LC12>)) socks5.c:73 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b5678337390 *.LC12>)) socks5.c:73 -1
      (nil))
 (insn 51 50 52 9 (set (reg:SI 37 r8)
         (const_int 4 [0x4])) socks5.c:73 -1
@@ -319,18 +319,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:73 -1
      (nil))
 (insn 53 52 54 9 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4729") [flags 0x2]  <var_decl 0x2b578bf288e8 __func__>)) socks5.c:73 -1
+        (symbol_ref:DI ("__func__.4729") [flags 0x2]  <var_decl 0x2b56782d08e8 __func__>)) socks5.c:73 -1
      (nil))
 (insn 54 53 55 9 (set (reg:SI 4 si)
         (const_int 73 [0x49])) socks5.c:73 -1
      (nil))
 (insn 55 54 56 9 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:73 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:73 -1
      (nil))
 (insn 56 55 57 9 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:73 -1
      (nil))
-(call_insn 57 56 58 9 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b578beef300 _log_write>) [0 _log_write S1 A8])
+(call_insn 57 56 58 9 (call (mem:QI (symbol_ref:DI ("_log_write") [flags 0x41]  <function_decl 0x2b5678297300 _log_write>) [0 _log_write S1 A8])
         (const_int 8 [0x8])) socks5.c:73 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -453,7 +453,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 19 18 20 2 (set (reg/f:DI 60 [ D.5120 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 70)
-                (const_int 224 [0xe0])) [0 config_4->password+0 S8 A64])) socks5.c:85 -1
+                (const_int 128 [0x80])) [0 config_4->password+0 S8 A64])) socks5.c:85 -1
      (nil))
 (insn 20 19 21 2 (set (reg/f:DI 71)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -461,7 +461,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 21 20 22 2 (set (reg/f:DI 61 [ D.5120 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 71)
-                (const_int 216 [0xd8])) [0 config_4->login+0 S8 A64])) socks5.c:85 -1
+                (const_int 120 [0x78])) [0 config_4->login+0 S8 A64])) socks5.c:85 -1
      (nil))
 (insn 22 21 23 2 (set (reg:DI 4 si)
         (reg/f:DI 60 [ D.5120 ])) socks5.c:85 -1
@@ -470,7 +470,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 61 [ D.5120 ])) socks5.c:85 -1
      (nil))
 (call_insn 24 23 25 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("socks5_is_valid_cred") [flags 0x3]  <function_decl 0x2b578bf1a500 socks5_is_valid_cred>) [0 socks5_is_valid_cred S1 A8])
+        (call (mem:QI (symbol_ref:DI ("socks5_is_valid_cred") [flags 0x3]  <function_decl 0x2b56782c2500 socks5_is_valid_cred>) [0 socks5_is_valid_cred S1 A8])
             (const_int 0 [0]))) socks5.c:85 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -554,7 +554,7 @@ try_optimize_cfg iteration 2
         (reg:SI 59 [ D.5122 ])) socks5.c:91 -1
      (nil))
 (call_insn 15 14 16 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("socks5_mkmethods_plain") [flags 0x3]  <function_decl 0x2b578bf1a600 socks5_mkmethods_plain>) [0 socks5_mkmethods_plain S1 A8])
+        (call (mem:QI (symbol_ref:DI ("socks5_mkmethods_plain") [flags 0x3]  <function_decl 0x2b56782c2600 socks5_mkmethods_plain>) [0 socks5_mkmethods_plain S1 A8])
             (const_int 0 [0]))) socks5.c:91 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -650,18 +650,18 @@ try_optimize_cfg iteration 2
  -> 18)
 (note 11 10 12 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
 (insn 12 11 13 5 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.4742") [flags 0x2]  <var_decl 0x2b578bf28b48 __PRETTY_FUNCTION__>)) socks5.c:96 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.4742") [flags 0x2]  <var_decl 0x2b56782d0b48 __PRETTY_FUNCTION__>)) socks5.c:96 -1
      (nil))
 (insn 13 12 14 5 (set (reg:SI 1 dx)
         (const_int 96 [0x60])) socks5.c:96 -1
      (nil))
 (insn 14 13 15 5 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:96 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:96 -1
      (nil))
 (insn 15 14 16 5 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2b578bf9c8e8 *.LC13>)) socks5.c:96 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2b56783448e8 *.LC13>)) socks5.c:96 -1
      (nil))
-(call_insn 16 15 17 5 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b578bda3700 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 16 15 17 5 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b567814b700 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) socks5.c:96 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -703,7 +703,7 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) socks5.c:98 -1
      (nil))
 (call_insn 27 26 28 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2b578bc75d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2b567801dd00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) socks5.c:98 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -814,7 +814,7 @@ try_optimize_cfg iteration 2
         (reg:DI 81)) socks5.c:106 -1
      (nil))
 (call_insn 57 56 58 8 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("mkevbuffer") [flags 0x41]  <function_decl 0x2b578bef9f00 mkevbuffer>) [0 mkevbuffer S1 A8])
+        (call (mem:QI (symbol_ref:DI ("mkevbuffer") [flags 0x41]  <function_decl 0x2b56782a1f00 mkevbuffer>) [0 mkevbuffer S1 A8])
             (const_int 0 [0]))) socks5.c:106 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -834,7 +834,7 @@ try_optimize_cfg iteration 2
 (insn 61 60 62 8 (set (reg:DI 5 di)
         (reg:DI 83)) socks5.c:107 -1
      (nil))
-(call_insn 62 61 63 8 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b578bc7b500 free>) [0 __builtin_free S1 A8])
+(call_insn 62 61 63 8 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b5678023500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) socks5.c:107 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -899,7 +899,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 8 7 9 2 (set (reg/f:DI 60 [ D.5130 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 59 [ D.5129 ])
-                (const_int 240 [0xf0])) [0 _2->config.password+0 S8 A64])) socks5.c:113 -1
+                (const_int 144 [0x90])) [0 _2->config.password+0 S8 A64])) socks5.c:113 -1
      (nil))
 (insn 9 8 10 2 (set (reg/f:DI 66)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -911,7 +911,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 11 10 12 2 (set (reg/f:DI 62 [ D.5130 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 61 [ D.5129 ])
-                (const_int 232 [0xe8])) [0 _4->config.login+0 S8 A64])) socks5.c:113 -1
+                (const_int 136 [0x88])) [0 _4->config.login+0 S8 A64])) socks5.c:113 -1
      (nil))
 (insn 12 11 13 2 (set (reg:DI 4 si)
         (reg/f:DI 60 [ D.5130 ])) socks5.c:113 -1
@@ -920,7 +920,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 62 [ D.5130 ])) socks5.c:113 -1
      (nil))
 (call_insn 14 13 15 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("socks5_mkpassword_plain") [flags 0x3]  <function_decl 0x2b578bf1a700 socks5_mkpassword_plain>) [0 socks5_mkpassword_plain S1 A8])
+        (call (mem:QI (symbol_ref:DI ("socks5_mkpassword_plain") [flags 0x3]  <function_decl 0x2b56782c2700 socks5_mkpassword_plain>) [0 socks5_mkpassword_plain S1 A8])
             (const_int 0 [0]))) socks5.c:113 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1002,7 +1002,7 @@ try_optimize_cfg iteration 2
         (reg:DI 80)) socks5.c:118 -1
      (nil))
 (call_insn/i 11 10 12 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b578bc5f600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b5678007600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) socks5.c:118 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1023,7 +1023,7 @@ try_optimize_cfg iteration 2
         (reg:DI 82)) socks5.c:119 -1
      (nil))
 (call_insn/i 16 15 17 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b578bc5f600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b5678007600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) socks5.c:119 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1224,7 +1224,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 71 [ D.5136 ])) socks5.c:125 -1
      (nil))
 (call_insn 57 56 58 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b578bc5af00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b5678002f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) socks5.c:125 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1309,7 +1309,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 75 [ D.5136 ])) socks5.c:127 -1
      (nil))
 (call_insn 73 72 74 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b578bc5af00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b5678002f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) socks5.c:127 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1334,7 +1334,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 76 [ D.5137 ])) socks5.c:128 -1
      (nil))
 (call_insn 78 77 79 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("mkevbuffer") [flags 0x41]  <function_decl 0x2b578bef9f00 mkevbuffer>) [0 mkevbuffer S1 A8])
+        (call (mem:QI (symbol_ref:DI ("mkevbuffer") [flags 0x41]  <function_decl 0x2b56782a1f00 mkevbuffer>) [0 mkevbuffer S1 A8])
             (const_int 0 [0]))) socks5.c:128 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1426,18 +1426,18 @@ try_optimize_cfg iteration 2
  -> 18)
 (note 11 10 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 12 11 13 4 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.4765") [flags 0x2]  <var_decl 0x2b578bf3b260 __PRETTY_FUNCTION__>)) socks5.c:138 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.4765") [flags 0x2]  <var_decl 0x2b56782e3260 __PRETTY_FUNCTION__>)) socks5.c:138 -1
      (nil))
 (insn 13 12 14 4 (set (reg:SI 1 dx)
         (const_int 138 [0x8a])) socks5.c:138 -1
      (nil))
 (insn 14 13 15 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:138 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:138 -1
      (nil))
 (insn 15 14 16 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2b578bfa7da8 *.LC14>)) socks5.c:138 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2b567834fda8 *.LC14>)) socks5.c:138 -1
      (nil))
-(call_insn 16 15 17 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b578bda3700 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 16 15 17 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b567814b700 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) socks5.c:138 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -1523,7 +1523,7 @@ try_optimize_cfg iteration 2
         (reg:DI 73)) socks5.c:146 -1
      (nil))
 (call_insn 39 38 40 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("mkevbuffer") [flags 0x41]  <function_decl 0x2b578bef9f00 mkevbuffer>) [0 mkevbuffer S1 A8])
+        (call (mem:QI (symbol_ref:DI ("mkevbuffer") [flags 0x41]  <function_decl 0x2b56782a1f00 mkevbuffer>) [0 mkevbuffer S1 A8])
             (const_int 0 [0]))) socks5.c:146 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1601,7 +1601,7 @@ try_optimize_cfg iteration 2
         (reg:SI 60 [ socks5_cmd_connect.12 ])) socks5.c:151 -1
      (nil))
 (call_insn 11 10 12 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("socks5_mkcommand_plain") [flags 0x3]  <function_decl 0x2b578bf1a900 socks5_mkcommand_plain>) [0 socks5_mkcommand_plain S1 A8])
+        (call (mem:QI (symbol_ref:DI ("socks5_mkcommand_plain") [flags 0x3]  <function_decl 0x2b56782c2900 socks5_mkcommand_plain>) [0 socks5_mkcommand_plain S1 A8])
             (const_int 0 [0]))) socks5.c:151 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -1675,7 +1675,7 @@ try_optimize_cfg iteration 2
 (insn 10 9 11 2 (set (reg:DI 5 di)
         (reg:DI 61)) socks5.c:158 -1
      (nil))
-(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b578bef9900 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b56782a1900 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) socks5.c:158 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1715,7 +1715,7 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) socks5.c:161 -1
      (nil))
 (insn 21 20 22 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("socks5_mkmethods") [flags 0x3]  <function_decl 0x2b578bf1ad00 socks5_mkmethods>)) socks5.c:161 -1
+        (symbol_ref:DI ("socks5_mkmethods") [flags 0x3]  <function_decl 0x2b56782c2d00 socks5_mkmethods>)) socks5.c:161 -1
      (nil))
 (insn 22 21 23 4 (set (reg:DI 4 si)
         (reg:DI 63)) socks5.c:161 -1
@@ -1724,7 +1724,7 @@ try_optimize_cfg iteration 2
         (reg:DI 64)) socks5.c:161 -1
      (nil))
 (call_insn 24 23 27 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b578bf1a200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b56782c2200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
             (const_int 0 [0]))) socks5.c:161 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1815,7 +1815,7 @@ try_optimize_cfg iteration 2
  -> 17)
 (note 13 12 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 14 13 15 4 (set (reg/f:DI 59 [ D.5148 ])
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b578bfb9da8 *.LC15>)) socks5.c:171 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b5678361da8 *.LC15>)) socks5.c:171 -1
      (nil))
 (jump_insn 15 14 16 4 (set (pc)
         (label_ref 55)) socks5.c:171 -1
@@ -1851,7 +1851,7 @@ try_optimize_cfg iteration 2
  -> 29)
 (note 25 24 26 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
 (insn 26 25 27 6 (set (reg/f:DI 59 [ D.5148 ])
-        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2b578bfb9e40 *.LC16>)) socks5.c:173 -1
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2b5678361e40 *.LC16>)) socks5.c:173 -1
      (nil))
 (jump_insn 27 26 28 6 (set (pc)
         (label_ref 55)) socks5.c:173 -1
@@ -1927,7 +1927,7 @@ try_optimize_cfg iteration 2
 (code_label 47 46 48 10 33 "" [1 uses])
 (note 48 47 49 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
 (insn 49 48 50 10 (set (reg/f:DI 59 [ D.5148 ])
-        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x2b578bfb9ed8 *.LC17>)) socks5.c:175 -1
+        (symbol_ref/f:DI ("*.LC17") [flags 0x2]  <var_decl 0x2b5678361ed8 *.LC17>)) socks5.c:175 -1
      (nil))
 (jump_insn 50 49 51 10 (set (pc)
         (label_ref 55)) socks5.c:175 -1
@@ -2044,7 +2044,7 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) socks5.c:185 -1
      (nil))
 (insn 14 13 15 2 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("sizes_equal") [flags 0x41]  <function_decl 0x2b578bef9c00 sizes_equal>)) socks5.c:185 -1
+        (symbol_ref:DI ("sizes_equal") [flags 0x41]  <function_decl 0x2b56782a1c00 sizes_equal>)) socks5.c:185 -1
      (nil))
 (insn 15 14 16 2 (set (reg:DI 1 dx)
         (reg:DI 71)) socks5.c:185 -1
@@ -2056,7 +2056,7 @@ try_optimize_cfg iteration 2
         (reg:DI 72)) socks5.c:185 -1
      (nil))
 (call_insn 18 17 19 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b578bef9e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b56782a1e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
             (const_int 0 [0]))) socks5.c:185 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2108,7 +2108,7 @@ try_optimize_cfg iteration 2
         (reg:DI 74)) socks5.c:188 -1
      (nil))
 (call_insn 32 31 33 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("socks5_is_known_auth_method") [flags 0x3]  <function_decl 0x2b578bf1a800 socks5_is_known_auth_method>) [0 socks5_is_known_auth_method S1 A8])
+        (call (mem:QI (symbol_ref:DI ("socks5_is_known_auth_method") [flags 0x3]  <function_decl 0x2b56782c2800 socks5_is_known_auth_method>) [0 socks5_is_known_auth_method S1 A8])
             (const_int 0 [0]))) socks5.c:188 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2172,7 +2172,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 44 43 45 6 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2b578bfc9b48 *.LC18>)) socks5.c:190 -1
+        (symbol_ref/f:DI ("*.LC18") [flags 0x2]  <var_decl 0x2b5678371b48 *.LC18>)) socks5.c:190 -1
      (nil))
 (insn 45 44 46 6 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) socks5.c:190 -1
@@ -2187,18 +2187,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:190 -1
      (nil))
 (insn 49 48 50 6 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4785") [flags 0x2]  <var_decl 0x2b578bf3b4c0 __func__>)) socks5.c:190 -1
+        (symbol_ref:DI ("__func__.4785") [flags 0x2]  <var_decl 0x2b56782e34c0 __func__>)) socks5.c:190 -1
      (nil))
 (insn 50 49 51 6 (set (reg:SI 4 si)
         (const_int 190 [0xbe])) socks5.c:190 -1
      (nil))
 (insn 51 50 52 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:190 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:190 -1
      (nil))
 (insn 52 51 53 6 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:190 -1
      (nil))
-(call_insn 53 52 54 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b578bf1a400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 53 52 54 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b56782c2400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 24 [0x18])) socks5.c:190 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2221,7 +2221,7 @@ try_optimize_cfg iteration 2
 (insn 55 54 56 6 (set (reg:DI 5 di)
         (reg:DI 79)) socks5.c:191 -1
      (nil))
-(call_insn 56 55 57 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 56 55 57 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:191 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2270,7 +2270,7 @@ try_optimize_cfg iteration 2
         (const_int 3 [0x3])) socks5.c:194 -1
      (nil))
 (insn 71 70 72 8 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("socks5_mkconnect") [flags 0x3]  <function_decl 0x2b578bf39200 socks5_mkconnect>)) socks5.c:194 -1
+        (symbol_ref:DI ("socks5_mkconnect") [flags 0x3]  <function_decl 0x2b56782e1200 socks5_mkconnect>)) socks5.c:194 -1
      (nil))
 (insn 72 71 73 8 (set (reg:DI 4 si)
         (reg:DI 80)) socks5.c:194 -1
@@ -2279,7 +2279,7 @@ try_optimize_cfg iteration 2
         (reg:DI 81)) socks5.c:194 -1
      (nil))
 (call_insn 74 73 75 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b578bf1a200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b56782c2200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
             (const_int 0 [0]))) socks5.c:194 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2332,7 +2332,7 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) socks5.c:200 -1
      (nil))
 (insn 89 88 90 10 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("socks5_mkpassword") [flags 0x3]  <function_decl 0x2b578bf1af00 socks5_mkpassword>)) socks5.c:200 -1
+        (symbol_ref:DI ("socks5_mkpassword") [flags 0x3]  <function_decl 0x2b56782c2f00 socks5_mkpassword>)) socks5.c:200 -1
      (nil))
 (insn 90 89 91 10 (set (reg:DI 4 si)
         (reg:DI 82)) socks5.c:200 -1
@@ -2341,7 +2341,7 @@ try_optimize_cfg iteration 2
         (reg:DI 83)) socks5.c:200 -1
      (nil))
 (call_insn 92 91 97 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b578bf1a200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b56782c2200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
             (const_int 0 [0]))) socks5.c:200 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2438,7 +2438,7 @@ try_optimize_cfg iteration 2
         (const_int 2 [0x2])) socks5.c:211 -1
      (nil))
 (insn 13 12 14 2 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("sizes_equal") [flags 0x41]  <function_decl 0x2b578bef9c00 sizes_equal>)) socks5.c:211 -1
+        (symbol_ref:DI ("sizes_equal") [flags 0x41]  <function_decl 0x2b56782a1c00 sizes_equal>)) socks5.c:211 -1
      (nil))
 (insn 14 13 15 2 (set (reg:DI 1 dx)
         (reg:DI 70)) socks5.c:211 -1
@@ -2450,7 +2450,7 @@ try_optimize_cfg iteration 2
         (reg:DI 71)) socks5.c:211 -1
      (nil))
 (call_insn 17 16 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b578bef9e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b56782a1e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
             (const_int 0 [0]))) socks5.c:211 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2533,7 +2533,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 36 35 37 6 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x2b578bfd0558 *.LC19>)) socks5.c:215 -1
+        (symbol_ref/f:DI ("*.LC19") [flags 0x2]  <var_decl 0x2b5678377558 *.LC19>)) socks5.c:215 -1
      (nil))
 (insn 37 36 38 6 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) socks5.c:215 -1
@@ -2548,18 +2548,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:215 -1
      (nil))
 (insn 41 40 42 6 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4792") [flags 0x2]  <var_decl 0x2b578bf3b5f0 __func__>)) socks5.c:215 -1
+        (symbol_ref:DI ("__func__.4792") [flags 0x2]  <var_decl 0x2b56782e35f0 __func__>)) socks5.c:215 -1
      (nil))
 (insn 42 41 43 6 (set (reg:SI 4 si)
         (const_int 215 [0xd7])) socks5.c:215 -1
      (nil))
 (insn 43 42 44 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:215 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:215 -1
      (nil))
 (insn 44 43 45 6 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:215 -1
      (nil))
-(call_insn 45 44 46 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b578bf1a400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 45 44 46 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b56782c2400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) socks5.c:215 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2580,7 +2580,7 @@ try_optimize_cfg iteration 2
 (insn 47 46 48 6 (set (reg:DI 5 di)
         (reg:DI 74)) socks5.c:216 -1
      (nil))
-(call_insn 48 47 49 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 48 47 49 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:216 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2629,7 +2629,7 @@ try_optimize_cfg iteration 2
         (const_int 3 [0x3])) socks5.c:219 -1
      (nil))
 (insn 63 62 64 8 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("socks5_mkconnect") [flags 0x3]  <function_decl 0x2b578bf39200 socks5_mkconnect>)) socks5.c:219 -1
+        (symbol_ref:DI ("socks5_mkconnect") [flags 0x3]  <function_decl 0x2b56782e1200 socks5_mkconnect>)) socks5.c:219 -1
      (nil))
 (insn 64 63 65 8 (set (reg:DI 4 si)
         (reg:DI 75)) socks5.c:219 -1
@@ -2638,7 +2638,7 @@ try_optimize_cfg iteration 2
         (reg:DI 76)) socks5.c:219 -1
      (nil))
 (call_insn 66 65 67 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b578bf1a200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b56782c2200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
             (const_int 0 [0]))) socks5.c:219 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2661,7 +2661,7 @@ try_optimize_cfg iteration 2
 (insn 72 71 73 9 (set (reg:DI 5 di)
         (reg:DI 77)) socks5.c:224 -1
      (nil))
-(call_insn 73 72 78 9 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 73 72 78 9 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:224 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2782,7 +2782,7 @@ try_optimize_cfg iteration 2
         (const_int 4 [0x4])) socks5.c:231 -1
      (nil))
 (insn 13 12 14 2 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("sizes_greater_equal") [flags 0x41]  <function_decl 0x2b578bef9d00 sizes_greater_equal>)) socks5.c:231 -1
+        (symbol_ref:DI ("sizes_greater_equal") [flags 0x41]  <function_decl 0x2b56782a1d00 sizes_greater_equal>)) socks5.c:231 -1
      (nil))
 (insn 14 13 15 2 (set (reg:DI 1 dx)
         (reg:DI 90)) socks5.c:231 -1
@@ -2794,7 +2794,7 @@ try_optimize_cfg iteration 2
         (reg:DI 91)) socks5.c:231 -1
      (nil))
 (call_insn 17 16 18 2 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b578bef9e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b56782a1e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
             (const_int 0 [0]))) socks5.c:231 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2877,7 +2877,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 36 35 37 6 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x2b578bfdd000 *.LC20>)) socks5.c:235 -1
+        (symbol_ref/f:DI ("*.LC20") [flags 0x2]  <var_decl 0x2b5678385000 *.LC20>)) socks5.c:235 -1
      (nil))
 (insn 37 36 38 6 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) socks5.c:235 -1
@@ -2892,18 +2892,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:235 -1
      (nil))
 (insn 41 40 42 6 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4799") [flags 0x2]  <var_decl 0x2b578bf3b720 __func__>)) socks5.c:235 -1
+        (symbol_ref:DI ("__func__.4799") [flags 0x2]  <var_decl 0x2b56782e3720 __func__>)) socks5.c:235 -1
      (nil))
 (insn 42 41 43 6 (set (reg:SI 4 si)
         (const_int 235 [0xeb])) socks5.c:235 -1
      (nil))
 (insn 43 42 44 6 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:235 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:235 -1
      (nil))
 (insn 44 43 45 6 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:235 -1
      (nil))
-(call_insn 45 44 46 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b578bf1a400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 45 44 46 6 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b56782c2400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) socks5.c:235 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2924,7 +2924,7 @@ try_optimize_cfg iteration 2
 (insn 47 46 48 6 (set (reg:DI 5 di)
         (reg:DI 94)) socks5.c:236 -1
      (nil))
-(call_insn 48 47 49 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 48 47 49 6 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:236 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3115,7 +3115,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 103 102 104 14 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x2b578bfdd098 *.LC21>)) socks5.c:256 -1
+        (symbol_ref/f:DI ("*.LC21") [flags 0x2]  <var_decl 0x2b5678385098 *.LC21>)) socks5.c:256 -1
      (nil))
 (insn 104 103 105 14 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) socks5.c:256 -1
@@ -3130,18 +3130,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:256 -1
      (nil))
 (insn 108 107 109 14 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4799") [flags 0x2]  <var_decl 0x2b578bf3b720 __func__>)) socks5.c:256 -1
+        (symbol_ref:DI ("__func__.4799") [flags 0x2]  <var_decl 0x2b56782e3720 __func__>)) socks5.c:256 -1
      (nil))
 (insn 109 108 110 14 (set (reg:SI 4 si)
         (const_int 256 [0x100])) socks5.c:256 -1
      (nil))
 (insn 110 109 111 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:256 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:256 -1
      (nil))
 (insn 111 110 112 14 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:256 -1
      (nil))
-(call_insn 112 111 113 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b578bf1a400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 112 111 113 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b56782c2400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) socks5.c:256 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -3162,7 +3162,7 @@ try_optimize_cfg iteration 2
 (insn 114 113 115 14 (set (reg:DI 5 di)
         (reg:DI 99)) socks5.c:257 -1
      (nil))
-(call_insn 115 114 116 14 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 115 114 116 14 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:257 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3206,7 +3206,7 @@ try_optimize_cfg iteration 2
         (reg:DI 102)) socks5.c:261 -1
      (nil))
 (call_insn 129 128 130 15 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b578bf1a200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b56782c2200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
             (const_int 0 [0]))) socks5.c:261 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3258,7 +3258,7 @@ try_optimize_cfg iteration 2
 (insn 143 142 144 17 (set (reg/f:DI 59 [ iftmp.27 ])
         (mem/f/j:DI (plus:DI (mult:DI (reg:DI 103)
                     (const_int 8 [0x8]))
-                (symbol_ref:DI ("socks5_strstatus") [flags 0x2]  <var_decl 0x2b578bf28720 socks5_strstatus>)) [0 socks5_strstatus S8 A64])) socks5.c:267 -1
+                (symbol_ref:DI ("socks5_strstatus") [flags 0x2]  <var_decl 0x2b56782d0720 socks5_strstatus>)) [0 socks5_strstatus S8 A64])) socks5.c:267 -1
      (nil))
 (jump_insn 144 143 145 17 (set (pc)
         (label_ref 149)) -1
@@ -3268,7 +3268,7 @@ try_optimize_cfg iteration 2
 (code_label 146 145 147 18 56 "" [1 uses])
 (note 147 146 148 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
 (insn 148 147 149 18 (set (reg/f:DI 59 [ iftmp.27 ])
-        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x2b578bfdd130 *.LC22>)) socks5.c:267 -1
+        (symbol_ref/f:DI ("*.LC22") [flags 0x2]  <var_decl 0x2b5678385130 *.LC22>)) socks5.c:267 -1
      (nil))
 (code_label 149 148 150 19 57 "" [1 uses])
 (note 150 149 151 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
@@ -3310,7 +3310,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 157 156 158 19 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x2b578bfdd1c8 *.LC23>)) socks5.c:267 -1
+        (symbol_ref/f:DI ("*.LC23") [flags 0x2]  <var_decl 0x2b56783851c8 *.LC23>)) socks5.c:267 -1
      (nil))
 (insn 158 157 159 19 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) socks5.c:267 -1
@@ -3325,18 +3325,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) socks5.c:267 -1
      (nil))
 (insn 162 161 163 19 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.4799") [flags 0x2]  <var_decl 0x2b578bf3b720 __func__>)) socks5.c:267 -1
+        (symbol_ref:DI ("__func__.4799") [flags 0x2]  <var_decl 0x2b56782e3720 __func__>)) socks5.c:267 -1
      (nil))
 (insn 163 162 164 19 (set (reg:SI 4 si)
         (const_int 269 [0x10d])) socks5.c:267 -1
      (nil))
 (insn 164 163 165 19 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b578bf8f2f8 *.LC11>)) socks5.c:267 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b56783372f8 *.LC11>)) socks5.c:267 -1
      (nil))
 (insn 165 164 166 19 (set (reg:QI 0 ax)
         (const_int 0 [0])) socks5.c:267 -1
      (nil))
-(call_insn 166 165 167 19 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b578bf1a400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 166 165 167 19 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b56782c2400 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 32 [0x20])) socks5.c:267 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -3361,7 +3361,7 @@ try_optimize_cfg iteration 2
 (insn 168 167 169 19 (set (reg:DI 5 di)
         (reg:DI 106)) socks5.c:270 -1
      (nil))
-(call_insn 169 168 178 19 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 169 168 178 19 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:270 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3495,7 +3495,7 @@ Forwarding edge 17->18 to 23 failed.
 (insn 16 15 17 2 (set (reg:DI 5 di)
         (reg:DI 95)) socks5.c:279 -1
      (nil))
-(call_insn 17 16 18 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b578bef9900 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 17 16 18 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b56782a1900 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) socks5.c:279 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3541,7 +3541,7 @@ Forwarding edge 17->18 to 23 failed.
 (insn 28 27 29 4 (set (reg:DI 5 di)
         (reg:DI 99)) socks5.c:282 -1
      (nil))
-(call_insn 29 28 30 4 (call (mem:QI (symbol_ref:DI ("socks5_read_auth_methods") [flags 0x3]  <function_decl 0x2b578bf39500 socks5_read_auth_methods>) [0 socks5_read_auth_methods S1 A8])
+(call_insn 29 28 30 4 (call (mem:QI (symbol_ref:DI ("socks5_read_auth_methods") [flags 0x3]  <function_decl 0x2b56782e1500 socks5_read_auth_methods>) [0 socks5_read_auth_methods S1 A8])
         (const_int 0 [0])) socks5.c:282 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3596,7 +3596,7 @@ Forwarding edge 17->18 to 23 failed.
 (insn 44 43 45 6 (set (reg:DI 5 di)
         (reg:DI 103)) socks5.c:285 -1
      (nil))
-(call_insn 45 44 46 6 (call (mem:QI (symbol_ref:DI ("socks5_read_auth_reply") [flags 0x3]  <function_decl 0x2b578bf39600 socks5_read_auth_reply>) [0 socks5_read_auth_reply S1 A8])
+(call_insn 45 44 46 6 (call (mem:QI (symbol_ref:DI ("socks5_read_auth_reply") [flags 0x3]  <function_decl 0x2b56782e1600 socks5_read_auth_reply>) [0 socks5_read_auth_reply S1 A8])
         (const_int 0 [0])) socks5.c:285 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3651,7 +3651,7 @@ Forwarding edge 17->18 to 23 failed.
 (insn 60 59 61 8 (set (reg:DI 5 di)
         (reg:DI 107)) socks5.c:288 -1
      (nil))
-(call_insn 61 60 62 8 (call (mem:QI (symbol_ref:DI ("socks5_read_reply") [flags 0x3]  <function_decl 0x2b578bf39700 socks5_read_reply>) [0 socks5_read_reply S1 A8])
+(call_insn 61 60 62 8 (call (mem:QI (symbol_ref:DI ("socks5_read_reply") [flags 0x3]  <function_decl 0x2b56782e1700 socks5_read_reply>) [0 socks5_read_reply S1 A8])
         (const_int 0 [0])) socks5.c:288 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3708,7 +3708,7 @@ Forwarding edge 17->18 to 23 failed.
         (const_int 1 [0x1])) socks5.c:293 -1
      (nil))
 (insn 76 75 77 10 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("sizes_greater_equal") [flags 0x41]  <function_decl 0x2b578bef9d00 sizes_greater_equal>)) socks5.c:293 -1
+        (symbol_ref:DI ("sizes_greater_equal") [flags 0x41]  <function_decl 0x2b56782a1d00 sizes_greater_equal>)) socks5.c:293 -1
      (nil))
 (insn 77 76 78 10 (set (reg:DI 1 dx)
         (reg:DI 110)) socks5.c:293 -1
@@ -3720,7 +3720,7 @@ Forwarding edge 17->18 to 23 failed.
         (reg:DI 111)) socks5.c:293 -1
      (nil))
 (call_insn 80 79 81 10 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b578bef9e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b56782a1e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
             (const_int 0 [0]))) socks5.c:293 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3811,7 +3811,7 @@ Forwarding edge 17->18 to 23 failed.
         (reg:DI 115)) socks5.c:296 -1
      (nil))
 (call_insn 105 104 106 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b578bf1a200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper") [flags 0x41]  <function_decl 0x2b56782c2200 redsocks_write_helper>) [0 redsocks_write_helper S1 A8])
             (const_int 0 [0]))) socks5.c:296 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3996,7 +3996,7 @@ Forwarding edge 17->18 to 23 failed.
         (reg:DI 86 [ D.5176 ])) socks5.c:303 -1
      (nil))
 (insn 148 147 149 14 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("sizes_greater_equal") [flags 0x41]  <function_decl 0x2b578bef9d00 sizes_greater_equal>)) socks5.c:303 -1
+        (symbol_ref:DI ("sizes_greater_equal") [flags 0x41]  <function_decl 0x2b56782a1d00 sizes_greater_equal>)) socks5.c:303 -1
      (nil))
 (insn 149 148 150 14 (set (reg:DI 1 dx)
         (reg/f:DI 87 [ D.5180 ])) socks5.c:303 -1
@@ -4008,7 +4008,7 @@ Forwarding edge 17->18 to 23 failed.
         (reg:DI 129)) socks5.c:303 -1
      (nil))
 (call_insn 152 151 153 14 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b578bef9e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_read_expected") [flags 0x41]  <function_decl 0x2b56782a1e00 redsocks_read_expected>) [0 redsocks_read_expected S1 A8])
             (const_int 0 [0]))) socks5.c:303 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4049,7 +4049,7 @@ Forwarding edge 17->18 to 23 failed.
 (insn 163 162 164 16 (set (reg:DI 5 di)
         (reg:DI 130)) socks5.c:305 -1
      (nil))
-(call_insn 164 163 165 16 (call (mem:QI (symbol_ref:DI ("redsocks_start_relay") [flags 0x41]  <function_decl 0x2b578bef9b00 redsocks_start_relay>) [0 redsocks_start_relay S1 A8])
+(call_insn 164 163 165 16 (call (mem:QI (symbol_ref:DI ("redsocks_start_relay") [flags 0x41]  <function_decl 0x2b56782a1b00 redsocks_start_relay>) [0 redsocks_start_relay S1 A8])
         (const_int 0 [0])) socks5.c:305 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -4100,7 +4100,7 @@ Forwarding edge 17->18 to 23 failed.
 (insn 183 182 184 21 (set (reg:DI 5 di)
         (reg:DI 131)) socks5.c:308 -1
      (nil))
-(call_insn 184 183 187 21 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b578bef9800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 184 183 187 21 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b56782a1800 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) socks5.c:308 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))

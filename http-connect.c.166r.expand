@@ -77,12 +77,12 @@ try_optimize_cfg iteration 2
 (insn 10 9 11 2 (parallel [
             (set (reg:DI 62)
                 (plus:DI (reg/f:DI 63)
-                    (const_int 832 [0x340])))
+                    (const_int 704 [0x2c0])))
             (clobber (reg:CC 17 flags))
         ]) http-connect.c:53 -1
      (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                     (const_int -24 [0xffffffffffffffe8])) [0 instance+0 S8 A64])
-            (const_int 832 [0x340]))
+            (const_int 704 [0x2c0]))
         (nil)))
 (insn 11 10 12 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -8 [0xfffffffffffffff8])) [0 auth+0 S8 A64])
@@ -98,7 +98,7 @@ try_optimize_cfg iteration 2
 (insn 14 13 15 2 (set (reg:DI 5 di)
         (reg/f:DI 59 [ D.5633 ])) http-connect.c:54 -1
      (nil))
-(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 15 14 16 2 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:54 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -166,7 +166,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67)) http-connect.c:67 -1
      (nil))
 (call_insn 8 7 9 3 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2b6ca74cf700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2b9911c6c700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-connect.c:67 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -221,7 +221,7 @@ try_optimize_cfg iteration 2
         (reg:DI 70)) http-connect.c:68 -1
      (nil))
 (call_insn/i 22 21 23 5 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2b6ca71cbc00 strchr>) [0 __builtin_strchr S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strchr") [flags 0x41]  <function_decl 0x2b9911968c00 strchr>) [0 __builtin_strchr S1 A8])
             (const_int 0 [0]))) http-connect.c:68 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -251,7 +251,7 @@ try_optimize_cfg iteration 2
 (insn 29 28 30 6 (set (reg:DI 5 di)
         (reg:DI 71)) http-connect.c:69 -1
      (nil))
-(call_insn 30 29 31 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 30 29 31 6 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:69 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -268,13 +268,13 @@ try_optimize_cfg iteration 2
 (code_label 34 33 35 7 5 "" [1 uses])
 (note 35 34 36 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
 (insn 36 35 37 7 (set (reg/f:DI 62 [ auth_request_header.0 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2b6ca74f48e8 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-connect.c:72 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2b9911c908e8 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-connect.c:72 -1
      (nil))
 (insn 37 36 38 7 (set (reg:DI 5 di)
         (reg/f:DI 62 [ auth_request_header.0 ])) http-connect.c:72 -1
      (nil))
 (call_insn/i 38 37 39 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b6ca71ce600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b991196b600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-connect.c:72 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -284,7 +284,7 @@ try_optimize_cfg iteration 2
         (reg:DI 0 ax)) http-connect.c:72 -1
      (nil))
 (insn 40 39 41 7 (set (reg/f:DI 64 [ auth_request_header.1 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2b6ca74f48e8 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-connect.c:72 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2b9911c908e8 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-connect.c:72 -1
      (nil))
 (insn 41 40 42 7 (set (reg:DI 72)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -300,7 +300,7 @@ try_optimize_cfg iteration 2
         (reg:DI 72)) http-connect.c:72 -1
      (nil))
 (call_insn/i 45 44 46 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2b6ca7356a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2b9911af3a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-connect.c:72 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -341,7 +341,7 @@ try_optimize_cfg iteration 2
 (insn 56 55 57 9 (set (reg:DI 5 di)
         (reg:DI 73)) http-connect.c:74 -1
      (nil))
-(call_insn 57 56 59 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 57 56 59 9 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:74 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -533,18 +533,18 @@ try_optimize_cfg iteration 2
  -> 21)
 (note 14 13 15 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
 (insn 15 14 16 4 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__PRETTY_FUNCTION__.5410") [flags 0x2]  <var_decl 0x2b6ca74f4be0 __PRETTY_FUNCTION__>)) http-connect.c:83 -1
+        (symbol_ref:DI ("__PRETTY_FUNCTION__.5410") [flags 0x2]  <var_decl 0x2b9911c90be0 __PRETTY_FUNCTION__>)) http-connect.c:83 -1
      (nil))
 (insn 16 15 17 4 (set (reg:SI 1 dx)
         (const_int 83 [0x53])) http-connect.c:83 -1
      (nil))
 (insn 17 16 18 4 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:83 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:83 -1
      (nil))
 (insn 18 17 19 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2b6ca75551c8 *.LC1>)) http-connect.c:83 -1
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x2b9911cf21c8 *.LC1>)) http-connect.c:83 -1
      (nil))
-(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b6ca727c400 __assert_fail>) [0 __assert_fail S1 A8])
+(call_insn 19 18 20 4 (call (mem:QI (symbol_ref:DI ("__assert_fail") [flags 0x41]  <function_decl 0x2b9911a19400 __assert_fail>) [0 __assert_fail S1 A8])
         (const_int 0 [0])) http-connect.c:83 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -564,7 +564,7 @@ try_optimize_cfg iteration 2
 (insn 24 23 25 5 (set (reg:DI 5 di)
         (reg:DI 112)) http-connect.c:85 -1
      (nil))
-(call_insn 25 24 26 5 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b6ca74e2400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 25 24 26 5 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b9911c7f400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) http-connect.c:85 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -601,7 +601,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 61 [ D.5639 ])) http-connect.c:88 -1
      (nil))
 (call_insn 34 33 35 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x2b6ca749c400 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
+        (call (mem:QI (symbol_ref:DI ("evbuffer_get_length") [flags 0x41]  <function_decl 0x2b9911c39400 evbuffer_get_length>) [0 evbuffer_get_length S1 A8])
             (const_int 0 [0]))) http-connect.c:88 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -625,7 +625,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 62 [ D.5639 ])) http-connect.c:89 -1
      (nil))
 (call_insn 40 39 41 6 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2b6ca74cf700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2b9911c6c700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-connect.c:89 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -665,7 +665,7 @@ try_optimize_cfg iteration 2
         (reg:DI 118)) http-connect.c:92 -1
      (nil))
 (insn 49 48 50 7 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b6ca7555260 *.LC2>)) http-connect.c:92 -1
+        (symbol_ref/f:DI ("*.LC2") [flags 0x2]  <var_decl 0x2b9911cf2260 *.LC2>)) http-connect.c:92 -1
      (nil))
 (insn 50 49 51 7 (set (reg:DI 5 di)
         (reg:DI 119)) http-connect.c:92 -1
@@ -674,7 +674,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:92 -1
      (nil))
 (call_insn 52 51 53 7 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("*__isoc99_sscanf") [flags 0x41]  <function_decl 0x2b6ca71d8700 sscanf>) [0 __builtin_sscanf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("*__isoc99_sscanf") [flags 0x41]  <function_decl 0x2b9911975700 sscanf>) [0 __builtin_sscanf S1 A8])
             (const_int 0 [0]))) http-connect.c:92 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -725,7 +725,7 @@ try_optimize_cfg iteration 2
 (insn 63 62 64 9 (parallel [
             (set (reg:DI 121)
                 (plus:DI (reg/f:DI 65 [ D.5640 ])
-                    (const_int 832 [0x340])))
+                    (const_int 704 [0x2c0])))
             (clobber (reg:CC 17 flags))
         ]) http-connect.c:94 -1
      (nil))
@@ -733,7 +733,7 @@ try_optimize_cfg iteration 2
                 (const_int -32 [0xffffffffffffffe0])) [0 auth+0 S8 A64])
         (reg:DI 121)) http-connect.c:94 -1
      (expr_list:REG_EQUAL (plus:DI (reg/f:DI 65 [ D.5640 ])
-            (const_int 832 [0x340]))
+            (const_int 704 [0x2c0]))
         (nil)))
 (insn 65 64 66 9 (set (reg/f:DI 122)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -804,7 +804,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 79 78 80 11 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2b6ca75552f8 *.LC3>)) http-connect.c:97 -1
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x2b9911cf22f8 *.LC3>)) http-connect.c:97 -1
      (nil))
 (insn 80 79 81 11 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-connect.c:97 -1
@@ -819,18 +819,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:97 -1
      (nil))
 (insn 84 83 85 11 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b6ca74f4ed8 __func__>)) http-connect.c:97 -1
+        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b9911c90ed8 __func__>)) http-connect.c:97 -1
      (nil))
 (insn 85 84 86 11 (set (reg:SI 4 si)
         (const_int 97 [0x61])) http-connect.c:97 -1
      (nil))
 (insn 86 85 87 11 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:97 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:97 -1
      (nil))
 (insn 87 86 88 11 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:97 -1
      (nil))
-(call_insn 88 87 89 11 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 88 87 89 11 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-connect.c:97 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -851,7 +851,7 @@ try_optimize_cfg iteration 2
 (insn 90 89 91 11 (set (reg:DI 5 di)
         (reg:DI 126)) http-connect.c:98 -1
      (nil))
-(call_insn 91 90 92 11 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b6ca74e2300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 91 90 92 11 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b9911c7f300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-connect.c:98 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -877,7 +877,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 99 98 100 12 (set (reg/f:DI 71 [ D.5641 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 70 [ D.5640 ])
-                (const_int 232 [0xe8])) [0 _24->config.login+0 S8 A64])) http-connect.c:101 -1
+                (const_int 136 [0x88])) [0 _24->config.login+0 S8 A64])) http-connect.c:101 -1
      (nil))
 (insn 100 99 101 12 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:DI 71 [ D.5641 ])
@@ -901,7 +901,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 105 104 106 13 (set (reg/f:DI 73 [ D.5641 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 72 [ D.5640 ])
-                (const_int 240 [0xf0])) [0 _26->config.password+0 S8 A64])) http-connect.c:101 -1
+                (const_int 144 [0x90])) [0 _26->config.password+0 S8 A64])) http-connect.c:101 -1
      (nil))
 (insn 106 105 107 13 (set (reg:CCZ 17 flags)
         (compare:CCZ (reg/f:DI 73 [ D.5641 ])
@@ -946,7 +946,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 114 113 115 14 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2b6ca7555390 *.LC4>)) http-connect.c:102 -1
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x2b9911cf2390 *.LC4>)) http-connect.c:102 -1
      (nil))
 (insn 115 114 116 14 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-connect.c:102 -1
@@ -961,18 +961,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:102 -1
      (nil))
 (insn 119 118 120 14 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b6ca74f4ed8 __func__>)) http-connect.c:102 -1
+        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b9911c90ed8 __func__>)) http-connect.c:102 -1
      (nil))
 (insn 120 119 121 14 (set (reg:SI 4 si)
         (const_int 102 [0x66])) http-connect.c:102 -1
      (nil))
 (insn 121 120 122 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:102 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:102 -1
      (nil))
 (insn 122 121 123 14 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:102 -1
      (nil))
-(call_insn 123 122 124 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 123 122 124 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-connect.c:102 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -993,7 +993,7 @@ try_optimize_cfg iteration 2
 (insn 125 124 126 14 (set (reg:DI 5 di)
         (reg:DI 131)) http-connect.c:103 -1
      (nil))
-(call_insn 126 125 127 14 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b6ca74e2300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 126 125 127 14 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b9911c7f300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-connect.c:103 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1021,7 +1021,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 74 [ D.5639 ])) http-connect.c:107 -1
      (nil))
 (call_insn 135 134 136 15 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("get_auth_request_header") [flags 0x3]  <function_decl 0x2b6ca7502500 get_auth_request_header>) [0 get_auth_request_header S1 A8])
+        (call (mem:QI (symbol_ref:DI ("get_auth_request_header") [flags 0x3]  <function_decl 0x2b9911c9f500 get_auth_request_header>) [0 get_auth_request_header S1 A8])
             (const_int 0 [0]))) http-connect.c:107 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1076,7 +1076,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 145 144 146 16 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2b6ca7555428 *.LC5>)) http-connect.c:110 -1
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x2b9911cf2428 *.LC5>)) http-connect.c:110 -1
      (nil))
 (insn 146 145 147 16 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-connect.c:110 -1
@@ -1091,18 +1091,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:110 -1
      (nil))
 (insn 150 149 151 16 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b6ca74f4ed8 __func__>)) http-connect.c:110 -1
+        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b9911c90ed8 __func__>)) http-connect.c:110 -1
      (nil))
 (insn 151 150 152 16 (set (reg:SI 4 si)
         (const_int 110 [0x6e])) http-connect.c:110 -1
      (nil))
 (insn 152 151 153 16 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:110 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:110 -1
      (nil))
 (insn 153 152 154 16 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:110 -1
      (nil))
-(call_insn 154 153 155 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 154 153 155 16 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-connect.c:110 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1123,7 +1123,7 @@ try_optimize_cfg iteration 2
 (insn 156 155 157 16 (set (reg:DI 5 di)
         (reg:DI 136)) http-connect.c:111 -1
      (nil))
-(call_insn 157 156 158 16 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b6ca74e2300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 157 156 158 16 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b9911c7f300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-connect.c:111 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1146,7 +1146,7 @@ try_optimize_cfg iteration 2
 (insn 164 163 165 17 (set (reg:DI 5 di)
         (reg:DI 137)) http-connect.c:114 -1
      (nil))
-(call_insn 165 164 166 17 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 165 164 166 17 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:114 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1162,7 +1162,7 @@ try_optimize_cfg iteration 2
 (insn 168 167 169 17 (set (reg:DI 5 di)
         (reg/f:DI 77 [ D.5641 ])) http-connect.c:115 -1
      (nil))
-(call_insn 169 168 170 17 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 169 168 170 17 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:115 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1177,13 +1177,13 @@ try_optimize_cfg iteration 2
         (reg/f:DI 139)) http-connect.c:116 -1
      (nil))
 (insn 172 171 173 17 (set (reg/f:DI 78 [ auth_request_header.3 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2b6ca74f48e8 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-connect.c:118 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_request_header") [flags 0x40]  <var_decl 0x2b9911c908e8 auth_request_header>) [0 auth_request_header+0 S8 A64])) http-connect.c:118 -1
      (nil))
 (insn 173 172 174 17 (set (reg:DI 5 di)
         (reg/f:DI 78 [ auth_request_header.3 ])) http-connect.c:118 -1
      (nil))
 (call_insn/i 174 173 175 17 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b6ca71ce600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b991196b600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-connect.c:118 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1220,7 +1220,7 @@ try_optimize_cfg iteration 2
 (code_label 181 180 182 19 20 "" [1 uses])
 (note 182 181 183 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
 (call_insn/u 183 182 184 19 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b6ca736b100 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("__ctype_b_loc") [flags 0x41]  <function_decl 0x2b9911b08100 __ctype_b_loc>) [0 __ctype_b_loc S1 A8])
             (const_int 0 [0]))) http-connect.c:119 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1288,7 +1288,7 @@ try_optimize_cfg iteration 2
         (reg:DI 141)) http-connect.c:122 -1
      (nil))
 (call_insn/i 200 199 201 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b6ca71ce600 strlen>) [0 __builtin_strlen S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strlen") [flags 0x41]  <function_decl 0x2b991196b600 strlen>) [0 __builtin_strlen S1 A8])
             (const_int 0 [0]))) http-connect.c:122 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1321,7 +1321,7 @@ try_optimize_cfg iteration 2
         (reg:DI 143)) http-connect.c:123 -1
      (nil))
 (call_insn 207 206 208 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2b6ca71e4d00 calloc>) [0 __builtin_calloc S1 A8])
+        (call (mem:QI (symbol_ref:DI ("calloc") [flags 0x41]  <function_decl 0x2b9911981d00 calloc>) [0 __builtin_calloc S1 A8])
             (const_int 0 [0]))) http-connect.c:123 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1367,7 +1367,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 91 [ D.5641 ])) http-connect.c:124 -1
      (nil))
 (call_insn 219 218 220 20 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b6ca71c9f00 memcpy>) [0 __builtin_memcpy S1 A8])
+        (call (mem:QI (symbol_ref:DI ("memcpy") [flags 0x41]  <function_decl 0x2b9911966f00 memcpy>) [0 __builtin_memcpy S1 A8])
             (const_int 0 [0]))) http-connect.c:124 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1392,7 +1392,7 @@ try_optimize_cfg iteration 2
 (insn 223 222 224 20 (set (reg:DI 5 di)
         (reg:DI 150)) http-connect.c:127 -1
      (nil))
-(call_insn 224 223 225 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 224 223 225 20 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:127 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1413,7 +1413,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 92 [ D.5649 ])) http-connect.c:129 -1
      (nil))
 (call_insn 229 228 230 20 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_disable") [flags 0x41]  <function_decl 0x2b6ca74b5e00 bufferevent_disable>) [0 bufferevent_disable S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_disable") [flags 0x41]  <function_decl 0x2b9911c52e00 bufferevent_disable>) [0 bufferevent_disable S1 A8])
             (const_int 0 [0]))) http-connect.c:129 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1464,7 +1464,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 238 237 239 21 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2b6ca75554c0 *.LC6>)) http-connect.c:130 -1
+        (symbol_ref/f:DI ("*.LC6") [flags 0x2]  <var_decl 0x2b9911cf24c0 *.LC6>)) http-connect.c:130 -1
      (nil))
 (insn 239 238 240 21 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-connect.c:130 -1
@@ -1479,18 +1479,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-connect.c:130 -1
      (nil))
 (insn 243 242 244 21 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b6ca74f4ed8 __func__>)) http-connect.c:130 -1
+        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b9911c90ed8 __func__>)) http-connect.c:130 -1
      (nil))
 (insn 244 243 245 21 (set (reg:SI 4 si)
         (const_int 130 [0x82])) http-connect.c:130 -1
      (nil))
 (insn 245 244 246 21 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:130 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:130 -1
      (nil))
 (insn 246 245 247 21 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:130 -1
      (nil))
-(call_insn 247 246 248 21 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 247 246 248 21 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-connect.c:130 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1530,7 +1530,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 97 [ D.5650 ])) http-connect.c:135 -1
      (nil))
 (call_insn 256 255 257 22 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2b6ca748f200 event_get_fd>) [0 event_get_fd S1 A8])
+        (call (mem:QI (symbol_ref:DI ("event_get_fd") [flags 0x41]  <function_decl 0x2b9911c2c200 event_get_fd>) [0 event_get_fd S1 A8])
             (const_int 0 [0]))) http-connect.c:135 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1539,18 +1539,18 @@ try_optimize_cfg iteration 2
         (reg:SI 0 ax)) http-connect.c:135 -1
      (nil))
 (insn 258 257 259 22 (set (reg:DI 2 cx)
-        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b6ca74f4ed8 __func__>)) http-connect.c:135 -1
+        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b9911c90ed8 __func__>)) http-connect.c:135 -1
      (nil))
 (insn 259 258 260 22 (set (reg:SI 1 dx)
         (const_int 135 [0x87])) http-connect.c:135 -1
      (nil))
 (insn 260 259 261 22 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:135 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:135 -1
      (nil))
 (insn 261 260 262 22 (set (reg:SI 5 di)
         (reg:SI 98 [ D.5638 ])) http-connect.c:135 -1
      (nil))
-(call_insn 262 261 263 22 (call (mem:QI (symbol_ref:DI ("redsocks_close_internal") [flags 0x41]  <function_decl 0x2b6ca74e2e00 redsocks_close_internal>) [0 redsocks_close_internal S1 A8])
+(call_insn 262 261 263 22 (call (mem:QI (symbol_ref:DI ("redsocks_close_internal") [flags 0x41]  <function_decl 0x2b9911c7fe00 redsocks_close_internal>) [0 redsocks_close_internal S1 A8])
         (const_int 0 [0])) http-connect.c:135 -1
      (nil)
     (expr_list:REG_BR_PRED (use (reg:SI 5 di))
@@ -1569,7 +1569,7 @@ try_optimize_cfg iteration 2
 (insn 265 264 266 22 (set (reg:DI 5 di)
         (reg/f:DI 99 [ D.5649 ])) http-connect.c:136 -1
      (nil))
-(call_insn 266 265 267 22 (call (mem:QI (symbol_ref:DI ("bufferevent_free") [flags 0x41]  <function_decl 0x2b6ca74b5200 bufferevent_free>) [0 bufferevent_free S1 A8])
+(call_insn 266 265 267 22 (call (mem:QI (symbol_ref:DI ("bufferevent_free") [flags 0x41]  <function_decl 0x2b9911c52200 bufferevent_free>) [0 bufferevent_free S1 A8])
         (const_int 0 [0])) http-connect.c:136 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1589,7 +1589,7 @@ try_optimize_cfg iteration 2
 (insn 270 269 271 22 (set (reg:DI 5 di)
         (reg:DI 157)) http-connect.c:142 -1
      (nil))
-(call_insn 271 270 272 22 (call (mem:QI (symbol_ref:DI ("redsocks_connect_relay") [flags 0x41]  <function_decl 0x2b6ca74e2500 redsocks_connect_relay>) [0 redsocks_connect_relay S1 A8])
+(call_insn 271 270 272 22 (call (mem:QI (symbol_ref:DI ("redsocks_connect_relay") [flags 0x41]  <function_decl 0x2b9911c7f500 redsocks_connect_relay>) [0 redsocks_connect_relay S1 A8])
         (const_int 0 [0])) http-connect.c:142 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1693,7 +1693,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 300 299 301 27 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2b6ca7555558 *.LC7>)) http-connect.c:149 -1
+        (symbol_ref/f:DI ("*.LC7") [flags 0x2]  <var_decl 0x2b9911cf2558 *.LC7>)) http-connect.c:149 -1
      (nil))
 (insn 301 300 302 27 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 5 [0x5])) http-connect.c:149 -1
@@ -1708,18 +1708,18 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:149 -1
      (nil))
 (insn 305 304 306 27 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b6ca74f4ed8 __func__>)) http-connect.c:149 -1
+        (symbol_ref:DI ("__func__.5415") [flags 0x2]  <var_decl 0x2b9911c90ed8 __func__>)) http-connect.c:149 -1
      (nil))
 (insn 306 305 307 27 (set (reg:SI 4 si)
         (const_int 149 [0x95])) http-connect.c:149 -1
      (nil))
 (insn 307 306 308 27 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:149 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:149 -1
      (nil))
 (insn 308 307 309 27 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:149 -1
      (nil))
-(call_insn 309 308 310 27 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 309 308 310 27 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 24 [0x18])) http-connect.c:149 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -1742,7 +1742,7 @@ try_optimize_cfg iteration 2
 (insn 311 310 312 27 (set (reg:DI 5 di)
         (reg:DI 162)) http-connect.c:150 -1
      (nil))
-(call_insn 312 311 313 27 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b6ca74e2300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 312 311 313 27 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b9911c7f300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-connect.c:150 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1760,7 +1760,7 @@ try_optimize_cfg iteration 2
 (insn 317 316 318 28 (set (reg:DI 5 di)
         (reg:DI 163)) http-connect.c:154 -1
      (nil))
-(call_insn 318 317 319 28 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 318 317 319 28 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:154 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1800,7 +1800,7 @@ try_optimize_cfg iteration 2
 (insn 331 330 332 31 (set (reg:DI 5 di)
         (reg:DI 164)) http-connect.c:157 -1
      (nil))
-(call_insn 332 331 333 31 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b6ca74e2300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
+(call_insn 332 331 333 31 (call (mem:QI (symbol_ref:DI ("redsocks_drop_client") [flags 0x41]  <function_decl 0x2b9911c7f300 redsocks_drop_client>) [0 redsocks_drop_client S1 A8])
         (const_int 0 [0])) http-connect.c:157 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1850,7 +1850,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 107 [ D.5639 ])) http-connect.c:166 -1
      (nil))
 (call_insn 349 348 350 35 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2b6ca74cf700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_evbuffer_readline") [flags 0x41]  <function_decl 0x2b9911c6c700 redsocks_evbuffer_readline>) [0 redsocks_evbuffer_readline S1 A8])
             (const_int 0 [0]))) http-connect.c:166 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -1911,7 +1911,7 @@ try_optimize_cfg iteration 2
 (insn 365 364 366 38 (set (reg:DI 5 di)
         (reg:DI 169)) http-connect.c:171 -1
      (nil))
-(call_insn 366 365 367 38 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 366 365 367 38 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:171 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -1979,7 +1979,7 @@ try_optimize_cfg iteration 2
 (insn 388 387 389 42 (set (reg:DI 5 di)
         (reg:DI 172)) http-connect.c:179 -1
      (nil))
-(call_insn 389 388 392 42 (call (mem:QI (symbol_ref:DI ("redsocks_start_relay") [flags 0x41]  <function_decl 0x2b6ca74e2600 redsocks_start_relay>) [0 redsocks_start_relay S1 A8])
+(call_insn 389 388 392 42 (call (mem:QI (symbol_ref:DI ("redsocks_start_relay") [flags 0x41]  <function_decl 0x2b9911c7f600 redsocks_start_relay>) [0 redsocks_start_relay S1 A8])
         (const_int 0 [0])) http-connect.c:179 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2089,7 +2089,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:185 -1
      (nil))
 (call_insn 9 8 10 2 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("evbuffer_new") [flags 0x41]  <function_decl 0x2b6ca7495d00 evbuffer_new>) [0 evbuffer_new S1 A8])
+        (call (mem:QI (symbol_ref:DI ("evbuffer_new") [flags 0x41]  <function_decl 0x2b9911c32d00 evbuffer_new>) [0 evbuffer_new S1 A8])
             (const_int 0 [0]))) http-connect.c:188 -1
      (nil)
     (nil))
@@ -2143,7 +2143,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 19 18 20 4 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2b6ca7571850 *.LC8>)) http-connect.c:190 -1
+        (symbol_ref/f:DI ("*.LC8") [flags 0x2]  <var_decl 0x2b9911d0e850 *.LC8>)) http-connect.c:190 -1
      (nil))
 (insn 20 19 21 4 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-connect.c:190 -1
@@ -2158,18 +2158,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-connect.c:190 -1
      (nil))
 (insn 24 23 25 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5432") [flags 0x2]  <var_decl 0x2b6ca750c428 __func__>)) http-connect.c:190 -1
+        (symbol_ref:DI ("__func__.5432") [flags 0x2]  <var_decl 0x2b9911ca9428 __func__>)) http-connect.c:190 -1
      (nil))
 (insn 25 24 26 4 (set (reg:SI 4 si)
         (const_int 190 [0xbe])) http-connect.c:190 -1
      (nil))
 (insn 26 25 27 4 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:190 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:190 -1
      (nil))
 (insn 27 26 28 4 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:190 -1
      (nil))
-(call_insn 28 27 29 4 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 28 27 29 4 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-connect.c:190 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2201,7 +2201,7 @@ try_optimize_cfg iteration 2
 (insn 35 34 36 5 (parallel [
             (set (reg:DI 112)
                 (plus:DI (reg/f:DI 61 [ D.5660 ])
-                    (const_int 832 [0x340])))
+                    (const_int 704 [0x2c0])))
             (clobber (reg:CC 17 flags))
         ]) http-connect.c:194 -1
      (nil))
@@ -2209,7 +2209,7 @@ try_optimize_cfg iteration 2
                 (const_int -184 [0xffffffffffffff48])) [0 auth+0 S8 A64])
         (reg:DI 112)) http-connect.c:194 -1
      (expr_list:REG_EQUAL (plus:DI (reg/f:DI 61 [ D.5660 ])
-            (const_int 832 [0x340]))
+            (const_int 704 [0x2c0]))
         (nil)))
 (insn 37 36 38 5 (set (reg/f:DI 113)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -2272,13 +2272,13 @@ try_optimize_cfg iteration 2
         (const_int 5 [0x5])) http-connect.c:203 -1
      (nil))
 (insn 52 51 53 6 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b6ca75718e8 *.LC9>)) http-connect.c:203 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b9911d0e8e8 *.LC9>)) http-connect.c:203 -1
      (nil))
 (insn 53 52 54 6 (set (reg:DI 5 di)
         (reg/f:DI 65 [ D.5662 ])) http-connect.c:203 -1
      (nil))
 (call_insn/i 54 53 55 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2b6ca7356a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2b9911af3a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-connect.c:203 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2311,7 +2311,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 61 60 62 7 (set (reg/f:DI 68 [ D.5662 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 67 [ D.5660 ])
-                (const_int 240 [0xf0])) [0 _21->config.password+0 S8 A64])) http-connect.c:204 -1
+                (const_int 144 [0x90])) [0 _21->config.password+0 S8 A64])) http-connect.c:204 -1
      (nil))
 (insn 62 61 63 7 (set (reg/f:DI 118)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -2323,7 +2323,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 64 63 65 7 (set (reg/f:DI 70 [ D.5662 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 69 [ D.5660 ])
-                (const_int 232 [0xe8])) [0 _23->config.login+0 S8 A64])) http-connect.c:204 -1
+                (const_int 136 [0x88])) [0 _23->config.login+0 S8 A64])) http-connect.c:204 -1
      (nil))
 (insn 65 64 66 7 (set (reg:DI 4 si)
         (reg/f:DI 68 [ D.5662 ])) http-connect.c:204 -1
@@ -2332,7 +2332,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 70 [ D.5662 ])) http-connect.c:204 -1
      (nil))
 (call_insn 67 66 68 7 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("basic_authentication_encode") [flags 0x41]  <function_decl 0x2b6ca7502000 basic_authentication_encode>) [0 basic_authentication_encode S1 A8])
+        (call (mem:QI (symbol_ref:DI ("basic_authentication_encode") [flags 0x41]  <function_decl 0x2b9911c9f000 basic_authentication_encode>) [0 basic_authentication_encode S1 A8])
             (const_int 0 [0]))) http-connect.c:204 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2347,7 +2347,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 70 69 71 7 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -200 [0xffffffffffffff38])) [0 auth_scheme+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b6ca75718e8 *.LC9>)) http-connect.c:205 -1
+        (symbol_ref/f:DI ("*.LC9") [flags 0x2]  <var_decl 0x2b9911d0e8e8 *.LC9>)) http-connect.c:205 -1
      (nil))
 (jump_insn 71 70 72 7 (set (pc)
         (label_ref 151)) -1
@@ -2367,13 +2367,13 @@ try_optimize_cfg iteration 2
         (const_int 6 [0x6])) http-connect.c:206 -1
      (nil))
 (insn 78 77 79 8 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b6ca7571980 *.LC10>)) http-connect.c:206 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b9911d0e980 *.LC10>)) http-connect.c:206 -1
      (nil))
 (insn 79 78 80 8 (set (reg:DI 5 di)
         (reg/f:DI 71 [ D.5662 ])) http-connect.c:206 -1
      (nil))
 (call_insn/i 80 79 81 8 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2b6ca7356a00 strncasecmp>) [0 strncasecmp S1 A8])
+        (call (mem:QI (symbol_ref:DI ("strncasecmp") [flags 0x41]  <function_decl 0x2b9911af3a00 strncasecmp>) [0 strncasecmp S1 A8])
             (const_int 0 [0]))) http-connect.c:206 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2411,7 +2411,7 @@ try_optimize_cfg iteration 2
         (reg:SI 74 [ D.5661 ])) http-connect.c:209 -1
      (nil))
 (call_insn/u 89 88 90 9 (set (reg:HI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2b6ca73fde00 ntohs>) [0 ntohs S1 A8])
+        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2b9911b9ae00 ntohs>) [0 ntohs S1 A8])
             (const_int 0 [0]))) http-connect.c:209 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2435,7 +2435,7 @@ try_optimize_cfg iteration 2
         (reg:SI 123)) http-connect.c:209 -1
      (nil))
 (call_insn 95 94 96 9 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b6ca7429800 inet_ntoa>) [0 inet_ntoa S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b9911bc6800 inet_ntoa>) [0 inet_ntoa S1 A8])
             (const_int 0 [0]))) http-connect.c:209 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2458,7 +2458,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 77 [ D.5662 ])) http-connect.c:209 -1
      (nil))
 (insn 100 99 101 9 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b6ca7571a18 *.LC11>)) http-connect.c:209 -1
+        (symbol_ref/f:DI ("*.LC11") [flags 0x2]  <var_decl 0x2b9911d0ea18 *.LC11>)) http-connect.c:209 -1
      (nil))
 (insn 101 100 102 9 (set (reg:DI 4 si)
         (const_int 128 [0x80])) http-connect.c:209 -1
@@ -2470,7 +2470,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:209 -1
      (nil))
 (call_insn 104 103 105 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2b6ca71d8300 snprintf>) [0 __builtin_snprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2b9911975300 snprintf>) [0 __builtin_snprintf S1 A8])
             (const_int 0 [0]))) http-connect.c:209 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2482,7 +2482,7 @@ try_optimize_cfg iteration 2
                         (expr_list:REG_BR_PRED (use (reg:SI 37 r8))
                             (nil))))))))
 (call_insn 105 104 106 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b6ca731e400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b9911abb400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-connect.c:214 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2494,7 +2494,7 @@ try_optimize_cfg iteration 2
         (zero_extend:SI (subreg:HI (reg:SI 78 [ D.5661 ]) 0))) http-connect.c:213 -1
      (nil))
 (call_insn 108 107 109 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b6ca731e400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b9911abb400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-connect.c:214 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2506,7 +2506,7 @@ try_optimize_cfg iteration 2
         (zero_extend:SI (subreg:HI (reg:SI 80 [ D.5661 ]) 0))) http-connect.c:213 -1
      (nil))
 (call_insn 111 110 112 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b6ca731e400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b9911abb400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-connect.c:214 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2518,7 +2518,7 @@ try_optimize_cfg iteration 2
         (zero_extend:SI (subreg:HI (reg:SI 82 [ D.5661 ]) 0))) http-connect.c:213 -1
      (nil))
 (call_insn 114 113 115 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b6ca731e400 rand>) [0 rand S1 A8])
+        (call (mem:QI (symbol_ref:DI ("rand") [flags 0x41]  <function_decl 0x2b9911abb400 rand>) [0 rand S1 A8])
             (const_int 0 [0]))) http-connect.c:214 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2549,7 +2549,7 @@ try_optimize_cfg iteration 2
         (reg:SI 85 [ D.5661 ])) http-connect.c:213 -1
      (nil))
 (insn 122 121 123 9 (set (reg:DI 1 dx)
-        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b6ca7571ab0 *.LC12>)) http-connect.c:213 -1
+        (symbol_ref/f:DI ("*.LC12") [flags 0x2]  <var_decl 0x2b9911d0eab0 *.LC12>)) http-connect.c:213 -1
      (nil))
 (insn 123 122 124 9 (set (reg:DI 4 si)
         (const_int 17 [0x11])) http-connect.c:213 -1
@@ -2561,7 +2561,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:213 -1
      (nil))
 (call_insn 126 125 127 9 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2b6ca71d8300 snprintf>) [0 __builtin_snprintf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("snprintf") [flags 0x41]  <function_decl 0x2b9911975300 snprintf>) [0 __builtin_snprintf S1 A8])
             (const_int 8 [0x8]))) http-connect.c:213 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2592,7 +2592,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 131 130 132 9 (set (reg/f:DI 88 [ D.5662 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 87 [ D.5660 ])
-                (const_int 240 [0xf0])) [0 _43->config.password+0 S8 A64])) http-connect.c:217 -1
+                (const_int 144 [0x90])) [0 _43->config.password+0 S8 A64])) http-connect.c:217 -1
      (nil))
 (insn 132 131 133 9 (set (reg/f:DI 128)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -2604,7 +2604,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 134 133 135 9 (set (reg/f:DI 90 [ D.5662 ])
         (mem/f/j:DI (plus:DI (reg/f:DI 89 [ D.5660 ])
-                (const_int 232 [0xe8])) [0 _45->config.login+0 S8 A64])) http-connect.c:217 -1
+                (const_int 136 [0x88])) [0 _45->config.login+0 S8 A64])) http-connect.c:217 -1
      (nil))
 (insn 135 134 136 9 (set (reg/f:DI 129)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -2646,7 +2646,7 @@ try_optimize_cfg iteration 2
         (reg:DI 130)) http-connect.c:216 -1
      (nil))
 (insn 143 142 144 9 (set (reg:DI 2 cx)
-        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2b6ca7571b48 *.LC13>)) http-connect.c:216 -1
+        (symbol_ref/f:DI ("*.LC13") [flags 0x2]  <var_decl 0x2b9911d0eb48 *.LC13>)) http-connect.c:216 -1
      (nil))
 (insn 144 143 145 9 (set (reg:DI 1 dx)
         (reg/f:DI 88 [ D.5662 ])) http-connect.c:216 -1
@@ -2658,7 +2658,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 92 [ D.5664 ])) http-connect.c:216 -1
      (nil))
 (call_insn 147 146 148 9 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("digest_authentication_encode") [flags 0x41]  <function_decl 0x2b6ca7502100 digest_authentication_encode>) [0 digest_authentication_encode S1 A8])
+        (call (mem:QI (symbol_ref:DI ("digest_authentication_encode") [flags 0x41]  <function_decl 0x2b9911c9f100 digest_authentication_encode>) [0 digest_authentication_encode S1 A8])
             (const_int 8 [0x8]))) http-connect.c:216 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -2678,7 +2678,7 @@ try_optimize_cfg iteration 2
      (nil))
 (insn 150 149 151 9 (set (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
                 (const_int -200 [0xffffffffffffff38])) [0 auth_scheme+0 S8 A64])
-        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b6ca7571980 *.LC10>)) http-connect.c:219 -1
+        (symbol_ref/f:DI ("*.LC10") [flags 0x2]  <var_decl 0x2b9911d0e980 *.LC10>)) http-connect.c:219 -1
      (nil))
 (code_label 151 150 152 10 35 "" [3 uses])
 (note 152 151 153 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
@@ -2710,7 +2710,7 @@ try_optimize_cfg iteration 2
         (reg:SI 94 [ D.5661 ])) http-connect.c:227 -1
      (nil))
 (call_insn/u 160 159 161 11 (set (reg:HI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2b6ca73fde00 ntohs>) [0 ntohs S1 A8])
+        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2b9911b9ae00 ntohs>) [0 ntohs S1 A8])
             (const_int 0 [0]))) http-connect.c:227 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2734,7 +2734,7 @@ try_optimize_cfg iteration 2
         (reg:SI 135)) http-connect.c:224 -1
      (nil))
 (call_insn 166 165 167 11 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b6ca7429800 inet_ntoa>) [0 inet_ntoa S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b9911bc6800 inet_ntoa>) [0 inet_ntoa S1 A8])
             (const_int 0 [0]))) http-connect.c:224 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2754,7 +2754,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 97 [ D.5662 ])) http-connect.c:224 -1
      (nil))
 (insn 171 170 172 11 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2b6ca7571be0 *.LC14>)) http-connect.c:224 -1
+        (symbol_ref/f:DI ("*.LC14") [flags 0x2]  <var_decl 0x2b9911d0ebe0 *.LC14>)) http-connect.c:224 -1
      (nil))
 (insn 172 171 173 11 (set (reg:DI 5 di)
         (reg:DI 136)) http-connect.c:224 -1
@@ -2763,7 +2763,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:224 -1
      (nil))
 (call_insn 174 173 175 11 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("evbuffer_add_printf") [flags 0x41]  <function_decl 0x2b6ca74a4100 evbuffer_add_printf>) [0 evbuffer_add_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("evbuffer_add_printf") [flags 0x41]  <function_decl 0x2b9911c41100 evbuffer_add_printf>) [0 evbuffer_add_printf S1 A8])
             (const_int 0 [0]))) http-connect.c:224 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2787,7 +2787,7 @@ try_optimize_cfg iteration 2
 (code_label 179 178 180 12 37 "" [1 uses])
 (note 180 179 181 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
 (insn 181 180 182 12 (set (reg/f:DI 98 [ auth_response_header.6 ])
-        (mem/f/c:DI (symbol_ref:DI ("auth_response_header") [flags 0x40]  <var_decl 0x2b6ca74f4980 auth_response_header>) [0 auth_response_header+0 S8 A64])) http-connect.c:230 -1
+        (mem/f/c:DI (symbol_ref:DI ("auth_response_header") [flags 0x40]  <var_decl 0x2b9911c90980 auth_response_header>) [0 auth_response_header+0 S8 A64])) http-connect.c:230 -1
      (nil))
 (insn 182 181 183 12 (set (reg/f:DI 138)
         (mem/f/c:DI (plus:DI (reg/f:DI 54 virtual-stack-vars)
@@ -2804,7 +2804,7 @@ try_optimize_cfg iteration 2
         (reg:SI 100 [ D.5661 ])) http-connect.c:233 -1
      (nil))
 (call_insn/u 186 185 187 12 (set (reg:HI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2b6ca73fde00 ntohs>) [0 ntohs S1 A8])
+        (call (mem:QI (symbol_ref:DI ("ntohs") [flags 0x41]  <function_decl 0x2b9911b9ae00 ntohs>) [0 ntohs S1 A8])
             (const_int 0 [0]))) http-connect.c:233 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2828,7 +2828,7 @@ try_optimize_cfg iteration 2
         (reg:SI 140)) http-connect.c:230 -1
      (nil))
 (call_insn 192 191 193 12 (set (reg:DI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b6ca7429800 inet_ntoa>) [0 inet_ntoa S1 A8])
+        (call (mem:QI (symbol_ref:DI ("inet_ntoa") [flags 0x41]  <function_decl 0x2b9911bc6800 inet_ntoa>) [0 inet_ntoa S1 A8])
             (const_int 0 [0]))) http-connect.c:230 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2865,7 +2865,7 @@ try_optimize_cfg iteration 2
         (reg/f:DI 103 [ D.5662 ])) http-connect.c:230 -1
      (nil))
 (insn 202 201 203 12 (set (reg:DI 4 si)
-        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b6ca7571c78 *.LC15>)) http-connect.c:230 -1
+        (symbol_ref/f:DI ("*.LC15") [flags 0x2]  <var_decl 0x2b9911d0ec78 *.LC15>)) http-connect.c:230 -1
      (nil))
 (insn 203 202 204 12 (set (reg:DI 5 di)
         (reg:DI 142)) http-connect.c:230 -1
@@ -2874,7 +2874,7 @@ try_optimize_cfg iteration 2
         (const_int 0 [0])) http-connect.c:230 -1
      (nil))
 (call_insn 205 204 206 12 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("evbuffer_add_printf") [flags 0x41]  <function_decl 0x2b6ca74a4100 evbuffer_add_printf>) [0 evbuffer_add_printf S1 A8])
+        (call (mem:QI (symbol_ref:DI ("evbuffer_add_printf") [flags 0x41]  <function_decl 0x2b9911c41100 evbuffer_add_printf>) [0 evbuffer_add_printf S1 A8])
             (const_int 8 [0x8]))) http-connect.c:230 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -2902,7 +2902,7 @@ try_optimize_cfg iteration 2
 (insn 211 210 212 13 (set (reg:DI 5 di)
         (reg:DI 145)) http-connect.c:240 -1
      (nil))
-(call_insn 212 211 213 13 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b6ca71ea500 free>) [0 __builtin_free S1 A8])
+(call_insn 212 211 213 13 (call (mem:QI (symbol_ref:DI ("free") [flags 0x41]  <function_decl 0x2b9911987500 free>) [0 __builtin_free S1 A8])
         (const_int 0 [0])) http-connect.c:240 -1
      (expr_list:REG_EH_REGION (const_int 0 [0])
         (nil))
@@ -2951,7 +2951,7 @@ try_optimize_cfg iteration 2
         (nil)))
 (insn 220 219 221 14 (set (mem:DI (plus:DI (reg/f:DI 56 virtual-outgoing-args)
                 (const_int 8 [0x8])) [0  S8 A64])
-        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2b6ca7571d10 *.LC16>)) http-connect.c:243 -1
+        (symbol_ref/f:DI ("*.LC16") [flags 0x2]  <var_decl 0x2b9911d0ed10 *.LC16>)) http-connect.c:243 -1
      (nil))
 (insn 221 220 222 14 (set (mem:SI (reg/f:DI 56 virtual-outgoing-args) [0  S4 A64])
         (const_int 3 [0x3])) http-connect.c:243 -1
@@ -2966,18 +2966,18 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-connect.c:243 -1
      (nil))
 (insn 225 224 226 14 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("__func__.5432") [flags 0x2]  <var_decl 0x2b6ca750c428 __func__>)) http-connect.c:243 -1
+        (symbol_ref:DI ("__func__.5432") [flags 0x2]  <var_decl 0x2b9911ca9428 __func__>)) http-connect.c:243 -1
      (nil))
 (insn 226 225 227 14 (set (reg:SI 4 si)
         (const_int 243 [0xf3])) http-connect.c:243 -1
      (nil))
 (insn 227 226 228 14 (set (reg:DI 5 di)
-        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b6ca7555130 *.LC0>)) http-connect.c:243 -1
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x2b9911cf2130 *.LC0>)) http-connect.c:243 -1
      (nil))
 (insn 228 227 229 14 (set (reg:QI 0 ax)
         (const_int 0 [0])) http-connect.c:243 -1
      (nil))
-(call_insn 229 228 230 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b6ca74e2f00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
+(call_insn 229 228 230 14 (call (mem:QI (symbol_ref:DI ("redsocks_log_write_plain") [flags 0x41]  <function_decl 0x2b9911c7ff00 redsocks_log_write_plain>) [0 redsocks_log_write_plain S1 A8])
         (const_int 16 [0x10])) http-connect.c:243 -1
      (nil)
     (expr_list:REG_DEP_TRUE (use (reg:QI 0 ax))
@@ -3032,7 +3032,7 @@ try_optimize_cfg iteration 2
 (insn 243 242 244 17 (set (reg:DI 5 di)
         (reg:DI 149)) http-connect.c:252 -1
      (nil))
-(call_insn 244 243 245 17 (call (mem:QI (symbol_ref:DI ("evbuffer_free") [flags 0x41]  <function_decl 0x2b6ca7495e00 evbuffer_free>) [0 evbuffer_free S1 A8])
+(call_insn 244 243 245 17 (call (mem:QI (symbol_ref:DI ("evbuffer_free") [flags 0x41]  <function_decl 0x2b9911c32e00 evbuffer_free>) [0 evbuffer_free S1 A8])
         (const_int 0 [0])) http-connect.c:252 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3067,7 +3067,7 @@ try_optimize_cfg iteration 2
      (nil)
  -> 261)
 (note 265 258 259 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
-(call_insn 259 265 260 21 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2b6ca7547300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
+(call_insn 259 265 260 21 (call (mem:QI (symbol_ref:DI ("__stack_chk_fail") [flags 0x41]  <function_decl 0x2b9911ce4300 __stack_chk_fail>) [0 __stack_chk_fail S1 A8])
         (const_int 0 [0])) http-connect.c:254 -1
      (expr_list:REG_NORETURN (const_int 0 [0])
         (expr_list:REG_EH_REGION (const_int 0 [0])
@@ -3140,7 +3140,7 @@ try_optimize_cfg iteration 2
 (insn 10 9 11 2 (set (reg:DI 5 di)
         (reg:DI 62)) http-connect.c:261 -1
      (nil))
-(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b6ca74e2400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
+(call_insn 11 10 12 2 (call (mem:QI (symbol_ref:DI ("redsocks_touch_client") [flags 0x41]  <function_decl 0x2b9911c7f400 redsocks_touch_client>) [0 redsocks_touch_client S1 A8])
         (const_int 0 [0])) http-connect.c:261 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3183,7 +3183,7 @@ try_optimize_cfg iteration 2
         (const_int 1 [0x1])) http-connect.c:264 -1
      (nil))
 (insn 22 21 23 4 (set (reg:DI 1 dx)
-        (symbol_ref:DI ("httpc_mkconnect") [flags 0x3]  <function_decl 0x2b6ca7502400 httpc_mkconnect>)) http-connect.c:264 -1
+        (symbol_ref:DI ("httpc_mkconnect") [flags 0x3]  <function_decl 0x2b9911c9f400 httpc_mkconnect>)) http-connect.c:264 -1
      (nil))
 (insn 23 22 24 4 (set (reg:DI 4 si)
         (reg:DI 64)) http-connect.c:264 -1
@@ -3192,7 +3192,7 @@ try_optimize_cfg iteration 2
         (reg:DI 65)) http-connect.c:264 -1
      (nil))
 (call_insn 25 24 26 4 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper_ex") [flags 0x41]  <function_decl 0x2b6ca74e2c00 redsocks_write_helper_ex>) [0 redsocks_write_helper_ex S1 A8])
+        (call (mem:QI (symbol_ref:DI ("redsocks_write_helper_ex") [flags 0x41]  <function_decl 0x2b9911c7fc00 redsocks_write_helper_ex>) [0 redsocks_write_helper_ex S1 A8])
             (const_int 0 [0]))) http-connect.c:264 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))
@@ -3240,7 +3240,7 @@ try_optimize_cfg iteration 2
         (reg:DI 67)) http-connect.c:270 -1
      (nil))
 (call_insn 38 37 41 6 (set (reg:SI 0 ax)
-        (call (mem:QI (symbol_ref:DI ("bufferevent_disable") [flags 0x41]  <function_decl 0x2b6ca74b5e00 bufferevent_disable>) [0 bufferevent_disable S1 A8])
+        (call (mem:QI (symbol_ref:DI ("bufferevent_disable") [flags 0x41]  <function_decl 0x2b9911c52e00 bufferevent_disable>) [0 bufferevent_disable S1 A8])
             (const_int 0 [0]))) http-connect.c:270 -1
      (nil)
     (expr_list:REG_FRAME_RELATED_EXPR (use (reg:DI 5 di))

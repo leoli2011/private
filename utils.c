@@ -153,7 +153,14 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
             }
 
             if (cl->instance->config.mptcp_test_mode) {
-                rc = setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT_SET_UUID, running_info_test[ins++ % SN_CNT], sizeof(int));
+				char uid[4];
+				int len;
+				int uuid;
+				server_config *sc = &running_info_test[ins++ % (SN_CNT * 3)];
+				len = Base64decode(uid, sc->key.uid);
+				memcpy(&uuid, uid, len);
+                log_errno(LOG_WARNING, "setsockopt client_uuid= %x, len=%d \n", uuid, len);
+                rc = setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT_SET_UUID, &uuid, len);
                 if (rc) {
                     log_errno(LOG_WARNING, "setsockopt enable MPTCP client_uuid setting failed");
                 }

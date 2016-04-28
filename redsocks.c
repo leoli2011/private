@@ -1096,10 +1096,8 @@ static int redsocks_init()
                 }
             }
 
-            /* request IP list
             snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/iplist");
             mptcp_login_test(instance, buf, 0, NO_SN_TEST);
-            */
 
             tv.tv_sec = instance->config.mptcp_reauth_time;
             tv.tv_usec = 0;
