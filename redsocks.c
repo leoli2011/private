@@ -1026,6 +1026,7 @@ static int redsocks_init()
     struct timeval tv;
     int i, j;
 	char buf[128];
+    server_config *sc = NULL;
 
 	sa.sa_handler = SIG_IGN;
 	sa.sa_flags = SA_RESTART;
@@ -1040,6 +1041,8 @@ static int redsocks_init()
 		goto fail;
 	}
 
+	init_netd_cmd();
+
 	list_for_each_entry_safe(instance, tmp, &instances, list) {
         snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/login");
         if (instance->config.mptcp_enable) {
@@ -1053,7 +1056,7 @@ static int redsocks_init()
 
                 for (i = 0; i < 3; i++) {
                     for (j = 0; j < SN_CNT; j++) {
-                        server_config *sc = &running_info_test[i][j];
+                        sc = &running_info_test[i][j];
                         struct in_addr addr;
 
                         if (!sc->dst[0].dip) {
@@ -1077,7 +1080,7 @@ static int redsocks_init()
                 }
 
                 for (i = 0; i < 3; i++) {
-                    server_config *sc = &running_info[i];
+                    sc = &running_info[i];
                     struct in_addr addr;
 
                     if (!sc->dst[0].dip) {
@@ -1095,6 +1098,8 @@ static int redsocks_init()
                               sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
                 }
             }
+
+			set_letv_dns_server(sc->dst[0].dip, 0);
 
             snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/iplist");
             mptcp_login_test(instance, buf, 0, NO_SN_TEST);

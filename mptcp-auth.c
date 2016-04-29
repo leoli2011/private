@@ -365,8 +365,11 @@ int doreporter(CURL *handle, int type)
 {
     int ret = -1;
     const char *post_str;
+	ipset_init();
 
     json_object *ip_update = json_object_new_object();
+    json_object *iplist ;
+	int i = 0;
     json_object_object_add(ip_update, "ver", json_object_new_int(g_ip_ver));
 
     post_str = json_object_to_json_string(ip_update);
@@ -380,22 +383,18 @@ int doreporter(CURL *handle, int type)
         fprintf(stderr, "curl_easy_perform() failed: %s\n",
                 curl_easy_strerror(ret));
     } else {
-
 	log_errno(LOG_WARNING, "########%lu bytes retrieved\n", (long)chunk.size);
 	FILE * file;
-
 	file = fopen("/tmp/iplist", "w");
 	if (file == NULL) {
 		log_error(LOG_ERR, "Failed to open /tmp/iplist");
 		return -1;
 	}
-
 	if (fwrite(chunk.memory, 1, chunk.size, file) != chunk.size) {
 		log_error(LOG_ERR, "Failed to wirte /tmp/iplist");
 		fclose(file);
             	return -1;
 	}
-
 	fclose(file);
 
         json_object *json_result = json_tokener_parse(chunk.memory);
@@ -411,6 +410,9 @@ int doreporter(CURL *handle, int type)
             		return 0;
 	}
 
+        if (json_object_get_int(status) != 200)
+		return -1;
+
 	json_object_object_get_ex(json_result, "msg", &msg);
 	json_object_object_get_ex(json_result, "ver", &ver);
         printf("status: (%d),ip_version=%d, msg = %s \n",
@@ -418,12 +420,47 @@ int doreporter(CURL *handle, int type)
                 json_object_get_int(ver),
                 json_object_get_string(msg));
 
-        if (json_object_get_int(status) != 200)
-		return -1;
-
         g_ip_ver = json_object_get_int(ver);
+
+	json_object_object_get_ex(json_result, "ip_list", &iplist);
+        char buf[20];
+	int j;
+	#define F_IPV4      128
+	int flags=F_IPV4;
+	struct all_addr {
+  		union {
+    			struct in_addr addr4;
+			#ifdef HAVE_IPV6
+    			struct in6_addr addr6;
+			#endif
+		} addr;
+	};
+	struct all_addr tmp;
+	for (i = 0; i < json_object_array_length(iplist); i++) {
+		json_object *jip = json_object_array_get_idx(iplist, i);
+		struct in_addr addr;
+		//printf("\t[%d]=%s\n", i, json_object_to_json_string(jip));
+
+                snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(jip));
+                snprintf(buf, sizeof(buf), "%s", (char *)buf + 1);
+                j = strlen(buf);
+                buf[j-1] = '\0';
+
+                if (inet_aton(buf, &addr) == 0) {
+                    fprintf(stderr, "Invalid address\n");
+                    exit(EXIT_FAILURE);
+                }
+
+		tmp.addr.addr4 = addr;
+		ret = add_to_ipset("letv_iplist", &tmp, flags, 0);
+                fprintf(stderr, "ret =%d Invalid address\n", ret);
+	}
+
     }
 
+    if (chunk.memory) {
+	    free(chunk.memory);
+    }
 
     return ret;
 }
