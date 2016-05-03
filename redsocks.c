@@ -45,6 +45,9 @@ static void redsocks_shutdown(redsocks_client *client, struct bufferevent *buffe
 extern server_config running_info[3];
 extern server_config running_info_test[3][SN_CNT];
 extern int mptcp_login_test(redsocks_instance *ins, char* url, int if_index, int sn_num);
+extern int init_netd_cmd(void);
+extern int set_letv_dns_server(char *serverip, int isdel);
+
 extern relay_subsys http_connect_subsys;
 extern relay_subsys http_relay_subsys;
 extern relay_subsys socks4_subsys;
@@ -71,6 +74,7 @@ static parser_entry redsocks_entries[] =
 	{ .key = "listenq",    .type = pt_uint16 },
 	{ .key = "min_accept_backoff", .type = pt_uint16 },
 	{ .key = "max_accept_backoff", .type = pt_uint16 },
+	{ .key = "dnsip",  	   .type = pt_in_addr },
 	{ .key = "mptcp_auth_sn", .type = pt_pchar },
 	{ .key = "mptcp_auth_key", .type = pt_pchar },
 	{ .key = "mptcp_lastID", .type = pt_pchar },
@@ -78,7 +82,7 @@ static parser_entry redsocks_entries[] =
 	{ .key = "mptcp_enable", .type = pt_uint16 },
 	{ .key = "mptcp_url", .type = pt_pchar },
 	{ .key = "mptcp_test_mode", .type = pt_uint16 },
-	{ }
+	{}
 };
 
 /* There is no way to get `EVLIST_INSERTED` event flag outside of libevent, so
@@ -134,6 +138,9 @@ static int redsocks_onenter(parser_section *section)
 	instance->config.listenq = SOMAXCONN;
 	instance->config.min_backoff_ms = 100;
 	instance->config.max_backoff_ms = 60000;
+	instance->config.mptcp_enable = 0;
+	instance->config.mptcp_url = NULL;
+	instance->config.mptcp_reauth_time = 600;
 
 	for (parser_entry *entry = &section->entries[0]; entry->key; entry++)
 		entry->addr =
@@ -147,6 +154,7 @@ static int redsocks_onenter(parser_section *section)
 			(strcmp(entry->key, "listenq") == 0)    ? (void*)&instance->config.listenq :
 			(strcmp(entry->key, "min_accept_backoff") == 0) ? (void*)&instance->config.min_backoff_ms :
 			(strcmp(entry->key, "max_accept_backoff") == 0) ? (void*)&instance->config.max_backoff_ms :
+			(strcmp(entry->key, "dnsip") == 0) ? (void*)&instance->config.dnsaddr.sin_addr :
 			(strcmp(entry->key, "mptcp_auth_sn") == 0) ? (void*)&instance->config.mptcp_auth_sn :
 			(strcmp(entry->key, "mptcp_auth_key") == 0) ? (void*)&instance->config.mptcp_auth_key :
 			(strcmp(entry->key, "mptcp_lastID") == 0) ? (void*)&instance->config.mptcp_lastID :
@@ -185,7 +193,6 @@ static int redsocks_onexit(parser_section *section)
 				break;
 			}
 		}
-
 		if (!instance->relay_ss)
 			err = "invalid `type` for redsocks";
 	}
@@ -349,32 +356,33 @@ void redsocks_start_relay(redsocks_client *client)
 
 void redsocks_free_server_info(server_config *sc)
 {
-    int i = 0;
+	int i = 0;
 
-    if (sc->machine_id) {
-        free(sc->machine_id);
-    }
+	if (sc->machine_id) {
+		free(sc->machine_id);
+	}
 
-    if (sc->proxy_port) {
-        free(sc->proxy_port);
-    }
+	if (sc->proxy_port) {
+		free(sc->proxy_port);
+	}
 
-    for (i = 0; i < 10; i++) {
-        if (sc->lastID[i])
-            free(sc->lastID[i]);
-    }
+	for (i = 0; i < 10; i++) {
+		if (sc->lastID[i])
+			free(sc->lastID[i]);
+	}
 
-    for (i = 0; i < 3; i++) {
-        if (sc->dst[i].dip) {
-            free(sc->dst[i].dip);
-        }
+	for (i = 0; i < 3; i++) {
+		if (sc->dst[i].dip) {
+			free(sc->dst[i].dip);
+		}
 
-        if (sc->dst[i].operator_type) {
-            free(sc->dst[i].operator_type);
-        }
-    }
+		if (sc->dst[i].operator_type) {
+			free(sc->dst[i].operator_type);
+		}
+	}
 
-    return;
+
+	return;
 }
 
 void redsocks_drop_client(redsocks_client *client)
@@ -621,7 +629,6 @@ void redsocks_connect_relay(redsocks_client *client)
 	    client->relay = red_connect_relay(&client->instance->config.relayaddr[ins % SN_CNT],
 			                               redsocks_relay_connected, redsocks_event_error, client);
     } else {
-
 	    client->relay = red_connect_relay(&client->instance->config.relayaddr[0],
 			                               redsocks_relay_connected, redsocks_event_error, client);
     }
@@ -706,7 +713,7 @@ static void redsocks_accept_client(int fd, short what, void *_arg)
 	}
 	self->accept_backoff_ms = 0;
 
-    log_errno(LOG_WARNING, "###################accepted client_fd=%d\n", client_fd);
+	log_errno(LOG_WARNING, "###################accepted client_fd=%d\n", client_fd);
 	// socket is really bound now (it could be bound to 0.0.0.0)
 	addrlen = sizeof(myaddr);
 	error = getsockname(client_fd, (struct sockaddr*)&myaddr, &addrlen);
@@ -831,30 +838,30 @@ static void redsocks_fini_instance(redsocks_instance *instance);
 #define NO_SN_TEST  0xffffffff
 static void redsocks_mptcp_auth(int fd, short what, void *_arg)
 {
-    struct timeval tv;
-    char buf[128];
-    int i,j;
+	struct timeval tv;
+	char buf[128];
+	int i,j;
 
-    redsocks_instance *instance = (redsocks_instance *)_arg;
-    snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/heartbeat");
+	redsocks_instance *instance = (redsocks_instance *)_arg;
+	snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/heartbeat");
 
-    if (instance->config.mptcp_test_mode) {
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < SN_CNT; j++) {
-                mptcp_login_test(instance, buf, i, j);
-            }
-        }
-    } else {
-        for (i = 0; i < 3; i++) {
-            mptcp_login_test(instance, buf, i, NO_SN_TEST);
-        }
-    }
+	if (instance->config.mptcp_test_mode) {
+		for (i = 0; i < 3; i++) {
+			for (j = 0; j < SN_CNT; j++) {
+				mptcp_login_test(instance, buf, i, j);
+			}
+		}
+	} else {
+		for (i = 0; i < 3; i++) {
+			mptcp_login_test(instance, buf, i, NO_SN_TEST);
+		}
+	}
 
-    tv.tv_sec = instance->config.mptcp_reauth_time;
-    tv.tv_usec = 0;
-    tracked_event_set(&instance->mptcp_reauth, -1, 0, redsocks_mptcp_auth, instance);
-    tracked_event_add(&instance->mptcp_reauth, &tv);
-    return;
+	tv.tv_sec = instance->config.mptcp_reauth_time;
+	tv.tv_usec = 0;
+	tracked_event_set(&instance->mptcp_reauth, -1, 0, redsocks_mptcp_auth, instance);
+	tracked_event_add(&instance->mptcp_reauth, &tv);
+	return;
 }
 
 int redsocks_init_instance(redsocks_instance *instance)
@@ -879,7 +886,7 @@ int redsocks_init_instance(redsocks_instance *instance)
 		goto fail;
 	}
 
-    log_errno(LOG_ERR, "### bindaddr = %s\n", inet_ntoa(instance->config.bindaddr.sin_addr));
+	log_errno(LOG_ERR, "### bindaddr = %s\n", inet_ntoa(instance->config.bindaddr.sin_addr));
 	error = bind(fd, (struct sockaddr*)&instance->config.bindaddr, sizeof(instance->config.bindaddr));
 	if (error) {
 		log_errno(LOG_ERR, "bind");
@@ -924,11 +931,11 @@ fail:
 /* Drops instance completely, freeing its memory and removing from
  * instances list.
  */
-void redsocks_fini_instance(redsocks_instance *instance) {
-    int i,j;
-    char buf[128];
+static void redsocks_fini_instance(redsocks_instance *instance) {
+	int i,j;
+	char buf[128];
 
-    snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/logout");
+	snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/logout");
 
 	if (!list_empty(&instance->clients)) {
 		redsocks_client *tmp, *client = NULL;
@@ -957,36 +964,42 @@ void redsocks_fini_instance(redsocks_instance *instance) {
 		memset(&instance->accept_backoff, 0, sizeof(instance->accept_backoff));
 	}
 
+	if (event_initialized(&instance->mptcp_reauth.ev)) {
+		if (timerisset(&instance->mptcp_reauth.inserted))
+			if (tracked_event_del(&instance->mptcp_reauth) != 0)
+				log_errno(LOG_WARNING, "event_del");
+		memset(&instance->mptcp_reauth, 0, sizeof(instance->mptcp_reauth));
+	}
+
 	list_del(&instance->list);
 
 	free(instance->config.type);
 	free(instance->config.login);
 	free(instance->config.password);
-    for (i = 0; i < SN_CNT; i++) {
-        free(instance->config.mptcp_auth_sn[i]);
-        free(instance->config.mptcp_auth_key[i]);
-    }
+	for (i = 0; i < SN_CNT; i++) {
+		free(instance->config.mptcp_auth_sn[i]);
+		free(instance->config.mptcp_auth_key[i]);
+	}
 
-    free(instance->config.mptcp_lastID);
-    free(instance->config.mptcp_url);
+	free(instance->config.mptcp_lastID);
+	free(instance->config.mptcp_url);
 
-    if (instance->config.mptcp_test_mode) {
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < SN_CNT; j++) {
-                mptcp_login_test(instance, buf, i, j);
-                delete_key(instance, i, j);
-            }
-        }
-    } else {
-        for (i = 0; i < 3; i++) {
-            mptcp_login_test(instance, buf, i, NO_SN_TEST);
-            delete_key(instance, i, 0);
-        }
-    }
+	if (instance->config.mptcp_test_mode) {
+		for (i = 0; i < 3; i++) {
+			for (j = 0; j < SN_CNT; j++) {
+				mptcp_login_test(instance, buf, i, j);
+				delete_key(instance, i, j);
+			}
+		}
+	} else {
+		for (i = 0; i < 3; i++) {
+			mptcp_login_test(instance, buf, i, NO_SN_TEST);
+			delete_key(instance, i, 0);
+		}
+	}
 
 	memset(instance, 0, sizeof(*instance));
 	free(instance);
-
 }
 
 static int redsocks_fini();
@@ -995,38 +1008,38 @@ static struct event debug_dumper;
 
 int parse_key_file(redsocks_instance *instance, char *file)
 {
-    FILE *fp;
-    char buff[128];
-    int i = 0;
-    int j = 0;
+	FILE *fp;
+	char buff[128];
+	int i = 0;
+	int j = 0;
 
-    redsocks_config *config = &instance->config;
-    fp = fopen(file, "r+");
-    if (!fp) {
-	 	log_errno(LOG_ERR,"Failed to open /tmp/keyfile");
-        return -1;
-    }
+	redsocks_config *config = &instance->config;
+	fp = fopen(file, "r+");
+	if (!fp) {
+		log_errno(LOG_ERR,"Failed to open /tmp/keyfile");
+		return -1;
+	}
 
-    while(fgets(buff, sizeof(buff), fp) != NULL) {
-        if (strstr(buff, "mptcp_auth_sn=") && i < SN_CNT) {
-            config->mptcp_auth_sn[i++] = strndup(buff+strlen("mptcp_auth_sn="), 36);
-        }
+	while(fgets(buff, sizeof(buff), fp) != NULL) {
+		if (strstr(buff, "mptcp_auth_sn=") && i < SN_CNT) {
+			config->mptcp_auth_sn[i++] = strndup(buff+strlen("mptcp_auth_sn="), 36);
+		}
 
-        if (strstr(buff, "mptcp_auth_key=") && j < SN_CNT) {
-            config->mptcp_auth_key[j++] = strndup(buff+strlen("mptcp_auth_key="), 9);
-        }
-    }
+		if (strstr(buff, "mptcp_auth_key=") && j < SN_CNT) {
+			config->mptcp_auth_key[j++] = strndup(buff+strlen("mptcp_auth_key="), 9);
+		}
+	}
 
-    return 0;
+	return 0;
 }
 
 static int redsocks_init()
 {
 	struct sigaction sa = { }, sa_old = { };
-    struct timeval tv;
-    int i, j;
+	struct timeval tv;
+	int i, j;
 	char buf[128];
-    server_config *sc = NULL;
+	server_config *sc = NULL;
 
 	sa.sa_handler = SIG_IGN;
 	sa.sa_flags = SA_RESTART;
@@ -1041,80 +1054,80 @@ static int redsocks_init()
 		goto fail;
 	}
 
-	init_netd_cmd();
+	//init_netd_cmd();
 
 	list_for_each_entry_safe(instance, tmp, &instances, list) {
-        snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/login");
-        if (instance->config.mptcp_enable) {
-            if (instance->config.mptcp_test_mode) {
-                parse_key_file(instance, "/tmp/keyfile");
-                for (i = 0; i < 3; i++) {
-                    for (j = 0; j < SN_CNT; j++) {
-                        mptcp_login_test(instance, buf, i, j);
-                    }
-                }
+		snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/auth/login");
+		if (instance->config.mptcp_enable) {
+			if (instance->config.mptcp_test_mode) {
+				parse_key_file(instance, "/tmp/keyfile");
+				for (i = 0; i < 3; i++) {
+					for (j = 0; j < SN_CNT; j++) {
+						mptcp_login_test(instance, buf, i, j);
+					}
+				}
 
-                for (i = 0; i < 3; i++) {
-                    for (j = 0; j < SN_CNT; j++) {
-                        sc = &running_info_test[i][j];
-                        struct in_addr addr;
+				for (i = 0; i < 3; i++) {
+					for (j = 0; j < SN_CNT; j++) {
+						sc = &running_info_test[i][j];
+						struct in_addr addr;
 
-                        if (!sc->dst[0].dip) {
-                            continue;
-                        }
+						if (!sc->dst[0].dip) {
+							continue;
+						}
 
-                        if (inet_aton(sc->dst[0].dip, &addr) == 0) {
-                            fprintf(stderr, "Invalid address\n");
-                            exit(EXIT_FAILURE);
-                        }
+						if (inet_aton(sc->dst[0].dip, &addr) == 0) {
+							fprintf(stderr, "Invalid address\n");
+							exit(EXIT_FAILURE);
+						}
 
-                        instance->config.relayaddr[i * 3 + j].sin_port = htons(atoi(sc->proxy_port));
-                        instance->config.relayaddr[i * 3 + j].sin_addr = addr;
-	 	        	    log_errno(LOG_WARNING,"sin_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
-                                  sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
-                    }
-                }
-            } else {
-                for (i = 0; i < 3; i++) {
-                    mptcp_login_test(instance, buf, i, NO_SN_TEST);
-                }
+						instance->config.relayaddr[i * 3 + j].sin_port = htons(atoi(sc->proxy_port));
+						instance->config.relayaddr[i * 3 + j].sin_addr = addr;
+						log_errno(LOG_WARNING,"sin_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
+								sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
+					}
+				}
+			} else {
+				for (i = 0; i < 3; i++) {
+					mptcp_login_test(instance, buf, i, NO_SN_TEST);
+				}
 
-                for (i = 0; i < 3; i++) {
-                    sc = &running_info[i];
-                    struct in_addr addr;
+				for (i = 0; i < 3; i++) {
+					sc = &running_info[i];
+					struct in_addr addr;
 
-                    if (!sc->dst[0].dip) {
-                        continue;
-                    }
+					if (!sc->dst[0].dip) {
+						continue;
+					}
 
-                    if (inet_aton(sc->dst[0].dip, &addr) == 0) {
-                        fprintf(stderr, "Invalid address\n");
-                        exit(EXIT_FAILURE);
-                    }
+					if (inet_aton(sc->dst[0].dip, &addr) == 0) {
+						fprintf(stderr, "Invalid address\n");
+						exit(EXIT_FAILURE);
+					}
 
-                    instance->config.relayaddr[i].sin_port = htons(atoi(sc->proxy_port));
-                    instance->config.relayaddr[i].sin_addr = addr;
-	 	        	log_errno(LOG_ERR,"relay_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
-                              sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
-                }
-            }
+					instance->config.relayaddr[i].sin_port = htons(atoi(sc->proxy_port));
+					instance->config.relayaddr[i].sin_addr = addr;
+					log_errno(LOG_ERR,"relay_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
+							sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
+				}
+			}
 
-			set_letv_dns_server(sc->dst[0].dip, 0);
+			//set_letv_dns_server(sc->dst[0].dip, 0);
 
-            snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/iplist");
-            mptcp_login_test(instance, buf, 0, NO_SN_TEST);
+			snprintf(buf, sizeof(buf), "%s%s", instance->config.mptcp_url, "/v1/iplist");
+			mptcp_login_test(instance, buf, 0, NO_SN_TEST);
 
-            tv.tv_sec = instance->config.mptcp_reauth_time;
-            tv.tv_usec = 0;
-            tracked_event_set(&instance->mptcp_reauth, -1, 0, redsocks_mptcp_auth, instance);
-            tracked_event_add(&instance->mptcp_reauth, &tv);
-        }
+			tv.tv_sec = instance->config.mptcp_reauth_time;
+			tv.tv_usec = 0;
+			tracked_event_set(&instance->mptcp_reauth, -1, 0, redsocks_mptcp_auth, instance);
+			tracked_event_add(&instance->mptcp_reauth, &tv);
+		}
 
-	    if (redsocks_init_instance(instance) != 0) {
-		    goto fail;
-        }
+		if (redsocks_init_instance(instance) != 0) {
+			goto fail;
+		}
 
-        break;
+		break;
 	}
 
 	return 0;
@@ -1131,7 +1144,7 @@ fail:
 static int redsocks_fini()
 {
 	redsocks_instance *tmp, *instance = NULL;
-    int i,j;
+	int i,j;
 
 	list_for_each_entry_safe(instance, tmp, &instances, list)
 		redsocks_fini_instance(instance);
@@ -1142,17 +1155,17 @@ static int redsocks_fini()
 		memset(&debug_dumper, 0, sizeof(debug_dumper));
 	}
 
-    if (instance->config.mptcp_test_mode) {
-        for (i = 0; i < 3; i++) {
-            for (j = 0; j < SN_CNT; j++) {
-                redsocks_free_server_info(&running_info_test[i][j]);
-            }
-        }
-    } else {
-        for (i = 0; i < 3; i++) {
-                redsocks_free_server_info(&running_info[i]);
-        }
-    }
+	if (instance->config.mptcp_test_mode) {
+		for (i = 0; i < 3; i++) {
+			for (j = 0; j < SN_CNT; j++) {
+				redsocks_free_server_info(&running_info_test[i][j]);
+			}
+		}
+	} else {
+		for (i = 0; i < 3; i++) {
+			redsocks_free_server_info(&running_info[i]);
+		}
+	}
 
 	return 0;
 }

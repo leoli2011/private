@@ -1,7 +1,6 @@
-OBJS := parser.o main.o redsocks.o log.o http-connect.o socks4.o socks5.o http-relay.o base.o base64.o md5.o http-auth.o utils.o redudp.o dnstc.o gen/version.o
-OBJS += mptcp-auth.o
-OBJS += ipset.o
-OBJS += netd_cmd.o
+OBJS := parser.o main.o redsocks.o log.o http-connect.o socks4.o socks5.o http-relay.o base.o base64.o md5.o http-auth.o utils.o redudp.o dnstc.o gen/version.o	mptcp-auth.o
+#OBJS += ipset.o
+#OBJS += netd_cmd.o
 SRCS := $(OBJS:.o=.c)
 CONF := config.h
 DEPS := .depend
@@ -10,8 +9,8 @@ VERSION := 0.4
 
 LIBS := -levent -lcurl -ljson-c -lssl
 #CFLAGS += -g -O2
-#CFLAGS += -g -ggdb -O0
-CFLAGS += -g -ggdb -O0  -fdump-rtl-expand
+CFLAGS += -g -ggdb -O0
+#CFLAGS += -g -ggdb -O0  -fdump-rtl-expand
 override CFLAGS += -std=c99 -D_XOPEN_SOURCE=600 -D_BSD_SOURCE -D_DEFAULT_SOURCE -Wall
 
 all: $(OUT)

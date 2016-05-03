@@ -25,7 +25,8 @@
 #include <pwd.h>
 #include <grp.h>
 #include <stdlib.h>
-#include "config.h"
+//#include "config.h"
+#define USE_IPTABLES
 #if defined USE_IPTABLES
 # include <limits.h>
 # include <linux/netfilter_ipv4.h>

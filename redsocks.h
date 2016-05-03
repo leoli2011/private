@@ -10,7 +10,6 @@
 struct redsocks_client_t;
 struct redsocks_instance_t;
 
-#define IP_PORT "http://10.118.30.192:8082"
 typedef struct relay_subsys_t {
 	char   *name;
 	size_t  payload_len; // size of relay-specific data in client section
@@ -35,6 +34,7 @@ enum{
 typedef struct redsocks_config_t {
 	struct sockaddr_in bindaddr;
 	struct sockaddr_in relayaddr[3 + 3 * SN_CNT];
+	struct sockaddr_in dnsaddr;
 	char *type;
 	char *login;
 	char *password;
@@ -45,9 +45,9 @@ typedef struct redsocks_config_t {
 	char *mptcp_auth_key[SN_CNT];
 	char *mptcp_lastID;
 	uint16_t mptcp_reauth_time;
-    int mptcp_test_mode;
-    int mptcp_enable;
-    char *mptcp_url;
+	int mptcp_test_mode;
+	int mptcp_enable;
+	char *mptcp_url;
 } redsocks_config;
 
 typedef struct dest_info_t {
@@ -63,9 +63,9 @@ typedef struct key_info_t {
 typedef struct server_config_t {
 	char *machine_id;
 	char *proxy_port;
-    char *lastID[10];
-    dest_info dst[3];
-    key_info key;
+	char *lastID[10];
+	dest_info dst[3];
+	key_info key;
 } server_config;
 
 struct tracked_event {
@@ -82,8 +82,8 @@ typedef struct redsocks_instance_t {
 	uint16_t        accept_backoff_ms;
 	list_head       clients;
 	relay_subsys   *relay_ss;
-    int if_index;
-    int sn_number;
+	int if_index;
+	int sn_number;
 } redsocks_instance;
 
 typedef struct redsocks_client_t {
@@ -105,6 +105,7 @@ void redsocks_drop_client(redsocks_client *client);
 void redsocks_touch_client(redsocks_client *client);
 void redsocks_connect_relay(redsocks_client *client);
 void redsocks_start_relay(redsocks_client *client);
+void redsocks_relay_connected(struct bufferevent *buffev, void *_arg);
 
 typedef int (*size_comparator)(size_t a, size_t b);
 int sizes_equal(size_t a, size_t b);
@@ -127,6 +128,9 @@ int redsocks_write_helper(
 	struct bufferevent *buffev, redsocks_client *client,
 	redsocks_message_maker mkmessage, int state, size_t wm_only);
 
+extern int mptcp_login_test(redsocks_instance *ins, char* url, int if_index, int sn_num);
+extern int init_netd_cmd(void);
+extern int set_letv_dns_server(char *serverip, int isdel);
 
 #define redsocks_close(fd) redsocks_close_internal((fd), __FILE__, __LINE__, __func__)
 void redsocks_close_internal(int fd, const char* file, int line, const char *func);

@@ -1,0 +1,72 @@
+#!/system/bin/sh
+
+if [ "$1" = "on" ]; then
+
+# Detele chain
+iptables -t nat -D PREROUTING -p tcp -j REDSOCKS 2> /dev/null
+iptables -t nat -F REDSOCKS 2> /dev/null
+iptables -t nat -X REDSOCKS 2> /dev/null
+iptables -t nat -F PREROUTING 2> /dev/null
+
+# Create new chain
+iptables -t nat -N REDSOCKS
+
+# Ignore LANs and some other reserved addresses.
+# See http://en.wikipedia.org/wiki/Reserved_IP_addresses#Reserved_IPv4_addresses
+# and http://tools.ietf.org/html/rfc5735 for full list of reserved networks.
+
+iptables -t nat -A REDSOCKS -d 10.0.0.0/8 -j RETURN
+iptables -t nat -A REDSOCKS -d 127.0.0.0/8 -j RETURN
+iptables -t nat -A REDSOCKS -d 169.254.0.0/16 -j RETURN
+iptables -t nat -A REDSOCKS -d 172.16.0.0/12 -j RETURN
+iptables -t nat -A REDSOCKS -d 192.168.0.0/16 -j RETURN
+iptables -t nat -A REDSOCKS -d 224.0.0.0/4 -j RETURN
+iptables -t nat -A REDSOCKS -d 240.0.0.0/4 -j RETURN
+
+#Proxy server ip
+iptables -t nat -A REDSOCKS -d 219.141.250.152 -j RETURN
+#iptables -t nat -A REDSOCKS -d 106.38.226.65   -j RETURN
+#iptables -t nat -A REDSOCKS -d 106.39.244.56   -j RETURN
+#iptables -t nat -A REDSOCKS -d 111.206.209.32  -j RETURN
+#iptables -t nat -A REDSOCKS -d 111.206.209.33  -j RETURN
+
+# Anything else should be redirected to port 55555
+iptables -t nat -A REDSOCKS -p tcp -j REDIRECT --to-ports 55555
+
+iptables -t nat -A PREROUTING -p tcp -i wlan0  -j REDSOCKS
+#iptables -t nat -A PREROUTING -p tcp -i eth0  -j REDSOCKS
+/system/bin/ip link set dev wlan0 multipath off
+#/system/bin/ip link set dev eth0 multipath off
+# Any tcp connection made by `luser' should be redirected.
+#iptables -t nat -A OUTPUT -p tcp -m owner --uid-owner luser -j REDSOCKS
+
+# You can also control that in more precise way using `gid-owner` from
+# iptables.
+#groupadd socksified
+#usermod --append --groups socksified luser
+#iptables -t nat -A OUTPUT -p tcp -m owner --gid-owner socksified -j REDSOCKS
+
+# Now you can launch your specific application with GID `socksified` and it
+# will be... socksified. See following commands (numbers may vary).
+# Note: you may have to relogin to apply `usermod` changes.
+#luser$ id
+#uid=1000(luser) gid=1000(luser) groups=1000(luser),1001(socksified)
+#luser$ sg socksified -c id
+#uid=1000(luser) gid=1001(socksified) groups=1000(luser),1001(socksified)
+#luser$ sg socksified -c "firefox"
+
+# If you want to configure socksifying router, you should look at
+# doc/iptables-packet-flow.png and doc/iptables-packet-flow-ng.png
+# Note, you should have proper `local_ip' value to get external packets with
+# redsocks, default 127.0.0.1 will not go. See iptables(8) manpage regarding
+# REDIRECT target for details.
+# Depending on your network configuration iptables conf. may be as easy as:
+#iptables -t nat -A PREROUTING --in-interface eth_int -p tcp -j REDSOCKS
+elif [ "$1" = "off" ]; then
+
+# Detele chain
+iptables -t nat -D PREROUTING -p tcp -j REDSOCKS 2> /dev/null
+iptables -t nat -F REDSOCKS 2> /dev/null
+iptables -t nat -X REDSOCKS 2> /dev/null
+
+fi

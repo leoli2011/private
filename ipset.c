@@ -46,7 +46,8 @@ void ipset_init(void)
     /* Initialize session */
     session = ipset_session_init(printf);
     if (session == NULL)
-        die (_("Cannot initialize ipset session, aborting."), NULL, EC_MISC);
+        //die (_("Cannot initialize ipset session, aborting."), NULL, EC_MISC);
+        fprintf(stderr, "Cannot initialize ipset session, aborting.");
     ipset_session_lineno(session, restore_line);
 }
 
@@ -84,9 +85,9 @@ retry:
     }
 #ifdef HAVE_IPV6
     if (flags & F_IPV4)
-        inet_ntop(AF_INET, ipaddr->addr.addr4, ipaddr_buff, ADDRSTRLEN);
+        inet_ntop(AF_INET, &ipaddr->addr.addr4, ipaddr_buff, ADDRSTRLEN);
     else if (flags & F_IPV6)
-        inet_ntop(AF_INET6, ipaddr->addr.addr6, ipaddr_buff, ADDRSTRLEN);
+        inet_ntop(AF_INET6, &ipaddr->addr.addr6, ipaddr_buff, ADDRSTRLEN);
 #else
     strcpy(ipaddr_buff, inet_ntoa(ipaddr->addr.addr4));
 #endif

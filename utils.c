@@ -117,7 +117,7 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 	int on = 1;
 	int relay_fd = -1;
 	int error;
-    int rc;
+	int rc;
 
 	relay_fd = socket(AF_INET, SOCK_STREAM, 0);
 	if (relay_fd == -1) {
@@ -137,36 +137,36 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 		goto fail;
 	}
 
-    if (writecb == redsocks_relay_connected) {
+	if (writecb == redsocks_relay_connected) {
 #define MPTCP_ENABLED     26
 #define MPTCP_AUTH_CLIENT 27
 #define MPTCP_AUTH_CLIENT_SET_UUID 30
-        int enable = 1;
-        redsocks_client * cl = (redsocks_client *)cbarg;
-        if (cl != NULL && cl->instance->config.mptcp_enable) {
-            if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_ENABLED, &enable, sizeof(enable))) {
-                log_errno(LOG_WARNING, "setsockopt enable MPTCP failed");
-            }
+		int enable = 1;
+		redsocks_client * cl = (redsocks_client *)cbarg;
+		if (cl != NULL && cl->instance->config.mptcp_enable) {
+			if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_ENABLED, &enable, sizeof(enable))) {
+				log_errno(LOG_WARNING, "setsockopt enable MPTCP failed");
+			}
 
-            if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT, &enable, sizeof(enable))) {
-                log_errno(LOG_WARNING, "setsockopt enable MPTCP Auth failed");
-            }
+			if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT, &enable, sizeof(enable))) {
+				log_errno(LOG_WARNING, "setsockopt enable MPTCP Auth failed");
+			}
 
-            if (cl->instance->config.mptcp_test_mode) {
+			if (cl->instance->config.mptcp_test_mode) {
 				char uid[4];
 				int len;
 				int uuid;
 				server_config *sc = &running_info_test[ins++ % (SN_CNT * 3)];
 				len = Base64decode(uid, sc->key.uid);
 				memcpy(&uuid, uid, len);
-                log_errno(LOG_WARNING, "setsockopt client_uuid= %x, len=%d \n", uuid, len);
-                rc = setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT_SET_UUID, &uuid, len);
-                if (rc) {
-                    log_errno(LOG_WARNING, "setsockopt enable MPTCP client_uuid setting failed");
-                }
-            }
-        }
-    }
+				log_errno(LOG_WARNING, "setsockopt client_uuid= %x, len=%d \n", uuid, len);
+				rc = setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT_SET_UUID, &uuid, len);
+				if (rc) {
+					log_errno(LOG_WARNING, "setsockopt enable MPTCP client_uuid setting failed");
+				}
+			}
+		}
+	}
 
 	error = connect(relay_fd, (struct sockaddr*)addr, sizeof(*addr));
 	if (error && errno != EINPROGRESS) {
