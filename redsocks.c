@@ -847,7 +847,7 @@ static void redsocks_mptcp_auth(int fd, short what, void *_arg)
 	if (instance->config.mptcp_test_mode) {
 		for (i = 0; i < 3; i++) {
 			for (j = 0; j < SN_CNT; j++) {
-				snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[i * 3 + j].sin_addr), "/v1/auth/heartbeat");
+				snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[i * SN_CNT + j].sin_addr), "/v1/auth/heartbeat");
 				mptcp_login_test(instance, buf, i, j);
 			}
 		}
@@ -987,7 +987,7 @@ static void redsocks_fini_instance(redsocks_instance *instance) {
 	if (instance->config.mptcp_test_mode) {
 		for (i = 0; i < 3; i++) {
 			for (j = 0; j < SN_CNT; j++) {
-				snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[i * 3 + j].sin_addr), "/v1/auth/logout");
+				snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[i * SN_CNT + j].sin_addr), "/v1/auth/logout");
 				mptcp_login_test(instance, buf, i, j);
 				delete_key(instance, i, j);
 			}
@@ -1083,8 +1083,8 @@ static int redsocks_init()
 							exit(EXIT_FAILURE);
 						}
 
-						instance->config.relayaddr[i * 3 + j].sin_port = htons(atoi(sc->proxy_port));
-						instance->config.relayaddr[i * 3 + j].sin_addr = addr;
+						instance->config.relayaddr[i * SN_CNT + j].sin_port = htons(atoi(sc->proxy_port));
+						instance->config.relayaddr[i * SN_CNT + j].sin_addr = addr;
 						log_errno(LOG_WARNING,"sin_port=%s, relay_addr=%s, uid=%s, key=%s, machine_id=%s",
 								sc->proxy_port, sc->dst[0].dip, sc->key.uid, sc->key.key, sc->machine_id);
 					}
