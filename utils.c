@@ -27,6 +27,10 @@
 #include "redsocks.h" // for redsocks_close
 #include "libc-compat.h"
 
+#define MPTCP_ENABLED     26
+#define MPTCP_AUTH_CLIENT 27
+#define MPTCP_AUTH_CLIENT_SET_UUID 30
+
 extern server_config running_info_test[3][SN_CNT];
 extern int ins;
 int red_recv_udp_pkt(int fd, char *buf, size_t buflen, struct sockaddr_in *inaddr, struct sockaddr_in *toaddr)
@@ -138,9 +142,6 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 	}
 
 	if (writecb == redsocks_relay_connected) {
-#define MPTCP_ENABLED     26
-#define MPTCP_AUTH_CLIENT 27
-#define MPTCP_AUTH_CLIENT_SET_UUID 30
 		int enable = 1;
 		redsocks_client * cl = (redsocks_client *)cbarg;
 		if (cl != NULL && cl->instance->config.mptcp_enable) {
@@ -156,14 +157,22 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 				char uid[4];
 				int len;
 				int uuid;
-				server_config *sc = &running_info_test[ins++ % (SN_CNT * 3)];
+				struct in_addr addr_tmp;
+				server_config *tmp = (server_config *)running_info_test;
+				server_config *sc = &tmp[ins++ % (SN_CNT * 3)];
+
 				len = Base64decode(uid, sc->key.uid);
 				memcpy(&uuid, uid, len);
-				log_errno(LOG_WARNING, "setsockopt client_uuid= %x, len=%d \n", uuid, len);
+				log_errno(LOG_WARNING, "setsockopt client_uuid= %x, len=%d , addr = %s\n", uuid, len, inet_ntoa(addr->sin_addr));
 				rc = setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT_SET_UUID, &uuid, len);
 				if (rc) {
 					log_errno(LOG_WARNING, "setsockopt enable MPTCP client_uuid setting failed");
 				}
+
+				inet_aton(sc->dst[0].dip, &addr_tmp);
+				addr->sin_port = htons(atoi(sc->proxy_port));
+				addr->sin_addr = addr_tmp;
+				log_errno(LOG_WARNING, "after setsockopt client_uuid= %x, len=%d , addr = %s\n", uuid, len, inet_ntoa(addr->sin_addr));
 			}
 		}
 	}

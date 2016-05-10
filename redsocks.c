@@ -626,7 +626,7 @@ int ins = 0;
 void redsocks_connect_relay(redsocks_client *client)
 {
     if (client->instance->config.mptcp_test_mode) {
-	    client->relay = red_connect_relay(&client->instance->config.relayaddr[ins % SN_CNT],
+	    client->relay = red_connect_relay(&client->instance->config.relayaddr[ins % (SN_CNT * 3)],
 			                               redsocks_relay_connected, redsocks_event_error, client);
     } else {
 	    client->relay = red_connect_relay(&client->instance->config.relayaddr[0],
@@ -843,16 +843,17 @@ static void redsocks_mptcp_auth(int fd, short what, void *_arg)
 	int i,j;
 
 	redsocks_instance *instance = (redsocks_instance *)_arg;
-	snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/heartbeat");
 
 	if (instance->config.mptcp_test_mode) {
 		for (i = 0; i < 3; i++) {
 			for (j = 0; j < SN_CNT; j++) {
+				snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[i * 3 + j].sin_addr), "/v1/auth/heartbeat");
 				mptcp_login_test(instance, buf, i, j);
 			}
 		}
 	} else {
 		for (i = 0; i < 3; i++) {
+			snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/heartbeat");
 			mptcp_login_test(instance, buf, i, NO_SN_TEST);
 		}
 	}
@@ -935,7 +936,6 @@ static void redsocks_fini_instance(redsocks_instance *instance) {
 	int i,j;
 	char buf[128];
 
-	snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/logout");
 
 	if (!list_empty(&instance->clients)) {
 		redsocks_client *tmp, *client = NULL;
@@ -987,12 +987,14 @@ static void redsocks_fini_instance(redsocks_instance *instance) {
 	if (instance->config.mptcp_test_mode) {
 		for (i = 0; i < 3; i++) {
 			for (j = 0; j < SN_CNT; j++) {
+				snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[i * 3 + j].sin_addr), "/v1/auth/logout");
 				mptcp_login_test(instance, buf, i, j);
 				delete_key(instance, i, j);
 			}
 		}
 	} else {
 		for (i = 0; i < 3; i++) {
+			snprintf(buf, sizeof(buf), "http://%s:443%s", inet_ntoa(instance->config.relayaddr[0].sin_addr), "/v1/auth/logout");
 			mptcp_login_test(instance, buf, i, NO_SN_TEST);
 			delete_key(instance, i, 0);
 		}

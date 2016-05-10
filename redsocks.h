@@ -33,7 +33,7 @@ enum{
 
 typedef struct redsocks_config_t {
 	struct sockaddr_in bindaddr;
-	struct sockaddr_in relayaddr[3 + 3 * SN_CNT];
+	struct sockaddr_in relayaddr[3 * SN_CNT];
 	struct sockaddr_in dnsaddr;
 	char *type;
 	char *login;

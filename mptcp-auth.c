@@ -220,7 +220,7 @@ int update_key(json_object *json_result, server_config *sc)
 	write_keyfile(MPTCP_AUTH_FILE, &key_test);
 
 #if 0
-	//int i;
+	int i;
 	fprintf(stderr, "uid: ");
 	for (i = 0; i < 3; i++) {
 		fprintf(stderr, "%02x:", (unsigned char) client_uid[i]);
@@ -388,7 +388,7 @@ int doreporter(CURL *handle)
 	curl_easy_setopt(handle, CURLOPT_POSTFIELDS, post_str);
 	curl_easy_setopt(handle, CURLOPT_WRITEFUNCTION, &WriteMemoryCallback);
 	curl_easy_setopt(handle, CURLOPT_WRITEDATA, (void *)&chunk);
-	curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
+	curl_easy_setopt(handle, CURLOPT_VERBOSE, 0L);
 	ret = curl_easy_perform(handle);
 	if(ret != CURLE_OK) {
 		fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(ret));
@@ -437,7 +437,7 @@ int doreporter(CURL *handle)
 	for (i = 0; i < json_object_array_length(iplist); i++) {
 		json_object *jip = json_object_array_get_idx(iplist, i);
 		struct in_addr addr;
-		printf("\t[%d]=%s\n", i, json_object_to_json_string(jip));
+		//printf("\t[%d]=%s\n", i, json_object_to_json_string(jip));
 
                 snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(jip));
                 snprintf(buf, sizeof(buf), "%s", (char *)buf + 1);
@@ -445,7 +445,7 @@ int doreporter(CURL *handle)
                 buf[j-1] = '\0';
 
                 if (inet_aton(buf, &addr) == 0) {
-                    fprintf(stderr, "Invalid address\n");
+                    //fprintf(stderr, "Invalid address\n");
 		    continue;
                     //exit(EXIT_FAILURE);
                 }
@@ -465,12 +465,12 @@ int doreporter(CURL *handle)
 }
 
 char *l_ifname[3] = {
-	//"wwlan0",
-	//"wwlan1",
-	//"wwlan2",
-	"eth0",
-	"eth0",
-	"eth0",
+//	"eth0",
+//	"eth0",
+//	"eth0",
+	"61.147.168.12",
+	"153.3.50.214",
+	"221.181.203.210",
 };
 
 #define NO_SN_TEST  0xffffffff
@@ -582,7 +582,7 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 	curl_easy_setopt(easy_handle, CURLOPT_POSTFIELDS, post_str);
 	curl_easy_setopt(easy_handle, CURLOPT_WRITEFUNCTION, &process_data_test);
 	curl_easy_setopt(easy_handle, CURLOPT_WRITEDATA, ins);
-	curl_easy_setopt(easy_handle, CURLOPT_VERBOSE, 1L);
+	curl_easy_setopt(easy_handle, CURLOPT_VERBOSE, 0L);
 	curl_easy_perform(easy_handle);
 
 exit:
