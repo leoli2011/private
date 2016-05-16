@@ -170,6 +170,7 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 				}
 
 				inet_aton(sc->dst[0].dip, &addr_tmp);
+				addr->sin_family = AF_INET;
 				addr->sin_port = htons(atoi(sc->proxy_port));
 				addr->sin_addr = addr_tmp;
 				log_errno(LOG_WARNING, "after setsockopt client_uuid= %x, len=%d , addr = %s\n", uuid, len, inet_ntoa(addr->sin_addr));

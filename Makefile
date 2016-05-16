@@ -7,7 +7,7 @@ DEPS := .depend
 OUT := redsocks
 VERSION := 0.4
 
-LIBS := -levent -lcurl -ljson-c -lssl
+LIBS := -L ../libevent-2.0.22-stable/.libs -levent -lcurl -ljson-c -lssl
 #CFLAGS += -g -O2
 CFLAGS += -g -ggdb -O0
 #CFLAGS += -g -ggdb -O0  -fdump-rtl-expand
