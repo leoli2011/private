@@ -46,7 +46,7 @@ typedef struct redsocks_config_t {
 	char *mptcp_lastID;
 	uint16_t mptcp_reauth_time;
 	int mptcp_test_mode;
-	int mptcp_enable;
+	int mptcp_auth_enable;
 	char *mptcp_url;
 } redsocks_config;
 
@@ -66,6 +66,7 @@ typedef struct server_config_t {
 	char *lastID[10];
 	dest_info dst[3];
 	key_info key;
+	int valid;
 } server_config;
 
 struct tracked_event {

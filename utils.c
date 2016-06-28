@@ -144,17 +144,17 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 
 	if (writecb == redsocks_relay_connected) {
 		int enable = 1;
-		redsocks_client * cl = (redsocks_client *)cbarg;
-		if (cl != NULL && cl->instance->config.mptcp_enable) {
+		if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_ENABLED, &enable, sizeof(enable))) {
+			log_errno(LOG_WARNING, "setsockopt enable MPTCP failed");
+		}
+
+		redsocks_client *cl = (redsocks_client *)cbarg;
+		if (cl != NULL && cl->instance->config.mptcp_auth_enable) {
 			char uid[4];
-			int len;
-			int uuid;
+			int len = 0;
+			int uuid = 0;
 			struct in_addr addr_tmp;
 			server_config *tmp, *sc;
-			if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_ENABLED, &enable, sizeof(enable))) {
-				log_errno(LOG_WARNING, "setsockopt enable MPTCP failed");
-			}
-
 			if (setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT, &enable, sizeof(enable))) {
 				log_errno(LOG_WARNING, "setsockopt enable MPTCP Auth failed");
 			}
@@ -162,25 +162,56 @@ struct bufferevent* red_connect_relay(struct sockaddr_in *addr, evbuffercb write
 			if (cl->instance->config.mptcp_test_mode) {
 				tmp = (server_config *)running_info_test;
 				sc = &tmp[ins++ % (SN_CNT * 3)];
-
+                if (!sc->valid) {
+					log_errno(LOG_ERR, "sc->valid = 0");
+                    int i;
+                    for (i = ins; i < SN_CNT * 3; i++) {
+                        sc = &tmp[i % (SN_CNT * 3)];
+                        if (sc->valid) {
+					        log_errno(LOG_ERR, "change another sc->valid = 1");
+                            break;
+                        }
+                    }
+                }
 			} else {
+				int i;
 				tmp = (server_config *)running_info;
-				sc = &tmp[ins++ % 3];
+				for (i = 0; i < 3; i++) {
+					sc = &tmp[i];
+					if (sc->valid) {
+						break;
+					}
+				}
+
+				if (i == 3) {
+					log_errno(LOG_ERR, "Failed to get valid uid.");
+					goto fail;
+				}
 			}
 
 			len = Base64decode(uid, sc->key.uid);
 			memcpy(&uuid, uid, len);
 			log_errno(LOG_WARNING, "setsockopt client_uuid= %x, len=%d , addr = %s\n", uuid, len, inet_ntoa(addr->sin_addr));
+
+			if (uuid == 0 || len != 4) {
+				log_errno(LOG_WARNING, "invalid uuid=%x or len=%d, uuid=%s\n", uuid, len, sc->key.uid);
+				goto fail;
+			}
+
 			rc = setsockopt(relay_fd, IPPROTO_TCP, MPTCP_AUTH_CLIENT_SET_UUID, &uuid, len);
 			if (rc) {
 				log_errno(LOG_WARNING, "setsockopt enable MPTCP client_uuid setting failed");
+				goto fail;
 			}
 
-			inet_aton(sc->dst[0].dip, &addr_tmp);
+			if (inet_aton(sc->dst[0].dip, &addr_tmp) == 0) {
+				log_errno(LOG_ERR, "Invalid address\n");
+				goto fail;
+			}
+
 			addr->sin_family = AF_INET;
 			addr->sin_port = htons(atoi(sc->proxy_port));
 			addr->sin_addr = addr_tmp;
-			log_errno(LOG_WARNING, "after setsockopt client_uuid= %x, len=%d , addr = %s\n", uuid, len, inet_ntoa(addr->sin_addr));
 		}
 	}
 

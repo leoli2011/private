@@ -20,7 +20,7 @@
 #include <cutils/sockets.h>
 #include <cutils/properties.h>
 
-#define LETV_RESOURCE "letv letv.com lecloud.com lemall.com hdletv.com leauto.com letv.cn letvcdn.com letvcloud.com letvimg.com letvstore.com"
+#define LETV_RESOURCE "letv letv.com lecloud.com lemall.com hdletv.com leauto.com letv.cn letvcdn.com letvcloud.com letvimg.com letvstore.com le.com"
 
 typedef int (*netd_result_handle)(int code, char* res_line, void *arg);
 
@@ -92,7 +92,7 @@ static int netd_result(int sock, int cmdid, netd_result_handle handle, void *arg
 
 static int netd_cmdx(int sock, char *cmd, netd_result_handle handle, void *arg)
 {
-    char final_cmd[128];
+    char final_cmd[512];
     static int cmdid = 1000;
 
     snprintf(final_cmd, sizeof(final_cmd), "%d %s", ++cmdid, cmd);
@@ -136,18 +136,31 @@ int send_netd_cmd(char *cmd)
     return netd_cmdx(netd_csock, cmd, NULL, NULL);
 }
 
-int set_letv_dns_server(char *serverip, int isdel)
+int set_proxy_dns_server(char *serverip, int isdel)
 {
-    char cmd[128];
+    char cmd[512];
     char default_ifc[PROPERTY_VALUE_MAX];
+    char default_netid[PROPERTY_VALUE_MAX];
+    char la_cfg[PROPERTY_VALUE_MAX];
+    int ret = 0;
 
     if (!serverip) return -1;
-    if (property_get("net.default.interface", default_ifc, NULL) <= 0) return -1; 
+    if (property_get("net.default.interface", default_ifc, NULL) <= 0) return -1;
+    if (property_get("net.default.netid", default_netid, NULL) <= 0) return -1;
+    property_get("net.default.la", la_cfg, "0");
 
-    if (!isdel) {
-        snprintf(cmd, sizeof(cmd), "tether dns add %s %s no "LETV_RESOURCE, default_ifc, serverip);
-    } else {
-        snprintf(cmd, sizeof(cmd), "tether dns del %s %s no "LETV_RESOURCE, default_ifc, serverip);
+    ret = atoi(la_cfg);
+    if (ret > 1) {
+        if (!isdel) {
+            snprintf(cmd, sizeof(cmd), "tether dns add %s %s no "LETV_RESOURCE, default_ifc, serverip);
+        } else {
+            snprintf(cmd, sizeof(cmd), "tether dns del %s %s no "LETV_RESOURCE, default_ifc, serverip);
+        }
+        ret = send_netd_cmd(cmd);
+    } else if (!isdel && ret == 1) {
+        snprintf(cmd, sizeof(cmd), "tether dns set %s %s", default_netid, serverip);
+        ret = send_netd_cmd(cmd);
     }
-    return send_netd_cmd(cmd);
+    property_set("net.default.ladns", isdel ? "" : serverip);
+    return ret;
 }

@@ -4,9 +4,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
 #include <curl/curl.h>
 #include <json-c/json.h>
 #include <openssl/ssl.h>
@@ -190,27 +187,20 @@ int update_key(json_object *json_result, server_config *sc)
 		char buf[92] = {0};
 		int j;
 
-		snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(uid));
-		snprintf(buf, sizeof(buf), "%s", buf + 1);
-		j = strlen(buf);
-		buf[j-1] = '\0';
+		snprintf(buf, sizeof(buf), "%s", json_object_get_string(uid));
 		snprintf(sc->key.uid, 9, "%s", buf);
 
 		memset(buf, 0x0, 92);
-		snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(key));
-		snprintf(buf, sizeof(buf), "%s", buf + 1);
-		j = strlen(buf);
-		buf[j-1]  = '\0';
+		snprintf(buf, sizeof(buf), "%s", json_object_get_string(key));
 		snprintf(sc->key.key, 89, "%s", buf);
 	}
 
-	client_uid_len = Base64decode(client_uid, sc->key.uid);
-	client_key_len = Base64decode(client_key, sc->key.key);
-	log_error(LOG_DEBUG, "uid_len(%d), key_len(%d)\n", client_uid_len, client_key_len);
-
-	if (client_uid_len != 4 ||client_key_len != 64) {
-		log_error(LOG_ERR, "wrong uid or key\n");
-				goto exit;
+	client_uid_len = base64_decode(client_uid, sc->key.uid, 4);
+	client_key_len = base64_decode(client_key, sc->key.key, 64);
+	//log_error(LOG_DEBUG, "uid_len(%d), key_len(%d)\n", client_uid_len, client_key_len);
+	if (client_uid_len != 4 || client_key_len != 64) {
+		log_error(LOG_ERR, "wrong uid or key, key=%s, uid=%s\n", sc->key.key, sc->key.uid);
+		goto exit;
 	}
 
 	key_test.cmd = 0x01;
@@ -218,9 +208,10 @@ int update_key(json_object *json_result, server_config *sc)
 	memcpy(&key_test.key, client_key, client_key_len);
 
 	write_keyfile(MPTCP_AUTH_FILE, &key_test);
+	sc->valid = 1;
 
 #if 0
-	int i;
+	//int i;
 	fprintf(stderr, "uid: ");
 	for (i = 0; i < 3; i++) {
 		fprintf(stderr, "%02x:", (unsigned char) client_uid[i]);
@@ -292,8 +283,8 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 	}
 
 	json_object_object_get_ex(json_result, "msg", &msg);
-	log_error(LOG_DEBUG, "status: (%d), msg = %s \n",
-			json_object_get_int(status), json_object_get_string(msg));
+	//log_error(LOG_DEBUG, "status: (%d), msg = %s \n",
+			//json_object_get_int(status), json_object_get_string(msg));
 
 	if (json_object_get_int(status) != 200)
 		return -1;
@@ -322,15 +313,10 @@ size_t process_data_test(void *buffer, size_t size, size_t nmemb, void *user_p)
 		json_object *jproxy = json_object_array_get_idx(proxy, i);
 		json_object_object_get_ex(jproxy, "ip", &ip);
 		json_object_object_get_ex(jproxy, "operator_type", &o_type);
-		//log_error(LOG_WARNING, "\t[%d], ip=%s, operator_type=%s\n",
-    		//i, json_object_to_json_string(ip), json_object_to_json_string(o_type));
 
-		snprintf(buf[i], sizeof(buf[i]), "%s", json_object_to_json_string(ip));
-		snprintf(buf[i], sizeof(buf[i]), "%s", (char *)buf[i] + 1);
-		j = strlen(buf[i]);
-		buf[i][j-1] = '\0';
+		snprintf(buf[i], sizeof(buf[i]), "%s", json_object_get_string(ip));
 		sc->dst[i].dip = strdup(buf[i]);
-		sc->dst[i].operator_type = strdup(json_object_to_json_string(o_type));
+		sc->dst[i].operator_type = strdup(json_object_get_string(o_type));
 	}
 
 	update_key(json_result, sc);
@@ -439,20 +425,14 @@ int doreporter(CURL *handle)
 		struct in_addr addr;
 		//printf("\t[%d]=%s\n", i, json_object_to_json_string(jip));
 
-                snprintf(buf, sizeof(buf), "%s", json_object_to_json_string(jip));
-                snprintf(buf, sizeof(buf), "%s", (char *)buf + 1);
-                j = strlen(buf);
-                buf[j-1] = '\0';
-
+                snprintf(buf, sizeof(buf), "%s", json_object_get_string(jip));
                 if (inet_aton(buf, &addr) == 0) {
-                    //fprintf(stderr, "Invalid address\n");
+                    fprintf(stderr, "Invalid address\n");
 		    continue;
-                    //exit(EXIT_FAILURE);
                 }
 
 	//	tmp.addr.addr4 = addr;
 	//	ret = add_to_ipset("letv_iplist", &tmp, flags, 0);
-        //      fprintf(stderr, "ret =%d Invalid address\n", ret);
 	}
 
     }
@@ -465,12 +445,9 @@ int doreporter(CURL *handle)
 }
 
 char *l_ifname[3] = {
-//	"eth0",
-//	"eth0",
-//	"eth0",
-	"61.147.168.12",
-	"153.3.50.214",
-	"221.181.203.210",
+	"eth3",
+	"eth3",
+	"eth3",
 };
 
 #define NO_SN_TEST  0xffffffff
@@ -513,14 +490,20 @@ char const* build_json(redsocks_instance *instance, int type, int index, int sn_
 		     break;
 
 		case AUTH_LOGOUT: {
+			if (!sc->valid) {
+				return NULL;
+			}
 			json_object *jlogout = json_object_new_object();
 			json_object_object_add(jlogout, "uid", json_object_new_string(sc->key.uid));
 			post_str = json_object_to_json_string(jlogout);
-			log_error(LOG_DEBUG, "logout post_str=%s.", post_str);
+//			log_error(LOG_DEBUG, "logout post_str=%s.", post_str);
 		}
 		break;
 
 		case AUTH_HEARTBEAT: {
+			if (!sc->valid) {
+				return NULL;
+			}
 			json_object *heart = json_object_new_object();
 			json_object_object_add(heart, "uid", json_object_new_string(sc->key.uid));
 			json_object_object_add(heart, "update_key", json_object_new_string("1"));
@@ -575,7 +558,7 @@ int mptcp_login_test(redsocks_instance *ins, char *url, int if_index, int sn_num
 		log_error(LOG_ERR, "Unsupport operation!\n");
 
 	if (!post_str) {
-		log_error(LOG_ERR, "Failed to build json string.");
+		log_error(LOG_INFO, "Failed to build json string.");
 		goto exit;
 	}
 
